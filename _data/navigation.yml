@@ -1,0 +1,13 @@
+# Site navigation links
+
+- title: Research
+  url: /research/
+
+- title: Consulting
+  url: /consulting/
+
+- title: Projects
+  url: /projects/
+
+- title: Blog
+  url: /blog/

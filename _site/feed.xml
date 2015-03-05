@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">>_ blockchain.lawyer</title>
+<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="/feed.xml" />
+<link rel="alternate" type="text/html" href="" />
+<updated>2015-03-05T02:20:30+01:00</updated>
+<id>/</id>
+<author>
+  <name>Florian Glatz</name>
+  <uri>/</uri>
+  <email>fg@blockchain.lawyer</email>
+</author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[What are Smart Contracts? In search of a consensus.]]></title>
+  <link rel="alternate" type="text/html" href="/smart-contracts/" />
+  <id>/smart-contracts</id>
+  <published>2014-12-11T00:00:00+01:00</published>
+  <updated>2014-12-11T00:00:00+01:00</updated>
+  <author>
+    <name>Florian Glatz</name>
+    <uri></uri>
+    <email>fg@blockchain.lawyer</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Smart contracts are software that is executed in a rich and trustworthy computing environment.
+They are contracts rethought for the digital age.&lt;/p&gt;
+
+&lt;p&gt;Read more about them over at &lt;a href=&quot;https://medium.com/@heckerhut/whats-a-smart-contract-in-search-of-a-consensus-c268c830a8ad&quot;&gt;medium&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/smart-contracts/&quot;&gt;What are Smart Contracts? In search of a consensus.&lt;/a&gt; was originally published by Florian Glatz at &lt;a href=&quot;&quot;&gt;>_ blockchain.lawyer&lt;/a&gt; on December 11, 2014.&lt;/p&gt;
+  </content>
+</entry>
+
+</feed>
