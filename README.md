@@ -1,2 +1,1 @@
-# blockchain
-Blockchain Lawyer
+[blockchain.lawyer](http://blockchain.lawyer)
