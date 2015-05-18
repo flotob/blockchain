@@ -1,5 +1,5 @@
 ---
-layout: post-index
+layout: page
 title: Legal Guidance for Blockchain Organizations
 excerpt: "Blockchain Lawyer"
 tags: [blockchain, p2p, law, code, bitcoin, smart contracts, legal hacking, legal automation]
