@@ -11,6 +11,6 @@ In order to understand the purpose that Codius was intended to serve in the wide
 
 This is where Codius’ complementary infrastructure decisions unfold their beneficial value to Blockchain-driven networks. Whereas Blockchains are good at delivering global consensus among thousands to millions of nodes, Codius’ solution is intended to deliver local consensus relevant only to specific individuals.
 
-The affordances of local consensus schemes lie mainly in two areas: Computational Complexity and Data Richness.
+The affordances of local consensus schemes lie mainly in two areas: <i>Computational Complexity and Data Richness.</i>
 
 Read more about it over at [medium](https://medium.com/@heckerhut/the-quiet-death-of-ripple-s-codiu-project-782c11a17c02).
