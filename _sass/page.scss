@@ -286,9 +286,10 @@ $button-size: 1.5rem;
 /* Large feature header image */
 .image-wrap {
 	position: relative;
+  z-index: 1;
 	margin-bottom: 2em;
 	@include clearfix;
-	&:after {
+	/*&:after {
 		content: " ";
 		display: block;
 		position: absolute;
@@ -307,7 +308,7 @@ $button-size: 1.5rem;
 		@media #{$x-large} {
 			left: 33.333333333%;
 		}
-	}
+	}*/
 	img {
 		width: 100%;
 		height: auto;

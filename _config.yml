@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:            ">_ blockchain.lawyer"
+title:            "blockchain.lawyer"
 locale:           en_US
 url:              
 
@@ -27,7 +27,7 @@ kramdown:
 # Site owner
 owner:
   name: "Florian Glatz"
-  avatar: flo2.png
+  avatar: flo3.png
   bio: "I consult, write, talk, invest in law and code."
   email: fg@blockchain.lawyer
   keybase: ftg

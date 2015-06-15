@@ -22,6 +22,9 @@
       "{{ site.url }}/images/{{ page.image.feature }}"
     {% endif %}
   alt="{{ page.title }} feature image">
+  <div class="article-author-side center-align">
+    {% include _author-bio.html %}
+  </div>  
   {% if page.image.credit %}
     <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
   {% endif %}
@@ -29,28 +32,33 @@
 {% endif %}
 
 <div id="main" role="main">
-  <div class="article-author-side">
-    {% include _author-bio.html %}
-  </div>
-  <article class="page">
-    <h1>{{ page.title }}</h1>
-    <div class="article-wrap">
-      {{ content }}
-      {% if page.share != false %}
-        <hr />
-        {% include _social-share.html %}
+  <div class="container">
+    <article class="page">
+      <h1>{{ page.title }}</h1>
+      <div class="article-wrap">
+        {{ content }}
+        {% if page.share != false %}
+          <hr />
+          {% include _social-share.html %}
+        {% endif %}
+      </div><!-- /.article-wrap -->
+      {% if site.owner.disqus-shortname and page.comments == true %}
+        <section id="disqus_thread"></section><!-- /#disqus_thread -->
       {% endif %}
-    </div><!-- /.article-wrap -->
-    {% if site.owner.disqus-shortname and page.comments == true %}
-      <section id="disqus_thread"></section><!-- /#disqus_thread -->
-    {% endif %}
-  </article>
+    </article>
+  </div>
 </div><!-- /#index -->
 
-<div class="footer-wrap">
-  <footer>
+<div class="page-footer">
+  <div class="container">
     {% include _footer.html %}
-  </footer>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2014 Copyright Text
+    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>  
 </div><!-- /.footer-wrap -->
 
 {% include _scripts.html %}          
