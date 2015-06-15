@@ -1,7 +1,4 @@
 ---
-layout: page
-title: blog
-tags: [blog, law, code]
+layout: post-index
+excerpt: "A List of Posts"
 ---
-
-<script async src="https://static.medium.com/embed.js"></script><a class="m-profile" href="https://medium.com/@heckerhut">Florian Glatz</a>
