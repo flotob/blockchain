@@ -35,15 +35,17 @@
 <!-- Modernizr -->
 <script src="{{ site.url }}/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 <!-- Materialize -->
-
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.3/lodash.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+<script src="/assets/js/velocity.ui.js"></script>
 <script src="/assets/js/parallax_blur.js"></script>
 <script language="javascript" type="text/javascript">
   // materialize init code
   $('document').ready(function () {
     $(".button-collapse").sideNav();
     $('.parallax').parallaxBlur(); // custom parallax effect
+    $('.tooltipped').tooltip({delay: 50});
   });
 </script>
 

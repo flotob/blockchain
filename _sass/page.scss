@@ -413,11 +413,11 @@ $button-size: 1.5rem;
   }
   */
   position: relative;
-  top: -6em;
+  top: -7.5em;
   margin-bottom: -6em;
 
   .bio-photo {
-    height: 9em;
+    height: 8.3em;
     width: auto;
     border: 3px solid #fff;
     -ms-interpolation-mode: bicubic;
@@ -469,6 +469,37 @@ $button-size: 1.5rem;
       }
     }
 
+  }
+
+  .bio-photo-wrapper {
+    position: relative;
+    @extend .center-align;
+  }
+  .auth-social {
+    @extend .z-depth-1;
+    @extend .circle;
+    background: $white;
+    padding: 0.2em;
+    color: $black;
+    font-size: 1em;
+    display: inline-block;
+    position: relative;
+    margin: 0.2em;
+    width: 1.9em;
+    height: 1.9em;
+    top: 4em;
+  }  
+  .auth-social:nth-child(1), .auth-social:nth-child(4) {
+    
+  }
+  .auth-social:nth-child(2), .auth-social:nth-child(3) {
+    
+  }  
+  .auth-social:nth-child(2) {
+    margin-right: 5em;
+  }
+  .auth-social:nth-child(3) {
+    margin-left: 5em;
   }
 }
 

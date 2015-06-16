@@ -29,13 +29,20 @@ sitemap: false
 @import "vendor/materialize/materialize";
 
 .parallax-container {
-  height: 29rem;
+  height: 30rem;
 
   .parallax img {
     position: fixed;
-    left: 52%;
-    bottom: 65%;    
+    bottom: 20%;
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    height: auto;
   }
+}
+
+#sidenav-overlay {
+  z-index: 0;
 }
 
 @media #{$medium-and-down} {
@@ -43,5 +50,24 @@ sitemap: false
     &.fullwidth {
       width: 100%;
     }
+  }
+}
+
+.row.header {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 4em;
+  @extend .center-align;
+
+  .label {
+    border: 1px solid rgba(0,0,0,0.6);
+    padding: 0.2em 1em 0.2em 1em;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    position: relative;
+    top: 1em;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    background: $white;
   }
 }
