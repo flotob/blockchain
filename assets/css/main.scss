@@ -32,11 +32,9 @@ sitemap: false
   height: 30rem;
 
   .parallax img {
-    position: fixed;
-    bottom: 20%;
-    min-width: 0;
-    min-height: 0;
-    width: 100%;
+position: fixed;
+    bottom: 0;
+    width: auto;
     height: auto;
   }
 }
@@ -71,4 +69,8 @@ sitemap: false
     background: $white;
     text-transform: uppercase;
   }
+}
+
+.card .card-content p {
+  margin-bottom: 1em;
 }

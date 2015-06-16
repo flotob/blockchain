@@ -4,56 +4,60 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
-{% include _head.html %}
+  {% include _head.html %}
 </head>
 
-<body class="home">
+<body class="page">
 
 {% include _browser-upgrade.html %}
 
+<header>
 {% include _navigation.html %}
+<script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script>
+</header>
 
-{% if page.image.feature %}
-  <div class="image-wrap">
-  <img src=
-    {% if page.image.feature contains 'http' %}
-      "{{ page.image.feature }}"
-    {% else %}
-      "{{ site.url }}/images/{{ page.image.feature }}"
-    {% endif %}
-  alt="{{ page.title }} feature image">
+
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="/images/wall_medium.jpg" alt="{{ page.title }} feature image">      
+  </div>  
   {% if page.image.credit %}
     <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
-  {% endif %}
-  </div><!-- /.image-wrap -->
-{% endif %}
+  {% endif %}    
+</div>
 
-<div id="main" role="main"> 
-  <div class="article-author-side">
-    {% include _author-bio.html %}
+<div class="section white" style="min-height: 52em">
+  <div class="row container">
+    <a name="content"></a>
+    <div class="article-author-side center-align">
+      {% include _author-bio.html %}
+    </div>
   </div>
-  <div id="index">
-    <h3><a href="{{ site.url}}/posts/">Recent Posts</a></h3>
-    {% for post in site.posts limit:5 %}    
-    <article>
-      {% if post.link %}
-        <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
-      {% else %}
-        <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-      {% endif %}
-    </article>
-    {% endfor %}
-  </div><!-- /#index -->
-</div><!-- /#main -->
+  <div class="row header"><div class="label">{{ page.category }}</div></div>
+  <div class="row container">
 
-<div class="footer-wrap">
-  <footer>
+    <div class="col s12 m6 left">
+      <div class="card white">
+        <div class="card-content black-text">
+          <h3 class="card-title black-text">{{ page.title }}</h3>
+          {{ content }}
+        </div>
+        <div class="card-action">
+          <a href="https://medium.com/@heckerhut/smart-contracts-platforms-and-intermediaries-c3d30f5182a6?source=featured">Read more</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m6 left" style="padding-top: .5em">
+      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/heckerhut" data-widget-id="610926712856182784"></a>
+    </div>    
+
+  </div>
+</div>
+
+<div class="page-footer grey lighten-5 valign-wrapper" style="height: 17em;">
     {% include _footer.html %}
-  </footer>
-</div><!-- /.footer-wrap -->
+</div>
 
-{% include _scripts.html %}
-  
 </body>
 </html>

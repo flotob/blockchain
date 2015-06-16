@@ -32,7 +32,6 @@
 
             if (initial) {
               zero = percentScrolled;
-              console.log(zero);
               $img.css('display', 'block');
               var path = $img.attr('src').split('.'),
                   url = path.shift() + '_blur.' + path.shift(),
@@ -89,8 +88,6 @@
           }
 
           var filterVal = 'blur(' + ( $(document).scrollTop() / 10 ) + 'px)';
-
-          console.log('filter',filterVal);
 
           $this.children("img").last()
             .css('filter',filterVal)

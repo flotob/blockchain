@@ -8,4 +8,4 @@ category: imprint
 
 Florian Glatz, fg@blockchain.lawyer
 
-[Minimal Mistakes Theme](https://github.com/mmistakes/minimal-mistakes)
+Theme built with [Materialize CSS](materializecss.com)

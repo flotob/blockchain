@@ -13,6 +13,7 @@
 
 <header>
 {% include _navigation.html %}
+<script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script>
 </header>
 
 
@@ -33,9 +34,16 @@
     </div>
   </div>
   <div class="row header"><div class="label">{{ page.category }}</div></div>
-  <div class="row container">
-    <h2 class="header">{{ page.title }}</h2>
-    <p class="grey-text text-darken-3 lighten-3">{{ content }}</p>
+  <div class="row container"> 
+    <div class="card white">
+      <div class="card-content black-text">
+        <h3 class="card-title black-text">{{ page.title }}</h3>
+        {{ content }}
+      </div>
+      <div class="card-action grey lighten-5">
+        <a href="https://medium.com/@heckerhut" style="color: rgba(0,0,0,.5);">Read my blog</a>
+      </div>
+    </div>
   </div>
 </div>
 
