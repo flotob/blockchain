@@ -32,6 +32,7 @@
 
             if (initial) {
               zero = percentScrolled;
+              console.log(zero);
               $img.css('display', 'block');
               var path = $img.attr('src').split('.'),
                   url = path.shift() + '_blur.' + path.shift(),
@@ -42,14 +43,13 @@
 
               $img.css('transform', "translate3D(-50%," + parallax + "px, 0)");
               $imgBlur.css('transform', "translate3D(-50%," + parallax + "px, 0)");
-            } else {
-              $imgBlur = $this.children("img").last();
-              $imgBlur.css({
-                display: 'block',
-                opacity: Math.round( (percentScrolled - zero) * 5, 2)
-              });
             }
 
+            $this.children("img").last()
+              .css({
+                display: 'block',
+                opacity: percentScrolled * ($(document).scrollTop()/150)
+              });
           }
         })();
 

@@ -29,11 +29,19 @@ sitemap: false
 @import "vendor/materialize/materialize";
 
 .parallax-container {
-  height: 25.7rem;
+  height: 29rem;
 
   .parallax img {
-    position: absolute;
+    position: fixed;
     left: 52%;
-    bottom: 45%;    
+    bottom: 65%;    
+  }
+}
+
+@media #{$medium-and-down} {
+  .container {
+    &.fullwidth {
+      width: 100%;
+    }
   }
 }

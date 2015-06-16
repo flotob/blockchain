@@ -414,6 +414,7 @@ $button-size: 1.5rem;
   */
   position: relative;
   top: -6em;
+  margin-bottom: -6em;
 
   .bio-photo {
     height: 9em;
@@ -422,12 +423,52 @@ $button-size: 1.5rem;
     -ms-interpolation-mode: bicubic;
     @extend .z-depth-1;
     @extend .circle;
+    @extend .center-align;
   }  
-  .author-social {
-    display: none;
-  }
   .author-bio {
-    display: none;
+    display: block;
+    @extend .center-align;
+    letter-spacing: 0.2em;
+  }
+  .new-author-social-wrapper {
+    display: inline-block;
+    @extend .center-align;
+
+    section {
+      float: left;
+      @extend .center-align;
+      margin: 1.2em;
+      margin-top: -1em;
+
+      i {
+        font-size: 2em;
+
+        &.fa-envelope {
+          font-size: 1.6em;
+        }
+        &.fa-key {
+          /*-moz-transform: scale(-1, 1);
+          -webkit-transform: scale(-1, 1);
+          -o-transform: scale(-1, 1);
+          -ms-transform: scale(-1, 1); */
+          
+          transform: rotate(-47deg) scale(-1, -1);   
+        }
+      }
+
+      h4 {
+        text-transform: uppercase;
+        font-size: 0.75em;
+        font-weight: 200;
+        letter-spacing: 0.2em;
+        color: lighten($black,10);
+      }
+
+      a {
+        float: left;
+      }
+    }
+
   }
 }
 

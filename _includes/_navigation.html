@@ -1,27 +1,8 @@
-<!-- <div class="navigation-wrapper">
-	<div class="site-name">
-		<a href="{{ site.url }}/">{{ site.title }}</a>
-	</div>
-	<div class="top-navigation">
-		<nav role="navigation" id="site-nav" class="nav">
-		    <ul>
-		        {% for link in site.data.navigation %}
-				    {% if link.url contains 'http' %}
-				        {% assign domain = '' %}
-				        {% else %}
-				        {% assign domain = site.url %}
-				    {% endif %}
-				    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
-				{% endfor %}
-		    </ul>
-		</nav>
-	</div>
-</div> -->
-
-  <nav class="grey-lighten-5">
-    <div class="container">
+<!-- &#9608;-&#9608;-&#9608;<span class="lawyer">.lawyer</span> -->
+  <nav class="lighten-5">
+    <div class="container fullwidth">
       <div class="nav-wrapper">
-        <a href="{{ site.url }}/" class="brand-logo black-text">&#9608;-&#9608;-&#9608;<span class="lawyer">.lawyer</span> </a>
+        <a href="{{ site.url }}/" class="brand-logo black-text">{{ site.title }} </a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         <ul class="right hide-on-med-and-down">
           {% for link in site.data.navigation %}

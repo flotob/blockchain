@@ -1,5 +1,5 @@
 nav {
-  position: relative;
+  position: fixed;
   z-index: 1;
   color: #fff;
   @extend .z-depth-1;
@@ -42,12 +42,12 @@ nav {
 
   // Logo
   .brand-logo {
-    position: relative;
-    top: 0.1em;
     color: #fff;
     display: inline-block;
     font-size: 1rem;
     padding: 0;
+    font-weight: 300;
+    letter-spacing: 0.02em;
 
     &.center {
       left: 50%;
@@ -55,7 +55,8 @@ nav {
     }
 
     @media #{$medium-and-down} {
-      left: 50%;
+      right: 0;
+      position: absolute;
       @include transform(translateX(-50%));
     }
 
@@ -90,6 +91,8 @@ nav {
       color: #fff;
       display: block;
       padding: 0 15px;
+      font-weight: 300;
+      letter-spacing: 0.02em;      
     }
 
     &.left {
