@@ -488,6 +488,10 @@ $button-size: 1.5rem;
     width: 1.9em;
     height: 1.9em;
     top: 4em;
+
+    &:hover {
+      top: 4.1em;
+    }
   }  
   .auth-social:nth-child(1), .auth-social:nth-child(4) {
     

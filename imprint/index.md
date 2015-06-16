@@ -3,6 +3,7 @@ layout: page
 title: Imprint
 excerpt: "Blockchain Lawyer"
 tags: [blockchain, p2p, law, code, bitcoin, smart contracts, legal hacking, legal automation]
+category: imprint
 ---
 
 Florian Glatz, fg@blockchain.lawyer

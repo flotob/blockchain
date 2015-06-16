@@ -3,6 +3,7 @@ layout: page
 title: Projects
 excerpt: "Blockchain Lawyer"
 tags: [blockchain, p2p, law, code, bitcoin, smart contracts, legal hacking, legal automation]
+category: Projects
 ---
 
 These are some of the projects I am involved in, as founder, coder or in a legal capacity.

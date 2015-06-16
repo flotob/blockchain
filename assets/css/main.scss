@@ -59,9 +59,9 @@ sitemap: false
   @extend .center-align;
 
   .label {
-    border: 1px solid rgba(0,0,0,0.6);
+    border: 1px solid rgba(0,0,0,0.44);
     padding: 0.2em 1em 0.2em 1em;
-    font-size: 0.9em;
+    font-size: 0.85em;
     font-weight: 400;
     letter-spacing: 0.3em;
     position: relative;
@@ -69,5 +69,6 @@ sitemap: false
     display: inline-block;
     color: rgba(0,0,0,0.6);
     background: $white;
+    text-transform: uppercase;
   }
 }
