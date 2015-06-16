@@ -4,64 +4,76 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
-{% include _head.html %}
+  {% include _head.html %}
 </head>
 
 <body class="page">
 
 {% include _browser-upgrade.html %}
 
+<header>
 {% include _navigation.html %}
+</header>
 
-{% if page.image.feature %}
-  <div class="image-wrap">
-  <img src=
-    {% if page.image.feature contains 'http' %}
-      "{{ page.image.feature }}"
-    {% else %}
-      "{{ site.url }}/images/{{ page.image.feature }}"
-    {% endif %}
-  alt="{{ page.title }} feature image">
-  <div class="article-author-side center-align">
-    {% include _author-bio.html %}
-  </div>  
-  {% if page.image.credit %}
-    <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
-  {% endif %}
-  </div><!-- /.image-wrap -->
-{% endif %}
 
-<div id="main" role="main">
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="/images/wall_medium.jpg" alt="{{ page.title }} feature image">      
+    </div>  
+    {% if page.image.credit %}
+      <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+    {% endif %}    
+  </div>
+  <!-- <div class="image-wrap"></div> -->
+
+<div class="section lighten-3">
+  <div class="row container">
+    <div class="article-author-side center-align">
+      {% include _author-bio.html %}
+    </div>
+  </div>
+  <div class="row container">
+    <h2 class="header">{{ page.title }}</h2>
+    <p class="grey-text text-darken-3 lighten-3">{{ content }}</p>
+  </div>
+</div>
+
+<!-- <div class="parallax-container">
+    <div class="parallax">
+      <img src=
+          {% if page.image.feature contains 'http' %}
+            "{{ page.image.feature }}"
+          {% else %}
+            "{{ site.url }}/images/{{ page.image.feature }}"
+          {% endif %}
+        alt="{{ page.title }} feature image">      
+    </div>
+  </div> -->
+
+<!-- <div id="main" role="main">
   <div class="container">
     <article class="page">
       <h1>{{ page.title }}</h1>
       <div class="article-wrap">
         {{ content }}
-        {% if page.share != false %}
-          <hr />
-          {% include _social-share.html %}
-        {% endif %}
-      </div><!-- /.article-wrap -->
-      {% if site.owner.disqus-shortname and page.comments == true %}
-        <section id="disqus_thread"></section><!-- /#disqus_thread -->
-      {% endif %}
+      </div>
     </article>
   </div>
-</div><!-- /#index -->
+</div> -->
 
 <div class="page-footer">
   <div class="container">
     {% include _footer.html %}
   </div>
   <div class="footer-copyright">
-    <div class="container">
-    © 2014 Copyright Text
-    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    <div class="row container" style="font-size: 0.7rem">
+      <div style="float: left">&copy; 2015</div>
+      <div class="center-align"><a href="/imprint">Imprint</a> | <a href="/privacy">Privacy Policy</a></span>
     </div>
   </div>  
 </div><!-- /.footer-wrap -->
 
-{% include _scripts.html %}          
+<!-- {% include _scripts.html %} -->
 
 </body>
 </html>

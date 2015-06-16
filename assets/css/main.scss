@@ -27,3 +27,13 @@ sitemap: false
 // @import "vendor/magnific-popup/magnific-popup";
 //@import "vendor/google/fonts";
 @import "vendor/materialize/materialize";
+
+.parallax-container {
+  height: 25.7rem;
+
+  .parallax img {
+    position: absolute;
+    left: 52%;
+    bottom: 45%;    
+  }
+}
