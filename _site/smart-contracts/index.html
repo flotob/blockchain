@@ -53,8 +53,36 @@
 
 <!-- Modernizr -->
 <script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+<!-- Materialize -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.3/lodash.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+<script src="/assets/js/velocity.ui.js"></script>
+<script src="/assets/js/parallax_blur.js"></script>
+<script language="javascript" type="text/javascript">
+  // materialize init code
+  $('document').ready(function () {
+    $(".button-collapse").sideNav();
+    $('.parallax').parallaxBlur(); // custom parallax effect
+    $('.tooltipped').tooltip({delay: 50});
+    
+    // social affairs
+    if($(document).scrollTop() > 317)
+      $('.article-author-side').addClass('collapse');
+    else
+      $('.article-author-side').removeClass('collapse');
 
-<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+    $(document).on('scroll', function () {
+      if($(document).scrollTop() > 317)
+        $('.article-author-side').addClass('collapse');
+      else
+        $('.article-author-side').removeClass('collapse');
+    });    
+  });
+</script>
+
+<!-- 
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'> -->
 
 <!-- Icons -->
 <!-- 16x16 -->
@@ -76,38 +104,61 @@
 
 <!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
 
-<div class="navigation-wrapper">
-	<div class="site-name">
-		<a href="/">blockchain.lawyer</a>
-	</div><!-- /.site-name -->
-	<div class="top-navigation">
-		<nav role="navigation" id="site-nav" class="nav">
-		    <ul>
-		        
-				    
-				        
-				    
-				    <li><a href="/research/" >Research</a></li>
-				
-				    
-				        
-				    
-				    <li><a href="/consulting/" >Consulting</a></li>
-				
-				    
-				        
-				    
-				    <li><a href="/projects/" >Projects</a></li>
-				
-				    
-				        
-				    
-				    <li><a href="/blog/" >Blog</a></li>
-				
-		    </ul>
-		</nav>
-	</div><!-- /.top-navigation -->
-</div><!-- /.navigation-wrapper -->
+<!-- &#9608;-&#9608;-&#9608;<span class="lawyer">.lawyer</span> -->
+  <nav class="lighten-5">
+    <div class="container fullwidth">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo black-text">blockchain.lawyer </a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <ul class="right hide-on-med-and-down">
+          
+            
+                
+            
+            <li><a href="/research/#content" class="black-text">Research</a></li>
+          
+            
+                
+            
+            <li><a href="/consulting/#content" class="black-text">Consulting</a></li>
+          
+            
+                
+            
+            <li><a href="/projects/#content" class="black-text">Projects</a></li>
+          
+            
+                
+                
+            <li><a href="https://medium.com/@heckerhut#content" class="black-text">Blog</a></li>
+          
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          
+            
+                
+            
+            <li><a href="/research/#content">Research</a></li>
+          
+            
+                
+            
+            <li><a href="/consulting/#content">Consulting</a></li>
+          
+            
+                
+            
+            <li><a href="/projects/#content">Projects</a></li>
+          
+            
+                
+                
+            <li><a href="https://medium.com/@heckerhut#content">Blog</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 
 
@@ -118,31 +169,25 @@
 
 <div itemscope itemtype="http://schema.org/Person">
 
+<div class="auth-social-wrapper">
+  <a href="mailto:fg@blockchain.lawyer"
+    data-position="top" data-delay="50" data-tooltip="E-Mail"
+    class="tooltipped auth-social" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+  <a href="http://keybase.io/ftg" 
+    data-position="top" data-delay="50" data-tooltip="Public Key"
+    class="tooltipped auth-social" target="_blank"><i class="fa fa-fw fa-key"></i></a>
+  <a href="http://twitter.com/heckerhut"
+    data-position="top" data-delay="50" data-tooltip="Twitter"
+    class="tooltipped auth-social" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+  <a href="http://github.com/flotob"
+    data-position="top" data-delay="50" data-tooltip="Github"
+    class="tooltipped auth-social" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+</div>
 
-	<img src="/images/flo3.png" class="bio-photo" alt="Florian Glatz bio photo">
+<img src="/images/flo3.png" class="bio-photo" alt="Florian Glatz bio photo">
 
-
-  <h3 itemprop="name">Florian Glatz</h3>
-  <p>Law & Code</p>
-  <a href="http://keybase.io/ftg" class="author-social" target="_blank"><i class="fa fa-fw fa-key"></i>keybase</a>
-  <a href="http://github.com/flotob" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i>github</a>
-  <a href="http://twitter.com/heckerhut" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i>twitter</a>
-  <a href="mailto:fg@blockchain.lawyer" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i>mail</a>  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  <h3 class="author-name noble" itemprop="name">Florian Glatz</h3>
+  <p class="author-bio">Law & Code</p>
 </div>
 
   </div>
@@ -173,14 +218,12 @@ They are contracts rethought for the digital age.</p>
     <h4><small class="pull-right"><a href="/blog/">View all posts</a></small></h4>
   </div>
   <footer>
-    
-
-<div style="width: 100%; text-align: center;">
-  <a href="/imprint">Imprint</a> | <a href="/privacy">Privacy Policy</a>
-  <br/><br/>
-  <span style="font-size: 0.7rem">&copy; 2015</span>
-  </div>
-
+    <div class="row container valign center-align" style="font-size: 0.8em; color: rgba(0,0,0,.6)">
+  <span>&copy; 2015</span>
+  <a href="/imprint/#content" style="color: rgba(0,0,0,.6)">Imprint</a>
+  <span> | </span>
+  <a href="/privacy/#content" style="color: rgba(0,0,0,.6)">Privacy Policy</a>
+</div>
   </footer>
 </div><!-- /.footer-wrap -->
 

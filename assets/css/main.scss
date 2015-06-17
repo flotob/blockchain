@@ -24,5 +24,135 @@ sitemap: false
 @import "forms";
 @import "page";
 @import "vendor/font-awesome/font-awesome";
-@import "vendor/magnific-popup/magnific-popup";
+// @import "vendor/magnific-popup/magnific-popup";
 //@import "vendor/google/fonts";
+@import "vendor/materialize/materialize";
+
+.parallax-container {
+  height: 30rem;
+
+  .parallax img {
+position: fixed;
+    bottom: 0;
+    width: auto;
+    height: auto;
+  }
+}
+
+#sidenav-overlay {
+  z-index: 0;
+}
+
+@media #{$medium-and-down} {
+  .container {
+    &.fullwidth {
+      width: 100%;
+    }
+  }
+}
+
+.row.header {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 4em;
+  @extend .center-align;
+
+  .label {
+    border: 1px solid rgba(0,0,0,0.44);
+    padding: 0.2em 1em 0.2em 1em;
+    font-size: 0.85em;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    position: relative;
+    top: 1em;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    background: $white;
+    text-transform: uppercase;
+  }
+}
+
+.card .card-content p {
+  margin-bottom: 1em;
+}
+
+/* Author sidebar */
+.article-author-side {
+  
+  position: relative;
+  top: -7.5em;
+  margin-bottom: -6em;
+
+  .bio-photo {
+    height: 8.3em;
+    width: auto;
+    border: 3px solid #fff;
+    -ms-interpolation-mode: bicubic;
+    @extend .z-depth-1;
+    @extend .circle;
+    @extend .center-align;
+  }  
+  .author-bio {
+    display: block;
+    @extend .center-align;
+    letter-spacing: 0.2em;
+  }
+ 
+  .auth-social-wrapper {
+    position: relative;
+    @extend .center-align;
+  }
+  .auth-social {
+    @extend .z-depth-1;
+    @extend .circle;
+    background: $white;
+    padding: 0.2em;
+    color: $black;
+    font-size: 1em;
+    display: inline-block;
+    position: relative;
+    margin: 0.2em;
+    width: 1.9em;
+    height: 1.9em;
+    top: 4em;
+
+    &:hover {
+      top: 4.1em;
+    }
+  }  
+  .auth-social:nth-child(2) {
+    margin-right: 5em;
+  }
+  .auth-social:nth-child(3) {
+    margin-left: 5em;
+  }
+
+  &.collapse {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 47.5%;
+    padding: .3em;
+
+    .auth-social-wrapper, .author-bio, .author-name {
+      display: none;
+    }
+
+    .bio-photo {
+      border: 0;
+      box-shadow: none;
+      height: 3.5em;
+    }
+  }
+}
+
+
+.twitter-wrapper {
+  height: 515px;
+  overflow: hidden;
+  position: relative;
+
+  iframe {
+    position: relative!important;
+    top: -44px;
+  }
+}

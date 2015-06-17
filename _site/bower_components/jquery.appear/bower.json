@@ -1,0 +1,26 @@
+{
+  "name": "jquery.appear",
+  "main": "jquery.appear.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/aliirz/jquery.appear",
+  "authors": [
+    "aliirz <dejavu87@gmail.com>"
+  ],
+  "description": "A plugin to call a function when an element appears",
+  "keywords": [
+    "jquery",
+    "jquery.appear",
+    "appear"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1.3"
+  }
+}

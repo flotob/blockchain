@@ -1,0 +1,77 @@
+==================================================================
+https://keybase.io/ftg
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://blockchain.lawyer
+  * I am ftg (https://keybase.io/ftg) on keybase.
+  * I have a public key with fingerprint 0E27 7D41 7A00 BA82 0DEF  2346 FCAC 0458 8973 21FD
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.3"
+        },
+        "key": {
+            "fingerprint": "0e277d417a00ba820def2346fcac0458897321fd",
+            "host": "keybase.io",
+            "key_id": "FCAC0458897321FD",
+            "uid": "9b2ba4a0a6bea563dd3f27618501d100",
+            "username": "ftg"
+        },
+        "merkle_root": {
+            "ctime": 1423017189,
+            "hash": "9fc210b6f45120f9f3e548b6e06309a6aa8b869244f1dd479cc9b6ba70d55a212955b232f98eddfb8103ae67e16f8bcaa9ef2057d4d10a942c3db2da68d50298",
+            "seqno": 147489
+        },
+        "service": {
+            "hostname": "blockchain.lawyer",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1423017266,
+    "expire_in": 157680000,
+    "prev": "17ddc8693a41281b0909ace01102ef4ff6de203ba6818da9b01a56accfde1f13",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
+Comment: GPGTools - https://gpgtools.org
+
+owFVUl1sFUUYvbUFYpVoglaxGssiBEm9zMzOzu5esOFaafh5wEijPBiv83vvtre7
+t7vbliv0BTCxgMbUKIYGDE2AkIqYPhF+RBNiiAitoWhDUn3AEHnQ+IskWuJMU4PM
+08x8Z853zvnmnfm1mfqafz6q2zyQLJquuXCDZdq/fgNttVgkqlZuq8XLgQxTswtp
+l7RyVqesMprIbBA1hZGQ2Y6kaRbTbPXKOAmiUKNA1s3aVn+zgZvHKgiLMq7EgeGy
+gESuKzB0KQCMeggIqZCNieKUA+x4nu/aCCqhKUtRkt7V1ZrhLARC37a15lvv4Nue
+17WemYLPEKOYAkqYpA6xhbAVcgn0HAAFBMAAExnPWlJp0UjtknFnWRbiKJrxy9PA
+VCFGNoAu9HwthiYlw644goARhR2IgPKVLR3sMSIBsYFPCaUe84iPMFZQCOz6nPuM
+MOoC4TgUQeQ7DkM2Ur4nhVDMg8CmkrgSEuUxTqmv4wCOTkhrpT5G3BYMCUo84QDk
+e1p9IrvDyIhzsef3m3PcG3BpdJvEZo2xcsQ7eYkGYbZM+6oy1i8rcZRGPCrrcilN
+KznjPK1WDLxPssKxWaYCC0Khh/b/qUINvTsVREizJbdUglgWAoNwXOIBvUwf2as5
+oSsE12HYFEPkQQZ8nRCXAEKApMJKESERsJk2Bz1BfQagHhjlXAkJFbTveMVaJy1q
+yiQohjTtiaXVP1DzeF2mpj4zd8495ttm6u998L+/PHFx3t9zx3Ysm6jb+ejN8c8f
+uPHKwY7xH1euXXgGLsmUjs9/8XL71Q8+a9j786V9y1/Pj+8u/vL04k1/1U5+qGpf
+zR+y/nyiET/7GH1r2Zbz61Y/0rX7QPGT73YtSEYflptu/z5SnTw+dGv8ypyNJ9re
+m1z3zDw6dHlwfe4I3P7CYPn9jtazwfKPv8iPXBte5Tw0tuen2l8bdoA1TRu2NR6a
+vn5p8dRz+4d2Jh3h5o3vjuTWjLW0fHp9VfaPvpXDo8dWLBm88NTAt03brItLX7od
+Phm2vPnb1PcL2k+N5sHhvcMHkwa/0Wo5ia7hm91vn7tv0ZFzPQ3dqyemrx74qu/W
+y0dP33/ym+1fnv3htXDpvp7zC6f+BQ==
+=vOhk
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ftg
+
+==================================================================

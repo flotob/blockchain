@@ -1,10 +1,11 @@
 ---
-layout: page
-title: Legal Guidance for Blockchain Organizations
+layout: home
+title: Blockchain Organizations
 excerpt: "Blockchain Lawyer"
 tags: [blockchain, p2p, law, code, bitcoin, smart contracts, legal hacking, legal automation]
 image:
-  feature: wall.jpg
+  feature: wall_medium.jpg
+category: blockchain.lawyer
 ---
 
 Blockchain technology allows new businesses and organizations to form and self-organize, raise funds, create value and manage their infrastructure in radically new ways. 

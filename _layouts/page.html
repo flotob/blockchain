@@ -4,56 +4,51 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
-{% include _head.html %}
+  {% include _head.html %}
 </head>
 
 <body class="page">
 
 {% include _browser-upgrade.html %}
 
+<header>
 {% include _navigation.html %}
+</header>
 
-{% if page.image.feature %}
-  <div class="image-wrap">
-  <img src=
-    {% if page.image.feature contains 'http' %}
-      "{{ page.image.feature }}"
-    {% else %}
-      "{{ site.url }}/images/{{ page.image.feature }}"
-    {% endif %}
-  alt="{{ page.title }} feature image">
+
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="/images/wall_medium.jpg" alt="{{ page.title }} feature image">      
+  </div>  
   {% if page.image.credit %}
     <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
-  {% endif %}
-  </div><!-- /.image-wrap -->
-{% endif %}
+  {% endif %}    
+</div>
 
-<div id="main" role="main">
-  <div class="article-author-side">
-    {% include _author-bio.html %}
+<div class="section white" style="min-height: 52em">
+  <div class="row container">
+    <a name="content"></a>
+    <div class="article-author-side center-align">
+      {% include _author-bio.html %}
+    </div>
   </div>
-  <article class="page">
-    <h1>{{ page.title }}</h1>
-    <div class="article-wrap">
-      {{ content }}
-      {% if page.share != false %}
-        <hr />
-        {% include _social-share.html %}
-      {% endif %}
-    </div><!-- /.article-wrap -->
-    {% if site.owner.disqus-shortname and page.comments == true %}
-      <section id="disqus_thread"></section><!-- /#disqus_thread -->
-    {% endif %}
-  </article>
-</div><!-- /#index -->
+  <div class="row header"><div class="label">{{ page.category }}</div></div>
+  <div class="row container"> 
+    <div class="card white">
+      <div class="card-content black-text">
+        <h3 class="card-title black-text">{{ page.title }}</h3>
+        {{ content }}
+      </div>
+      <div class="card-action grey lighten-5">
+        <a href="https://medium.com/@heckerhut" style="color: rgba(0,0,0,.5);">Read my blog</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="footer-wrap">
-  <footer>
+<div class="page-footer grey lighten-5 valign-wrapper" style="height: 17em;">
     {% include _footer.html %}
-  </footer>
-</div><!-- /.footer-wrap -->
-
-{% include _scripts.html %}          
+</div>
 
 </body>
 </html>
