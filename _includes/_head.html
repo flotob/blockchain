@@ -48,10 +48,10 @@
     $('.tooltipped').tooltip({delay: 50});
     
     // social affairs
-    if($(document).scrollTop() > 317)
+    if($(document).scrollTop() > 317) {
+      $('.article-author-side').addClass('notransition');
       $('.article-author-side').addClass('collapse');
-    else
-      $('.article-author-side').removeClass('collapse');
+    }
 
     $(document).on('scroll', function () {
       if($(document).scrollTop() > 317)

@@ -13,7 +13,7 @@ sitemap: false
 
 // Partials
 @import "variables";
-@import "grid";
+/*@import "grid";
 @import "mixins";
 @import "normalize";
 @import "site";
@@ -22,7 +22,7 @@ sitemap: false
 @import "coderay";
 @import "elements";
 @import "forms";
-@import "page";
+@import "page";*/
 @import "vendor/font-awesome/font-awesome";
 // @import "vendor/magnific-popup/magnific-popup";
 //@import "vendor/google/fonts";
@@ -171,4 +171,12 @@ sitemap: false
     position: relative!important;
     top: -44px;
   }
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
 }
