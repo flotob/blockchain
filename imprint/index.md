@@ -6,6 +6,8 @@ tags: [blockchain, p2p, law, code, bitcoin, smart contracts, legal hacking, lega
 category: imprint
 ---
 
-Florian Glatz, fg@blockchain.lawyer
+**Admin:** Florian Glatz, <a href="mailto:{{ site.owner.email }}">{{ site.owner.email }}</a>
 
-Theme built with [Materialize CSS](materializecss.com)
+**Credits:**
+  Wall by <a href="http://www.blinkblink.de" target="_blank">Anna Niestroj / Studio BlinkBlink</a>.
+  Theme built with <a href="http://materializecss.com" target="_blank">Materialize CSS</a>.
