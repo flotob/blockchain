@@ -1,7 +1,7 @@
 nav {
   position: fixed;
+  color: $black;
   z-index: 1;
-  color: #fff;
   @extend .z-depth-1;
   background-color: $primary-color;
   width: 100%;
