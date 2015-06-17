@@ -5,7 +5,6 @@
       // Parallax Scripts
       return this.each(function(i) {
         var $this = $(this);
-        $this.addClass('parallax');
 
         var updateParallax = (function () {
           var zero;
