@@ -28,6 +28,7 @@ sitemap: false
 //@import "vendor/google/fonts";
 @import "vendor/materialize/materialize";
 
+
 .plx-container {
   height: 30rem;
   position: relative;
@@ -111,6 +112,7 @@ sitemap: false
     display: block;
     @extend .center-align;
     letter-spacing: 0.2em;
+    margin: 0;
   }
  
   .auth-social-wrapper {
