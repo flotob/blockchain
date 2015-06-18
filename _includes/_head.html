@@ -46,7 +46,9 @@
     $(".button-collapse").sideNav();
     $('.plx').parallaxBlur(); // custom parallax effect
     $('.tooltipped').tooltip({delay: 50});
-    
+    var ln = navigator.language || navigator.userLanguage;
+    $('ul.tabs').tabs('select_tab', ln && _.indexOf(ln, ['de', 'en']) ? ln : 'en');
+
     // social affairs
     if($(document).scrollTop() > 317) {
       $('.article-author-side').addClass('notransition');

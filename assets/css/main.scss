@@ -186,3 +186,20 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transition: none !important;
   transition: none !important;
 }
+
+.tabs {
+  .indicator {
+    background-color: #ff8f00;
+  }
+
+  .tab {
+    a {
+      color: rgba(0,0,0,.6);
+    }
+
+    a.active, a:hover, a:active {
+      @extend .amber-text;
+      @extend .text-darken-3;
+    }
+  }
+}

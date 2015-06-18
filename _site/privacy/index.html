@@ -65,7 +65,9 @@
     $(".button-collapse").sideNav();
     $('.plx').parallaxBlur(); // custom parallax effect
     $('.tooltipped').tooltip({delay: 50});
-    
+    var ln = navigator.language || navigator.userLanguage;
+    $('ul.tabs').tabs('select_tab', ln && _.indexOf(ln, ['de', 'en']) ? ln : 'en');
+
     // social affairs
     if($(document).scrollTop() > 317) {
       $('.article-author-side').addClass('notransition');
@@ -171,7 +173,7 @@
 </div>
 
 <div class="section white" style="min-height: 52em">
-  <div class="row container">
+  <div class="row">
     <a name="content"></a>
     <div class="article-author-side center-align">
       
@@ -203,7 +205,7 @@
     </div>
   </div>
   <div class="row header"><div class="label">Privacy Policy</div></div>
-  <div class="row container"> 
+  <div class="row"> 
     <div class="card white">
       <div class="card-content black-text">
         <h3 class="card-title black-text">Privacy Policy</h3>
