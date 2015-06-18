@@ -22,6 +22,11 @@ nav {
       display: block;
       font-size: 2rem;
     }
+
+    .button-collapse {
+      position: absolute;
+      right: 0;
+    }
   }
 
   @media #{$large-and-up} {
@@ -59,9 +64,8 @@ nav {
     }
 
     @media #{$medium-and-down} {
-      right: 0;
+      left: 0;
       position: absolute;
-      @include transform(translateX(-50%));
     }
 
     &.right {
@@ -69,11 +73,6 @@ nav {
       padding: 0;
     }
 
-    .lawyer {
-      position: relative;
-      top: -0.35em;
-      text-decoration: underline;
-    }
   }
 
 

@@ -43,7 +43,9 @@
 <script language="javascript" type="text/javascript">
   // materialize init code
   $('document').ready(function () {
-    $(".button-collapse").sideNav();
+    $(".button-collapse").sideNav({
+      edge: 'right'
+    });
     $('.plx').parallaxBlur(); // custom parallax effect
     $('.tooltipped').tooltip({delay: 50});
     var ln = navigator.language || navigator.userLanguage;
