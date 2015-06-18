@@ -1,0 +1,46 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  {% include _head.html %}
+</head>
+
+<body class="page">
+
+  {% include _browser-upgrade.html %}
+
+  <header>
+  {% include _navigation.html %}
+  </header>
+
+
+  <div class="plx-container">
+    <div class="plx">
+      <img src="/images/wall_medium.jpg" alt="{{ page.title }} feature image">      
+    </div>  
+    {% if page.image.credit %}
+      <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+    {% endif %}    
+  </div>
+
+  <div class="section white">
+    <div class="row container">
+      <a name="content"></a>
+      <div class="article-author-side center-align">
+        {% include _author-bio.html %}
+      </div>
+    </div>
+  </div>
+  <div class="section white">
+    <div class="row header"><div class="label">{{ page.category }}</div></div>
+  </div>
+
+  <div class="section white" style="min-height: 52em">{{ content }}</div>
+
+  <div class="page-footer grey lighten-5 valign-wrapper" style="height: 17em;">
+      {% include _footer.html %}
+  </div>    
+</body>
+</html>
