@@ -197,7 +197,7 @@ sitemap: false
 
 /* Author sidebar */
 @media #{$small-and-down} {
-  .bio-photo {
+  .article-author-side .bio-photo {
     z-index: 0;
   }
 }
