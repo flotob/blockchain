@@ -89,7 +89,7 @@ category: imprint
           RA Florian Glatz is insured with:
         </div>
         <div class="card-action grey lighten-5">
-           <a href="http://www.hdi-gerling.de" target="_blank">HDI-Gerling Firmen und Privat Vers. AG</a>
+           <a href="https://www.hdi-gerling.de/en/about_us/about_us/index.jsp" target="_blank">HDI-Gerling Firmen und Privat Vers. AG</a>
          </div>
       </div>  
     </div>
