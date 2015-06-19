@@ -38,7 +38,7 @@ category: imprint
       <div class="card white">
         <div class="card-content black-text">
           <h3 class="card-title black-text">Copyright Credits</h3>
-          Wall Foto Anna Niestroj / Theme by Materialize CSS
+          Wall Foto by Anna Niestroj / Theme by Materialize CSS
         </div>
         <div class="card-action grey lighten-5">
            <a href="http://www.blinkblink.de" target="_blank">Studio BLINKBLINK</a>
