@@ -136,6 +136,12 @@ sitemap: false
 
 
 /* Author sidebar */
+@media #{$small-and-down} {
+  .article-author-side .bio-photo {
+    z-index: 0;
+  }
+}
+
 .article-author-side {
   
   position: relative;
