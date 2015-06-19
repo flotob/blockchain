@@ -11,7 +11,7 @@
                 {% else %}
                 {% assign domain = site.url %}
             {% endif %}
-            <li><a href="{{ domain }}{{ link.url }}" class="black-text">{{ link.title }}</a></li>
+            <li><a href="{{ domain }}{{ link.url }}#content" class="black-text">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
         <ul class="side-nav" id="mobile-demo">
@@ -21,7 +21,7 @@
                 {% else %}
                 {% assign domain = site.url %}
             {% endif %}
-            <li><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li><a href="{{ domain }}{{ link.url }}#content">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
       </div>

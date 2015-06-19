@@ -107,6 +107,14 @@ sitemap: false
     @extend .z-depth-1;
     @extend .circle;
     @extend .center-align;
+
+    position: relative;
+    z-index: 1;    
+
+    &.minified {
+      position: fixed;
+      top: 0;
+    }
   }  
   .author-bio {
     display: block;
@@ -142,24 +150,6 @@ sitemap: false
   }
   .auth-social:nth-child(3) {
     margin-left: 5em;
-  }
-
-  &.collapse {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 47.5%;
-    padding: .3em;
-
-    .auth-social-wrapper, .author-bio, .author-name {
-      display: none;
-    }
-
-    .bio-photo {
-      border: 0;
-      box-shadow: none;
-      height: 3.5em;
-    }
   }
 }
 

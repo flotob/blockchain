@@ -57,12 +57,66 @@
     //   $('.article-author-side').addClass('collapse');
     // }
 
-    // $(document).on('scroll', function () {
-    //   if($(document).scrollTop() > 317)
-    //     $('.article-author-side').addClass('collapse');
-    //   else
-    //     $('.article-author-side').removeClass('collapse');
-    // });
+    var biopic = $('img.bio-photo');
+    var height = biopic.height();
+    var target = height * 47 / 100;
+    var left = biopic.offset().left - $(window).scrollLeft();
+    var zero = 353;
+
+    function setPic () {
+      var el = biopic;
+      var offset = $(document).scrollTop();
+
+      if (offset >= zero) {
+        if (el.height() > target) {
+          // if (!zero) zero = $(document).scrollTop();
+
+          var val = height - ( $(document).scrollTop() - zero );
+
+          if (val < target) val = target;
+
+          el.css({
+            height: val + 'px',
+            position: 'fixed',
+            top: '0.2em',
+            left: left + 'px'
+          });
+
+          // console.log(val, $(document).scrollTop(), zero, $(document).scrollTop() - zero);
+          // console.log('set height to:', val);
+          // console.log('target', target);
+          // console.log('scrolltop:', $(document).scrollTop());
+          // console.log('zero:', zero);
+          // console.log('diff:', $(document).scrollTop() - zero);
+        }
+        else if (el.height() != target) {
+          e.height(target);
+        }
+        // else if (el.css('position') != 'fixed') {
+        //   el.css({
+        //     position: 'fixed',
+        //     top: 0
+        //   });
+        // }
+      }
+      else if (el.css('position') != 'relative' || el.css('top') !== '0px') {
+        el.css({
+          height: '8.3em',
+          position: 'relative',
+          top: 0,
+          left: 0
+        });        
+      }      
+    }
+
+    // init
+    if ($(document).scrollTop() >= zero ) {
+      setPic();
+    }
+    // update onScroll
+    $(document).on('scroll', function () {
+      setPic();
+    });
   });
 </script>
 
