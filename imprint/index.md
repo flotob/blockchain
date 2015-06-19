@@ -84,10 +84,9 @@ category: imprint
       <div class="card white">
         <div class="card-content black-text">
           <h3 class="card-title black-text">Professional Insurance</h3>
-          German lawyers (Rechtsanwälte) are legally obliged to appropriately insured. Details can be found in § 51 BRAO.<br/>
-          <br/>
-          RA Florian Glatz<br/>
-          is insured with:
+          German lawyers (Rechtsanwälte) are legally obliged to be insured. Details can be found in § 51 BRAO.<br/>
+          <br/><br/><br/>
+          RA Florian Glatz is insured with:
         </div>
         <div class="card-action grey lighten-5">
            <a href="http://www.hdi-gerling.de" target="_blank">HDI-Gerling Firmen und Privat Vers. AG</a>
