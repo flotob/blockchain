@@ -88,9 +88,27 @@ sitemap: false
   }
 }
 
+/* cards */
 .card .card-content p {
   margin-bottom: 1em;
 }
+.card {
+  .card-image, .card-content {
+    &.sometimes-left {
+      float: left;
+    }
+  }
+}
+@media #{$small-and-down} {
+  .card {
+    .card-image, .card-content {
+      &.sometimes-left {
+        float: none;
+      }
+    }
+  }
+}
+
 
 /* Author sidebar */
 .article-author-side {
@@ -195,3 +213,4 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
+
