@@ -59,6 +59,7 @@
     var width = biopic.width();
     var left = '46%';
     var zero = 353;
+    var perfect = 343;
 
     // init
     if ($(document).scrollTop() >= zero ) {
@@ -86,7 +87,12 @@
               height: val + 'px',
               position: 'fixed',
               top: '0.2em',
-              left: left
+              left: left,
+              cursor: 'pointer'
+            });
+
+            el.on('click', function () {
+              $('html,body').animate({scrollTop: perfect}, 10);
             });
           }
           else if (el.height() != target) {
@@ -98,8 +104,11 @@
             height: '8.3em',
             position: 'relative',
             top: 0,
-            left: 0
-          });      
+            left: 0,
+            cursor: 'auto'
+          });
+
+          el.off();
         }
       }
     }
