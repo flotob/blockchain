@@ -54,7 +54,7 @@ category: imprint
         <div class="card-image sometimes-left">
           <img src="/images/brak.png">
         </div>      
-        <div class="card-content black-text sometimes-left">
+        <div class="card-content white black-text sometimes-left">
           <h3 class="card-title black-text">Supervisory authority</h3>
           Chamber of Lawyers<br/>
           Littenstraße 9<br/>
@@ -63,9 +63,6 @@ category: imprint
           <i>The professional title "Rechtsanwalt" ("Lawyer") was assigned by the Chamber of Lawyers of Berlin, Germany.<br/>
           Turnover tax identification number: DE 34/308/00538</i>
         </div>
-        <div class="card-action grey lighten-5">
-           <a href="http://www.rak-berlin.de" target="_blank">Chamber of Lawyers Berlin</a>
-         </div>        
       </div>
     </div>
     <div class="col s12 m6">  
@@ -134,7 +131,7 @@ category: imprint
         <div class="card-image sometimes-left">
           <img src="/images/brak.png">
         </div>      
-        <div class="card-content black-text sometimes-left">
+        <div class="card-content white black-text sometimes-left">
           <h3 class="card-title black-text">Aufsichtsbehörde</h3>
           Rechtsanwaltskammer Berlin<br/>
           Littenstraße 9<br/>
@@ -143,9 +140,6 @@ category: imprint
           <i>Die Berufsbezeichnung Rechtsanwalt wurde in der Bundesrepublik Deutschland verliehen.<br/>
           Umsatzsteuer-Identifikationsnummer: DE 34/308/00538</i>
         </div>
-        <div class="card-action grey lighten-5">
-           <a href="http://www.rak-berlin.de" target="_blank">Rechtsanwaltskammer Berlin</a>
-        </div>                
       </div>      
     </div>
     <div class="col s12 m6">  
