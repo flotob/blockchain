@@ -88,6 +88,18 @@ sitemap: false
   }
 }
 
+/* css-js bridge re media queries */ 
+@media #{$small-and-down} {
+  .jscssbridge {
+    float: right;
+  }
+}
+@media #{$medium-and-up} {
+  .jscssbridge {
+    float: left;
+  }
+}
+
 /* cards */
 .card .card-content p {
   margin-bottom: 1em;

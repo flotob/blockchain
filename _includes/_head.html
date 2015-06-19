@@ -70,35 +70,38 @@
     });    
 
     function setPic () {
-      var el = biopic;
-      var offset = $(document).scrollTop();
+      // secret css-js bridge for media queries (such a stupid hack)
+      if ($('.jscssbridge').css('float') == 'left') {
+        var el = biopic;
+        var offset = $(document).scrollTop();
 
-      if (offset >= zero) {
-        if (el.height() > target) {
+        if (offset >= zero) {
+          if (el.height() > target) {
 
-          var val = height - ( $(document).scrollTop() - zero );
+            var val = height - ( $(document).scrollTop() - zero );
 
-          if (val < target) val = target;
+            if (val < target) val = target;
 
-          el.css({
-            height: val + 'px',
-            position: 'fixed',
-            top: '0.2em',
-            left: left + 'px'
-          });
+            el.css({
+              height: val + 'px',
+              position: 'fixed',
+              top: '0.2em',
+              left: left + 'px'
+            });
+          }
+          else if (el.height() != target) {
+            el.css('height', target + 'px');
+          }
         }
-        else if (el.height() != target) {
-          el.css('height', target + 'px');
+        else if (el.css('position') != 'relative' || el.css('top') !== '0px') {
+          el.css({
+            height: '8.3em',
+            position: 'relative',
+            top: 0,
+            left: 0
+          });      
         }
       }
-      else if (el.css('position') != 'relative' || el.css('top') !== '0px') {
-        el.css({
-          height: '8.3em',
-          position: 'relative',
-          top: 0,
-          left: 0
-        });      
-      }      
     }
   });
 </script>
