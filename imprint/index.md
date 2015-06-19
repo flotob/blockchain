@@ -63,6 +63,9 @@ category: imprint
           <i>The professional title "Rechtsanwalt" ("Lawyer") was assigned by the Chamber of Lawyers of Berlin, Germany.<br/>
           Turnover tax identification number: DE 34/308/00538</i>
         </div>
+        <div class="card-action grey lighten-5">
+           <a href="http://www.rak-berlin.de" target="_blank">Chamber of Lawyers Berlin</a>
+         </div>                        
       </div>
     </div>
     <div class="col s12 m6">  
@@ -76,7 +79,7 @@ category: imprint
           Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE)
         </div>
         <div class="card-action grey lighten-5">
-           <a href="http://www.brak.de" target="_blank">Chamber of Lawyers Berlin</a>
+           <a href="http://www.brak.de/fuer-anwaelte/berufsrecht/" target="_blank">Chamber of Lawyers Germany</a>
          </div>
       </div>
     </div>
@@ -140,6 +143,9 @@ category: imprint
           <i>Die Berufsbezeichnung Rechtsanwalt wurde in der Bundesrepublik Deutschland verliehen.<br/>
           Umsatzsteuer-Identifikationsnummer: DE 34/308/00538</i>
         </div>
+        <div class="card-action grey lighten-5">
+           <a href="http://www.rak-berlin.de" target="_blank">Rechtsanwaltskammer Berlin</a>
+         </div>        
       </div>
     </div>
     <div class="col s12 m6">  
@@ -153,7 +159,7 @@ category: imprint
           Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE)
         </div>
         <div class="card-action grey lighten-5">
-           <a href="http://www.brak.de" target="_blank">Bundesrechtsanwaltskammer</a>
+           <a href="http://www.brak.de/fuer-anwaelte/berufsrecht/" target="_blank">Bundesrechtsanwaltskammer</a>
          </div>
       </div>
     </div>
