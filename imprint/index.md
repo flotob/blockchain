@@ -55,7 +55,7 @@ category: imprint
           <img src="/images/brak.png">
         </div>      
         <div class="card-content white black-text sometimes-left">
-          <h3 class="card-title black-text">Supervisory authority</h3>
+          <h3 class="card-title black-text">Supervisory Authority</h3>
           Chamber of Lawyers<br/>
           Littenstraße 9<br/>
           10179 Berlin, Germany<br/>
