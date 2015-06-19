@@ -135,13 +135,6 @@ sitemap: false
 }
 
 
-/* Author sidebar */
-@media #{$small-and-down} {
-  .article-author-side .bio-photo {
-    z-index: 0;
-  }
-}
-
 .article-author-side {
   
   position: relative;
@@ -199,6 +192,13 @@ sitemap: false
   }
   .auth-social:nth-child(3) {
     margin-left: 5em;
+  }
+}
+
+/* Author sidebar */
+@media #{$small-and-down} {
+  .bio-photo {
+    z-index: 0;
   }
 }
 
