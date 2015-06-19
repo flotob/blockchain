@@ -25,21 +25,29 @@ category: imprint
         <div class="card-content black-text">
           <h3 class="card-title black-text">Imprint</h3>
           RA Florian Glatz, Flemingstr. 11, 10557 Berlin
-          <br/>
-          <a href="mailto:{{ site.owner.email }}" target="_blank">{{ site.owner.email }}</a> (<a href="https://keybase.io/ftg" target="_blank">Pub Keys</a>)
         </div>
+        <div class="card-action grey lighten-5">
+           <a href="mailto:{{ site.owner.email }}" target="_blank">{{ site.owner.email }}</a>
+         </div>
+        <div class="card-action grey lighten-5">
+           <a href="https://keybase.io/ftg" target="_blank">Public Keys (hosted on keybase.io)</a>
+         </div>                 
       </div>
     </div>
     <div class="col s12 m6">
       <div class="card white">
         <div class="card-content black-text">
           <h3 class="card-title black-text">Copyright Credits</h3>
-          Wall by <a href="http://www.blinkblink.de" target="_blank">Anna Niestroj / Studio BlinkBlink</a>.
-          <br/>
-          Theme built with <a href="http://materializecss.com" target="_blank">Materialize CSS</a>.
+          Wall Foto Anna Niestroj / Theme by Materialize CSS
         </div>
+        <div class="card-action grey lighten-5">
+           <a href="http://www.blinkblink.de" target="_blank">Studio BLINKBLINK</a>
+         </div>
+        <div class="card-action grey lighten-5">
+           <a href="http://materializecss.com" target="_blank">Materialize CSS</a>
+         </div>                         
       </div>
-    </div>  
+    </div>    
 
     <div class="col s12 m12">
       <div class="card white">
@@ -94,20 +102,29 @@ category: imprint
         <div class="card-content black-text">
           <h3 class="card-title black-text">Impressum</h3>
           RA Florian Glatz, Flemingstr. 11, 10557 Berlin
-          <a href="mailto:{{ site.owner.email }}" target="_blank">{{ site.owner.email }}</a> (<a href="https://keybase.io/ftg" target="_blank">Pub Keys</a>)
         </div>
+        <div class="card-action grey lighten-5">
+           <a href="mailto:{{ site.owner.email }}" target="_blank">{{ site.owner.email }}</a>
+         </div>
+        <div class="card-action grey lighten-5">
+           <a href="https://keybase.io/ftg" target="_blank">Public Keys (hosted on keybase.io)</a>
+         </div>                 
       </div>
     </div>
     <div class="col s12 m6">
       <div class="card white">
         <div class="card-content black-text">
           <h3 class="card-title black-text">Rechtehinweis</h3>
-          Wand von <a href="http://www.blinkblink.de" target="_blank">Anna Niestroj / Studio BlinkBlink</a>.
-          <br/>
-          Theme gebaut mit <a href="http://materializecss.com" target="_blank">Materialize CSS</a>.
+          Wandbild von Anna Niestroj / Theme by Materialize CSS
         </div>
+        <div class="card-action grey lighten-5">
+           <a href="http://www.blinkblink.de" target="_blank">Studio BLINKBLINK</a>
+         </div>
+        <div class="card-action grey lighten-5">
+           <a href="http://materializecss.com" target="_blank">Materialize CSS</a>
+         </div>                         
       </div>
-    </div>  
+    </div>
 
     <div class="col s12 m12">
       <div class="card white">
