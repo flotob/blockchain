@@ -143,10 +143,10 @@ category: imprint
           <i>Die Berufsbezeichnung Rechtsanwalt wurde in der Bundesrepublik Deutschland verliehen.<br/>
           Umsatzsteuer-Identifikationsnummer: DE 34/308/00538</i>
         </div>
-      </div>
-      <div class="card-action grey lighten-5">
-         <a href="http://www.rak-berlin.de" target="_blank">Rechtsanwaltskammer Berlin</a>
-       </div>              
+        <div class="card-action grey lighten-5">
+           <a href="http://www.rak-berlin.de" target="_blank">Rechtsanwaltskammer Berlin</a>
+        </div>                
+      </div>      
     </div>
     <div class="col s12 m6">  
       <div class="card white">
