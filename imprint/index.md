@@ -60,7 +60,7 @@ category: imprint
           Littenstraße 9<br/>
           10179 Berlin, Germany<br/>
           <br/>
-          <i>The professional title "Rechtsanwalt" ("Lawyer") was assigned by the Chamber of Lawyers of Berlin, Germany.<br/>
+          <i>The professional title "Rechtsanwalt" ("Lawyer") was assigned by the Chamber of Lawyers.<br/>
           Turnover tax identification number: DE 34/308/00538</i>
         </div>
       </div>
