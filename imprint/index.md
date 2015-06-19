@@ -43,10 +43,10 @@ category: imprint
 
     <div class="col s12 m12">
       <div class="card white">
-        <div class="card-image sometimes-left valign-wrapper" style="max-width: 30%">
-          <img src="/images/brak.png" class="valign" style="position: relative; top: 4em;">
+        <div class="card-image sometimes-left">
+          <img src="/images/brak.png">
         </div>      
-        <div class="card-content black-text sometimes-left"  style="max-width: 70%">
+        <div class="card-content black-text sometimes-left">
           <h3 class="card-title black-text">Supervisory authority</h3>
           Chamber of Lawyers<br/>
           Littenstraße 9<br/>
@@ -111,10 +111,10 @@ category: imprint
 
     <div class="col s12 m12">
       <div class="card white">
-        <div class="card-image sometimes-left valign-wrapper" style="max-width: 30%">
-          <img src="/images/brak.png" class="valign" style="position: relative; top: 4em;">
+        <div class="card-image sometimes-left">
+          <img src="/images/brak.png">
         </div>      
-        <div class="card-content black-text sometimes-left"  style="max-width: 70%">
+        <div class="card-content black-text sometimes-left">
           <h3 class="card-title black-text">Aufsichtsbehörde</h3>
           Rechtsanwaltskammer Berlin<br/>
           Littenstraße 9<br/>

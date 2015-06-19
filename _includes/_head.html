@@ -51,12 +51,8 @@
     var ln = navigator.language || navigator.userLanguage;
     $('ul.tabs').tabs('select_tab', ln && _.indexOf(ln, ['de', 'en']) ? ln : 'en');
 
-    // social affairs
-    // if($(document).scrollTop() > 317) {
-    //   $('.article-author-side').addClass('notransition');
-    //   $('.article-author-side').addClass('collapse');
-    // }
 
+    // BioPic ScrollEffect
     var biopic = $('img.bio-photo');
     var height = biopic.height();
     var target = height * 47 / 100;
@@ -64,7 +60,14 @@
     var left = biopic.offset().left - $(window).scrollLeft();
     var zero = 353;
 
-    console.log(left);
+    // init
+    if ($(document).scrollTop() >= zero ) {
+      setPic();
+    }
+    // update onScroll
+    $(document).on('scroll', function () {
+      setPic();
+    });    
 
     function setPic () {
       var el = biopic;
@@ -72,7 +75,6 @@
 
       if (offset >= zero) {
         if (el.height() > target) {
-          // if (!zero) zero = $(document).scrollTop();
 
           var val = height - ( $(document).scrollTop() - zero );
 
@@ -82,26 +84,12 @@
             height: val + 'px',
             position: 'fixed',
             top: '0.2em',
-            // left: (left - (width - el.width())) + 'px'
             left: left + 'px'
           });
-
-          // console.log(val, $(document).scrollTop(), zero, $(document).scrollTop() - zero);
-          // console.log('set height to:', val);
-          // console.log('target', target);
-          // console.log('scrolltop:', $(document).scrollTop());
-          // console.log('zero:', zero);
-          // console.log('diff:', $(document).scrollTop() - zero);
         }
         else if (el.height() != target) {
-          e.height(target);
+          el.css('height', target + 'px');
         }
-        // else if (el.css('position') != 'fixed') {
-        //   el.css({
-        //     position: 'fixed',
-        //     top: 0
-        //   });
-        // }
       }
       else if (el.css('position') != 'relative' || el.css('top') !== '0px') {
         el.css({
@@ -109,18 +97,9 @@
           position: 'relative',
           top: 0,
           left: 0
-        });        
+        });      
       }      
     }
-
-    // init
-    if ($(document).scrollTop() >= zero ) {
-      setPic();
-    }
-    // update onScroll
-    $(document).on('scroll', function () {
-      setPic();
-    });
   });
 </script>
 

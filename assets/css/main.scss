@@ -96,7 +96,16 @@ sitemap: false
   .card-image, .card-content {
     &.sometimes-left {
       float: left;
+      img {
+        position: relative; top: 4em;
+      }
     }
+  }
+  .card-image.sometimes-left {
+    max-width: 30%;
+  }
+  .card-content.sometimes-left {
+    max-width: 70%;
   }
 }
 @media #{$small-and-down} {
@@ -104,6 +113,10 @@ sitemap: false
     .card-image, .card-content {
       &.sometimes-left {
         float: none;
+        max-width: none;
+        img {
+          position: static;
+        }
       }
     }
   }
