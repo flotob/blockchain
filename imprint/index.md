@@ -84,7 +84,7 @@ category: imprint
       <div class="card white">
         <div class="card-content black-text">
           <h3 class="card-title black-text">Professional Insurance</h3>
-          German lawyers (Rechtsanwälte) are obliged due to regulation in the Bundesrechtsanwaltsordnung (BRAO), to be professionally insured. Details can be found in § 51 BRAO.<br/>
+          German lawyers (Rechtsanwälte) are legally obliged to appropriately insured. Details can be found in § 51 BRAO.<br/>
           <br/>
           RA Florian Glatz<br/>
           is insured with:
