@@ -60,8 +60,11 @@
     var biopic = $('img.bio-photo');
     var height = biopic.height();
     var target = height * 47 / 100;
+    var width = biopic.width();
     var left = biopic.offset().left - $(window).scrollLeft();
     var zero = 353;
+
+    console.log(left);
 
     function setPic () {
       var el = biopic;
@@ -79,6 +82,7 @@
             height: val + 'px',
             position: 'fixed',
             top: '0.2em',
+            // left: (left - (width - el.width())) + 'px'
             left: left + 'px'
           });
 
