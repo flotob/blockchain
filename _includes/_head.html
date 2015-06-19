@@ -57,7 +57,7 @@
     var height = biopic.height();
     var target = height * 47 / 100;
     var width = biopic.width();
-    var left = biopic.offset().left - $(window).scrollLeft();
+    var left = '46%';
     var zero = 353;
 
     // init
@@ -86,7 +86,7 @@
               height: val + 'px',
               position: 'fixed',
               top: '0.2em',
-              left: left + 'px'
+              left: left
             });
           }
           else if (el.height() != target) {
