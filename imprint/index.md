@@ -56,10 +56,7 @@ category: imprint
         </div>      
         <div class="card-content white black-text sometimes-left">
           <h3 class="card-title black-text">Supervisory Authority</h3>
-          Chamber of Lawyers<br/>
-          Littenstraße 9<br/>
-          10179 Berlin, Germany<br/>
-          <br/>
+          Chamber of Lawyers, Littenstraße 9, 10179 Berlin, Germany<br/>
           <i>The professional title "Rechtsanwalt" ("Lawyer") was assigned by the Chamber of Lawyers.<br/>
           Turnover tax identification number: DE 34/308/00538</i>
         </div>
@@ -132,10 +129,7 @@ category: imprint
         </div>      
         <div class="card-content white black-text sometimes-left">
           <h3 class="card-title black-text">Aufsichtsbehörde</h3>
-          Rechtsanwaltskammer Berlin<br/>
-          Littenstraße 9<br/>
-          10179 Berlin<br/>
-          <br/>
+          Rechtsanwaltskammer Berlin, Littenstraße 9, 10179 Berlin<br/>          
           <i>Die Berufsbezeichnung Rechtsanwalt wurde in der Bundesrepublik Deutschland verliehen.<br/>
           Umsatzsteuer-Identifikationsnummer: DE 34/308/00538</i>
         </div>
