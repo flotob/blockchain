@@ -7,21 +7,25 @@
         <ul class="right hide-on-med-and-down">
           {% for link in site.data.navigation %}
             {% if link.url contains 'http' %}
-                {% assign domain = '' %}
-                {% else %}
-                {% assign domain = site.url %}
+              {% assign domain = '' %}
+              {% assign anchor = '#content' %}
+            {% else %}
+              {% assign domain = site.url %}
+              {% assign anchor = '' %}
             {% endif %}
-            <li><a href="{{ domain }}{{ link.url }}#content" class="black-text">{{ link.title }}</a></li>
+            <li><a href="{{ domain }}{{ link.url }}{{ anchor }}" class="black-text">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
         <ul class="side-nav" id="mobile-demo">
           {% for link in site.data.navigation %}
             {% if link.url contains 'http' %}
-                {% assign domain = '' %}
-                {% else %}
-                {% assign domain = site.url %}
+              {% assign domain = '' %}
+              {% assign anchor = '#content' %}
+            {% else %}
+              {% assign domain = site.url %}
+              {% assign anchor = '' %}
             {% endif %}
-            <li><a href="{{ domain }}{{ link.url }}#content">{{ link.title }}</a></li>
+            <li><a href="{{ domain }}{{ link.url }}{{ anchor }}">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
       </div>
