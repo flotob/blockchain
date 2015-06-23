@@ -23,7 +23,7 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
-<link href="//cdn.rawgit.com/noelboss/featherlight/1.3.2/release/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
+<!-- <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.2/release/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" /> -->
 
 <meta http-equiv="cleartype" content="on">
 
@@ -39,7 +39,7 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.3/lodash.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
-<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.2/release/featherlight.min.js"></script>
+<!-- <script src="//cdn.rawgit.com/noelboss/featherlight/1.3.2/release/featherlight.min.js"></script> -->
 <script src="/assets/js/velocity.ui.js"></script>
 <script src="/assets/js/parallax_blur.js"></script>
 <script language="javascript" type="text/javascript">
@@ -53,14 +53,14 @@
     var ln = navigator.language || navigator.userLanguage;
     $('ul.tabs').tabs('select_tab', ln && _.indexOf(ln, ['de', 'en']) ? ln : 'en');
 
-    $('.pubkeypop').featherlight(null, {
-      beforeContent: function () {
-        var content = this.$instance.find('.featherlight-inner');
-        content.replaceWith(content.wrap('<pre />'));
-        this.$instance.find('.featherlight-content')
-          .prepend('<a href="https://keybase.io/ftg" target="_blank" class="orange-text text-lighten-3"><i class="fa fa-fw fa-key"></i> track on keybase.io/ftg</a>');
-      }
-    });
+    // $('.pubkeypop').featherlight(null, {
+    //   beforeContent: function () {
+    //     var content = this.$instance.find('.featherlight-inner');
+    //     content.replaceWith(content.wrap('<pre />'));
+    //     this.$instance.find('.featherlight-content')
+    //       .prepend('<a href="https://keybase.io/ftg" target="_blank" class="orange-text text-lighten-3"><i class="fa fa-fw fa-key"></i> track on keybase.io/ftg</a>');
+    //   }
+    // });
 
 
     // BioPic ScrollEffect
