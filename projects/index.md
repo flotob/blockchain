@@ -10,7 +10,7 @@ category: Projects
   <div class="col s12 m4">
     <div class="card white">
       <div class="card-image">
-        <img src="/images/bitrights.png">
+        <img src="/images/bitrights.png" style="padding: 2em;">
       </div>
       <div class="card-content black-text">
         <h3 class="card-title black-text">Bitrights</h3>
@@ -36,7 +36,7 @@ category: Projects
   <div class="col s12 m4">
     <div class="card white">
       <div class="card-image">
-        <img src="/images/p2pvalue.png">
+        <img src="/images/p2pvalue.png" style="padding: 2em;">
       </div>    
       <div class="card-content black-text">
         <h3 class="card-title black-text">P2PValue</h3>
