@@ -23,7 +23,7 @@ category: Privacy Policy
       <div class="card white">
         <div class="card-content black-text">
           <h3 class="card-title black-text">Privacy Policy</h3>
-This website is hosted on Github. Additionally, this website requests javascript libraries and webfonts from servers operated by Google, CDNJS and Twitter.
+This website is hosted on Github. Additionally, this website requests javascript libraries and webfonts from servers operated by Google, CDNJS, RawGIT and Twitter.
         </div>
         <div class="card-action grey lighten-5">
            <a href="http://github.com/flotob/blockchain" target="_blank">Source Code on Github</a>
@@ -36,7 +36,10 @@ This website is hosted on Github. Additionally, this website requests javascript
          </div>                          
         <div class="card-action grey lighten-5">
            <a href="https://www.cloudflare.com/security-policy" target="_blank">Privacy Policy of CloudFlare (CDNJS)</a>
-         </div>                                   
+         </div>
+        <div class="card-action grey lighten-5">
+           <a href="http://rawgit.com" target="_blank">RawGIT (no privacy policy available)</a>
+         </div>                                            
         <div class="card-action grey lighten-5">
            <a href="https://twitter.com/privacy" target="_blank">Privacy Policy of Twitter</a>
          </div>                                            
@@ -49,7 +52,7 @@ This website is hosted on Github. Additionally, this website requests javascript
       <div class="card white">
         <div class="card-content black-text">
           <h3 class="card-title black-text">Datenschutzhinweise</h3>
-          Diese Seite wird von Github gehostet. Ebenfalls fordert die Seite beim Laden Programmbibliotheken (Javascript) und Webfonts von Servern an, die von Google, CloudFlare (CDNJS) und Twitter betrieben werden.
+          Diese Seite wird von Github gehostet. Ebenfalls fordert die Seite beim Laden Programmbibliotheken (Javascript) und Webfonts von Servern an, die von Google, CloudFlare (CDNJS), RawGIT und Twitter betrieben werden.
         </div>
         <div class="card-action grey lighten-5">
            <a href="http://github.com/flotob/blockchain" target="_blank">Quellcode auf Github</a>
@@ -63,6 +66,9 @@ This website is hosted on Github. Additionally, this website requests javascript
         <div class="card-action grey lighten-5">
            <a href="https://www.cloudflare.com/security-policy" target="_blank">Datenschutzbestimmungen von CloudFlare (CDNJS)</a>
          </div>                                   
+        <div class="card-action grey lighten-5">
+           <a href="http://rawgit.com" target="_blank">RawGIT (keine Datenschutzhinweise vorhanden)</a>
+         </div>                                                     
         <div class="card-action grey lighten-5">
            <a href="https://twitter.com/privacy" target="_blank">Datenschutzbestimmungen von Twitter</a>
          </div>                 
