@@ -53,6 +53,15 @@
     var ln = navigator.language || navigator.userLanguage;
     $('ul.tabs').tabs('select_tab', ln && _.indexOf(ln, ['de', 'en']) ? ln : 'en');
 
+    $('.pubkeypop').featherlight(null, {
+      beforeContent: function () {
+        var content = this.$instance.find('.featherlight-inner');
+        content.replaceWith(content.wrap('<pre />'));
+        this.$instance.find('.featherlight-content')
+          .prepend('<a href="https://keybase.io/ftg" target="_blank" class="orange-text text-lighten-3"><i class="fa fa-fw fa-key"></i> track on keybase.io/ftg</a>');
+      }
+    });
+
 
     // BioPic ScrollEffect
     var biopic = $('img.bio-photo');
