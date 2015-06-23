@@ -61,7 +61,7 @@ category: Projects
        </div>           
       <div class="card-action grey lighten-5">
          <a href="http://medium.com/@heckerhut" target="_blank">Read my Blog</a>
-       </div>                        
+       </div>
     </div>
     <div class="card white">
       <div class="card-image">

@@ -41,6 +41,12 @@ category: consulting
         <h3 class="card-title black-text">Legal Guidance</h3>
         These are some of the companies in the Blockchain space that I advice in a legal capacity.
       </div>
+      <div class="card-action grey lighten-5">
+         <a href="http://twitter.com/heckerhut" target="_blank">Follow me on Twitter</a>
+       </div>           
+      <div class="card-action grey lighten-5">
+         <a href="http://medium.com/@heckerhut" target="_blank">Read my Blog</a>
+       </div>      
     </div>
   </div>  
 </div>
