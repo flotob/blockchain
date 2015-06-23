@@ -32,23 +32,6 @@ category: Projects
          <a href="http://docontract.com/" target="_blank">docontract.com</a>
        </div>                
     </div>    
-  </div>     
-  <div class="col s12 m4">
-    <div class="card white">
-      <div class="card-image">
-        <img src="/images/p2pvalue.png" style="padding: 2em;">
-      </div>    
-      <div class="card-content black-text">
-        <h3 class="card-title black-text">P2PValue</h3>
-        Techno-social platform for sustainable models and value generation in commons-based peer production in the future internet.
-      </div>
-      <div class="card-action grey lighten-5">
-         <a href="http://www.p2pvalue.eu" target="_blank">P2PValue.eu</a>
-       </div>                
-      <div class="card-action grey lighten-5">
-         <a href="http://cordis.europa.eu/fp7/ict/" target="_blank">EUROPEAN COMMISSION (FP 7)</a>
-       </div>                
-    </div>
   </div>
   <div class="col s12 m4">
     <div class="card white">
