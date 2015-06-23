@@ -20,6 +20,18 @@ category: Projects
          <a href="http://bitrights.org/" target="_blank">Bitrights.org</a>
        </div>                
     </div>
+    <div class="card white">
+      <div class="card-image">
+        <img src="/images/vimendo.jpg">
+      </div>    
+      <div class="card-content black-text">
+        <h3 class="card-title black-text">Vimendo</h3>
+        E-Learning For Professional and Amateur Sports
+      </div>
+      <div class="card-action grey lighten-5">
+         <a href="http://vimendo.de/" target="_blank">vimendo.de</a>
+       </div>                             
+    </div>           
   </div>
   <div class="col s12 m4">
     <div class="card white">
@@ -47,18 +59,6 @@ category: Projects
       <div class="card-action grey lighten-5">
          <a href="http://medium.com/@heckerhut" target="_blank">Read my Blog</a>
        </div>
-    </div>
-    <div class="card white">
-      <div class="card-image">
-        <img src="/images/vimendo.jpg">
-      </div>    
-      <div class="card-content black-text">
-        <h3 class="card-title black-text">Vimendo</h3>
-        E-Learning For Professional and Amateur Sports
-      </div>
-      <div class="card-action grey lighten-5">
-         <a href="http://vimendo.de/" target="_blank">vimendo.de</a>
-       </div>                             
-    </div>        
+    </div> 
   </div>  
 </div>
