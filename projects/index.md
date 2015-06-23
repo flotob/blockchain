@@ -20,6 +20,8 @@ category: Projects
          <a href="http://bitrights.org/" target="_blank">Bitrights.org</a>
        </div>                
     </div>
+  </div>
+  <div class="col s12 m4">
     <div class="card white">
       <div class="card-image">
         <img src="/images/docontract.png">
@@ -31,7 +33,7 @@ category: Projects
       <div class="card-action grey lighten-5">
          <a href="http://docontract.com/" target="_blank">docontract.com</a>
        </div>                
-    </div>    
+    </div>        
   </div>
   <div class="col s12 m4">
     <div class="card white">
