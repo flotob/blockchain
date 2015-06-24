@@ -35,7 +35,7 @@ category: Research
         <img src="/images/p2pvalue.png" style="padding: 2em;">
       </div>    
       <div class="card-content black-text">
-        <h3 class="card-title black-text">P2PValue</h3>
+        <!-- <h3 class="card-title black-text">P2PValue</h3> -->
         Techno-social platform for sustainable models and value generation in commons-based peer production in the future internet.
       </div>
       <div class="card-action grey lighten-5">
