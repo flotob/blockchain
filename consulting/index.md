@@ -14,7 +14,7 @@ category: consulting
       </div>
       <div class="card-content black-text">
         <h3 class="card-title black-text">SatoshiPay</h3>
-        Bitcoin PSP Provider
+        Bitcoin Payment Service
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://satoshipay.net/" target="_blank">SatoshiPay.net</a>
