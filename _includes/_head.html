@@ -105,7 +105,7 @@
             if (!el.next('.bio-photo-placeholder').length)
               $('<div class="bio-photo-placeholder" />')
                 .insertAfter(el)
-                .height(height);
+                .height(height + 5);
 
             el.on('click', function () {
               $('html,body').animate({scrollTop: perfect}, 10);
