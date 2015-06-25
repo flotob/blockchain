@@ -55,7 +55,7 @@ category: Research
       </div>
       <div class="card-action grey lighten-5">
         <a href="http://ec.europa.eu/internal_market/retail/docs/140711-study-utp-legal-framework_en.pdf" target="_blank">
-          UTP Framework Study
+          UTP Framework Study (PDF)
         </a>
       </div>
       <div class="card-action grey lighten-5">
@@ -63,32 +63,4 @@ category: Research
       </div>
     </div>
   </div>  
-<!--   <div class="col s12 m3">
-    <div class="card white">
-      <div class="card-image">
-        <img src="/images/bitshake.png">
-      </div>
-      <div class="card-content black-text">
-        <h3 class="card-title black-text">Bitshake</h3>
-        Smart Contracts Platform
-      </div>
-      <div class="card-action grey lighten-5">
-         <a href="http://www.bitshake.io" target="_blank">Bitshake.io</a>
-       </div>                
-    </div>
-  </div>        
-  <div class="col s12 m3">
-    <div class="card white">
-      <div class="card-content black-text">
-        <h3 class="card-title black-text">Legal Guidance</h3>
-        These are some of the organizations in the Blockchain space that I advice in a legal capacity.
-      </div>
-      <div class="card-action grey lighten-5">
-         <a href="http://twitter.com/heckerhut" target="_blank">Follow me on Twitter</a>
-       </div>           
-      <div class="card-action grey lighten-5">
-         <a href="http://medium.com/@heckerhut" target="_blank">Read my Blog</a>
-       </div>      
-    </div>
-  </div> -->
 </div>
