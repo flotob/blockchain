@@ -102,6 +102,11 @@
               cursor: 'pointer'
             });
 
+            if (!el.next('.bio-photo-placeholder').length)
+              $('<div class="bio-photo-placeholder" />')
+                .insertAfter(el)
+                .height(height);
+
             el.on('click', function () {
               $('html,body').animate({scrollTop: perfect}, 10);
             });
@@ -118,6 +123,8 @@
             left: 0,
             cursor: 'auto'
           });
+
+          el.next('.bio-photo-placeholder').remove();
 
           el.off();
         }
