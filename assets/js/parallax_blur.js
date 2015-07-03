@@ -1,3 +1,4 @@
+
 (function ($) {
 
     $.fn.parallaxBlur = function () {
@@ -46,7 +47,7 @@
             $this.children("img").last()
               .css({
                 display: 'block',
-                opacity: percentScrolled * ($(document).scrollTop()/150)
+                opacity: percentScrolled * ($(document).scrollTop()/90)
               });
           }
 
