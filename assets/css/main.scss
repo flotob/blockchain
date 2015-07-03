@@ -55,11 +55,15 @@ sitemap: false
   }
 }
 @media #{$small-and-down} {
-  .plx-container .plx img {
-    position: static;
-    min-width: 0; min-height: 0;
-    width: 135%;
-    height: auto;
+  .plx-container  {
+    height: 15rem;
+
+    .plx img {
+      position: absolute; top: -4em; left: 0;
+      min-width: 0; min-height: 0;
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
