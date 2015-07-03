@@ -54,6 +54,14 @@ sitemap: false
       }
   }
 }
+@media #{$small-and-down} {
+  .plx-container .plx img {
+    position: static;
+    min-width: 0; min-height: 0;
+    width: 135%;
+    height: auto;
+  }
+}
 
 
 #sidenav-overlay {
