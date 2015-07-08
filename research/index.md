@@ -37,7 +37,7 @@ category: Research
       </div>    
       <div class="card-content black-text">
         Techno-social platform for sustainable models and value generation in commons-based peer production in the future internet.
-        <span class="xtitle">Ingénieur d'etudes</span>
+        <span class="xtitle">Researcher</span>
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://www.p2pvalue.eu" target="_blank">P2PValue.eu</a>
