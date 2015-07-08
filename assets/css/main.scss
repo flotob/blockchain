@@ -29,6 +29,12 @@ sitemap: false
 @import "vendor/materialize/materialize";
 
 
+.xtitle {
+  color: rgba(0,0,0,.5);
+  margin-top: 1em;
+  display: block;
+}
+
 .plx-container {
   height: 30rem;
   position: relative;

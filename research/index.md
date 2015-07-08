@@ -14,6 +14,7 @@ category: Research
           I research smart contracts, distributed consensus networks and algorithmical governance from a legal, technological and sociological perspective.<br/>
           <br/>
           My superverisor is Prof. Dr. Rupprecht Podszun at University Bayreuth.
+          <br/><br/>
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://www.zivilrecht8.uni-bayreuth.de/de/team/owner_of_chair/Rupprecht_Podszun/" target="_blank">Civil Law Chair Podszun</a>
@@ -35,8 +36,8 @@ category: Research
         <img src="/images/p2pvalue.png" style="padding: 2em;">
       </div>    
       <div class="card-content black-text">
-        <!-- <h3 class="card-title black-text">P2PValue</h3> -->
         Techno-social platform for sustainable models and value generation in commons-based peer production in the future internet.
+        <span class="xtitle">Ingénieur d'etudes</span>
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://www.p2pvalue.eu" target="_blank">P2PValue.eu</a>
@@ -51,7 +52,9 @@ category: Research
       <div class="card-image"><img src="/images/eu.png"></div>
       <div class="card-content black-text">
         <h3>Unfair Trading Practices</h3>
-        Study on the legal framework covering business-to-business UTPs in the retail supply chain.
+        Study on the legal framework covering business-to-business UTPs in the retail supply chain (2013-2014).
+      	<br/><br/>
+	     <span class="xtitle">National Expert Germany</span>
       </div>
       <div class="card-action grey lighten-5">
         <a href="http://ec.europa.eu/internal_market/retail/docs/140711-study-utp-legal-framework_en.pdf" target="_blank">
