@@ -14,9 +14,9 @@ category: consulting
       </div>
       <div class="card-content black-text">
         <h3 class="card-title black-text">SatoshiPay</h3>
-        Bitcoin Payment Service
+	Bitcoin Nano-PSP 
         <br/><br/>
-        /Software Developer & Advisor        
+        /Core-Dev & Legal        
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://satoshipay.net/" target="_blank">SatoshiPay.net</a>
@@ -32,7 +32,7 @@ category: consulting
         <h3 class="card-title black-text">Bitshake</h3>
         Smart Contracts Platform
         <br/><br/>
-        /Advisor
+        /Chief Legal Hacker
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://www.bitshake.io" target="_blank">Bitshake.io</a>
@@ -43,7 +43,7 @@ category: consulting
     <div class="card white">
       <div class="card-content black-text">
         <h3 class="card-title black-text">Legal Guidance</h3>
-        These are some of the organizations in the Blockchain space that I advice in a legal capacity.
+        These are some of the organizations in the Blockchain space that I advice in a techno-legal capacity.
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://twitter.com/heckerhut" target="_blank">Follow me on Twitter</a>
