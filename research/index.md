@@ -14,7 +14,6 @@ category: Research
           I research smart contracts, distributed consensus networks and algorithmical governance from a legal, technological and sociological perspective.<br/>
           <br/>
           My superverisor is Prof. Dr. Rupprecht Podszun at University Bayreuth.
-          <br/><br/>
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://www.zivilrecht8.uni-bayreuth.de/de/team/owner_of_chair/Rupprecht_Podszun/" target="_blank">Civil Law Chair Podszun</a>
