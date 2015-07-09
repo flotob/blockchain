@@ -37,7 +37,7 @@ category: Research
       </div>    
       <div class="card-content black-text">
         Techno-social platform for sustainable models and value generation in commons-based peer production in the future internet.
-        <span class="xtitle">Researcher at CERSA/CNRS/Paris2</span>
+        <span class="xtitle">Researcher @CERSA/CNRS/Paris2</span>
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://www.p2pvalue.eu" target="_blank">P2PValue.eu</a>
@@ -54,7 +54,7 @@ category: Research
         <h3>Unfair Trading Practices</h3>
         Study on the legal framework covering business-to-business UTPs in the retail supply chain (2013-2014).
       	<br/><br/>
-	     <span class="xtitle">National Expert Germany</span>
+	     <span class="xtitle">Researcher @EUI Florence</span>
       </div>
       <div class="card-action grey lighten-5">
         <a href="http://ec.europa.eu/internal_market/retail/docs/140711-study-utp-legal-framework_en.pdf" target="_blank">
