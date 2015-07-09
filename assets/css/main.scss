@@ -33,6 +33,10 @@ sitemap: false
   color: rgba(0,0,0,.5);
   margin-top: 1em;
   display: block;
+
+  a {
+    color: inherit!important;
+  }
 }
 
 .plx-container {
