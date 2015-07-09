@@ -15,6 +15,7 @@ category: Projects
       <div class="card-content black-text">
         <h3 class="card-title black-text">Vimendo</h3>
         E-Learning For Professional and Amateur Sports
+        <span class="xtitle">Co-Founder & CTO</span>
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://vimendo.de/" target="_blank">vimendo.de</a>
@@ -29,6 +30,7 @@ category: Projects
       <div class="card-content black-text">
         <h3 class="card-title black-text">contract()</h3>
         Free and Open Source Contract Templating Engine for Independent Game Developers and other Freelancers
+        <span class="xtitle">Advisor</span>
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://docontract.com/" target="_blank">docontract.com</a>
@@ -41,6 +43,7 @@ category: Projects
       <div class="card-content black-text">
         <h3 class="card-title black-text">Bitrights</h3>
         Blockchain Thinktank
+        <span class="xtitle">Co-Founder & Researcher</span>
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://bitrights.org/" target="_blank">Bitrights.org</a>
