@@ -15,8 +15,7 @@ category: consulting
       <div class="card-content black-text">
         <h3 class="card-title black-text">SatoshiPay</h3>
 	Bitcoin Nano-PSP 
-        <br/><br/>
-        /Core-Dev & Legal        
+        <span class="xtitle">Core-Dev & Legal</span>
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://satoshipay.net/" target="_blank">SatoshiPay.net</a>
@@ -31,8 +30,7 @@ category: consulting
       <div class="card-content black-text">
         <h3 class="card-title black-text">Bitshake</h3>
         Smart Contracts Platform
-        <br/><br/>
-        /Chief Legal Hacker
+        <span class="xtitle">Chief Legal Hacker</span>
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://www.bitshake.io" target="_blank">Bitshake.io</a>
