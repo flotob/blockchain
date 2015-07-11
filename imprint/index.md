@@ -38,10 +38,10 @@ category: imprint
       <div class="card white">
         <div class="card-content black-text">
           <h3 class="card-title black-text">Copyright Credits</h3>
-          Wall Foto by Anna Niestroj / Theme by Materialize CSS
+          Block Foto by UNSPLASH / Theme by Materialize CSS
         </div>
         <div class="card-action grey lighten-5">
-           <a href="http://www.blinkblink.de" target="_blank">Studio BLINKBLINK</a>
+           <a href="http://unsplash.com" target="_blank">UNSPLASH</a>
          </div>
         <div class="card-action grey lighten-5">
            <a href="http://materializecss.com" target="_blank">Materialize CSS</a>
