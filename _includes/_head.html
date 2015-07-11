@@ -99,7 +99,7 @@
 
     function setPic () {
       // secret css-js bridge for media queries (such a stupid hack)
-      // if ($('.jscssbridge').css('float') == 'left') {
+      if ($('.jscssbridge').css('float') == 'left') {
         var el = biopic;
         var offset = $(document).scrollTop();
 
@@ -156,7 +156,7 @@
 
           el.off();
         }
-      // }
+      }
     }
   });
 </script>
