@@ -111,10 +111,10 @@ category: imprint
       <div class="card white">
         <div class="card-content black-text">
           <h3 class="card-title black-text">Rechtehinweis</h3>
-          Wandbild von Anna Niestroj / Theme by Materialize CSS
+          Blockbild von UNSPLASH / Theme by Materialize CSS
         </div>
         <div class="card-action grey lighten-5">
-           <a href="http://www.blinkblink.de" target="_blank">Studio BLINKBLINK</a>
+           <a href="http://www.unsplash.com" target="_blank">UNSPLASH</a>
          </div>
         <div class="card-action grey lighten-5">
            <a href="http://materializecss.com" target="_blank">Materialize CSS</a>
