@@ -79,6 +79,15 @@ body {
   }
 }
 @media #{$small-and-down} {
+  body {
+    background: url(/images/blocks.jpg) repeat left top fixed; 
+    background-size: 100% auto;
+  }
+
+  .section.content {
+    opacity: 1;
+  }  
+
   .plx-container  {
     height: 15rem;
 
