@@ -80,7 +80,7 @@ body {
 }
 @media #{$small-and-down} {
   body {
-    background: url(/images/blocks.jpg) repeat left top fixed; 
+    background: url(/images/blocks.jpg) no-repeat left top fixed; 
     background-size: 100% auto;
   }
 
