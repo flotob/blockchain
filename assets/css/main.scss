@@ -29,6 +29,20 @@ sitemap: false
 @import "vendor/materialize/materialize";
 
 
+body {
+  background: url(/images/blocks.jpg) no-repeat center center fixed; 
+  background-size: 100% 100%;
+}
+
+.section.content {
+  opacity: .9;
+  @include box-shadow-2(0 2px 5px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16));
+}
+
+.page-footer {
+  height: 17em;
+}
+
 .xtitle {
   color: rgba(0,0,0,.5);
   margin-top: 1em;
@@ -42,7 +56,7 @@ sitemap: false
 .plx-container {
   height: 30rem;
   position: relative;
-  overflow: hidden;  
+  overflow: show;  
 
   .plx {
     position: absolute;
@@ -156,14 +170,7 @@ sitemap: false
   }
 }
 
-
-.article-author-side {
-  
-  position: relative;
-  top: -7.5em;
-  margin-bottom: -6em;
-
-  .bio-photo {
+.bio-photo {
     height: 8.3em;
     width: auto;
     border: 3px solid #fff;
@@ -179,7 +186,16 @@ sitemap: false
       position: fixed;
       top: 0;
     }
+
+
   }  
+
+.article-author-side {
+  
+  position: relative;
+  top: -7.5em;
+  margin-bottom: -6em;
+
   .author-bio {
     display: block;
     @extend .center-align;
@@ -219,7 +235,7 @@ sitemap: false
 
 /* Author sidebar */
 @media #{$small-and-down} {
-  .article-author-side .bio-photo {
+  .bio-photo {
     z-index: 0;
   }
 }

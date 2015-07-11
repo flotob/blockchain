@@ -16,16 +16,9 @@
 </header>
 
 
-<div class="plx-container">
-  <div class="plx">
-    <img src="/images/wall_medium.jpg" alt="{{ page.title }} feature image">      
-  </div>  
-  {% if page.image.credit %}
-    <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
-  {% endif %}    
-</div>
+<div class="plx-container"></div>
 
-<div class="section white content-wrapper" style="min-height: 52em">
+<div class="section white content">
   <div class="row">
     <a name="content"></a>
     <div class="article-author-side center-align">
@@ -46,7 +39,7 @@
   </div>
 </div>
 
-<div class="page-footer grey lighten-5 valign-wrapper" style="height: 17em;">
+<div class="page-footer lighten-5 valign-wrapper" style="height: 17em;">
     {% include _footer.html %}
 </div>
 
