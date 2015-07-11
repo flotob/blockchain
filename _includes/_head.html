@@ -48,7 +48,7 @@
     $(".button-collapse").sideNav({
       edge: 'right'
     });
-    $('.plx').parallaxBlur(); // custom parallax effect
+    // $('.plx').parallaxBlur(); // custom parallax effect
     $('.tooltipped').tooltip({delay: 50});
     var ln = navigator.language || navigator.userLanguage;
     $('ul.tabs').tabs('select_tab', ln && _.indexOf(ln, ['de', 'en']) ? ln : 'en');
@@ -68,12 +68,28 @@
     var height = biopic.height();
     var target = height * 47 / 100;
     var width = biopic.width();
-    var left = '46%';
-    var zero = 353;
-    var perfect = 343;
+    var left = (function () {
+      var left = biopic.offset().left;
+
+      $(window).on('resize', function () {
+        left = biopic.offset().left;        
+      })
+
+      return function () {
+        return $('.jscssbridge').css('float') == 'left'
+          ? ( 100 / $(window).width() * (left + $(window).scrollLeft()) ) + '%'
+          : '42%';
+      }
+    })();
+    var zero = function () {
+      return $('.plx-container').height() - $('nav').height();
+    };
+    var perfect = function () {
+      return zero() - ($('.auth-social-wrapper').height() * 1.2);
+    };
 
     // init
-    if ($(document).scrollTop() >= zero ) {
+    if ($(document).scrollTop() >= zero() ) {
       setPic();
     }
     // update onScroll
@@ -83,32 +99,39 @@
 
     function setPic () {
       // secret css-js bridge for media queries (such a stupid hack)
-      if ($('.jscssbridge').css('float') == 'left') {
+      // if ($('.jscssbridge').css('float') == 'left') {
         var el = biopic;
         var offset = $(document).scrollTop();
 
-        if (offset >= zero) {
+        if (offset >= zero()) {
           if (el.height() > target) {
 
-            var val = height - ( $(document).scrollTop() - zero );
+            var val = height - ( $(document).scrollTop() - zero() );
 
             if (val < target) val = target;
+
+            if (el.parents('.section.content').length) {
+              el.appendTo('body');
+            }
+
+            if (!$('.bio-photo-placeholder').length) {
+              var placeholder = $('<div class="bio-photo-placeholder" />').height(height + 5);
+              $('.auth-social-wrapper').after( placeholder );
+              console.log("inserting", placeholder);
+            }
 
             el.css({
               height: val + 'px',
               position: 'fixed',
-              top: '0.2em',
-              left: left,
-              cursor: 'pointer'
+              left: left(),
+              top: '0.1em',
+              cursor: 'pointer',
+              zIndex: 1,
+              opacity: '.9'
             });
 
-            if (!el.next('.bio-photo-placeholder').length)
-              $('<div class="bio-photo-placeholder" />')
-                .insertAfter(el)
-                .height(height + 5);
-
             el.on('click', function () {
-              $('html,body').animate({scrollTop: perfect}, 10);
+              $('html,body').animate({scrollTop: perfect()}, 10);
             });
           }
           else if (el.height() != target) {
@@ -121,14 +144,19 @@
             position: 'relative',
             top: 0,
             left: 0,
-            cursor: 'auto'
+            cursor: 'auto',
+            opacity: '1'
           });
 
-          el.next('.bio-photo-placeholder').remove();
+          if (!el.parents('.section.content').length) {
+            $('.auth-social-wrapper').after(el);
+          }          
+
+          $('.bio-photo-placeholder').remove();
 
           el.off();
         }
-      }
+      // }
     }
   });
 </script>
