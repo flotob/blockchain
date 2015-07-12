@@ -41,6 +41,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
 <!-- <script src="//cdn.rawgit.com/noelboss/featherlight/1.3.2/release/featherlight.min.js"></script> -->
 <script src="/assets/js/velocity.ui.js"></script>
+<!-- <script src="/assets/js/jquery.animate-shadow-min.js"></script> -->
 <script src="/assets/js/parallax_blur.js"></script>
 <script language="javascript" type="text/javascript">
   // materialize init code
@@ -62,101 +63,136 @@
     //   }
     // });
 
+    if ($('.jscssbridge').css('float') == 'left') { // = don't execute on mobile
 
-    // BioPic ScrollEffect
-    var biopic = $('img.bio-photo');
-    var height = biopic.height();
-    var target = height * 47 / 100;
-    var width = biopic.width();
-    var left = (function () {
-      var left = biopic.offset().left;
+      // BioPic ScrollEffect
+      var biopic = $('img.bio-photo');
+      var height = biopic.height();
+      var target = height * 47 / 100;
+      var width = biopic.width();
+      var left = (function () {
+        var left = biopic.offset().left;
 
-      $(window).on('resize', function () {
-        left = biopic.offset().left;        
-      })
+        $(window).on('resize', function () {
+          left = biopic.offset().left;        
+        })
 
-      return function () {
-        return $('.jscssbridge').css('float') == 'left'
-          ? ( 100 / $(window).width() * (left + $(window).scrollLeft()) ) + '%'
-          : '42%';
-      }
-    })();
-    var zero = function () {
-      return $('.plx-container').height() - $('nav').height();
-    };
-    var perfect = function () {
-      return zero() - ($('.auth-social-wrapper').height() * 1.2);
-    };
-
-    // init
-    if ($(document).scrollTop() >= zero() ) {
-      setPic();
-    }
-    // update onScroll
-    $(document).on('scroll', function () {
-      setPic();
-    });    
-
-    function setPic () {
-      // secret css-js bridge for media queries (such a stupid hack)
-      if ($('.jscssbridge').css('float') == 'left') {
-        var el = biopic;
-        var offset = $(document).scrollTop();
-
-        if (offset >= zero()) {
-          if (el.height() > target) {
-
-            var val = height - ( $(document).scrollTop() - zero() );
-
-            if (val < target) val = target;
-
-            if (el.parents('.section.content').length) {
-              el.appendTo('body');
-            }
-
-            if (!$('.bio-photo-placeholder').length) {
-              var placeholder = $('<div class="bio-photo-placeholder" />').height(height + 5);
-              $('.auth-social-wrapper').after( placeholder );
-              console.log("inserting", placeholder);
-            }
-
-            el.css({
-              height: val + 'px',
-              position: 'fixed',
-              left: left(),
-              top: '0.1em',
-              cursor: 'pointer',
-              zIndex: 1,
-              opacity: '.9'
-            });
-
-            el.on('click', function () {
-              $('html,body').animate({scrollTop: perfect()}, 10);
-            });
-          }
-          else if (el.height() != target) {
-            el.css('height', target + 'px');
-          }
+        return function () {
+          return $('.jscssbridge').css('float') == 'left'
+            ? ( 100 / $(window).width() * (left + $(window).scrollLeft()) ) + '%'
+            : '42%';
         }
-        else if (el.css('position') != 'relative' || el.css('top') !== '0px') {
-          el.css({
-            height: '8.3em',
-            position: 'relative',
-            top: 0,
-            left: 0,
-            cursor: 'auto',
-            opacity: '1'
+      })();
+      var zero = function () {
+        return $('.plx-container').height() - $('nav').height();
+      };
+      var perfect = function () {
+        return zero() - ($('.auth-social-wrapper').height() * 1.2);
+      };
+
+      // init
+      if ($(document).scrollTop() >= zero() ) {
+        setPic();
+      }
+      // update onScroll
+      $(document).on('scroll', function () {
+        setPic();
+
+        if ($('.section.content').offset().top - $(document).scrollTop() <= $('nav').height()) {
+          $('nav').css({
+            boxShadow: '0 2px 5px rgba(0,0,0,0.16)'
           });
-
-          if (!el.parents('.section.content').length) {
-            $('.auth-social-wrapper').after(el);
-          }          
-
-          $('.bio-photo-placeholder').remove();
-
-          el.off();
+        } else {
+          $('nav').css({
+            boxShadow: 'none'
+          });
         }
+
+        if ($('.section.content').offset().top - $(document).scrollTop() <= 0) {
+          $('nav').css({
+            backgroundColor: '#fff'
+          });
+        } else {
+          $('nav').css({
+            backgroundColor: 'transparent'
+          });        
+        }        
+
+        // if ($('.section.content').offset().top - $(document).scrollTop() <= $('nav').height()) {
+        //   $('nav').css({
+        //     'background-image': $('body').css('background-image'),
+        //     'background-size': '100% 100%',
+        //     'background-repeat': 'no-repeat',
+        //     'background-position': 'center top',
+        //     'background-attachment': 'fixed',
+        //   });
+        // }
+        // else {
+        //   $('nav').css({
+        //     background: 'transparent'
+        //   });
+        // }
+      });    
+
+      function setPic () {
+        // secret css-js bridge for media queries (such a stupid hack)
+        
+          var el = biopic;
+          var offset = $(document).scrollTop();
+
+          if (offset >= zero()) {
+            if (el.height() > target) {
+
+              var val = height - ( $(document).scrollTop() - zero() );
+
+              if (val < target) val = target;
+
+              if (el.parents('.section.content').length) {
+                el.appendTo('body');
+              }
+
+              if (!$('.bio-photo-placeholder').length) {
+                var placeholder = $('<div class="bio-photo-placeholder" />').height(height + 5);
+                $('.auth-social-wrapper').after( placeholder );
+              }
+
+              el.css({
+                height: val + 'px',
+                position: 'fixed',
+                left: left(),
+                top: '0.1em',
+                cursor: 'pointer',
+                zIndex: 1
+              });
+
+              el.on('click', function () {
+                $('html,body').animate({scrollTop: perfect()}, 10);
+              });
+            }
+            else if (el.height() != target) {
+              el.css('height', target + 'px');
+            }
+          }
+          else if (el.css('position') != 'relative' || el.css('top') !== '0px') {
+            el.css({
+              height: '8.3em',
+              position: 'relative',
+              top: 0,
+              left: 0,
+              cursor: 'auto'
+            });
+
+            if (!el.parents('.section.content').length) {
+              $('.auth-social-wrapper').after(el);
+            }          
+
+            $('.bio-photo-placeholder').remove();
+
+            el.off();
+          }
+
       }
+
     }
   });
 </script>
