@@ -30,8 +30,14 @@ sitemap: false
 
 
 body {
-  background: url(/images/blocks.jpg) no-repeat center center fixed; 
+  background: url(/images/blocks.jpg) no-repeat center top fixed; 
   background-size: 100% 100%;
+}
+
+nav {
+  webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;  
 }
 
 .section.content {
@@ -53,7 +59,7 @@ body {
 }
 
 .plx-container {
-  height: 30rem;
+  height: 26rem;
   position: relative;
   overflow: show;  
 
@@ -181,7 +187,7 @@ body {
 .bio-photo {
     height: 8.3em;
     width: auto;
-    border: 3px solid #fff;
+    border: 1px solid #fff;
     -ms-interpolation-mode: bicubic;
     @extend .z-depth-1;
     @extend .circle;

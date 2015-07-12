@@ -7,11 +7,11 @@ nav {
   color: $black;
   z-index: 1;
   @extend .z-depth-1;
-  background-color: $primary-color;
+  /*background-color: $primary-color;*/
   width: 100%;
   height: $navbar-height-mobile;
   line-height: $navbar-height-mobile;
-  opacity: .9;
+  /*opacity: .9;*/
 
   a { color: #fff; }
 
