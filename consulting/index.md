@@ -18,7 +18,7 @@ category: consulting
         <span class="xtitle">Core-Dev & Legal</span>
       </div>
       <div class="card-action grey lighten-5">
-         <a href="http://satoshipay.net/" target="_blank">SatoshiPay.net</a>
+         <a href="http://satoshipay.io" target="_blank">SatoshiPay.io</a>
        </div>                
     </div>
   </div>   
