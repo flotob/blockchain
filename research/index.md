@@ -36,7 +36,7 @@ category: Research
       </div>    
       <div class="card-content black-text">
         Techno-social platform for sustainable models and value generation in commons-based peer production in the future internet.
-        <span class="xtitle">Researcher <a href="http://cersa.cnrs.fr/" target="_blank">@cersa.cnrs.fr</a></span>
+        <span class="xtitle">Researcher <a href="http://cersa.blockchainworkshops.org/index.php/team/" target="_blank">@cersa.cnrs.fr</a></span>
       </div>
       <div class="card-action grey lighten-5">
          <a href="http://www.p2pvalue.eu" target="_blank">P2PValue.eu</a>
