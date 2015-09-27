@@ -12,4 +12,4 @@ Blockchain technology allows new businesses and organizations to form and self-o
 
 Blockchains are a techno-social Black Swan Event, challenging fundamental assumptions behind contemporary legislation. Businesses and not-for-profit organizations based on or interfacing with blockchains are exposed to countless legal insecurities. At the same time, blockchains can bolster trust even for existing legal processes.
 
-As a technology-focused lawyer I advise blockchain-centric organizations on legal compliance and systems design. As a software developer implement blockchains in novel and existing business procedures. As a researcher I explore the depths of code & law in the form of smart contracts.
+As a technology-focused lawyer I advise blockchain-centric organizations on legal compliance and systems design. As a developer I focus on software-driven solutions in law and finance. As a researcher I explore the interaction of code and law in a digital society.
