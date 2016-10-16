@@ -1,13 +1,13 @@
 # Site navigation links
 
-- title: Research
-  url: /research/
+- title: Speaking
+  url: /speaking/
 
 - title: Consulting
   url: /consulting/
 
-- title: Projects
-  url: /projects/
+- title: Research
+  url: /research/
 
 - title: Blog
   url: https://medium.com/@heckerhut
