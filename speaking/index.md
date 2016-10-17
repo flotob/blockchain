@@ -25,7 +25,7 @@ category: Speaking
             <br/><br/>
             Since education and dissemination of knowledge is my livelihood, I ask you to respect the CC License under which those slides are available exclusively (cf. below).
             <br/><br/>
-            <strong>You may use those slides in your on work, if you preserve the copyright attribution imprinted on each slide. You may
+            <strong>You may use those slides in your own work, if you preserve the copyright attribution imprinted on each slide. You may
             not use those slides for commercial purposes without my express written consent.</strong>
         </div>
       <div class="card-action grey lighten-5">
