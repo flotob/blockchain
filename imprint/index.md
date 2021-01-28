@@ -24,7 +24,7 @@ category: imprint
       <div class="card white">
         <div class="card-content black-text">
           <h3 class="card-title black-text">Imprint</h3>
-          RA Florian Glatz, Flemingstr. 11, 10557 Berlin
+          RA Florian Glatz, Schwedter Str. 267, 10119 Berlin
         </div>
         <div class="card-action grey lighten-5">
            <a href="mailto:{{ site.owner.email }}" target="_blank">{{ site.owner.email }}</a>
