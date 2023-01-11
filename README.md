@@ -1,11 +1,11 @@
-[blockchain.lawyer](http://blockchain.lawyer)
+[blockchain.lawyer](https://blockchain.lawyer)
 
 # Run locally
 
 ## Requirements
 [ruby](https://www.ruby-lang.org/en/documentation/installation/),
-[bundler](http://bundler.io),
-[jekyll](http://jekyllrb.com/docs/installation/),
+[bundler](https://bundler.io),
+[jekyll](https://jekyllrb.com/docs/installation/),
 [nodejs](https://nodejs.org/),
 
 ## Run

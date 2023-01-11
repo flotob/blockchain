@@ -26,13 +26,13 @@ category: Privacy Policy
 This website is hosted on Github. Additionally, this website requests javascript libraries and webfonts from servers operated by Google, CDNJS and Twitter.
         </div>
         <div class="card-action grey lighten-5">
-           <a href="http://github.com/flotob/blockchain" target="_blank">Source Code on Github</a>
+           <a href="https://github.com/flotob/blockchain" target="_blank">Source Code on Github</a>
          </div>        
         <div class="card-action grey lighten-5">
            <a href="https://github.com/site/privacy" target="_blank">Privacy Policy of Github</a>
          </div>        
         <div class="card-action grey lighten-5">
-           <a href="http://www.google.com/policies/privacy/" target="_blank">Privacy Policy of Google</a>
+           <a href="https://www.google.com/policies/privacy/" target="_blank">Privacy Policy of Google</a>
          </div>                          
         <div class="card-action grey lighten-5">
            <a href="https://www.cloudflare.com/security-policy" target="_blank">Privacy Policy of CloudFlare (CDNJS)</a>
@@ -52,13 +52,13 @@ This website is hosted on Github. Additionally, this website requests javascript
           Diese Seite wird von Github gehostet. Ebenfalls fordert die Seite beim Laden Programmbibliotheken (Javascript) und Webfonts von Servern an, die von Google, CloudFlare (CDNJS) und Twitter betrieben werden.
         </div>
         <div class="card-action grey lighten-5">
-           <a href="http://github.com/flotob/blockchain" target="_blank">Quellcode auf Github</a>
+           <a href="https://github.com/flotob/blockchain" target="_blank">Quellcode auf Github</a>
          </div>        
         <div class="card-action grey lighten-5">
            <a href="https://github.com/site/privacy" target="_blank">Datenschutzbestimmungen von Github</a>
          </div>        
         <div class="card-action grey lighten-5">
-           <a href="http://www.google.com/policies/privacy/" target="_blank">Datenschutzbestimmungen von Google</a>
+           <a href="https://www.google.com/policies/privacy/" target="_blank">Datenschutzbestimmungen von Google</a>
          </div>                          
         <div class="card-action grey lighten-5">
            <a href="https://www.cloudflare.com/security-policy" target="_blank">Datenschutzbestimmungen von CloudFlare (CDNJS)</a>

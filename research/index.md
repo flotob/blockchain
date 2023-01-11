@@ -16,7 +16,7 @@ category: Research
           My superverisor is Prof. Dr. Rupprecht Podszun at University Bayreuth.
       </div>
       <div class="card-action grey lighten-5">
-         <a href="http://www.zivilrecht8.uni-bayreuth.de/de/team/owner_of_chair/Rupprecht_Podszun/" target="_blank">Civil Law Chair Podszun</a>
+         <a href="https://www.zivilrecht8.uni-bayreuth.de/de/team/owner_of_chair/Rupprecht_Podszun/" target="_blank">Civil Law Chair Podszun</a>
        </div>      
       <div class="card-action grey lighten-5">
          <a href="https://medium.com/@heckerhut/whats-a-smart-contract-in-search-of-a-consensus-c268c830a8ad" target="_blank">Smart Contracts</a>
@@ -36,13 +36,13 @@ category: Research
       </div>    
       <div class="card-content black-text">
         Techno-social platform for sustainable models and value generation in commons-based peer production in the future internet.
-        <span class="xtitle">Researcher <a href="http://cersa.blockchainworkshops.org/index.php/team/" target="_blank">@cersa.cnrs.fr</a></span>
+        <span class="xtitle">Researcher <a href="https://cersa.blockchainworkshops.org/index.php/team/" target="_blank">@cersa.cnrs.fr</a></span>
       </div>
       <div class="card-action grey lighten-5">
-         <a href="http://www.p2pvalue.eu" target="_blank">P2PValue.eu</a>
+         <a href="https://www.p2pvalue.eu" target="_blank">P2PValue.eu</a>
        </div>                
       <div class="card-action grey lighten-5">
-         <a href="http://cordis.europa.eu/fp7/ict/" target="_blank">EUROPEAN COMMISSION (FP 7)</a>
+         <a href="https://cordis.europa.eu/fp7/ict/" target="_blank">EUROPEAN COMMISSION (FP 7)</a>
        </div>                
     </div>
   </div>  
@@ -53,15 +53,15 @@ category: Research
         <h3>Unfair Trading Practices</h3>
         Study on the legal framework covering business-to-business UTPs in the retail supply chain (2013-2014).
       	<br/><br/>
-	     <span class="xtitle">Researcher <a href="http://eui.eu" target="_blank">@eui.eu</a></span>
+	     <span class="xtitle">Researcher <a href="https://eui.eu" target="_blank">@eui.eu</a></span>
       </div>
       <div class="card-action grey lighten-5">
-        <a href="http://ec.europa.eu/internal_market/retail/docs/140711-study-utp-legal-framework_en.pdf" target="_blank">
+        <a href="https://ec.europa.eu/internal_market/retail/docs/140711-study-utp-legal-framework_en.pdf" target="_blank">
           UTP Framework Study (PDF)
         </a>
       </div>
       <div class="card-action grey lighten-5">
-        <a href="http://ec.europa.eu/growth/single-market/services/retail/index_en.htm" target="_blank">EU Single Market</a>
+        <a href="https://ec.europa.eu/growth/single-market/services/retail/index_en.htm" target="_blank">EU Single Market</a>
       </div>
     </div>
   </div>  

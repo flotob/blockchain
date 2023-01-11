@@ -18,7 +18,7 @@ category: consulting
         <span class="xtitle">Core-Dev & Legal</span>
       </div>
       <div class="card-action grey lighten-5">
-         <a href="http://satoshipay.io" target="_blank">SatoshiPay.io</a>
+         <a href="https://satoshipay.io" target="_blank">SatoshiPay.io</a>
        </div>                
     </div>
   </div>   
@@ -33,7 +33,7 @@ category: consulting
         <span class="xtitle">Chief Legal Hacker</span>
       </div>
       <div class="card-action grey lighten-5">
-         <a href="http://www.bitshake.io" target="_blank">Bitshake.io</a>
+         <a href="https://www.bitshake.io" target="_blank">Bitshake.io</a>
        </div>                
     </div>
   </div>        
@@ -46,10 +46,10 @@ category: consulting
         <strong>This list is not up to date.</strong>
       </div>
       <div class="card-action grey lighten-5">
-         <a href="http://twitter.com/heckerhut" target="_blank">Follow me on Twitter</a>
+         <a href="https://twitter.com/heckerhut" target="_blank">Follow me on Twitter</a>
        </div>           
       <div class="card-action grey lighten-5">
-         <a href="http://medium.com/@heckerhut" target="_blank">Read my Blog</a>
+         <a href="https://medium.com/@heckerhut" target="_blank">Read my Blog</a>
        </div>      
     </div>
   </div>  

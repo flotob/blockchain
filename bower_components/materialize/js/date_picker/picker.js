@@ -1,7 +1,7 @@
 /*!
  * pickadate.js v3.5.0, 2014/04/13
- * By Amsul, http://amsul.ca
- * Hosted on http://amsul.github.io/pickadate.js
+ * By Amsul, https://amsul.ca
+ * Hosted on https://amsul.github.io/pickadate.js
  * Licensed under MIT
  */
 
@@ -699,7 +699,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
                     targetDisabled = $target.hasClass( CLASSES.navDisabled ) || $target.hasClass( CLASSES.disabled ),
 
                     // * For IE, non-focusable elements can be active elements as well
-                    //   (http://stackoverflow.com/a/2684561).
+                    //   (https://stackoverflow.com/a/2684561).
                     activeElement = getActiveElement()
                     activeElement = activeElement && ( activeElement.type || activeElement.href )
 

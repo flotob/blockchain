@@ -41,10 +41,10 @@ category: imprint
           Block Foto by UNSPLASH / Theme by Materialize CSS
         </div>
         <div class="card-action grey lighten-5">
-           <a href="http://unsplash.com" target="_blank">UNSPLASH</a>
+           <a href="https://unsplash.com" target="_blank">UNSPLASH</a>
          </div>
         <div class="card-action grey lighten-5">
-           <a href="http://materializecss.com" target="_blank">Materialize CSS</a>
+           <a href="https://materializecss.com" target="_blank">Materialize CSS</a>
          </div>                         
       </div>
     </div>    
@@ -73,7 +73,7 @@ category: imprint
           Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE)
         </div>
         <div class="card-action grey lighten-5">
-           <a href="http://www.brak.de/fuer-anwaelte/berufsrecht/" target="_blank">Chamber of Lawyers Germany</a>
+           <a href="https://www.brak.de/fuer-anwaelte/berufsrecht/" target="_blank">Chamber of Lawyers Germany</a>
          </div>
       </div>
     </div>
@@ -114,10 +114,10 @@ category: imprint
           Blockbild von UNSPLASH / Theme by Materialize CSS
         </div>
         <div class="card-action grey lighten-5">
-           <a href="http://www.unsplash.com" target="_blank">UNSPLASH</a>
+           <a href="https://www.unsplash.com" target="_blank">UNSPLASH</a>
          </div>
         <div class="card-action grey lighten-5">
-           <a href="http://materializecss.com" target="_blank">Materialize CSS</a>
+           <a href="https://materializecss.com" target="_blank">Materialize CSS</a>
          </div>                         
       </div>
     </div>
@@ -146,7 +146,7 @@ category: imprint
           Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE)
         </div>
         <div class="card-action grey lighten-5">
-           <a href="http://www.brak.de/fuer-anwaelte/berufsrecht/" target="_blank">Bundesrechtsanwaltskammer</a>
+           <a href="https://www.brak.de/fuer-anwaelte/berufsrecht/" target="_blank">Bundesrechtsanwaltskammer</a>
          </div>
       </div>
     </div>
@@ -159,7 +159,7 @@ category: imprint
             RA Florian Glatz unterhält eine derartige Versicherung bei der:
         </div>
         <div class="card-action grey lighten-5">
-           <a href="http://www.hdi-gerling.de" target="_blank">HDI-Gerling Firmen und Privat Vers. AG</a>
+           <a href="https://www.hdi-gerling.de" target="_blank">HDI-Gerling Firmen und Privat Vers. AG</a>
          </div>
       </div>  
     </div>
