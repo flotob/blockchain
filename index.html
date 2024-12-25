@@ -405,6 +405,86 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+            position: relative;
+        }
+
+        .hero, .section {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
+
+        .chrome {
+            position: fixed;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 100;
+        }
+
+        .chrome.visible {
+            opacity: 1;
+        }
+
+        .header {
+            top: 0;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .header a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer {
+            bottom: 0;
+            padding: 1rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.5rem;
+        }
+
+        .nav-button {
+            background: var(--bg-alt);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nav-button:hover {
+            background: #f3f4f6;
+            transform: translateY(-1px);
+        }
+
+        .nav-button svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--text);
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 0.75rem 1rem;
+            }
+            .footer {
+                padding: 0.75rem;
+            }
+            .nav-button {
+                width: 36px;
+                height: 36px;
+            }
         }
 
         .work-card:hover {
@@ -446,6 +526,9 @@
     </style>
 </head>
 <body>
+    <header class="chrome header">
+        <a href="/">blockchain.lawyer</a>
+    </header>
     <main class="hero">
         <div class="container">
             <div class="content-wrapper">
@@ -561,5 +644,67 @@
             </div>
         </div>
     </section>
+    <footer class="chrome footer">
+        <button class="nav-button" id="prevSection">
+            <svg fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+            </svg>
+        </button>
+        <button class="nav-button" id="nextSection">
+            <svg fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </button>
+    </footer>
+    <script>
+        const sections = ['hero', 'next-section'];
+        let currentSection = 0;
+        let isScrolling = false;
+
+        function showChrome() {
+            document.querySelectorAll('.chrome').forEach(el => el.classList.add('visible'));
+        }
+
+        function hideChrome() {
+            document.querySelectorAll('.chrome').forEach(el => el.classList.remove('visible'));
+        }
+
+        function scrollToSection(index) {
+            if (index >= 0 && index < sections.length) {
+                currentSection = index;
+                const section = document.querySelector(sections[index] === 'hero' ? '.hero' : '#' + sections[index]);
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        document.getElementById('prevSection').addEventListener('click', () => {
+            scrollToSection(currentSection - 1);
+        });
+
+        document.getElementById('nextSection').addEventListener('click', () => {
+            scrollToSection(currentSection + 1);
+        });
+
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            hideChrome();
+            
+            scrollTimeout = setTimeout(() => {
+                const scrollPosition = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const newSection = Math.round(scrollPosition / windowHeight);
+                currentSection = newSection;
+                
+                // Only show chrome if we're not at the top section
+                if (currentSection > 0) {
+                    showChrome();
+                }
+            }, 150);
+        });
+
+        // Initial state
+        hideChrome();
+    </script>
 </body>
 </html> 
