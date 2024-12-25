@@ -1,25 +1,18 @@
 {
-  "name": "minimal-mistakes-theme",
-  "author": "Michael Rose <michael@mademistakes.com>",
-  "homepage": "https://mmistakes.github.io/minima-mistakes/",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
-  },
-  "engines": {
-    "node": ">= 0.10.0"
+  "name": "blockchain-website",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx postcss assets/css/main.css -o assets/css/styles.css --watch & bundle exec jekyll serve --livereload",
+    "build": "./scripts/build.sh",
+    "css": "npx postcss assets/css/main.css -o assets/css/styles.css"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-jshint": "~0.6.3",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-watch": "~0.5.2",
-    "grunt-recess": "~0.3.5",
-    "grunt-contrib-imagemin": "~0.2.0",
-    "grunt-svgmin": "~0.2.0"
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "postcss-import": "^16.0.0",
+    "tailwindcss": "^3.4.1"
   }
 }

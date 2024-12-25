@@ -1,59 +1,78 @@
-# Site wide configuration
+# Site settings
+title: "blockchain.lawyer"
+description: "Law & Code - Exploring the intersection of blockchain technology and law"
+baseurl: ""
+url: "https://blockchain.lawyer"
+locale: en_US
 
-title:            "blockchain.lawyer"
-locale:           en_US
-url:              
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
 
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  research:
+    output: true
+    permalink: /research/:path/
 
-# Jekyll configuration
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
 
-permalink:   /:categories/:title/
-markdown:    kramdown
-highlighter: pygments
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Assets
 sass:
   sass_dir: _sass
   style: compressed
-gems:
-  - jekyll-sitemap
 
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-
-# Site owner
-owner:
+# SEO
+author:
   name: "Florian Glatz"
   avatar: flo3.png
   bio: "Law & Code"
   email: fg@blockchain.lawyer
-  keybase: ftg
-  twitter: heckerhut
-  facebook: #username
-  google:
-    plus: #username
-    analytics: 
-    verify: 
-    ad-client: 
-    ad-slot: 
-  bing-verify: 
-  github: flotob
-  stackoverflow: #https://stackoverflow.com/users/123456/username
-  linkedin: #username
-  instagram: #username
-  lastfm: #username
-  tumblr: #username
-  pinterest: #username
-  foursquare: #username
-  steam: #username
-  dribbble: #username
-  youtube: #username
-  soundcloud: #username
-  weibo: #username
-  flickr: #username
+  social:
+    keybase: ftg
+    twitter: heckerhut
+    github: flotob
 
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "research"
+    values:
+      layout: "research"
+
+# Exclude from processing
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - tailwind.config.js
+  - postcss.config.js
+  - .gitignore
