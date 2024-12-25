@@ -1,70 +1,78 @@
-<!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  {% include _head.html %}
-</head>
+---
+layout: default
+---
 
-<body class="page">
-
-{% include _browser-upgrade.html %}
-
-<header>
-{% include _navigation.html %}
-<script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script>
-</header>
-
-
-<div class="plx-container"></div>
-
-<div class="section content white">
-  <div class="row container">
-    <a name="content"></a>
-    <div class="article-author-side center-align">
-      {% include _author-bio.html %}
+<!-- Hero Section -->
+<div class="relative bg-gradient-to-r from-primary-600 to-primary-800 dark:from-primary-800 dark:to-primary-900">
+    <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-800 dark:from-primary-800 dark:to-primary-900 mix-blend-multiply"></div>
     </div>
-  </div>
-  <div class="row header"><div class="label">{{ page.category }}</div></div>
-  <div class="row container">
-
-    <div class="col s12 m7 left">
-      <div class="card white">
-        <div class="card-content black-text">
-          <h3 class="card-title black-text">{{ page.title }}</h3>
-          {{ content }}
+    <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="mx-auto h-32 w-32 rounded-full mb-8">
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">{{ site.author.name }}</h1>
+            <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-200">{{ site.author.bio }}</p>
+            <div class="mt-10 flex justify-center space-x-4">
+                <a href="/research" class="btn-primary">Research</a>
+                <a href="/consulting" class="btn-primary">Consulting</a>
+            </div>
         </div>
-        <div class="card-action grey lighten-5">
-          <a href="https://medium.com/@heckerhut/smart-contracts-platforms-and-intermediaries-c3d30f5182a6?source=featured">Read more</a>
-        </div>
-      </div>
     </div>
-
-    <div class="col s12 m5 left">
-      <div class="z-depth-1">
-        <div class="card white" style="box-shadow: none; margin-bottom: 0">
-          <div class="card-content black-text" style="padding-bottom: 0">
-            <h3 class="card-title black-text">Twitter Stream</h3>
-          </div>
-        </div>
-        <div class="twitter-wrapper">
-          <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/heckerhut" data-widget-id="610926712856182784"></a>
-        </div>        
-        <div class="card white" style="box-shadow: none; margin-top: -3px;">
-          <div class="card-action grey lighten-5">
-            <a href="https://twitter.com/heckerhut" target="_blank">twitter.com/heckerhut</a>
-          </div>        
-        </div>
-      </div>
-    </div>    
-
-  </div>
 </div>
 
-<div class="page-footer lighten-5 valign-wrapper">
-    {% include _footer.html %}
-</div>
+<!-- Main Content -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Featured Projects -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Featured Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for project in site.projects limit:3 %}
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                {% if project.image %}
+                <img class="w-full h-48 object-cover" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                {% endif %}
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">{{ project.title }}</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">{{ project.excerpt | strip_html | truncatewords: 30 }}</p>
+                    <a href="{{ project.url }}" class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300">Learn more →</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
 
-</body>
-</html>
+    <!-- Latest Research -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Latest Research</h2>
+        <div class="space-y-8">
+            {% for post in site.posts limit:3 %}
+            <article class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <time class="text-sm text-gray-500 dark:text-gray-400" datetime="{{ post.date | date_to_xmlschema }}">
+                            {{ post.date | date: "%B %d, %Y" }}
+                        </time>
+                        {% if post.category %}
+                        <span class="ml-4 px-3 py-1 text-sm font-medium text-primary-800 dark:text-primary-200 bg-primary-100 dark:bg-primary-800 rounded-full">
+                            {{ post.category }}
+                        </span>
+                        {% endif %}
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                        <a href="{{ post.url }}" class="hover:text-primary-600 dark:hover:text-primary-400">{{ post.title }}</a>
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+                    <a href="{{ post.url }}" class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300">Read more →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Let's Work Together</h2>
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">Interested in blockchain law consulting or research collaboration?</p>
+        <a href="mailto:{{ site.author.email }}" class="btn-primary">Get in Touch</a>
+    </section>
+</div>

@@ -1,47 +1,30 @@
-<!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  {% include _head.html %}
-</head>
+---
+layout: default
+---
 
-<body class="page">
+<div class="max-w-4xl mx-auto">
+    <!-- Page Header -->
+    <header class="mb-8">
+        {% if page.title %}
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">{{ page.title }}</h1>
+        {% endif %}
+        
+        {% if page.subtitle %}
+        <p class="text-xl text-gray-600 dark:text-gray-400">{{ page.subtitle }}</p>
+        {% endif %}
+    </header>
 
-{% include _browser-upgrade.html %}
-
-<header>
-{% include _navigation.html %}
-</header>
-
-
-<div class="plx-container"></div>
-
-<div class="section white content">
-  <div class="row">
-    <a name="content"></a>
-    <div class="article-author-side center-align">
-      {% include _author-bio.html %}
-    </div>
-  </div>
-  <div class="row header"><div class="label">{{ page.category }}</div></div>
-  <div class="row container"> 
-    <div class="card white">
-      <div class="card-content black-text">
-        <h3 class="card-title black-text">{{ page.title }}</h3>
+    <!-- Page Content -->
+    <div class="prose dark:prose-invert prose-primary max-w-none">
         {{ content }}
-      </div>
-      <div class="card-action grey lighten-5">
-        <a href="https://medium.com/@heckerhut" style="color: rgba(0,0,0,.5);">Read my blog</a>
-      </div>
     </div>
-  </div>
-</div>
 
-<div class="page-footer lighten-5 valign-wrapper" style="height: 17em;">
-    {% include _footer.html %}
+    {% if page.cta %}
+    <!-- Call to Action -->
+    <div class="mt-12 bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 text-center">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">{{ page.cta.title }}</h2>
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">{{ page.cta.description }}</p>
+        <a href="{{ page.cta.button_url }}" class="btn-primary">{{ page.cta.button_text }}</a>
+    </div>
+    {% endif %}
 </div>
-
-</body>
-</html>
