@@ -3,15 +3,18 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "npx postcss assets/css/main.css -o assets/css/styles.css --watch & bundle exec jekyll serve --livereload",
+    "dev": "concurrently \"npm run css:watch\" \"bundle exec jekyll serve --livereload\"",
     "build": "./scripts/build.sh",
-    "css": "npx postcss assets/css/main.css -o assets/css/styles.css"
+    "css": "postcss assets/css/main.css -o assets/css/styles.css",
+    "css:watch": "postcss assets/css/main.css -o assets/css/styles.css --watch"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.17",
+    "concurrently": "^8.2.2",
     "postcss": "^8.4.33",
+    "postcss-cli": "^11.0.0",
     "postcss-import": "^16.0.0",
     "tailwindcss": "^3.4.1"
   }
