@@ -7,8 +7,8 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
+            --primary: #121a30;
+            --primary-dark: #000000;
             --text: #1f2937;
             --text-light: #6b7280;
             --bg: #ffffff;
@@ -36,7 +36,16 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 1rem;
+        }
+
+        .content-wrapper {
+            background: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
 
         .hero {
@@ -52,8 +61,9 @@
         .profile-img {
             width: 180px;
             height: 180px;
-            border-radius: 50%;
-            margin-bottom: 2rem;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             animation: fadeIn 1s ease-out 0.2s both;
         }
@@ -61,20 +71,32 @@
         h1 {
             font-size: 3rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.25rem;
             animation: fadeIn 1s ease-out 0.4s both;
         }
 
         .title {
             font-size: 1.5rem;
             color: var(--text-light);
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             animation: fadeIn 1s ease-out 0.6s both;
         }
 
+        .location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            animation: fadeIn 1s ease-out 0.7s both;
+        }
+
         .bio {
-            max-width: 600px;
-            margin: 0 auto 2rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            font-size: 1.25rem;
             animation: fadeIn 1s ease-out 0.8s both;
         }
 
@@ -82,7 +104,6 @@
             display: flex;
             gap: 1.5rem;
             justify-content: center;
-            margin-top: 2rem;
             animation: fadeIn 1s ease-out 1s both;
         }
 
@@ -97,18 +118,22 @@
 
         .social a:hover {
             color: var(--primary);
+            cursor: pointer;
         }
 
         .button {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             padding: 0.75rem 1.5rem;
             background: var(--primary);
             color: white;
             text-decoration: none;
             border-radius: 0.5rem;
             font-weight: 500;
-            transition: background-color 0.2s;
+            transition: all 0.2s;
             animation: fadeIn 1s ease-out 1.2s both;
+            cursor: pointer;
         }
 
         .button:hover {
@@ -126,43 +151,395 @@
                 width: 150px;
                 height: 150px;
             }
+            .bio {
+                font-size: 1.125rem;
+                padding: 0 0.5rem;
+            }
+            .social {
+                flex-wrap: wrap;
+                gap: 1rem;
+                padding: 0 0.5rem;
+            }
+            .social a {
+                font-size: 0.875rem;
+            }
+            .button {
+                padding: 0.625rem 1.25rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .container {
+                padding: 0.5rem;
+            }
+            .content-wrapper {
+                padding: 1.5rem 0.75rem;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        .button-container {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            animation: fadeIn 1s ease-out 1.2s both;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--text-light);
+        }
+
+        .button.secondary:hover {
+            background: rgba(0, 0, 0, 0.05);
+            border-color: var(--text);
+        }
+
+        .section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 1rem;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .work-card {
+            background: white;
+            border-radius: 16px;
+            overflow: visible;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .card-top {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            overflow: hidden;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .work-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .work-content {
+            padding: 1.5rem 1.5rem 0;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .work-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        .position {
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            .position {
+                display: block;
+                font-size: 0.75rem;
+                margin-bottom: 0.25rem;
+                color: var(--text);
+            }
+        }
+
+        .work-description {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            line-height: 1.5;
+            margin-bottom: auto;
+        }
+
+        .work-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: var(--bg-alt);
+            border-radius: 0 0 16px 16px;
+            transition: all 0.2s ease;
+            margin-top: 2rem;
+        }
+
+        .work-link:hover {
+            background: #f3f4f6;
+        }
+
+        .work-link svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media (max-width: 1024px) {
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 800px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .work-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                gap: 1rem;
+            }
+
+            .work-card {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .card-top {
+                flex-direction: row;
+                margin-bottom: 0;
+            }
+
+            .work-image {
+                width: 80px;
+                height: 80px;
+                margin: 0 1rem 0 0;
+                border-radius: 8px;
+            }
+
+            .work-content {
+                padding: 0;
+                flex: 1;
+            }
+
+            .work-title {
+                font-size: 1rem;
+                margin-bottom: 0.125rem;
+            }
+
+            .position {
+                font-size: 0.75rem;
+                margin-bottom: 0.25rem;
+                display: block;
+            }
+
+            .work-description {
+                font-size: 0.75rem;
+                margin-bottom: 0;
+            }
+
+            .work-link {
+                margin: 1.5rem -1rem -1rem;
+                padding: 0.75rem;
+                font-size: 0.75rem;
+            }
+
+            .work-link svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .work-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .work-image.logo {
+            object-fit: contain;
+            padding: 1rem;
+            border-bottom: none;
+            transform: scale(1.1);
+        }
+
+        .work-description-mobile {
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            .work-description {
+                display: none;
+            }
+
+            .work-description-mobile {
+                display: block;
+                font-size: 0.75rem;
+                margin-bottom: 0;
+            }
+
+            .work-image.logo {
+                padding: 0.5rem;
+                transform: scale(1.3);
+            }
         }
     </style>
 </head>
 <body>
     <main class="hero">
         <div class="container">
-            <img src="images/bio-photo.jpg" alt="Florian Glatz" class="profile-img">
-            <h1>Florian Glatz</h1>
-            <div class="title">Blockchain Lawyer & Researcher</div>
-            <p class="bio">
-                Exploring the intersection of law and blockchain technology. PhD researcher at University Bayreuth,
-                focusing on smart contracts, distributed consensus networks, and algorithmic governance.
-            </p>
-            <div class="social">
-                <a href="https://twitter.com/heckerhut" target="_blank">
-                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
-                    </svg>
-                    Twitter
-                </a>
-                <a href="https://github.com/flotob" target="_blank">
-                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
-                    </svg>
-                    GitHub
-                </a>
-                <a href="https://keybase.io/ftg" target="_blank">
-                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 3a1 1 0 100 2 1 1 0 000-2zm-3 3v2h6V8H9zm0 3v2h6v-2H9zm0 3v2h6v-2H9z"/>
-                    </svg>
-                    Keybase
-                </a>
-            </div>
-            <div style="margin-top: 2rem;">
-                <a href="mailto:florian@blockchain.lawyer" class="button">Get in Touch</a>
+            <div class="content-wrapper">
+                <img src="images/bio-photo.jpg" alt="Florian Glatz" class="profile-img">
+                <h1>Florian Glatz</h1>
+                <div class="title">Law, Code, Startups</div>
+                <p class="bio">
+                    Working at the intersection of law, blockchain technology, and software development since 2014.
+                </p>
+                <div class="social">
+                    <a href="https://twitter.com/heckerhut" target="_blank">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+                        </svg>
+                        Twitter
+                    </a>
+                    <a href="https://github.com/flotob" target="_blank">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://app.cg/u/~hz8ud4jRpdMYcpoWTSMmmz/" target="_blank">
+                        <img src="images/logo-black-transparent.svg" width="24" height="24" alt="Common Ground" style="opacity: 0.8">
+                        Common Ground
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="mailto:fg@blockchain.lawyer" class="button">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        Get in Touch
+                    </a>
+                    <a href="#next-section" class="button secondary">
+                        Learn More
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
+    <section id="next-section" class="section">
+        <div class="work-grid">
+            <div class="work-card">
+                <div class="card-top">
+                    <img src="https://framerusercontent.com/images/hYVNYcaQlCxkrdC7IfgIhm8ri0.png" alt="Common Ground" class="work-image">
+                    <div class="work-content">
+                        <h3 class="work-title">Common Ground</h3>
+                        <p class="work-description">
+                            <span class="position">Co-Founder & Board Member</span>
+                            Co-Founder and board member of the Common Ground Association, developing a user-owned social network using web3 primitives
+                        </p>
+                        <p class="work-description-mobile">
+                            <span class="position">Co-Founder & Board Member</span>
+                            Building a user-owned social network with web3 technology
+                        </p>
+                    </div>
+                </div>
+                <a href="https://commonground.cg" target="_blank" class="work-link">
+                    Learn more
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="work-card">
+                <div class="card-top">
+                    <img src="images/euci.png" alt="European Crypto Initiative" class="work-image logo">
+                    <div class="work-content">
+                        <h3 class="work-title">European Crypto Initiative</h3>
+                        <p class="work-description">
+                            <span class="position">Co-Founder & Board Member</span>
+                            Co-Founder and board member of the European Crypto Initiative, a Brussels-based non-profit advocating for better crypto regulation in Europe and beyond.
+                        </p>
+                        <p class="work-description-mobile">
+                            <span class="position">Co-Founder & Board Member</span>
+                            Advocating for better crypto regulation in Europe
+                        </p>
+                    </div>
+                </div>
+                <a href="https://eu.ci" target="_blank" class="work-link">
+                    Learn more
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="work-card">
+                <div class="card-top">
+                    <img src="images/common-ground.jpg" alt="Consulting" class="work-image">
+                    <div class="work-content">
+                        <h3 class="work-title">Consulting</h3>
+                        <p class="work-description">
+                            <span class="position">Law & Code</span>
+                            Helping projects and founders succeed in the web3 space with my decade of knowledge and experience
+                        </p>
+                        <p class="work-description-mobile">
+                            <span class="position">Law & Code</span>
+                            Helping projects and founders succeed in the web3 space
+                        </p>
+                    </div>
+                </div>
+                <a href="mailto:fg@blockchain.lawyer" class="work-link">
+                    Get in touch
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
 </html> 
