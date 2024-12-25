@@ -433,6 +433,9 @@
             top: 0;
             padding: 1rem 2rem;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .header a {
@@ -523,11 +526,130 @@
         .social a span.common-ground-text-mobile {
             display: none;
         }
+
+        .menu-button {
+            margin-left: 0;
+        }
+
+        .menu-button {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: var(--bg-alt);
+            border: none;
+            cursor: pointer;
+            margin-left: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .menu-button:hover {
+            background: #f3f4f6;
+            transform: translateY(-1px);
+        }
+
+        .menu-button .line {
+            position: absolute;
+            left: 12px;
+            width: 16px;
+            height: 2px;
+            background: var(--text);
+            transition: all 0.3s ease;
+        }
+
+        .menu-button .line:nth-child(1) { top: 14px; }
+        .menu-button .line:nth-child(2) { top: 19px; }
+        .menu-button .line:nth-child(3) { top: 24px; }
+
+        .menu-button.active .line:nth-child(1) {
+            transform: rotate(45deg);
+            top: 19px;
+        }
+
+        .menu-button.active .line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-button.active .line:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 19px;
+        }
+
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 90;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .menu-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .menu-item {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            transition: all 0.2s ease;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        .menu-overlay.visible .menu-item {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .menu-overlay.visible .menu-item:nth-child(1) { transition-delay: 0.1s; }
+        .menu-overlay.visible .menu-item:nth-child(2) { transition-delay: 0.15s; }
+        .menu-overlay.visible .menu-item:nth-child(3) { transition-delay: 0.2s; }
+        .menu-overlay.visible .menu-item:nth-child(4) { transition-delay: 0.25s; }
+        .menu-overlay.visible .menu-item:nth-child(5) { transition-delay: 0.3s; }
+
+        .menu-item:hover {
+            color: var(--primary);
+            transform: translateX(10px);
+        }
+
+        .menu-item.active {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .menu-item {
+                font-size: 2.5rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header class="chrome header">
         <a href="/">blockchain.lawyer</a>
+        <button class="menu-button" id="menuButton">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
     </header>
     <main class="hero">
         <div class="container">
@@ -656,6 +778,17 @@
             </svg>
         </button>
     </footer>
+
+    <div class="menu-overlay">
+        <nav class="menu-items">
+            <a href="#next-section" class="menu-item active">Work</a>
+            <a href="#blogs" class="menu-item">Blogs</a>
+            <a href="#publications" class="menu-item">Publications</a>
+            <a href="#interviews" class="menu-item">Interviews</a>
+            <a href="#events" class="menu-item">Events</a>
+        </nav>
+    </div>
+
     <script>
         const sections = ['hero', 'next-section'];
         let currentSection = 0;
@@ -705,6 +838,24 @@
 
         // Initial state
         hideChrome();
+
+        const menuButton = document.getElementById('menuButton');
+        const menuOverlay = document.querySelector('.menu-overlay');
+
+        menuButton.addEventListener('click', () => {
+            menuButton.classList.toggle('active');
+            menuOverlay.classList.toggle('visible');
+            document.body.style.overflow = menuOverlay.classList.contains('visible') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking a menu item
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', () => {
+                menuButton.classList.remove('active');
+                menuOverlay.classList.remove('visible');
+                document.body.style.overflow = '';
+            });
+        });
     </script>
 </body>
 </html> 
