@@ -653,13 +653,13 @@
         }
 
         .blog-category {
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
 
         .blog-category-title {
             max-width: 1200px;
-            margin: 0 auto 2rem;
-            font-size: 2rem;
+            margin: 0 0 1rem 2rem;
+            font-size: 1.75rem;
             font-weight: 700;
             color: var(--text);
             display: flex;
@@ -703,7 +703,7 @@
         }
 
         .blog-card {
-            flex: 0 0 400px;
+            flex: 0 0 320px;
             scroll-snap-align: start;
             background: white;
             border-radius: 12px;
@@ -717,7 +717,7 @@
 
         .blog-image {
             width: 100%;
-            height: 200px;
+            height: 160px;
             object-fit: cover;
             background: var(--bg-alt);
         }
@@ -745,10 +745,14 @@
 
         @media (max-width: 768px) {
             .blog-card {
-                flex: 0 0 300px;
+                flex: 0 0 260px;
             }
             .blog-image {
                 height: 160px;
+            }
+            .blog-category-title {
+                margin: 0 0 1rem 1rem;
+                font-size: 1.5rem;
             }
         }
 
@@ -954,13 +958,6 @@
                         <div class="blog-content">
                             <h3 class="blog-title">Can the Wikipedia Model be Applied to Public Policy Making?</h3>
                             <p class="blog-excerpt">Exploring collaborative approaches to policy development in the digital age.</p>
-                        </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/the-berlin-legal-tech-2017-hackathon-retrospective-and-future-roadmaps-88f50d45aac8" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-the-berlin-legal-tech-2017-hackathon-retrospective-and-future-roadmaps-88f50d45aac8.jpg" alt="The Berlin Legal Tech 2017 Hackathon" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">The Berlin Legal Tech 2017 Hackathon</h3>
-                            <p class="blog-excerpt">Retrospective and future roadmaps from the intersection of law and technology.</p>
                         </div>
                     </a>
                     <a href="https://heckerhut.medium.com/a-blockchain-token-taxonomy-fadf5c56139a" target="_blank" class="blog-card">
