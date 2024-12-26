@@ -808,6 +808,146 @@
             position: relative;
             padding: 0 2rem;
         }
+
+        .publications-section {
+            min-height: 100vh;
+            padding: 4rem 1rem;
+            background: var(--bg);
+        }
+
+        .publications-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .publications-row {
+            margin-bottom: 4rem;
+        }
+
+        .publications-category {
+            margin: 0 0 2rem 2rem;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .publication-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .publication-card.primary {
+            grid-column: auto;
+        }
+
+        .publication-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            background: var(--bg-alt);
+        }
+
+        .publication-card.secondary .publication-image {
+            object-fit: contain;
+            padding: 2rem;
+            background: white;
+            height: 300px;
+        }
+
+        .publication-content {
+            padding: 2rem;
+        }
+
+        .publication-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .publication-card.primary .publication-title {
+            font-size: 2rem;
+        }
+
+        .publication-meta {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .publication-description {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .publication-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .publication-link:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 1024px) {
+            .publications-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .publication-card.primary {
+                grid-column: auto;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .publications-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .publication-card.primary {
+                grid-column: auto;
+            }
+
+            .publication-card.primary .publication-image {
+                height: 200px;
+            }
+
+            .publication-card.primary .publication-title {
+                font-size: 1.5rem;
+            }
+
+            .publications-category {
+                margin: 0 0 1.5rem 1rem;
+                font-size: 1.5rem;
+            }
+        }
+
+        .publication-card.primary .publication-image {
+            object-fit: contain;
+            padding: 2rem;
+            background: white;
+        }
     </style>
 </head>
 <body>
@@ -934,204 +1074,87 @@
             </div>
         </div>
     </section>
-    <section id="blogs" class="blog-section section">
-        <div class="blog-container">
-            <div class="blog-category">
-                <h2 class="blog-category-title">
-                    <a href="https://medium.com/@heckerhut" target="_blank">
-                        Medium
-                        <svg width="32" height="32" viewBox="0 0 1043.63 592.71" fill="currentColor">
-                            <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94"></path>
-                        </svg>
-                    </a>
-                </h2>
-                <div class="blog-grid">
-                    <a href="https://heckerhut.medium.com/daos-are-dead-long-live-daos-50de94e8ee1e" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-daos-are-dead-long-live-daos-50de94e8ee1e.jpg" alt="DAOs are Dead, Long Live DAOs" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">DAOs are Dead, Long Live DAOs</h3>
-                            <p class="blog-excerpt">A critical analysis of the evolution and future of Decentralized Autonomous Organizations.</p>
+    <section id="publications" class="publications-section section">
+        <div class="publications-container">
+            <div class="publications-row">
+                <h2 class="publications-category">Books</h2>
+                <div class="publications-grid">
+                    <div class="publication-card primary">
+                        <img src="https://imageservice.azureedge.net/api/getimage?productId=27489151&width=270&format=webp" alt="Rechtshandbuch Legal Tech" class="publication-image">
+                        <div class="publication-content">
+                            <h3 class="publication-title">Rechtshandbuch Legal Tech</h3>
+                            <div class="publication-meta">Co-Editor with Stephan Breidenbach · 2nd Edition, 2021</div>
+                            <p class="publication-description">The definitive handbook on Legal Tech, exploring the digitalization of legal services and its impact on legal professions, businesses, and consumers. Published by C.H.BECK, this comprehensive guide provides practical examples and analyzes trends for the next 10-15 years.</p>
+                            <a href="https://www.beck-shop.de/breidenbach-glatz-rechtshandbuch-legal-tech/product/27489151" target="_blank" class="publication-link">
+                                Buy now
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
                         </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/can-the-wikipedia-model-be-applied-to-public-policy-making-ff4444a2ff60" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-can-the-wikipedia-model-be-applied-to-public-policy-making-ff4444a2ff60.jpg" alt="Can the Wikipedia Model be Applied to Public Policy Making?" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Can the Wikipedia Model be Applied to Public Policy Making?</h3>
-                            <p class="blog-excerpt">Exploring collaborative approaches to policy development in the digital age.</p>
+                    </div>
+                    <div class="publication-card primary">
+                        <img src="https://imageservice.azureedge.net/api/getimage?productId=35466459&width=270&format=webp" alt="FinTech-Handbuch" class="publication-image">
+                        <div class="publication-content">
+                            <h3 class="publication-title">FinTech-Handbuch</h3>
+                            <div class="publication-meta">Contributing Author · 3rd Edition, 2024</div>
+                            <p class="publication-description">A comprehensive guide to the FinTech industry, covering payments, crowdfunding, lending, securities, robo-advisory, InsureTech, and digital currencies. Published by C.H.BECK as part of their Banking Law series.</p>
+                            <a href="https://www.beck-shop.de/moeslein-omlor-fintech-handbuch/product/35466459" target="_blank" class="publication-link">
+                                Buy now
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
                         </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/a-blockchain-token-taxonomy-fadf5c56139a" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-a-blockchain-token-taxonomy-fadf5c56139a.jpg" alt="A Blockchain Token Taxonomy" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">A Blockchain Token Taxonomy</h3>
-                            <p class="blog-excerpt">A comprehensive framework for understanding and classifying blockchain tokens.</p>
-                        </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/how-we-use-smart-contracts-at-satoshipay-to-change-the-internet-s-economy-forever-today-777988a868d" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-how-we-use-smart-contracts-at-satoshipay-to-change-the-internet-s-economy-forever-today-777988a868d.jpg" alt="How We Use Smart Contracts at SatoshiPay" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">How We Use Smart Contracts at SatoshiPay</h3>
-                            <p class="blog-excerpt">Changing the internet's economy forever, today.</p>
-                        </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/smart-contracts-platforms-and-intermediaries-c3d30f5182a6" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-smart-contracts-platforms-and-intermediaries-c3d30f5182a6.jpg" alt="Smart Contracts, Platforms and Intermediaries" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Smart Contracts, Platforms and Intermediaries</h3>
-                            <p class="blog-excerpt">Exploring the relationship between smart contract technology and traditional intermediaries.</p>
-                        </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/the-political-economy-of-computing-7fffc75423a2" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-the-political-economy-of-computing-7fffc75423a2.jpg" alt="The Political Economy of Computing" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">The Political Economy of Computing</h3>
-                            <p class="blog-excerpt">Understanding the intersection of technology, economics, and politics.</p>
-                        </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/modes-of-contractual-governance-in-an-on-demand-service-economy-1833629f379b" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-modes-of-contractual-governance-in-an-on-demand-service-economy-1833629f379b.jpg" alt="Modes of Contractual Governance" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Modes of Contractual Governance</h3>
-                            <p class="blog-excerpt">Analyzing contractual governance in the on-demand service economy.</p>
-                        </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/whats-a-smart-contract-in-search-of-a-consensus-c268c830a8ad" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-whats-a-smart-contract-in-search-of-a-consensus-c268c830a8ad.jpg" alt="What's a Smart Contract?" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">What's a Smart Contract?</h3>
-                            <p class="blog-excerpt">In search of a consensus on the definition and implications of smart contracts.</p>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="blog-category">
-                <h2 class="blog-category-title">
-                    <a href="https://app.cg/c/networksociety/" target="_blank">
-                        Network Society
-                        <img src="images/logo-black-transparent.svg" alt="Common Ground">
-                    </a>
-                </h2>
-                <div class="blog-grid">
-                    <a href="https://app.cg/c/networksociety/article/what-is-a-digital-jurisdiction-9KS8MHd9TPrGmXeeBkYW9t/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-what-is-a-digital-jurisdiction-9KS8MHd9TPrGmXeeBkYW9t.jpg" alt="What is a Digital Jurisdiction?" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">What is a Digital Jurisdiction?</h3>
-                            <p class="blog-excerpt">Exploring the concept of jurisdiction in the digital age.</p>
+            <div class="publications-row">
+                <h2 class="publications-category">Magazines</h2>
+                <div class="publications-grid">
+                    <div class="publication-card primary">
+                        <img src="https://via.placeholder.com/800x400" alt="Primary Magazine" class="publication-image">
+                        <div class="publication-content">
+                            <h3 class="publication-title">Digital Society Review</h3>
+                            <div class="publication-meta">Co-Editor & Head Author · Volume 1, 2023</div>
+                            <p class="publication-description">A quarterly publication exploring the evolving landscape of digital societies, featuring in-depth analysis and expert perspectives.</p>
+                            <a href="#" class="publication-link">
+                                Learn more
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
                         </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/should-daos-have-constitutions-8QDmXW61MQitjWYLuTiGgN/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-should-daos-have-constitutions-8QDmXW61MQitjWYLuTiGgN.jpg" alt="Should DAOs Have Constitutions?" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Should DAOs Have Constitutions?</h3>
-                            <p class="blog-excerpt">Examining constitutional frameworks in decentralized organizations.</p>
+                    </div>
+                    <div class="publication-card secondary">
+                        <img src="https://via.placeholder.com/400x200" alt="Secondary Magazine 1" class="publication-image">
+                        <div class="publication-content">
+                            <h3 class="publication-title">Blockchain Quarterly</h3>
+                            <div class="publication-meta">Contributing Editor · Issue 12, 2022</div>
+                            <p class="publication-description">Latest developments and trends in blockchain technology and regulation.</p>
+                            <a href="#" class="publication-link">
+                                Learn more
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
                         </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/ongoing-research-on-sovereignty-in-the-digital-age-gdYwt5Uhm5Ty6uGWj9ANL7/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-ongoing-research-on-sovereignty-in-the-digital-age-gdYwt5Uhm5Ty6uGWj9ANL7.jpg" alt="Ongoing Research on Sovereignty in the Digital Age" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Ongoing Research on Sovereignty in the Digital Age</h3>
-                            <p class="blog-excerpt">Investigating the evolution of sovereignty in digital spaces.</p>
+                    </div>
+                    <div class="publication-card secondary">
+                        <img src="https://via.placeholder.com/400x200" alt="Secondary Magazine 2" class="publication-image">
+                        <div class="publication-content">
+                            <h3 class="publication-title">Legal Tech Today</h3>
+                            <div class="publication-meta">Contributing Author · Issue 24, 2021</div>
+                            <p class="publication-description">Insights into the transformation of legal services through technology.</p>
+                            <a href="#" class="publication-link">
+                                Learn more
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
                         </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/decentralized-justice-state-of-the-art-recurring-criticisms-and-next-generation-research-topics-rM9Hj55BEBhGevLMVVTrbG/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-decentralized-justice-state-of-the-art-recurring-criticisms-and-next-generation-research-topics-rM9Hj55BEBhGevLMVVTrbG.jpg" alt="Decentralized Justice" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Decentralized Justice</h3>
-                            <p class="blog-excerpt">State of the art, recurring criticisms, and next-generation research topics.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/overthrowing-the-network-state-the-rise-of-coordinations-w7vg8EE92xsHbz6fWYHD4y/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-overthrowing-the-network-state-the-rise-of-coordinations-w7vg8EE92xsHbz6fWYHD4y.jpg" alt="Overthrowing the Network State" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Overthrowing the Network State</h3>
-                            <p class="blog-excerpt">The rise of coordinations in digital governance.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/with-ai-regulation-on-the-horizon-compute-clusters-move-to-international-waters-rs3cySS29fLqY3AsSEthSD/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-with-ai-regulation-on-the-horizon-compute-clusters-move-to-international-waters-rs3cySS29fLqY3AsSEthSD.jpg" alt="AI Regulation and Compute Clusters" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">AI Regulation and Compute Clusters</h3>
-                            <p class="blog-excerpt">The migration of compute resources to international waters.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/our-favorite-talks-from-the-network-state-conference-dDEJRm68j1EcTRYivPbK7e/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-our-favorite-talks-from-the-network-state-conference-dDEJRm68j1EcTRYivPbK7e.jpg" alt="Network State Conference Highlights" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Network State Conference Highlights</h3>
-                            <p class="blog-excerpt">Key insights from our favorite talks at the conference.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/how-to-build-a-community-hivemind-notes-from-my-talk-at-the-daoists-global-governance-gathering-oic29gz4bTttyN95TdL9v6/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-how-to-build-a-community-hivemind-notes-from-my-talk-at-the-daoists-global-governance-gathering-oic29gz4bTttyN95TdL9v6.jpg" alt="Building a Community Hivemind" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Building a Community Hivemind</h3>
-                            <p class="blog-excerpt">Notes from the DAOists Global Governance Gathering.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/enshrining-a-dispute-resolution-oracle-in-an-l2-blockchain-pTjp1ycs4gNtQYkjsxpPp5/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-enshrining-a-dispute-resolution-oracle-in-an-l2-blockchain-pTjp1ycs4gNtQYkjsxpPp5.jpg" alt="Dispute Resolution Oracles in L2 Blockchains" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Dispute Resolution Oracles in L2 Blockchains</h3>
-                            <p class="blog-excerpt">Technical implementation of dispute resolution mechanisms.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/institutional-decline-and-the-quiet-revolution-riuTgMXambTqAt9rthfmji/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-institutional-decline-and-the-quiet-revolution-riuTgMXambTqAt9rthfmji.jpg" alt="Institutional Decline and the Quiet Revolution" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Institutional Decline and the Quiet Revolution</h3>
-                            <p class="blog-excerpt">Analyzing the transformation of traditional institutions.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/open-problems-in-daos-dMuTR4tMNnAGtssZS5NCPw/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-open-problems-in-daos-dMuTR4tMNnAGtssZS5NCPw.jpg" alt="Open Problems in DAOs" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Open Problems in DAOs</h3>
-                            <p class="blog-excerpt">Exploring current challenges and future research directions.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/how-web3s-new-consumer-tech-stack-addresses-cryptos-great-filters-dxXwsvpadnGfzDTVCvAyrp/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-how-web3s-new-consumer-tech-stack-addresses-cryptos-great-filters-dxXwsvpadnGfzDTVCvAyrp.jpg" alt="Web3's New Consumer Tech Stack" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Web3's New Consumer Tech Stack</h3>
-                            <p class="blog-excerpt">Addressing crypto's great filters through technology.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/could-ecosystems-form-the-first-network-states-oisu2aouBrREn19a641SPe/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-could-ecosystems-form-the-first-network-states-oisu2aouBrREn19a641SPe.jpg" alt="Could Ecosystems Form the First Network States?" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Could Ecosystems Form the First Network States?</h3>
-                            <p class="blog-excerpt">Examining the potential of ecological systems in digital governance.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/the-prediction-agent-economy-mNHjTHmLgPLSuKNveLMnXi/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-the-prediction-agent-economy-mNHjTHmLgPLSuKNveLMnXi.jpg" alt="The Prediction Agent Economy" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">The Prediction Agent Economy</h3>
-                            <p class="blog-excerpt">Understanding the role of AI agents in economic systems.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/future-state-exploring-emerging-democratic-practices-on-public-blockchains-6vrCWcYvYw6ihKinLGSziV/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-future-state-exploring-emerging-democratic-practices-on-public-blockchains-6vrCWcYvYw6ihKinLGSziV.jpg" alt="Future State" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Future State</h3>
-                            <p class="blog-excerpt">Exploring emerging democratic practices on public blockchains.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/what-is-hypercomputing-9DS6v1bYAVQcv1kqrzUZjk/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-what-is-hypercomputing-9DS6v1bYAVQcv1kqrzUZjk.jpg" alt="What is Hypercomputing?" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">What is Hypercomputing?</h3>
-                            <p class="blog-excerpt">Exploring the frontiers of computational power.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/greetings-from-edge-city-lanna-bUjpySVf5HPEXJVYFS5gKG/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-greetings-from-edge-city-lanna-bUjpySVf5HPEXJVYFS5gKG.jpg" alt="Greetings from Edge City Lanna" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Greetings from Edge City Lanna</h3>
-                            <p class="blog-excerpt">Dispatches from the frontier of digital urbanism.</p>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1152,7 +1175,6 @@
     <div class="menu-overlay">
         <nav class="menu-items">
             <a href="#next-section" class="menu-item active">Work</a>
-            <a href="#blogs" class="menu-item">Blogs</a>
             <a href="#publications" class="menu-item">Publications</a>
             <a href="#interviews" class="menu-item">Interviews</a>
             <a href="#events" class="menu-item">Events</a>
@@ -1160,7 +1182,7 @@
     </div>
 
     <script>
-        const sections = ['hero', 'next-section', 'blogs'];
+        const sections = ['hero', 'next-section', 'publications'];
         let currentSection = 0;
         let isScrolling = false;
 
