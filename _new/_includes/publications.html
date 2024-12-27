@@ -1,0 +1,17 @@
+<section class="publications fade-in">
+    <h2>Publications</h2>
+    <div class="publications-grid">
+        {% for pub in site.data.publications %}
+        <div class="publication-card fade-in--delay-{{ forloop.index }}">
+            <img src="{{ pub.image }}" alt="{{ pub.title }}" class="publication-image">
+            <div class="publication-content">
+                <h3>{{ pub.title }}</h3>
+                <p class="publication-meta">{{ pub.journal }} ({{ pub.year }})</p>
+                {% if pub.link %}
+                <a href="{{ pub.link }}" class="publication-link">Read More →</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section> 

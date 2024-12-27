@@ -1,0 +1,36 @@
+# Site settings
+title: Florian Glatz | Blockchain Lawyer & Researcher
+description: Personal website of Florian Glatz, blockchain lawyer and researcher
+url: "https://florianglatz.com"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Collections
+collections:
+  sections:
+    output: false
+    sort_by: order
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "sections"
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - README.md
+  - package.json
+  - package-lock.json 

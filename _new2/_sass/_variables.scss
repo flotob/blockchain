@@ -1,0 +1,16 @@
+// Color variables
+$primary: #121a30;
+$primary-dark: #000000;
+$text: #1f2937;
+$text-light: #6b7280;
+$bg: #ffffff;
+$bg-alt: #f9fafb;
+
+:root {
+    --primary: #{$primary};
+    --primary-dark: #{$primary-dark};
+    --text: #{$text};
+    --text-light: #{$text-light};
+    --bg: #{$bg};
+    --bg-alt: #{$bg-alt};
+} 

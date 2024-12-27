@@ -1,0 +1,172 @@
+// Header styles
+.header {
+    text-align: center;
+    margin-bottom: $spacing-base * 3;
+
+    .profile-img {
+        width: 180px;
+        height: 180px;
+        border-radius: 8px;
+        margin-bottom: $spacing-base;
+        object-fit: cover;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+        color: $text-light;
+        font-size: 1.5rem;
+        margin-bottom: $spacing-base;
+    }
+
+    .location {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        color: $text-light;
+        
+        svg {
+            color: $primary;
+        }
+    }
+}
+
+// Publications styles
+.publications {
+    margin-bottom: $spacing-base * 3;
+
+    .publications-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: $spacing-base * 2;
+    }
+
+    .publication-card {
+        background: $bg;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+
+        &:hover {
+            transform: translateY(-4px);
+        }
+
+        .publication-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .publication-content {
+            padding: $spacing-base;
+        }
+
+        .publication-meta {
+            color: $text-light;
+            font-size: 0.9rem;
+        }
+
+        .publication-link {
+            display: inline-block;
+            margin-top: $spacing-base;
+            color: $primary;
+            font-weight: 500;
+        }
+    }
+}
+
+// Projects styles
+.projects {
+    margin-bottom: $spacing-base * 3;
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: $spacing-base * 2;
+    }
+
+    .project-card {
+        background: $bg;
+        border-radius: 8px;
+        padding: $spacing-base * 1.5;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: $spacing-base;
+        }
+
+        .project-year {
+            color: $text-light;
+            font-size: 0.9rem;
+        }
+
+        .project-description {
+            color: $text;
+            margin-bottom: $spacing-base;
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-status {
+            font-size: 0.9rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            
+            &.status-active {
+                background: rgba($primary, 0.1);
+                color: $primary;
+            }
+            
+            &.status-completed {
+                background: rgba($text-light, 0.1);
+                color: $text-light;
+            }
+        }
+    }
+}
+
+// Contact styles
+.contact {
+    text-align: center;
+
+    .availability {
+        color: $text-light;
+        margin-bottom: $spacing-base * 2;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: $spacing-base * 2;
+        flex-wrap: wrap;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: $text;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: all 0.2s;
+        
+        &:hover {
+            background: rgba($primary, 0.1);
+            color: $primary;
+            text-decoration: none;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+} 

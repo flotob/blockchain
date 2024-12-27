@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.content-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--bg-alt) 0%, var(--bg) 100%);
+    animation: fadeIn 1s ease-out;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    animation: fadeIn 1s ease-out 0.2s both;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    animation: fadeIn 1s ease-out 0.4s both;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-out 0.6s both;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    animation: fadeIn 1s ease-out 0.7s both;
+}
+
+.bio {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.25rem;
+    animation: fadeIn 1s ease-out 0.8s both;
+} 

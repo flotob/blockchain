@@ -1,0 +1,49 @@
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Base styles
+body {
+    font-family: $font-family-base;
+    line-height: $line-height-base;
+    color: $text;
+    background: $bg;
+}
+
+// Layout containers
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: $spacing-base;
+}
+
+.content-wrapper {
+    background: rgba($bg, 0.8);
+    max-width: $content-max-width;
+    margin: 0 auto;
+    padding: $spacing-base * 2 $spacing-base;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+    color: $primary;
+    margin-bottom: $spacing-base;
+}
+
+p {
+    margin-bottom: $spacing-base;
+}
+
+a {
+    color: $primary;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+} 
