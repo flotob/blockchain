@@ -1660,6 +1660,182 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             grid-template-columns: 1fr;
         }
     }
+
+    /* Legal links in footer */
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .legal-links {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .legal-links a {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 0.875rem;
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+    }
+
+    .legal-links a:hover {
+        opacity: 1;
+    }
+
+    .separator {
+        color: var(--text);
+        opacity: 0.4;
+    }
+
+    /* Legal Modal */
+    .legal-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .legal-modal.visible {
+        display: flex;
+        opacity: 1;
+    }
+
+    .legal-modal-content {
+        background: white;
+        width: 90%;
+        max-width: 800px;
+        max-height: 90vh;
+        margin: auto;
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .legal-modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background: var(--bg-alt);
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        z-index: 2;
+    }
+
+    .legal-modal-close:hover {
+        background: #f3f4f6;
+    }
+
+    .legal-modal-body {
+        padding: 2rem;
+        overflow-y: auto;
+    }
+
+    .legal-tabs {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .legal-tab {
+        padding: 0.5rem 1rem;
+        border: none;
+        background: none;
+        color: var(--text);
+        opacity: 0.6;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+        font-weight: 500;
+    }
+
+    .legal-tab.active {
+        opacity: 1;
+        border-bottom: 2px solid var(--primary);
+    }
+
+    .legal-content {
+        position: relative;
+    }
+
+    .legal-lang-content {
+        display: none;
+    }
+
+    .legal-lang-content.active {
+        display: block;
+    }
+
+    .legal-section {
+        margin-bottom: 2rem;
+    }
+
+    .legal-section h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: var(--text);
+    }
+
+    .legal-section p {
+        margin-bottom: 1rem;
+        color: var(--text);
+        line-height: 1.6;
+    }
+
+    .legal-section a {
+        color: var(--primary);
+        text-decoration: none;
+    }
+
+    .legal-section a:hover {
+        text-decoration: underline;
+    }
+
+    .legal-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .legal-links li {
+        margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .footer {
+            padding: 0.75rem 1rem;
+        }
+
+        .legal-modal-content {
+            width: 95%;
+        }
+
+        .legal-modal-body {
+            padding: 1.5rem;
+        }
+    }
+
+    .nav-buttons {
+        display: flex;
+        gap: 0.5rem;
+    }
 </style>
 
 <!-- Cinema Modal -->
@@ -2230,16 +2406,23 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 </section>
 
 <footer class="chrome footer">
-    <button class="nav-button" id="prevSection">
-        <svg fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-        </svg>
-    </button>
-    <button class="nav-button" id="nextSection">
-        <svg fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
-    </button>
+    <div class="legal-links">
+        <a href="#" id="imprintLink">Imprint</a>
+        <span class="separator">·</span>
+        <a href="#" id="privacyLink">Privacy Policy</a>
+    </div>
+    <div class="nav-buttons">
+        <button class="nav-button" id="prevSection">
+            <svg fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+            </svg>
+        </button>
+        <button class="nav-button" id="nextSection">
+            <svg fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </button>
+    </div>
 </footer>
 
 <div class="menu-overlay">
@@ -2599,4 +2782,198 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             }
         }
     });
+</script> 
+
+<!-- Legal Modals -->
+<div class="legal-modal" id="imprintModal">
+    <div class="legal-modal-content">
+        <button class="legal-modal-close">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <div class="legal-modal-body">
+            <div class="legal-tabs">
+                <button class="legal-tab active" data-lang="en">English</button>
+                <button class="legal-tab" data-lang="de">Deutsch</button>
+            </div>
+            <div class="legal-content" id="imprintContent">
+                <div class="legal-lang-content active" data-lang="en">
+                    <h2>Imprint</h2>
+                    <div class="legal-section">
+                        <h3>Contact</h3>
+                        <p>RA Florian Glatz<br>Schwedter Str. 267<br>10119 Berlin</p>
+                        <p><a href="mailto:fg@blockchain.lawyer">fg@blockchain.lawyer</a></p>
+                        <p><a href="https://keybase.io/ftg" target="_blank">Public Keys (hosted on keybase.io)</a></p>
+                    </div>
+                    <div class="legal-section">
+                        <h3>Supervisory Authority</h3>
+                        <p>Chamber of Lawyers<br>Littenstraße 9<br>10179 Berlin, Germany</p>
+                        <p><i>The professional title "Rechtsanwalt" ("Lawyer") was assigned by the Chamber of Lawyers.<br>
+                        Turnover tax identification number: DE 34/308/00538</i></p>
+                    </div>
+                    <div class="legal-section">
+                        <h3>Professional Regulation</h3>
+                        <p>Bundesrechtsanwaltsordnung (BRAO)<br>
+                        Berufsordnung für Rechtsanwälte (BORA)<br>
+                        Rechtsanwaltsvergütungsgesetz (RVG)<br>
+                        Fachanwaltsordnung (FAO)<br>
+                        Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE)</p>
+                        <p><a href="https://www.brak.de/fuer-anwaelte/berufsrecht/" target="_blank">Chamber of Lawyers Germany</a></p>
+                    </div>
+                    <div class="legal-section">
+                        <h3>Professional Insurance</h3>
+                        <p>German lawyers (Rechtsanwälte) are legally obliged to be insured. Details can be found in § 51 BRAO.</p>
+                        <p>RA Florian Glatz is insured with:</p>
+                        <p><a href="https://www.hdi-gerling.de/en/about_us/about_us/index.jsp" target="_blank">HDI-Gerling Firmen und Privat Vers. AG</a></p>
+                    </div>
+                </div>
+                <div class="legal-lang-content" data-lang="de">
+                    <h2>Impressum</h2>
+                    <div class="legal-section">
+                        <h3>Kontakt</h3>
+                        <p>RA Florian Glatz<br>Schwedter Str. 267<br>10119 Berlin</p>
+                        <p><a href="mailto:fg@blockchain.lawyer">fg@blockchain.lawyer</a></p>
+                        <p><a href="https://keybase.io/ftg" target="_blank">Public Keys (hosted on keybase.io)</a></p>
+                    </div>
+                    <div class="legal-section">
+                        <h3>Aufsichtsbehörde</h3>
+                        <p>Rechtsanwaltskammer Berlin<br>Littenstraße 9<br>10179 Berlin</p>
+                        <p><i>Die Berufsbezeichnung Rechtsanwalt wurde in der Bundesrepublik Deutschland verliehen.<br>
+                        Umsatzsteuer-Identifikationsnummer: DE 34/308/00538</i></p>
+                    </div>
+                    <div class="legal-section">
+                        <h3>Berufsrechtliche Regelungen</h3>
+                        <p>Bundesrechtsanwaltsordnung (BRAO)<br>
+                        Berufsordnung für Rechtsanwälte (BORA)<br>
+                        Rechtsanwaltsvergütungsgesetz (RVG)<br>
+                        Fachanwaltsordnung (FAO)<br>
+                        Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE)</p>
+                        <p><a href="https://www.brak.de/fuer-anwaelte/berufsrecht/" target="_blank">Bundesrechtsanwaltskammer</a></p>
+                    </div>
+                    <div class="legal-section">
+                        <h3>Versicherung</h3>
+                        <p>Rechtsanwälte sind aufgrund der Bundesrechtsanwaltsordnung (BRAO) verpflichtet, eine Berufshaftpflichtversicherung zu unterhalten. Einzelheiten sind § 51 BRAO zu entnehmen.</p>
+                        <p>RA Florian Glatz unterhält eine derartige Versicherung bei der:</p>
+                        <p><a href="https://www.hdi-gerling.de" target="_blank">HDI-Gerling Firmen und Privat Vers. AG</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="legal-modal" id="privacyModal">
+    <div class="legal-modal-content">
+        <button class="legal-modal-close">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <div class="legal-modal-body">
+            <div class="legal-tabs">
+                <button class="legal-tab active" data-lang="en">English</button>
+                <button class="legal-tab" data-lang="de">Deutsch</button>
+            </div>
+            <div class="legal-content" id="privacyContent">
+                <div class="legal-lang-content active" data-lang="en">
+                    <h2>Privacy Policy</h2>
+                    <div class="legal-section">
+                        <p>This website is hosted on Github. Additionally, this website requests javascript libraries and webfonts from servers operated by Google, CDNJS and Twitter.</p>
+                        <ul class="legal-links">
+                            <li><a href="https://github.com/flotob/blockchain" target="_blank">Source Code on Github</a></li>
+                            <li><a href="https://github.com/site/privacy" target="_blank">Privacy Policy of Github</a></li>
+                            <li><a href="https://www.google.com/policies/privacy/" target="_blank">Privacy Policy of Google</a></li>
+                            <li><a href="https://www.cloudflare.com/security-policy" target="_blank">Privacy Policy of CloudFlare (CDNJS)</a></li>
+                            <li><a href="https://twitter.com/privacy" target="_blank">Privacy Policy of Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="legal-lang-content" data-lang="de">
+                    <h2>Datenschutzhinweise</h2>
+                    <div class="legal-section">
+                        <p>Diese Seite wird von Github gehostet. Ebenfalls fordert die Seite beim Laden Programmbibliotheken (Javascript) und Webfonts von Servern an, die von Google, CloudFlare (CDNJS) und Twitter betrieben werden.</p>
+                        <ul class="legal-links">
+                            <li><a href="https://github.com/flotob/blockchain" target="_blank">Quellcode auf Github</a></li>
+                            <li><a href="https://github.com/site/privacy" target="_blank">Datenschutzbestimmungen von Github</a></li>
+                            <li><a href="https://www.google.com/policies/privacy/" target="_blank">Datenschutzbestimmungen von Google</a></li>
+                            <li><a href="https://www.cloudflare.com/security-policy" target="_blank">Datenschutzbestimmungen von CloudFlare (CDNJS)</a></li>
+                            <li><a href="https://twitter.com/privacy" target="_blank">Datenschutzbestimmungen von Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Add this to your existing script
+document.addEventListener('DOMContentLoaded', function() {
+    const imprintModal = document.getElementById('imprintModal');
+    const privacyModal = document.getElementById('privacyModal');
+    const imprintLink = document.getElementById('imprintLink');
+    const privacyLink = document.getElementById('privacyLink');
+    const closeButtons = document.querySelectorAll('.legal-modal-close');
+    const legalTabs = document.querySelectorAll('.legal-tab');
+
+    function openModal(modal) {
+        modal.classList.add('visible');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modal) {
+        modal.classList.remove('visible');
+        document.body.style.overflow = '';
+    }
+
+    imprintLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal(imprintModal);
+    });
+
+    privacyLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal(privacyModal);
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            closeModal(button.closest('.legal-modal'));
+        });
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal(imprintModal);
+            closeModal(privacyModal);
+        }
+    });
+
+    legalTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const lang = tab.dataset.lang;
+            const modal = tab.closest('.legal-modal');
+            
+            // Update active tab
+            modal.querySelectorAll('.legal-tab').forEach(t => {
+                t.classList.toggle('active', t === tab);
+            });
+
+            // Update active content
+            modal.querySelectorAll('.legal-lang-content').forEach(content => {
+                content.classList.toggle('active', content.dataset.lang === lang);
+            });
+        });
+    });
+
+    // Close modal when clicking outside
+    [imprintModal, privacyModal].forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal(modal);
+            }
+        });
+    });
+});
 </script> 
