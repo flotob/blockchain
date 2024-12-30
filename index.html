@@ -1270,7 +1270,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     <div class="cinema-container">
         <div class="cinema-main">
             <div class="cinema-player">
-                <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div id="youtubePlayer"></div>
             </div>
             <div class="cinema-info">
                 <h2 class="cinema-title"></h2>
@@ -1952,6 +1952,9 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 <!-- Store data in a hidden div -->
 <div id="youtubeData" style="display: none;" data-videos="{{ site.data.youtube_videos | jsonify | replace: '"', '&quot;' }}"></div>
 
+<!-- Add YouTube IFrame API -->
+<script src="https://www.youtube.com/iframe_api"></script>
+
 <script>
     // Get video data from the data attribute
     const youtubeData = JSON.parse(
@@ -1960,9 +1963,158 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             .replace(/&quot;/g, '"')
     );
     
+    // DOM elements for cinema mode
+    const cinemaModal = document.querySelector('.cinema-modal');
+    const cinemaClose = document.querySelector('.cinema-close');
+    const cinemaTitle = document.querySelector('.cinema-title');
+    const cinemaChannelImg = document.querySelector('.cinema-channel img');
+    const cinemaChannelName = document.querySelector('.cinema-channel span');
+    const cinemaViews = document.querySelector('.cinema-views');
+    const cinemaDate = document.querySelector('.cinema-date');
+    const cinemaDescription = document.querySelector('.cinema-description');
+    const cinemaPlaylist = document.querySelector('.cinema-playlist');
+
     const sections = ['hero', 'next-section', 'blogs', 'publications', 'interviews', 'events'];
     let currentSection = 0;
     let isScrolling = false;
+
+    // Add YouTube player variables
+    let player;
+    let currentVideoIndex = 0;
+    let allVideos = [];
+
+    // Function to initialize YouTube player
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('youtubePlayer', {
+            height: '100%',
+            width: '100%',
+            videoId: '',
+            playerVars: {
+                autoplay: 1,
+                rel: 0,
+                modestbranding: 1
+            },
+            events: {
+                onStateChange: onPlayerStateChange
+            }
+        });
+    }
+
+    // Handle player state changes
+    function onPlayerStateChange(event) {
+        // When video ends (state = 0)
+        if (event.data === YT.PlayerState.ENDED) {
+            const nextIndex = (currentVideoIndex + 1) % allVideos.length;
+            loadVideo(allVideos[nextIndex], nextIndex);
+        }
+    }
+
+    // Update the cinema modal HTML to include a player div
+    document.querySelector('.cinema-player').innerHTML = '<div id="youtubePlayer"></div>';
+
+    // Function to load video
+    function loadVideo(video, index) {
+        currentVideoIndex = index;
+        const videoId = getVideoId(video.url);
+        
+        if (player && player.loadVideoById) {
+            player.loadVideoById(videoId);
+        }
+
+        cinemaTitle.textContent = video.title;
+        cinemaChannelImg.src = video.channel.thumbnail.default.url;
+        cinemaChannelImg.alt = video.channel.name;
+        cinemaChannelName.textContent = video.channel.name;
+        cinemaViews.textContent = formatViews(video.statistics.viewCount);
+        cinemaDate.textContent = new Date(video.publishedAt).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+        });
+        cinemaDescription.textContent = video.description;
+
+        // Update active state in playlist
+        document.querySelectorAll('.playlist-item').forEach((item, i) => {
+            item.classList.toggle('active', i === index);
+        });
+    }
+
+    // Update close cinema mode
+    cinemaClose.addEventListener('click', () => {
+        cinemaModal.classList.remove('visible');
+        document.body.style.overflow = '';
+        if (player && player.stopVideo) {
+            player.stopVideo();
+        }
+    });
+
+    // Function to extract video ID from YouTube URL
+    function getVideoId(url) {
+        const match = url.match(/[?&]v=([^&]+)/);
+        return match ? match[1] : null;
+    }
+
+    // Function to format view count
+    function formatViews(count) {
+        if (count < 1000) return `${count} views`;
+        return `${Math.floor(count/1000)}K views`;
+    }
+
+    // Function to build playlist
+    function buildPlaylist(videos) {
+        allVideos = videos;
+        cinemaPlaylist.innerHTML = videos.map((video, index) => `
+            <div class="playlist-item ${index === currentVideoIndex ? 'active' : ''}" data-index="${index}">
+                <div class="playlist-thumbnail">
+                    <img src="${video.thumbnails.medium.url}" alt="${video.title}">
+                    <div class="playlist-duration">${video.duration.replace('PT','').replace('H',':').replace('M',':').replace('S','')}</div>
+                </div>
+                <div class="playlist-info">
+                    <div class="playlist-title">${video.title}</div>
+                    <div class="playlist-channel">${video.channel.name}</div>
+                </div>
+            </div>
+        `).join('');
+
+        // Add click handlers to playlist items
+        document.querySelectorAll('.playlist-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const index = parseInt(item.dataset.index);
+                loadVideo(videos[index], index);
+            });
+        });
+    }
+
+    // Function to open cinema mode
+    function openCinema(video) {
+        // Get all videos from all categories and flatten them into a single array
+        const allVideosArray = Object.values(youtubeData.media_appearances)
+            .flat()
+            .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+        
+        const startIndex = allVideosArray.findIndex(v => v.url === video.url);
+        
+        buildPlaylist(allVideosArray);
+        loadVideo(video, startIndex);
+        cinemaModal.classList.add('visible');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Update video card click handlers
+    document.querySelectorAll('.blog-card').forEach(card => {
+        const videoUrl = card.getAttribute('href');
+        
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Find video in any category
+            const video = Object.values(youtubeData.media_appearances)
+                .flat()
+                .find(v => v.url === videoUrl);
+            if (video) {
+                openCinema(video);
+            }
+        });
+    });
 
     function showChrome() {
         document.querySelectorAll('.chrome').forEach(el => el.classList.add('visible'));
@@ -2047,118 +2199,4 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 
     window.addEventListener('resize', updateScrollButtons);
     updateScrollButtons();
-
-    // Add before the closing script tag
-    const cinemaModal = document.querySelector('.cinema-modal');
-    const cinemaClose = document.querySelector('.cinema-close');
-    const cinemaPlayer = document.querySelector('.cinema-player iframe');
-    const cinemaTitle = document.querySelector('.cinema-title');
-    const cinemaChannelImg = document.querySelector('.cinema-channel img');
-    const cinemaChannelName = document.querySelector('.cinema-channel span');
-    const cinemaViews = document.querySelector('.cinema-views');
-    const cinemaDate = document.querySelector('.cinema-date');
-    const cinemaDescription = document.querySelector('.cinema-description');
-    const cinemaPlaylist = document.querySelector('.cinema-playlist');
-
-    let currentVideoIndex = 0;
-    let allVideos = [];
-
-    // Function to extract video ID from YouTube URL
-    function getVideoId(url) {
-        const match = url.match(/[?&]v=([^&]+)/);
-        return match ? match[1] : null;
-    }
-
-    // Function to format view count
-    function formatViews(count) {
-        if (count < 1000) return `${count} views`;
-        return `${Math.floor(count/1000)}K views`;
-    }
-
-    // Function to load video
-    function loadVideo(video, index) {
-        currentVideoIndex = index;
-        const videoId = getVideoId(video.url);
-        cinemaPlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-        cinemaTitle.textContent = video.title;
-        cinemaChannelImg.src = video.channel.thumbnail.default.url;
-        cinemaChannelImg.alt = video.channel.name;
-        cinemaChannelName.textContent = video.channel.name;
-        cinemaViews.textContent = formatViews(video.statistics.viewCount);
-        cinemaDate.textContent = new Date(video.publishedAt).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric'
-        });
-        cinemaDescription.textContent = video.description;
-
-        // Update active state in playlist
-        document.querySelectorAll('.playlist-item').forEach((item, i) => {
-            item.classList.toggle('active', i === index);
-        });
-    }
-
-    // Function to build playlist
-    function buildPlaylist(videos) {
-        allVideos = videos;
-        cinemaPlaylist.innerHTML = videos.map((video, index) => `
-            <div class="playlist-item ${index === currentVideoIndex ? 'active' : ''}" data-index="${index}">
-                <div class="playlist-thumbnail">
-                    <img src="${video.thumbnails.medium.url}" alt="${video.title}">
-                    <div class="playlist-duration">${video.duration.replace('PT','').replace('H',':').replace('M',':').replace('S','')}</div>
-                </div>
-                <div class="playlist-info">
-                    <div class="playlist-title">${video.title}</div>
-                    <div class="playlist-channel">${video.channel.name}</div>
-                </div>
-            </div>
-        `).join('');
-
-        // Add click handlers to playlist items
-        document.querySelectorAll('.playlist-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const index = parseInt(item.dataset.index);
-                loadVideo(videos[index], index);
-            });
-        });
-    }
-
-    // Function to open cinema mode
-    function openCinema(video, category) {
-        // Get all videos from the same category
-        const videos = youtubeData.media_appearances[category];
-        const startIndex = videos.findIndex(v => v.url === video.url);
-        
-        buildPlaylist(videos);
-        loadVideo(video, startIndex);
-        cinemaModal.classList.add('visible');
-        document.body.style.overflow = 'hidden';
-    }
-
-    // Close cinema mode
-    cinemaClose.addEventListener('click', () => {
-        cinemaModal.classList.remove('visible');
-        document.body.style.overflow = '';
-        cinemaPlayer.src = '';
-    });
-
-    // Handle video end (autoplay next)
-    cinemaPlayer.addEventListener('ended', () => {
-        const nextIndex = (currentVideoIndex + 1) % allVideos.length;
-        loadVideo(allVideos[nextIndex], nextIndex);
-    });
-
-    // Update video card click handlers
-    document.querySelectorAll('.blog-card').forEach(card => {
-        const videoUrl = card.getAttribute('href');
-        const category = card.closest('.blog-category').querySelector('.blog-category-title').textContent.trim().toLowerCase();
-        
-        card.addEventListener('click', (e) => {
-            e.preventDefault();
-            const video = youtubeData.media_appearances[category].find(v => v.url === videoUrl);
-            if (video) {
-                openCinema(video, category);
-            }
-        });
-    });
 </script> 
