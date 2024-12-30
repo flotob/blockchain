@@ -2282,8 +2282,8 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         // Get the appropriate video list based on the type
         let videoList;
         if (isEventVideo) {
-            // For event videos, only show videos from the same event
-            videoList = getAllEventVideos().filter(v => v.eventTitle === video.eventTitle);
+            // For event videos, show all event videos
+            videoList = getAllEventVideos();
         } else {
             // For media appearances, only show other media appearances
             videoList = Object.values(youtubeData.media_appearances).flat();
