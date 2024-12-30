@@ -1470,7 +1470,8 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                 </a>
             </h2>
             <div class="blog-grid">
-                {% for video in site.data.youtube_videos.media_appearances.interviews %}
+                {% assign sorted_interviews = site.data.youtube_videos.media_appearances.interviews | sort: "publishedAt" | reverse %}
+                {% for video in sorted_interviews %}
                 <a href="{{ video.url }}" target="_blank" class="blog-card">
                     <div class="blog-image-container">
                         <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}" 
@@ -1509,7 +1510,8 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                 </a>
             </h2>
             <div class="blog-grid">
-                {% for video in site.data.youtube_videos.media_appearances.podcasts %}
+                {% assign sorted_podcasts = site.data.youtube_videos.media_appearances.podcasts | sort: "publishedAt" | reverse %}
+                {% for video in sorted_podcasts %}
                 <a href="{{ video.url }}" target="_blank" class="blog-card">
                     <div class="blog-image-container">
                         <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}" 
@@ -1548,7 +1550,8 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                 </a>
             </h2>
             <div class="blog-grid">
-                {% for video in site.data.youtube_videos.media_appearances.lectures %}
+                {% assign sorted_lectures = site.data.youtube_videos.media_appearances.lectures | sort: "publishedAt" | reverse %}
+                {% for video in sorted_lectures %}
                 <a href="{{ video.url }}" target="_blank" class="blog-card">
                     <div class="blog-image-container">
                         <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}" 
@@ -1587,7 +1590,8 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                 </a>
             </h2>
             <div class="blog-grid">
-                {% for video in site.data.youtube_videos.media_appearances.press_conferences %}
+                {% assign sorted_press = site.data.youtube_videos.media_appearances.press_conferences | sort: "publishedAt" | reverse %}
+                {% for video in sorted_press %}
                 <a href="{{ video.url }}" target="_blank" class="blog-card">
                     <div class="blog-image-container">
                         <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}" 
