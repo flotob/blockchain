@@ -2049,7 +2049,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 
 <section id="events" class="blog-section section">
     <div class="blog-container">
-        {% assign events = site.data.event_urls.events %}
+        {% assign events = site.data.event_videos.events %}
         {% for event in events %}
         <div class="blog-category">
             <h2 class="blog-category-title">
@@ -2063,25 +2063,26 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             <p class="event-description">{{ event.description }}</p>
             <div class="blog-grid">
                 {% for year_data in event.years reversed %}
-                    {% for video_data in year_data.videos %}
-                        {% assign video_id = video_data.video | split: "=" | last %}
-                        <a href="{{ video_data.video }}" target="_blank" class="blog-card">
+                    {% for video in year_data.videos %}
+                        <a href="{{ video.url }}" target="_blank" class="blog-card">
                             <div class="blog-image-container">
-                                <img src="https://i.ytimg.com/vi/{{ video_id }}/maxresdefault.jpg" 
-                                     alt="{{ event.title }} - {{ year_data.year }}"
+                                <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}" 
+                                     alt="{{ video.title }}"
                                      class="blog-image"
-                                     onerror="this.src='https://i.ytimg.com/vi/{{ video_id }}/hqdefault.jpg'">
+                                     onerror="this.src='{{ video.thumbnails.high.url }}'">
                                 <div class="blog-platform-badge">
                                     {{ year_data.year }}
                                 </div>
                             </div>
                             <div class="blog-content">
-                                <h3 class="blog-title">{{ event.title }} {{ year_data.year }}</h3>
+                                <h3 class="blog-title">{{ video.title }}</h3>
                                 <div class="channel-info">
+                                    <img src="{{ video.channel.thumbnail.default.url }}" alt="{{ video.channel.name }}" class="channel-logo">
                                     <div class="channel-details">
-                                        <div class="channel-name">{{ event.title }}</div>
+                                        <div class="channel-name">{{ video.channel.name }}</div>
                                         <div class="video-meta">
-                                            <span class="video-date">{{ year_data.year }}</span>
+                                            <span class="video-views">{% assign view_count = video.statistics.viewCount | plus: 0 %}{% if view_count < 1000 %}{{ view_count }} views{% else %}{{ view_count | divided_by: 1000 }}K views{% endif %}</span>
+                                            <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -2196,23 +2197,24 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             player.loadVideoById(videoId);
         }
 
-        cinemaTitle.textContent = video.title;
-        cinemaChannelImg.src = video.channel.thumbnail.default.url;
-        cinemaChannelImg.alt = video.channel.name;
-        cinemaChannelName.textContent = video.channel.name;
-        cinemaViews.textContent = formatViews(video.statistics.viewCount);
+        cinemaTitle.textContent = video.eventTitle ? 
+            `${video.eventTitle} (${video.eventYear}) - ${video.title}` : 
+            video.title;
+        cinemaChannelImg.src = video.channel?.thumbnail?.default?.url || '';
+        cinemaChannelImg.alt = video.channel?.name || '';
+        cinemaChannelName.textContent = video.channel?.name || '';
+        cinemaViews.textContent = formatViews(video.statistics?.viewCount || 0);
         cinemaDate.textContent = new Date(video.publishedAt).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'short',
             day: 'numeric'
         });
-        cinemaDescription.textContent = video.description;
+        cinemaDescription.textContent = video.description || '';
 
         // Update active state in playlist and scroll into view
         document.querySelectorAll('.playlist-item').forEach((item, i) => {
             item.classList.toggle('active', i === index);
             if (i === index) {
-                // Scroll the active item into view with smooth behavior
                 item.scrollIntoView({
                     behavior: 'smooth',
                     block: 'center'
@@ -2242,24 +2244,82 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         return `${Math.floor(count/1000)}K views`;
     }
 
+    // Function to get all videos from events
+    function getAllEventVideos() {
+        if (!eventData || !eventData.events) return [];
+        return eventData.events.flatMap(event => 
+            event.years.flatMap(year => 
+                year.videos.map(video => ({
+                    ...video,
+                    eventTitle: event.title,
+                    eventYear: year.year
+                }))
+            )
+        ).sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+    }
+
+    // Function to get video data from URL
+    function getVideoDataFromUrl(url) {
+        // First check media appearances
+        const mediaVideo = Object.values(youtubeData.media_appearances)
+            .flat()
+            .find(v => v.url === url);
+        
+        if (mediaVideo) return mediaVideo;
+
+        // If not found in media appearances, check events
+        const eventVideo = getAllEventVideos().find(v => v.url === url);
+        if (eventVideo) return eventVideo;
+
+        return null;
+    }
+
+    // Function to open cinema mode
+    function openCinema(video) {
+        // Get all videos from all categories and flatten them into a single array
+        const mediaVideos = Object.values(youtubeData.media_appearances)
+            .flat();
+        const eventVideos = getAllEventVideos();
+        
+        const allVideosArray = [...mediaVideos, ...eventVideos]
+            .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+        
+        const startIndex = allVideosArray.findIndex(v => v.url === video.url);
+        
+        buildPlaylist(allVideosArray);
+        cinemaModal.classList.add('visible');
+        document.body.style.overflow = 'hidden';
+        
+        // Small delay to ensure playlist items are rendered before scrolling
+        setTimeout(() => {
+            loadVideo(video, startIndex);
+        }, 100);
+    }
+
     // Function to build playlist
     function buildPlaylist(videos) {
         allVideos = videos;
         const playlistVideos = document.querySelector('.playlist-videos');
         
         function renderPlaylist(filteredVideos) {
-            playlistVideos.innerHTML = filteredVideos.map((video, index) => `
-                <div class="playlist-item ${index === currentVideoIndex ? 'active' : ''}" data-index="${index}">
-                    <div class="playlist-thumbnail">
-                        <img src="${video.thumbnails.medium.url}" alt="${video.title}">
-                        <div class="playlist-duration">${video.duration.replace('PT','').replace('H',':').replace('M',':').replace('S','')}</div>
+            playlistVideos.innerHTML = filteredVideos.map((video, index) => {
+                const title = video.eventTitle ? `${video.eventTitle} (${video.eventYear}) - ${video.title}` : video.title;
+                const thumbnailUrl = video.thumbnails?.medium?.url || video.thumbnails?.default?.url;
+                if (!thumbnailUrl) return '';
+                
+                return `
+                    <div class="playlist-item ${index === currentVideoIndex ? 'active' : ''}" data-index="${index}">
+                        <div class="playlist-thumbnail">
+                            <img src="${thumbnailUrl}" alt="${title}">
+                            <div class="playlist-duration">${video.duration?.replace('PT','').replace('H',':').replace('M',':').replace('S','') || ''}</div>
+                        </div>
+                        <div class="playlist-info">
+                            <div class="playlist-title">${title}</div>
+                            <div class="playlist-channel">${video.channel?.name || ''}</div>
+                        </div>
                     </div>
-                    <div class="playlist-info">
-                        <div class="playlist-title">${video.title}</div>
-                        <div class="playlist-channel">${video.channel.name}</div>
-                    </div>
-                </div>
-            `).join('');
+                `;
+            }).join('');
 
             // Add click handlers to playlist items
             document.querySelectorAll('.playlist-item').forEach(item => {
@@ -2277,60 +2337,16 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         const searchInput = document.getElementById('playlistSearch');
         searchInput.addEventListener('input', (e) => {
             const searchTerm = e.target.value.toLowerCase();
-            const filteredVideos = allVideos.filter(video => 
-                video.title.toLowerCase().includes(searchTerm) ||
-                video.channel.name.toLowerCase().includes(searchTerm) ||
-                video.description.toLowerCase().includes(searchTerm)
-            );
+            const filteredVideos = allVideos.filter(video => {
+                const title = video.eventTitle ? 
+                    `${video.eventTitle} ${video.eventYear} ${video.title}` : 
+                    video.title;
+                return title.toLowerCase().includes(searchTerm) ||
+                    (video.channel?.name || '').toLowerCase().includes(searchTerm) ||
+                    (video.description || '').toLowerCase().includes(searchTerm);
+            });
             renderPlaylist(filteredVideos);
         });
-    }
-
-    // Function to open cinema mode
-    function openCinema(video) {
-        // Get all videos from all categories and flatten them into a single array
-        const allVideosArray = Object.values(youtubeData.media_appearances)
-            .flat()
-            .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
-        
-        const startIndex = allVideosArray.findIndex(v => v.url === video.url);
-        
-        buildPlaylist(allVideosArray);
-        cinemaModal.classList.add('visible');
-        document.body.style.overflow = 'hidden';
-        
-        // Small delay to ensure playlist items are rendered before scrolling
-        setTimeout(() => {
-            loadVideo(video, startIndex);
-        }, 100);
-    }
-
-    // Function to get video data from URL
-    function getVideoDataFromUrl(url) {
-        // First check media appearances
-        const mediaVideo = Object.values(youtubeData.media_appearances)
-            .flat()
-            .find(v => v.url === url);
-        
-        if (mediaVideo) return mediaVideo;
-
-        // If not found in media appearances, check events
-        const videoId = getVideoId(url);
-        if (!videoId) return null;
-
-        // Create a simplified video object for events
-        return {
-            title: "Event Video", // This will be updated by the card's title
-            url: url,
-            thumbnails: {
-                maxres: {
-                    url: `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`
-                },
-                high: {
-                    url: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
-                }
-            }
-        };
     }
 
     // Update video card click handlers
@@ -2342,10 +2358,6 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             e.preventDefault();
             const video = getVideoDataFromUrl(videoUrl);
             if (video) {
-                // Update video title from card if it's an event video
-                if (!video.description) {
-                    video.title = card.querySelector('.blog-title').textContent.trim();
-                }
                 openCinema(video);
             }
         });

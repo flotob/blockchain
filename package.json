@@ -9,6 +9,7 @@
     "js-yaml": "^4.1.0"
   },
   "scripts": {
-    "convert": "node md-to-yaml.js"
+    "convert": "node md-to-yaml.js",
+    "fetch-events": "node scripts/fetch_event_data.js"
   }
 }
