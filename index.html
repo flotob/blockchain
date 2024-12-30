@@ -10,6 +10,35 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         --text-light: #6b7280;
         --bg: #ffffff;
         --bg-alt: #f9fafb;
+        --border: rgba(0, 0, 0, 0.05);
+        --shadow: rgba(0, 0, 0, 0.1);
+        --shadow-light: rgba(0, 0, 0, 0.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root:not([data-theme='light']) {
+            --primary: #4f6dbd;
+            --primary-dark: #3d5aa8;
+            --text: #e5e7eb;
+            --text-light: #9ca3af;
+            --bg: #111827;
+            --bg-alt: #1f2937;
+            --border: rgba(255, 255, 255, 0.05);
+            --shadow: rgba(0, 0, 0, 0.3);
+            --shadow-light: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    :root[data-theme='dark'] {
+        --primary: #4f6dbd;
+        --primary-dark: #3d5aa8;
+        --text: #e5e7eb;
+        --text-light: #9ca3af;
+        --bg: #111827;
+        --bg-alt: #1f2937;
+        --border: rgba(255, 255, 255, 0.05);
+        --shadow: rgba(0, 0, 0, 0.3);
+        --shadow-light: rgba(0, 0, 0, 0.2);
     }
 
     * {
@@ -28,6 +57,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         line-height: 1.6;
         color: var(--text);
         background: var(--bg);
+        transition: color 0.3s ease, background-color 0.3s ease;
     }
 
     .container {
@@ -37,12 +67,12 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     }
 
     .content-wrapper {
-        background: rgba(255, 255, 255, 0.8);
+        background: var(--bg);
         max-width: 600px;
         margin: 0 auto;
         padding: 2rem 1rem;
         border-radius: 12px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        box-shadow: 0 4px 6px -1px var(--shadow-light), 0 2px 4px -1px var(--shadow-light);
     }
 
     .hero {
@@ -252,10 +282,10 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     }
 
     .work-card {
-        background: white;
+        background: var(--bg);
         border-radius: 16px;
         overflow: visible;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        box-shadow: 0 4px 6px -1px var(--shadow-light), 0 2px 4px -1px var(--shadow-light);
         transition: all 0.3s ease;
         display: flex;
         flex-direction: column;
@@ -274,7 +304,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         width: 100%;
         height: 200px;
         object-fit: cover;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid var(--border);
     }
 
     .work-content {
@@ -415,7 +445,8 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         position: fixed;
         left: 0;
         right: 0;
-        background: rgba(255, 255, 255, 0.9);
+        background: var(--bg);
+        border-color: var(--border);
         backdrop-filter: blur(8px);
         opacity: 0;
         transition: opacity 0.3s ease;
@@ -429,7 +460,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     .header {
         top: 0;
         padding: 1rem 2rem;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid var(--border);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -444,7 +475,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     .footer {
         bottom: 0;
         padding: 1rem;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        border-top: 1px solid var(--border);
         display: flex;
         justify-content: flex-end;
         gap: 0.5rem;
@@ -702,10 +733,10 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     .blog-card {
         flex: 0 0 320px;
         scroll-snap-align: start;
-        background: white;
+        background: var(--bg);
         border-radius: 12px;
         overflow: hidden;
-        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        box-shadow: 0 2px 4px -1px var(--shadow-light), 0 2px 4px -1px var(--shadow-light);
         transition: all 0.2s ease;
         display: flex;
         flex-direction: column;
@@ -777,7 +808,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     .blog-meta {
         margin-top: auto;
         padding-top: 0.75rem;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        border-top: 1px solid var(--border);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -841,7 +872,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         height: 40px;
         border-radius: 20px;
         background: white;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px -1px var(--shadow), 0 2px 4px -1px var(--shadow);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -915,10 +946,10 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     }
 
     .publication-card {
-        background: white;
+        background: var(--bg);
         border-radius: 16px;
         overflow: hidden;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 6px -1px var(--shadow-light), 0 2px 4px -1px var(--shadow-light);
         transition: all 0.3s ease;
     }
 
@@ -1370,7 +1401,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     .blog-meta {
         margin-top: auto;
         padding-top: 0.75rem;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        border-top: 1px solid var(--border);
     }
 
     .blog-author {
@@ -1403,6 +1434,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     .blog-date {
         font-size: 0.75rem;
         color: var(--text-light);
+        white-space: nowrap;
     }
 
     @media (max-width: 768px) {
@@ -1459,7 +1491,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     .blog-card .blog-meta {
         margin-top: auto;
         padding-top: 0.75rem;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        border-top: 1px solid var(--border);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1522,7 +1554,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         gap: 0.5rem;
         margin-top: auto;
         padding-top: 0.75rem;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        border-top: 1px solid var(--border);
     }
 
     .channel-logo {
@@ -1618,10 +1650,10 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 
     .other-events-grid .blog-category {
         margin-bottom: 0;
-        background: white;
+        background: var(--bg);
         border-radius: 16px;
         padding: 1.5rem;
-        box-shadow: 0 4px 20px -8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 20px -8px var(--shadow), 0 2px 4px -1px var(--shadow-light);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -1712,7 +1744,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     }
 
     .legal-modal-content {
-        background: white;
+        background: var(--bg);
         width: 90%;
         max-width: 800px;
         max-height: 90vh;
@@ -1836,6 +1868,105 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         display: flex;
         gap: 0.5rem;
     }
+
+    .header-controls {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background: var(--bg-alt);
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        color: var(--text);
+    }
+
+    .theme-toggle:hover {
+        background: var(--bg-alt);
+        transform: translateY(-1px);
+    }
+
+    .theme-toggle svg {
+        width: 20px;
+        height: 20px;
+        transition: all 0.2s ease;
+    }
+
+    .theme-toggle .sun-icon {
+        display: none;
+    }
+
+    .theme-toggle .moon-icon {
+        display: block;
+    }
+
+    :root[data-theme='dark'] .theme-toggle .sun-icon {
+        display: block;
+    }
+
+    :root[data-theme='dark'] .theme-toggle .moon-icon {
+        display: none;
+    }
+
+    /* Add smooth transitions for theme changes */
+    body {
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    /* Update all background colors to use CSS variables */
+    .chrome {
+        background: var(--bg);
+        border-color: var(--border);
+    }
+
+    .content-wrapper,
+    .work-card,
+    .blog-card,
+    .publication-card,
+    .other-events-grid .blog-category {
+        background: var(--bg);
+        box-shadow: 0 4px 6px -1px var(--shadow-light), 0 2px 4px -1px var(--shadow-light);
+    }
+
+    .nav-button,
+    .menu-button,
+    .theme-toggle {
+        background: var(--bg-alt);
+    }
+
+    .nav-button:hover,
+    .menu-button:hover,
+    .theme-toggle:hover {
+        background: var(--bg-alt);
+    }
+
+    /* Update all text colors */
+    body,
+    .header a,
+    .work-title,
+    .blog-title,
+    .publication-title,
+    .channel-name,
+    .blog-channel-name {
+        color: var(--text);
+    }
+
+    .work-description,
+    .blog-excerpt,
+    .publication-description,
+    .event-description,
+    .video-meta,
+    .blog-date {
+        color: var(--text-light);
+    }
 </style>
 
 <!-- Cinema Modal -->
@@ -1874,11 +2005,21 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 
 <header class="chrome header">
     <a href="/">blockchain.lawyer</a>
-    <button class="menu-button" id="menuButton">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-    </button>
+    <div class="header-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+        </button>
+        <button class="menu-button" id="menuButton">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
 </header>
 
 <main class="hero">
@@ -2916,7 +3057,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const privacyLink = document.getElementById('privacyLink');
     const closeButtons = document.querySelectorAll('.legal-modal-close');
     const legalTabs = document.querySelectorAll('.legal-tab');
+    const themeToggle = document.getElementById('themeToggle');
 
+    // Theme toggle functionality
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }
+    
+    function getTheme() {
+        return localStorage.getItem('theme') || 
+               (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    }
+    
+    setTheme(getTheme());
+    
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = getTheme();
+        setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+    
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            setTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+
+    // Modal functionality
     function openModal(modal) {
         modal.classList.add('visible');
         document.body.style.overflow = 'hidden';
