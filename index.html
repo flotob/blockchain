@@ -639,8 +639,8 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     }
 
     .blog-section {
-        padding: 4rem 1rem;
         min-height: 100vh;
+        padding: 4rem 1rem;
         background: var(--bg-alt);
     }
 
@@ -1564,6 +1564,21 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     .video-date {
         white-space: nowrap;
     }
+
+    .event-description {
+        max-width: 1200px;
+        margin: 0 0 1.5rem 2rem;
+        font-size: 1rem;
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+        .event-description {
+            margin: 0 0 1rem 1rem;
+            font-size: 0.875rem;
+        }
+    }
 </style>
 
 <!-- Cinema Modal -->
@@ -2034,73 +2049,49 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 
 <section id="events" class="blog-section section">
     <div class="blog-container">
+        {% assign events = site.data.event_urls.events %}
+        {% for event in events %}
         <div class="blog-category">
             <h2 class="blog-category-title">
                 <a href="#" style="cursor: default">
-                    Policy
+                    {{ event.title }}
                     <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                     </svg>
                 </a>
             </h2>
+            <p class="event-description">{{ event.description }}</p>
             <div class="blog-grid">
-                <a href="#" class="blog-card">
-                    <img src="images/common-ground.jpg" alt="MiCA Workshop" class="blog-image">
-                    <div class="blog-content">
-                        <h3 class="blog-title">MiCA Workshop</h3>
-                        <p class="blog-excerpt">Leading discussions on the implementation of the Markets in Crypto-Assets regulation.</p>
-                    </div>
-                </a>
-                <a href="#" class="blog-card">
-                    <img src="images/common-ground.jpg" alt="DeFi Policy Forum" class="blog-image">
-                    <div class="blog-content">
-                        <h3 class="blog-title">DeFi Policy Forum</h3>
-                        <p class="blog-excerpt">Shaping the regulatory framework for decentralized finance in Europe.</p>
-                    </div>
-                </a>
-                <a href="#" class="blog-card">
-                    <img src="images/common-ground.jpg" alt="Digital Identity Standards" class="blog-image">
-                    <div class="blog-content">
-                        <h3 class="blog-title">Digital Identity Standards</h3>
-                        <p class="blog-excerpt">Contributing to the development of EU-wide digital identity frameworks.</p>
-                    </div>
-                </a>
+                {% for year_data in event.years reversed %}
+                    {% for video_data in year_data.videos %}
+                        {% assign video_id = video_data.video | split: "=" | last %}
+                        <a href="{{ video_data.video }}" target="_blank" class="blog-card">
+                            <div class="blog-image-container">
+                                <img src="https://i.ytimg.com/vi/{{ video_id }}/maxresdefault.jpg" 
+                                     alt="{{ event.title }} - {{ year_data.year }}"
+                                     class="blog-image"
+                                     onerror="this.src='https://i.ytimg.com/vi/{{ video_id }}/hqdefault.jpg'">
+                                <div class="blog-platform-badge">
+                                    {{ year_data.year }}
+                                </div>
+                            </div>
+                            <div class="blog-content">
+                                <h3 class="blog-title">{{ event.title }} {{ year_data.year }}</h3>
+                                <div class="channel-info">
+                                    <div class="channel-details">
+                                        <div class="channel-name">{{ event.title }}</div>
+                                        <div class="video-meta">
+                                            <span class="video-date">{{ year_data.year }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                {% endfor %}
             </div>
         </div>
-
-        <div class="blog-category">
-            <h2 class="blog-category-title">
-                <a href="#" style="cursor: default">
-                    Hackathons
-                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                    </svg>
-                </a>
-            </h2>
-            <div class="blog-grid">
-                <a href="#" class="blog-card">
-                    <img src="images/common-ground.jpg" alt="ETH Berlin" class="blog-image">
-                    <div class="blog-content">
-                        <h3 class="blog-title">ETH Berlin</h3>
-                        <p class="blog-excerpt">Mentoring teams building decentralized governance solutions.</p>
-                    </div>
-                </a>
-                <a href="#" class="blog-card">
-                    <img src="images/common-ground.jpg" alt="Legal Hackers Summit" class="blog-image">
-                    <div class="blog-content">
-                        <h3 class="blog-title">Legal Hackers Summit</h3>
-                        <p class="blog-excerpt">Organizing workshops on smart contract development for lawyers.</p>
-                    </div>
-                </a>
-                <a href="#" class="blog-card">
-                    <img src="images/common-ground.jpg" alt="Web3 Privacy Hackathon" class="blog-image">
-                    <div class="blog-content">
-                        <h3 class="blog-title">Web3 Privacy Hackathon</h3>
-                        <p class="blog-excerpt">Judging privacy-preserving solutions for decentralized applications.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>
 
@@ -2128,7 +2119,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 </div>
 
 <!-- Store data in a hidden div -->
-<div id="youtubeData" style="display: none;" data-videos="{{ site.data.youtube_videos | jsonify | replace: '"', '&quot;' }}"></div>
+<div id="youtubeData" style="display: none;" data-videos="{{ site.data.youtube_videos | jsonify | replace: '"', '&quot;' }}" data-events="{{ site.data.event_urls | jsonify | replace: '"', '&quot;' }}"></div>
 
 <!-- Add YouTube IFrame API -->
 <script src="https://www.youtube.com/iframe_api"></script>
@@ -2141,6 +2132,12 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             .replace(/&quot;/g, '"')
     );
     
+    const eventData = JSON.parse(
+        document.getElementById('youtubeData')
+            .dataset.events
+            .replace(/&quot;/g, '"')
+    );
+
     // DOM elements for cinema mode
     const cinemaModal = document.querySelector('.cinema-modal');
     const cinemaClose = document.querySelector('.cinema-close');
@@ -2308,17 +2305,47 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         }, 100);
     }
 
+    // Function to get video data from URL
+    function getVideoDataFromUrl(url) {
+        // First check media appearances
+        const mediaVideo = Object.values(youtubeData.media_appearances)
+            .flat()
+            .find(v => v.url === url);
+        
+        if (mediaVideo) return mediaVideo;
+
+        // If not found in media appearances, check events
+        const videoId = getVideoId(url);
+        if (!videoId) return null;
+
+        // Create a simplified video object for events
+        return {
+            title: "Event Video", // This will be updated by the card's title
+            url: url,
+            thumbnails: {
+                maxres: {
+                    url: `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`
+                },
+                high: {
+                    url: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+                }
+            }
+        };
+    }
+
     // Update video card click handlers
     document.querySelectorAll('.blog-card').forEach(card => {
         const videoUrl = card.getAttribute('href');
+        if (!videoUrl || !videoUrl.includes('youtube.com')) return;
         
         card.addEventListener('click', (e) => {
             e.preventDefault();
-            // Find video in any category
-            const video = Object.values(youtubeData.media_appearances)
-                .flat()
-                .find(v => v.url === videoUrl);
+            const video = getVideoDataFromUrl(videoUrl);
             if (video) {
+                // Update video title from card if it's an event video
+                if (!video.description) {
+                    video.title = card.querySelector('.blog-title').textContent.trim();
+                }
                 openCinema(video);
             }
         });
