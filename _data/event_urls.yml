@@ -1,0 +1,36 @@
+events:
+  - title: "Berlin Legal Tech"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in lobortis risus. In sit amet nunc ante. Vivamus a dolor malesuada, porttitor elit ut, eleifend ex. Curabitur feugiat ut magna quis fringilla. Curabitur eget luctus erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer imperdiet leo ac pulvinar accumsan."
+    years:
+      - year: 2017
+        videos:
+          - video: https://www.youtube.com/watch?v=ifhpY1QcFNY
+          - video: https://www.youtube.com/watch?v=OQwMaX3mgu4
+      - year: 2018
+        videos:
+          - video: https://www.youtube.com/watch?v=gItfenVMA-4
+          - video: https://www.youtube.com/watch?v=cLwZdourAR4
+      - year: 2019
+        videos:
+          - video: https://www.youtube.com/watch?v=84XK2vsZSOw
+      - year: 2020
+        videos:
+          - video: https://www.youtube.com/watch?v=0zqljqjuLYI
+  - title: "Swiss Legal Tech"
+    description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur euismod imperdiet commodo. Aenean a diam a erat eleifend elementum."
+    years:
+      - year: 2017
+        videos:
+          - video: https://www.youtube.com/watch?v=80hlBsmhWf0
+  - title: "Legal Tech Summer School"
+    description: "Quisque quis eros id ex malesuada commodo. Morbi tortor lacus, lobortis suscipit finibus vitae, consectetur ac augue. Cras feugiat risus eu leo rhoncus facilisis. Sed quis lectus ligula."
+    years:
+      - year: 2020
+        videos:
+          - video: https://www.youtube.com/watch?v=b2IrpVaZAwM
+  - title: "The Reg3 Conference"
+    description: "Cras venenatis ultrices magna, a ultricies odio dapibus ut. Cras molestie vitae leo aliquet tempus. Sed rutrum velit ut velit dictum gravida sit amet eu lectus."
+    years:
+      - year: 2023
+        videos:
+          - video: https://www.youtube.com/watch?v=aQXdagarn6Q 
