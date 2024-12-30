@@ -1,0 +1,106 @@
+medium_posts:
+  - title: "DAOs are Dead, Long Live DAOs"
+    url: "https://heckerhut.medium.com/daos-are-dead-long-live-daos-50de94e8ee1e"
+    image: "images/blog/blog-daos-are-dead-long-live-daos-50de94e8ee1e.jpg"
+    excerpt: "A critical analysis of the evolution and future of Decentralized Autonomous Organizations."
+    
+  - title: "Can the Wikipedia Model be Applied to Public Policy Making?"
+    url: "https://heckerhut.medium.com/can-the-wikipedia-model-be-applied-to-public-policy-making-ff4444a2ff60"
+    image: "images/blog/blog-can-the-wikipedia-model-be-applied-to-public-policy-making-ff4444a2ff60.jpg"
+    excerpt: "Exploring collaborative approaches to policy development in the digital age."
+    
+  - title: "A Blockchain Token Taxonomy"
+    url: "https://heckerhut.medium.com/a-blockchain-token-taxonomy-fadf5c56139a"
+    image: "images/blog/blog-a-blockchain-token-taxonomy-fadf5c56139a.jpg"
+    excerpt: "A comprehensive framework for understanding and classifying blockchain tokens."
+    
+  - title: "How We Use Smart Contracts at SatoshiPay"
+    url: "https://heckerhut.medium.com/how-we-use-smart-contracts-at-satoshipay-to-change-the-internet-s-economy-forever-today-777988a868d"
+    image: "images/blog/blog-how-we-use-smart-contracts-at-satoshipay-to-change-the-internet-s-economy-forever-today-777988a868d.jpg"
+    excerpt: "Changing the internet's economy forever, today."
+
+network_society_posts:
+  - title: "What is a Digital Jurisdiction?"
+    url: "https://app.cg/c/networksociety/article/what-is-a-digital-jurisdiction-9KS8MHd9TPrGmXeeBkYW9t/"
+    image: "images/blog/blog-what-is-a-digital-jurisdiction-9KS8MHd9TPrGmXeeBkYW9t.jpg"
+    excerpt: "Exploring the concept of jurisdiction in the digital age."
+
+  - title: "Should DAOs Have Constitutions?"
+    url: "https://app.cg/c/networksociety/article/should-daos-have-constitutions-8QDmXW61MQitjWYLuTiGgN/"
+    image: "images/blog/blog-should-daos-have-constitutions-8QDmXW61MQitjWYLuTiGgN.jpg"
+    excerpt: "Examining constitutional frameworks in decentralized organizations."
+
+  - title: "Ongoing Research on Sovereignty in the Digital Age"
+    url: "https://app.cg/c/networksociety/article/ongoing-research-on-sovereignty-in-the-digital-age-gdYwt5Uhm5Ty6uGWj9ANL7/"
+    image: "images/blog/blog-ongoing-research-on-sovereignty-in-the-digital-age-gdYwt5Uhm5Ty6uGWj9ANL7.jpg"
+    excerpt: "Investigating the evolution of sovereignty in digital spaces."
+
+  - title: "Decentralized Justice"
+    url: "https://app.cg/c/networksociety/article/decentralized-justice-state-of-the-art-recurring-criticisms-and-next-generation-research-topics-rM9Hj55BEBhGevLMVVTrbG/"
+    image: "images/blog/blog-decentralized-justice-state-of-the-art-recurring-criticisms-and-next-generation-research-topics-rM9Hj55BEBhGevLMVVTrbG.jpg"
+    excerpt: "State of the art, recurring criticisms, and next-generation research topics."
+
+  - title: "Overthrowing the Network State"
+    url: "https://app.cg/c/networksociety/article/overthrowing-the-network-state-the-rise-of-coordinations-w7vg8EE92xsHbz6fWYHD4y/"
+    image: "images/blog/blog-overthrowing-the-network-state-the-rise-of-coordinations-w7vg8EE92xsHbz6fWYHD4y.jpg"
+    excerpt: "The rise of coordinations in digital governance."
+
+  - title: "AI Regulation and Compute Clusters"
+    url: "https://app.cg/c/networksociety/article/with-ai-regulation-on-the-horizon-compute-clusters-move-to-international-waters-rs3cySS29fLqY3AsSEthSD/"
+    image: "images/blog/blog-with-ai-regulation-on-the-horizon-compute-clusters-move-to-international-waters-rs3cySS29fLqY3AsSEthSD.jpg"
+    excerpt: "The migration of compute resources to international waters."
+
+  - title: "Network State Conference Highlights"
+    url: "https://app.cg/c/networksociety/article/our-favorite-talks-from-the-network-state-conference-dDEJRm68j1EcTRYivPbK7e/"
+    image: "images/blog/blog-our-favorite-talks-from-the-network-state-conference-dDEJRm68j1EcTRYivPbK7e.jpg"
+    excerpt: "Key insights from our favorite talks at the conference."
+
+  - title: "Building a Community Hivemind"
+    url: "https://app.cg/c/networksociety/article/how-to-build-a-community-hivemind-notes-from-my-talk-at-the-daoists-global-governance-gathering-oic29gz4bTttyN95TdL9v6/"
+    image: "images/blog/blog-how-to-build-a-community-hivemind-notes-from-my-talk-at-the-daoists-global-governance-gathering-oic29gz4bTttyN95TdL9v6.jpg"
+    excerpt: "Notes from the DAOists Global Governance Gathering."
+
+  - title: "Dispute Resolution Oracles in L2 Blockchains"
+    url: "https://app.cg/c/networksociety/article/enshrining-a-dispute-resolution-oracle-in-an-l2-blockchain-pTjp1ycs4gNtQYkjsxpPp5/"
+    image: "images/blog/blog-enshrining-a-dispute-resolution-oracle-in-an-l2-blockchain-pTjp1ycs4gNtQYkjsxpPp5.jpg"
+    excerpt: "Technical implementation of dispute resolution mechanisms."
+
+  - title: "Institutional Decline and the Quiet Revolution"
+    url: "https://app.cg/c/networksociety/article/institutional-decline-and-the-quiet-revolution-riuTgMXambTqAt9rthfmji/"
+    image: "images/blog/blog-institutional-decline-and-the-quiet-revolution-riuTgMXambTqAt9rthfmji.jpg"
+    excerpt: "Analyzing the transformation of traditional institutions."
+
+  - title: "Open Problems in DAOs"
+    url: "https://app.cg/c/networksociety/article/open-problems-in-daos-dMuTR4tMNnAGtssZS5NCPw/"
+    image: "images/blog/blog-open-problems-in-daos-dMuTR4tMNnAGtssZS5NCPw.jpg"
+    excerpt: "Exploring current challenges and future research directions."
+
+  - title: "Web3's New Consumer Tech Stack"
+    url: "https://app.cg/c/networksociety/article/how-web3s-new-consumer-tech-stack-addresses-cryptos-great-filters-dxXwsvpadnGfzDTVCvAyrp/"
+    image: "images/blog/blog-how-web3s-new-consumer-tech-stack-addresses-cryptos-great-filters-dxXwsvpadnGfzDTVCvAyrp.jpg"
+    excerpt: "Addressing crypto's great filters through technology."
+
+  - title: "Could Ecosystems Form the First Network States?"
+    url: "https://app.cg/c/networksociety/article/could-ecosystems-form-the-first-network-states-oisu2aouBrREn19a641SPe/"
+    image: "images/blog/blog-could-ecosystems-form-the-first-network-states-oisu2aouBrREn19a641SPe.jpg"
+    excerpt: "Examining the potential of ecological systems in digital governance."
+
+  - title: "The Prediction Agent Economy"
+    url: "https://app.cg/c/networksociety/article/the-prediction-agent-economy-mNHjTHmLgPLSuKNveLMnXi/"
+    image: "images/blog/blog-the-prediction-agent-economy-mNHjTHmLgPLSuKNveLMnXi.jpg"
+    excerpt: "Understanding the role of AI agents in economic systems."
+
+  - title: "Future State"
+    url: "https://app.cg/c/networksociety/article/future-state-exploring-emerging-democratic-practices-on-public-blockchains-6vrCWcYvYw6ihKinLGSziV/"
+    image: "images/blog/blog-future-state-exploring-emerging-democratic-practices-on-public-blockchains-6vrCWcYvYw6ihKinLGSziV.jpg"
+    excerpt: "Exploring emerging democratic practices on public blockchains."
+
+  - title: "What is Hypercomputing?"
+    url: "https://app.cg/c/networksociety/article/what-is-hypercomputing-9DS6v1bYAVQcv1kqrzUZjk/"
+    image: "images/blog/blog-what-is-hypercomputing-9DS6v1bYAVQcv1kqrzUZjk.jpg"
+    excerpt: "Exploring the frontiers of computational power."
+
+  - title: "Greetings from Edge City Lanna"
+    url: "https://app.cg/c/networksociety/article/greetings-from-edge-city-lanna-bUjpySVf5HPEXJVYFS5gKG/"
+    image: "images/blog/blog-greetings-from-edge-city-lanna-bUjpySVf5HPEXJVYFS5gKG.jpg"
+    excerpt: "Dispatches from the frontier of digital urbanism." 
