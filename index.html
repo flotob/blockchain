@@ -1183,10 +1183,42 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 
     .cinema-playlist {
         width: 400px;
-        overflow-y: auto;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .playlist-search {
+        position: sticky;
+        top: 0;
+        padding: 1rem 1rem 0.5rem;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 1;
+    }
+
+    .playlist-search input {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.05);
+        color: white;
+        font-size: 0.875rem;
+        transition: all 0.2s ease;
+    }
+
+    .playlist-search input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .playlist-search input:focus {
+        outline: none;
+        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .playlist-videos {
+        overflow-y: auto;
         padding-right: 1rem;
     }
 
@@ -1328,7 +1360,12 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                 <div class="cinema-description"></div>
             </div>
         </div>
-        <div class="cinema-playlist"></div>
+        <div class="cinema-playlist">
+            <div class="playlist-search">
+                <input type="text" placeholder="Search videos..." id="playlistSearch">
+            </div>
+            <div class="playlist-videos"></div>
+        </div>
     </div>
 </div>
 
@@ -2113,25 +2150,44 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     // Function to build playlist
     function buildPlaylist(videos) {
         allVideos = videos;
-        cinemaPlaylist.innerHTML = videos.map((video, index) => `
-            <div class="playlist-item ${index === currentVideoIndex ? 'active' : ''}" data-index="${index}">
-                <div class="playlist-thumbnail">
-                    <img src="${video.thumbnails.medium.url}" alt="${video.title}">
-                    <div class="playlist-duration">${video.duration.replace('PT','').replace('H',':').replace('M',':').replace('S','')}</div>
+        const playlistVideos = document.querySelector('.playlist-videos');
+        
+        function renderPlaylist(filteredVideos) {
+            playlistVideos.innerHTML = filteredVideos.map((video, index) => `
+                <div class="playlist-item ${index === currentVideoIndex ? 'active' : ''}" data-index="${index}">
+                    <div class="playlist-thumbnail">
+                        <img src="${video.thumbnails.medium.url}" alt="${video.title}">
+                        <div class="playlist-duration">${video.duration.replace('PT','').replace('H',':').replace('M',':').replace('S','')}</div>
+                    </div>
+                    <div class="playlist-info">
+                        <div class="playlist-title">${video.title}</div>
+                        <div class="playlist-channel">${video.channel.name}</div>
+                    </div>
                 </div>
-                <div class="playlist-info">
-                    <div class="playlist-title">${video.title}</div>
-                    <div class="playlist-channel">${video.channel.name}</div>
-                </div>
-            </div>
-        `).join('');
+            `).join('');
 
-        // Add click handlers to playlist items
-        document.querySelectorAll('.playlist-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const index = parseInt(item.dataset.index);
-                loadVideo(videos[index], index);
+            // Add click handlers to playlist items
+            document.querySelectorAll('.playlist-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const index = parseInt(item.dataset.index);
+                    loadVideo(filteredVideos[index], allVideos.indexOf(filteredVideos[index]));
+                });
             });
+        }
+
+        // Initial render
+        renderPlaylist(videos);
+
+        // Add search functionality
+        const searchInput = document.getElementById('playlistSearch');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredVideos = allVideos.filter(video => 
+                video.title.toLowerCase().includes(searchTerm) ||
+                video.channel.name.toLowerCase().includes(searchTerm) ||
+                video.description.toLowerCase().includes(searchTerm)
+            );
+            renderPlaylist(filteredVideos);
         });
     }
 
