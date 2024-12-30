@@ -1739,7 +1739,8 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                 </a>
             </h2>
             <div class="blog-grid">
-                {% for post in site.data.blog_posts.medium_posts %}
+                {% assign sorted_medium_posts = site.data.blog_posts.medium_posts | sort: "publishedAt" | reverse %}
+                {% for post in sorted_medium_posts %}
                 <a href="{{ post.url }}" target="_blank" rel="noopener" class="blog-card">
                     <div class="blog-image-container">
                         <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image">
@@ -1771,7 +1772,8 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                 </a>
             </h2>
             <div class="blog-grid">
-                {% for post in site.data.blog_posts.network_society_posts %}
+                {% assign sorted_network_posts = site.data.blog_posts.network_society_posts | sort: "publishedAt" | reverse %}
+                {% for post in sorted_network_posts %}
                 <a href="{{ post.url }}" target="_blank" rel="noopener" class="blog-card">
                     <div class="blog-image-container">
                         <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image">
