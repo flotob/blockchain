@@ -752,75 +752,84 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     }
 
     .blog-title {
-        font-size: 0.875rem;
+        font-size: 1.125rem;
         font-weight: 600;
         color: var(--text);
         margin-bottom: 0.5rem;
-        line-height: 1.4;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        max-height: 2.5rem;
+        max-height: 3rem;
+        line-height: 1.5;
     }
 
-    .channel-info {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+    .blog-excerpt {
+        font-size: 0.875rem;
+        color: var(--text-light);
+        margin-bottom: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .blog-meta {
         margin-top: auto;
         padding-top: 0.75rem;
         border-top: 1px solid rgba(0, 0, 0, 0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .channel-logo {
-        width: 24px;
-        height: 24px;
-        border-radius: 12px;
-        object-fit: cover;
-    }
-
-    .channel-details {
-        flex: 1;
-        min-width: 0;
-    }
-
-    .channel-name {
-        font-size: 0.875rem;
-        font-weight: 500;
-        color: var(--text);
-        margin-bottom: 0.125rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .video-meta {
+    .blog-channel {
         display: flex;
         align-items: center;
         gap: 0.5rem;
+    }
+
+    .blog-channel-image {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .blog-channel-name {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text);
+    }
+
+    .blog-date {
         font-size: 0.75rem;
         color: var(--text-light);
-    }
-
-    .video-views::after {
-        content: "•";
-        margin-left: 0.5rem;
-        opacity: 0.5;
-    }
-
-    .video-date {
         white-space: nowrap;
     }
 
     @media (max-width: 768px) {
-        .blog-card {
-            flex: 0 0 280px;
-            height: 320px;
+        .blog-title {
+            font-size: 1rem;
+            max-height: 2.5rem;
         }
-        
-        .blog-image-container {
-            height: 160px;
+
+        .blog-excerpt {
+            font-size: 0.8125rem;
+        }
+
+        .blog-channel-image {
+            width: 18px;
+            height: 18px;
+            border-radius: 9px;
+        }
+
+        .blog-channel-name {
+            font-size: 0.8125rem;
+        }
+
+        .blog-date {
+            font-size: 0.6875rem;
         }
     }
 
@@ -874,7 +883,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 
     .scroll-container {
         position: relative;
-        padding: 0 2rem;
+        padding: 0;
     }
 
     .publications-section {
@@ -1422,6 +1431,139 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             font-size: 0.6875rem;
         }
     }
+
+    /* Blog-specific styles */
+    .blog-card .blog-title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 0.5rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        max-height: 3rem;
+        line-height: 1.5;
+    }
+
+    .blog-card .blog-excerpt {
+        font-size: 0.875rem;
+        color: var(--text-light);
+        margin-bottom: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .blog-card .blog-meta {
+        margin-top: auto;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .blog-card .blog-channel {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .blog-card .blog-channel-image {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .blog-card .blog-channel-name {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text);
+    }
+
+    .blog-card .blog-date {
+        font-size: 0.75rem;
+        color: var(--text-light);
+        white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+        .blog-card .blog-title {
+            font-size: 1rem;
+            max-height: 2.5rem;
+        }
+
+        .blog-card .blog-excerpt {
+            font-size: 0.8125rem;
+        }
+
+        .blog-card .blog-channel-image {
+            width: 18px;
+            height: 18px;
+            border-radius: 9px;
+        }
+
+        .blog-card .blog-channel-name {
+            font-size: 0.8125rem;
+        }
+
+        .blog-card .blog-date {
+            font-size: 0.6875rem;
+        }
+    }
+
+    /* Restore video card specific styles */
+    .channel-info {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: auto;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .channel-logo {
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    .channel-details {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .channel-name {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text);
+        margin-bottom: 0.125rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .video-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        color: var(--text-light);
+    }
+
+    .video-views::after {
+        content: "•";
+        margin-left: 0.5rem;
+        opacity: 0.5;
+    }
+
+    .video-date {
+        white-space: nowrap;
+    }
 </style>
 
 <!-- Cinema Modal -->
@@ -1586,6 +1728,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 
 <section id="blogs" class="blog-section section">
     <div class="blog-container">
+        <!-- Medium Posts -->
         <div class="blog-category">
             <h2 class="blog-category-title">
                 <a href="https://medium.com/@heckerhut" target="_blank">
@@ -1596,29 +1739,22 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                 </a>
             </h2>
             <div class="blog-grid">
-                {% assign sorted_medium_posts = site.data.blog_posts.medium_posts | sort: "publishedAt" | reverse %}
-                {% for post in sorted_medium_posts %}
-                <a href="{{ post.url }}" target="_blank" class="blog-card">
+                {% for post in site.data.blog_posts.medium_posts %}
+                <a href="{{ post.url }}" target="_blank" rel="noopener" class="blog-card">
                     <div class="blog-image-container">
                         <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image">
-                        <div class="blog-platform-badge">
-                            <svg width="16" height="16" viewBox="0 0 1043.63 592.71" fill="currentColor">
-                                <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94"></path>
-                            </svg>
-                            Medium
-                        </div>
                     </div>
                     <div class="blog-content">
                         <h3 class="blog-title">{{ post.title }}</h3>
                         <p class="blog-excerpt">{{ post.excerpt }}</p>
                         <div class="blog-meta">
-                            <div class="blog-author">
-                                <img src="images/bio-photo.jpg" alt="Florian Glatz" class="blog-author-image">
-                                <div class="blog-author-info">
-                                    <div class="blog-author-name">Florian Glatz</div>
-                                    <div class="blog-date">{{ post.publishedAt | date: "%b %-d, %Y" }}</div>
-                                </div>
+                            <div class="blog-channel">
+                                <svg width="20" height="20" viewBox="0 0 1043.63 592.71" fill="currentColor">
+                                    <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94"></path>
+                                </svg>
+                                <span class="blog-channel-name">Medium</span>
                             </div>
+                            <time class="blog-date">{{ post.publishedAt | date: "%b %-d, %Y" }}</time>
                         </div>
                     </div>
                 </a>
@@ -1626,6 +1762,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             </div>
         </div>
 
+        <!-- Network Society Posts -->
         <div class="blog-category">
             <h2 class="blog-category-title">
                 <a href="https://app.cg/c/networksociety/" target="_blank">
@@ -1634,27 +1771,20 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                 </a>
             </h2>
             <div class="blog-grid">
-                {% assign sorted_network_posts = site.data.blog_posts.network_society_posts | sort: "publishedAt" | reverse %}
-                {% for post in sorted_network_posts %}
-                <a href="{{ post.url }}" target="_blank" class="blog-card">
+                {% for post in site.data.blog_posts.network_society_posts %}
+                <a href="{{ post.url }}" target="_blank" rel="noopener" class="blog-card">
                     <div class="blog-image-container">
                         <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image">
-                        <div class="blog-platform-badge">
-                            <img src="images/logo-black-transparent.svg" alt="Common Ground" class="blog-platform-icon">
-                            Common Ground
-                        </div>
                     </div>
                     <div class="blog-content">
                         <h3 class="blog-title">{{ post.title }}</h3>
                         <p class="blog-excerpt">{{ post.excerpt }}</p>
                         <div class="blog-meta">
-                            <div class="blog-author">
-                                <img src="images/bio-photo.jpg" alt="Florian Glatz" class="blog-author-image">
-                                <div class="blog-author-info">
-                                    <div class="blog-author-name">Florian Glatz</div>
-                                    <div class="blog-date">{{ post.publishedAt | date: "%b %-d, %Y" }}</div>
-                                </div>
+                            <div class="blog-channel">
+                                <img src="images/logo-black-transparent.svg" alt="Common Ground" class="blog-channel-image">
+                                <span class="blog-channel-name">Network Society</span>
                             </div>
+                            <time class="blog-date">{{ post.publishedAt | date: "%b %-d, %Y" }}</time>
                         </div>
                     </div>
                 </a>
