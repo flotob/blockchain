@@ -1,6 +1,6 @@
 events:
   - title: Berlin Legal Tech
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in lobortis risus. In sit amet nunc ante. Vivamus a dolor malesuada, porttitor elit ut, eleifend ex. Curabitur feugiat ut magna quis fringilla. Curabitur eget luctus erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer imperdiet leo ac pulvinar accumsan.
+    description: "A groundbreaking annual series that featured Europe’s first legal tech hackathon and conference, attracting over 1,650 participants from 30 countries. Across its editions, the event hosted more than 130 lectures and 80 project pitches, bringing together lawyers, developers, and legal engineers to create innovative solutions and compete for prizes."
     years:
       - year: 2017
         videos:
@@ -325,7 +325,7 @@ events:
             duration: PT1H50M44S
             url: https://www.youtube.com/watch?v=0zqljqjuLYI
   - title: Swiss Legal Tech
-    description: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur euismod imperdiet commodo. Aenean a diam a erat eleifend elementum.
+    description: "An annual series of hackathons and conferences based in Zurich, inspired by the Berlin Legal Tech model, tailored to Switzerland’s legal and financial sectors."
     years:
       - year: 2017
         videos:
@@ -378,7 +378,7 @@ events:
             duration: PT4M50S
             url: https://www.youtube.com/watch?v=80hlBsmhWf0
   - title: Legal Tech Summer School
-    description: Quisque quis eros id ex malesuada commodo. Morbi tortor lacus, lobortis suscipit finibus vitae, consectetur ac augue. Cras feugiat risus eu leo rhoncus facilisis. Sed quis lectus ligula.
+    description: "A free, annual educational program designed for students, combining hands-on workshops, expert-led sessions, and collaborative projects to explore the intersection of law and technology."
     years:
       - year: 2020
         videos:
@@ -427,7 +427,7 @@ events:
             duration: PT1M56S
             url: https://www.youtube.com/watch?v=b2IrpVaZAwM
   - title: The Reg3 Conference
-    description: Cras venenatis ultrices magna, a ultricies odio dapibus ut. Cras molestie vitae leo aliquet tempus. Sed rutrum velit ut velit dictum gravida sit amet eu lectus.
+    description: "An ongoing annual conference series that brings policymakers and developers together to address challenges such as decentralized governance, compliance, and blockchain regulation."
     years:
       - year: 2023
         videos:
