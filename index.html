@@ -1114,6 +1114,11 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     .cinema-info {
         padding: 1rem 0;
         color: white;
+        display: flex;
+        flex-direction: column;
+        height: calc(40vh - 2rem); /* Give it a fixed height relative to viewport */
+        min-height: 200px;
+        overflow: hidden;
     }
 
     .cinema-title {
@@ -1148,6 +1153,32 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         font-size: 0.875rem;
         line-height: 1.5;
         white-space: pre-wrap;
+        overflow-y: auto;
+        flex: 1;
+        padding-right: 1rem;
+        /* Custom scrollbar */
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+    }
+
+    .cinema-description::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .cinema-description::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .cinema-description::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+        .cinema-info {
+            height: calc(30vh - 2rem);
+            min-height: 150px;
+        }
     }
 
     .cinema-playlist {
