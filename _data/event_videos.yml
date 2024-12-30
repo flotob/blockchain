@@ -1,0 +1,488 @@
+events:
+  - title: Berlin Legal Tech
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in lobortis risus. In sit amet nunc ante. Vivamus a dolor malesuada, porttitor elit ut, eleifend ex. Curabitur feugiat ut magna quis fringilla. Curabitur eget luctus erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer imperdiet leo ac pulvinar accumsan.
+    years:
+      - year: 2017
+        videos:
+          - title: 'Berlin Legal Tech 2017: Conference Trailer (German)'
+            description: |-
+              Vom 8. bis 10. Februar fand die Berlin Legal Tech 2017 statt. Das einzigartige Event im Legal Tech Bereich entstand unter der Leitung von Legal-Tech Pionier Prof. Stephan Breidenbach, Europa-Universität Viadrina, und des auf Blockchain-Technologie spezialisierten Rechtsanwalts und Unternehmers Florian Glatz.
+               
+              Die dreitägige Veranstaltung begann mit einem Hackathon, auf dem Juristen und Softwareentwickler gemeinsam Themen identifizierten und Lösungen entwickelten. Begleitet durch Legal Knowledge Engineers, Juristen mit technischer Expertise, wurden Ideen in einem offenen Format entwickelt, Teams interessengeleitet gebildet und sodann in einem freundschaftlichen Wettbewerb gepitcht. Die überzeugendsten Konzepte und wegweisendsten Prototypen wurden von einer Experten-Jury prämiert.
+               
+              Die darauf folgende Konferenz fand am 10. Februar statt. Renommierte Speaker hatten die Gelegenheit, sich in einem offenen Dialog mit der Digitalisierung der Rechtswirklichkeit auseinanderzusetzen. In interaktiven Breakout Sessions wurden Fragen und Themen zu Blockchain, Künstlicher Intelligenz und der Industrialisierung von Rechtsdienstleistungen beantwortet. Auch präsentierten die Sieger des Hackathons ihre Ideen und Produkte.
+            publishedAt: '2017-02-26T20:15:31Z'
+            thumbnails:
+              default:
+                url: https://i.ytimg.com/vi/ifhpY1QcFNY/default.jpg
+                width: 120
+                height: 90
+              medium:
+                url: https://i.ytimg.com/vi/ifhpY1QcFNY/mqdefault.jpg
+                width: 320
+                height: 180
+              high:
+                url: https://i.ytimg.com/vi/ifhpY1QcFNY/hqdefault.jpg
+                width: 480
+                height: 360
+              standard:
+                url: https://i.ytimg.com/vi/ifhpY1QcFNY/sddefault.jpg
+                width: 640
+                height: 480
+              maxres:
+                url: https://i.ytimg.com/vi/ifhpY1QcFNY/maxresdefault.jpg
+                width: 1280
+                height: 720
+            channel:
+              name: Legal Tech Center
+              id: UCBOZfRSZuDJn7QHDG9Q9NMA
+              url: https://www.youtube.com/channel/UCBOZfRSZuDJn7QHDG9Q9NMA
+              thumbnail:
+                default:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s88-c-k-c0x00ffffff-no-rj
+                  width: 88
+                  height: 88
+                medium:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s240-c-k-c0x00ffffff-no-rj
+                  width: 240
+                  height: 240
+                high:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s800-c-k-c0x00ffffff-no-rj
+                  width: 800
+                  height: 800
+            statistics:
+              viewCount: '2156'
+              likeCount: '6'
+              favoriteCount: '0'
+            duration: PT5M3S
+            url: https://www.youtube.com/watch?v=ifhpY1QcFNY
+          - title: Berlin Legal Tech Hackathon & Conference Trailer (EN/DE)
+            description: |-
+              From 8th to 10th of February 2017, the Berlin Legal Tech took place. A two-day legal tech Hackathon followed by a full-day conference with up to 400 guests from over 10+ countries.
+
+              Get a taste of what it was like with this Trailer.
+
+              Watch the Conference Trailer here: https://www.youtube.com/watch?v=ifhpY1QcFNY
+
+              Read the retrospective of the Hackathon here: https://blog.hacking.law/the-berlin-legal-tech-2017-hackathon-retrospective-and-future-roadmaps-88f50d45aac8
+
+              Find lots more pictures and infos on
+
+              Twitter: https://twitter.com/hacking_law
+              Facebook: https://www.facebook.com/hacking.law.community/
+            publishedAt: '2017-03-16T12:42:05Z'
+            thumbnails:
+              default:
+                url: https://i.ytimg.com/vi/OQwMaX3mgu4/default.jpg
+                width: 120
+                height: 90
+              medium:
+                url: https://i.ytimg.com/vi/OQwMaX3mgu4/mqdefault.jpg
+                width: 320
+                height: 180
+              high:
+                url: https://i.ytimg.com/vi/OQwMaX3mgu4/hqdefault.jpg
+                width: 480
+                height: 360
+              standard:
+                url: https://i.ytimg.com/vi/OQwMaX3mgu4/sddefault.jpg
+                width: 640
+                height: 480
+              maxres:
+                url: https://i.ytimg.com/vi/OQwMaX3mgu4/maxresdefault.jpg
+                width: 1280
+                height: 720
+            channel:
+              name: Legal Tech Center
+              id: UCBOZfRSZuDJn7QHDG9Q9NMA
+              url: https://www.youtube.com/channel/UCBOZfRSZuDJn7QHDG9Q9NMA
+              thumbnail:
+                default:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s88-c-k-c0x00ffffff-no-rj
+                  width: 88
+                  height: 88
+                medium:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s240-c-k-c0x00ffffff-no-rj
+                  width: 240
+                  height: 240
+                high:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s800-c-k-c0x00ffffff-no-rj
+                  width: 800
+                  height: 800
+            statistics:
+              viewCount: '2078'
+              likeCount: '6'
+              favoriteCount: '0'
+              commentCount: '0'
+            duration: PT4M4S
+            url: https://www.youtube.com/watch?v=OQwMaX3mgu4
+      - year: 2018
+        videos:
+          - title: Trailer Berlin Legal Tech 2018
+            description: |-
+              In February 2018, we gathered 100+ legal hackers at our two-day hackathon during the second edition of Berlin Legal Tech. Developers, UX designers and legal professionals worked on legal tech solutions for the future of legal services.
+
+              On the third day of Berlin Legal Tech 2018, we held a conference that brought together legal tech enthusiasts and renowned speakers to discuss how the digital revolution will affect law and legal practice in the near and far future.
+
+              Sign up for Berlin Legal Tech 2019 here: berlinlegal.tech/2019
+            publishedAt: '2018-12-05T16:03:36Z'
+            thumbnails:
+              default:
+                url: https://i.ytimg.com/vi/gItfenVMA-4/default.jpg
+                width: 120
+                height: 90
+              medium:
+                url: https://i.ytimg.com/vi/gItfenVMA-4/mqdefault.jpg
+                width: 320
+                height: 180
+              high:
+                url: https://i.ytimg.com/vi/gItfenVMA-4/hqdefault.jpg
+                width: 480
+                height: 360
+              standard:
+                url: https://i.ytimg.com/vi/gItfenVMA-4/sddefault.jpg
+                width: 640
+                height: 480
+              maxres:
+                url: https://i.ytimg.com/vi/gItfenVMA-4/maxresdefault.jpg
+                width: 1280
+                height: 720
+            channel:
+              name: Legal Tech Center
+              id: UCBOZfRSZuDJn7QHDG9Q9NMA
+              url: https://www.youtube.com/channel/UCBOZfRSZuDJn7QHDG9Q9NMA
+              thumbnail:
+                default:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s88-c-k-c0x00ffffff-no-rj
+                  width: 88
+                  height: 88
+                medium:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s240-c-k-c0x00ffffff-no-rj
+                  width: 240
+                  height: 240
+                high:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s800-c-k-c0x00ffffff-no-rj
+                  width: 800
+                  height: 800
+            statistics:
+              viewCount: '72'
+              likeCount: '0'
+              favoriteCount: '0'
+              commentCount: '0'
+            duration: PT2M58S
+            url: https://www.youtube.com/watch?v=gItfenVMA-4
+          - title: Berlin Legal Tech 2018 Conference
+            description: |-
+              In February 2018, the second edition of Berlin Legal Tech Conference, brought together legal tech enthusiasts and renowned speakers to discuss how the digital revolution will affect law and legal practice in the near and far future.
+
+              Sign up for Berlin Legal Tech 2019 here: berlinlegal.tech/2019
+            publishedAt: '2018-12-05T15:50:03Z'
+            thumbnails:
+              default:
+                url: https://i.ytimg.com/vi/cLwZdourAR4/default.jpg
+                width: 120
+                height: 90
+              medium:
+                url: https://i.ytimg.com/vi/cLwZdourAR4/mqdefault.jpg
+                width: 320
+                height: 180
+              high:
+                url: https://i.ytimg.com/vi/cLwZdourAR4/hqdefault.jpg
+                width: 480
+                height: 360
+              standard:
+                url: https://i.ytimg.com/vi/cLwZdourAR4/sddefault.jpg
+                width: 640
+                height: 480
+              maxres:
+                url: https://i.ytimg.com/vi/cLwZdourAR4/maxresdefault.jpg
+                width: 1280
+                height: 720
+            channel:
+              name: Legal Tech Center
+              id: UCBOZfRSZuDJn7QHDG9Q9NMA
+              url: https://www.youtube.com/channel/UCBOZfRSZuDJn7QHDG9Q9NMA
+              thumbnail:
+                default:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s88-c-k-c0x00ffffff-no-rj
+                  width: 88
+                  height: 88
+                medium:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s240-c-k-c0x00ffffff-no-rj
+                  width: 240
+                  height: 240
+                high:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s800-c-k-c0x00ffffff-no-rj
+                  width: 800
+                  height: 800
+            statistics:
+              viewCount: '193'
+              likeCount: '0'
+              favoriteCount: '0'
+              commentCount: '0'
+            duration: PT1M25S
+            url: https://www.youtube.com/watch?v=cLwZdourAR4
+      - year: 2019
+        videos:
+          - title: BERLIN LEGAL TECH 2019 Hackathon & Konferenz
+            description: |-
+              Zusammenfassung der BERLIN LEGAL TECH 2019
+              6 Min
+            publishedAt: '2019-03-26T10:13:31Z'
+            thumbnails:
+              default:
+                url: https://i.ytimg.com/vi/84XK2vsZSOw/default.jpg
+                width: 120
+                height: 90
+              medium:
+                url: https://i.ytimg.com/vi/84XK2vsZSOw/mqdefault.jpg
+                width: 320
+                height: 180
+              high:
+                url: https://i.ytimg.com/vi/84XK2vsZSOw/hqdefault.jpg
+                width: 480
+                height: 360
+              standard:
+                url: https://i.ytimg.com/vi/84XK2vsZSOw/sddefault.jpg
+                width: 640
+                height: 480
+              maxres:
+                url: https://i.ytimg.com/vi/84XK2vsZSOw/maxresdefault.jpg
+                width: 1280
+                height: 720
+            channel:
+              name: Legal Tech Center
+              id: UCBOZfRSZuDJn7QHDG9Q9NMA
+              url: https://www.youtube.com/channel/UCBOZfRSZuDJn7QHDG9Q9NMA
+              thumbnail:
+                default:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s88-c-k-c0x00ffffff-no-rj
+                  width: 88
+                  height: 88
+                medium:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s240-c-k-c0x00ffffff-no-rj
+                  width: 240
+                  height: 240
+                high:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s800-c-k-c0x00ffffff-no-rj
+                  width: 800
+                  height: 800
+            statistics:
+              viewCount: '48'
+              likeCount: '0'
+              favoriteCount: '0'
+              commentCount: '0'
+            duration: PT6M53S
+            url: https://www.youtube.com/watch?v=84XK2vsZSOw
+      - year: 2020
+        videos:
+          - title: Hackathon Berlin LEGAL-TECH 2020
+            description: Berlin Legal-TECH & Hackathon 2020
+            publishedAt: '2020-03-21T16:01:56Z'
+            thumbnails:
+              default:
+                url: https://i.ytimg.com/vi/0zqljqjuLYI/default.jpg
+                width: 120
+                height: 90
+              medium:
+                url: https://i.ytimg.com/vi/0zqljqjuLYI/mqdefault.jpg
+                width: 320
+                height: 180
+              high:
+                url: https://i.ytimg.com/vi/0zqljqjuLYI/hqdefault.jpg
+                width: 480
+                height: 360
+              standard:
+                url: https://i.ytimg.com/vi/0zqljqjuLYI/sddefault.jpg
+                width: 640
+                height: 480
+              maxres:
+                url: https://i.ytimg.com/vi/0zqljqjuLYI/maxresdefault.jpg
+                width: 1280
+                height: 720
+            channel:
+              name: Legal Tech Center
+              id: UCBOZfRSZuDJn7QHDG9Q9NMA
+              url: https://www.youtube.com/channel/UCBOZfRSZuDJn7QHDG9Q9NMA
+              thumbnail:
+                default:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s88-c-k-c0x00ffffff-no-rj
+                  width: 88
+                  height: 88
+                medium:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s240-c-k-c0x00ffffff-no-rj
+                  width: 240
+                  height: 240
+                high:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s800-c-k-c0x00ffffff-no-rj
+                  width: 800
+                  height: 800
+            statistics:
+              viewCount: '287'
+              likeCount: '7'
+              favoriteCount: '0'
+              commentCount: '0'
+            duration: PT1H50M44S
+            url: https://www.youtube.com/watch?v=0zqljqjuLYI
+  - title: Swiss Legal Tech
+    description: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur euismod imperdiet commodo. Aenean a diam a erat eleifend elementum.
+    years:
+      - year: 2017
+        videos:
+          - title: Swiss Legal Tech 2017
+            description: This was the Swiss Legal Tech 2017 - www.swisslegal.tech
+            publishedAt: '2018-03-18T18:16:51Z'
+            thumbnails:
+              default:
+                url: https://i.ytimg.com/vi/80hlBsmhWf0/default.jpg
+                width: 120
+                height: 90
+              medium:
+                url: https://i.ytimg.com/vi/80hlBsmhWf0/mqdefault.jpg
+                width: 320
+                height: 180
+              high:
+                url: https://i.ytimg.com/vi/80hlBsmhWf0/hqdefault.jpg
+                width: 480
+                height: 360
+              standard:
+                url: https://i.ytimg.com/vi/80hlBsmhWf0/sddefault.jpg
+                width: 640
+                height: 480
+              maxres:
+                url: https://i.ytimg.com/vi/80hlBsmhWf0/maxresdefault.jpg
+                width: 1280
+                height: 720
+            channel:
+              name: Legal Tech Center
+              id: UCBOZfRSZuDJn7QHDG9Q9NMA
+              url: https://www.youtube.com/channel/UCBOZfRSZuDJn7QHDG9Q9NMA
+              thumbnail:
+                default:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s88-c-k-c0x00ffffff-no-rj
+                  width: 88
+                  height: 88
+                medium:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s240-c-k-c0x00ffffff-no-rj
+                  width: 240
+                  height: 240
+                high:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s800-c-k-c0x00ffffff-no-rj
+                  width: 800
+                  height: 800
+            statistics:
+              viewCount: '544'
+              likeCount: '1'
+              favoriteCount: '0'
+              commentCount: '0'
+            duration: PT4M50S
+            url: https://www.youtube.com/watch?v=80hlBsmhWf0
+  - title: Legal Tech Summer School
+    description: Quisque quis eros id ex malesuada commodo. Morbi tortor lacus, lobortis suscipit finibus vitae, consectetur ac augue. Cras feugiat risus eu leo rhoncus facilisis. Sed quis lectus ligula.
+    years:
+      - year: 2020
+        videos:
+          - title: Legal Tech Summer School 2018 Trailer
+            description: ''
+            publishedAt: '2019-03-04T11:10:55Z'
+            thumbnails:
+              default:
+                url: https://i.ytimg.com/vi/b2IrpVaZAwM/default.jpg
+                width: 120
+                height: 90
+              medium:
+                url: https://i.ytimg.com/vi/b2IrpVaZAwM/mqdefault.jpg
+                width: 320
+                height: 180
+              high:
+                url: https://i.ytimg.com/vi/b2IrpVaZAwM/hqdefault.jpg
+                width: 480
+                height: 360
+              standard:
+                url: https://i.ytimg.com/vi/b2IrpVaZAwM/sddefault.jpg
+                width: 640
+                height: 480
+            channel:
+              name: Legal Tech Center
+              id: UCBOZfRSZuDJn7QHDG9Q9NMA
+              url: https://www.youtube.com/channel/UCBOZfRSZuDJn7QHDG9Q9NMA
+              thumbnail:
+                default:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s88-c-k-c0x00ffffff-no-rj
+                  width: 88
+                  height: 88
+                medium:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s240-c-k-c0x00ffffff-no-rj
+                  width: 240
+                  height: 240
+                high:
+                  url: https://yt3.ggpht.com/ytc/AIdro_n5-ncmsWwwMoxwcM-kaG60CnxcT5V5FgYeVExOvmQ9lw=s800-c-k-c0x00ffffff-no-rj
+                  width: 800
+                  height: 800
+            statistics:
+              viewCount: '33'
+              likeCount: '0'
+              favoriteCount: '0'
+              commentCount: '0'
+            duration: PT1M56S
+            url: https://www.youtube.com/watch?v=b2IrpVaZAwM
+  - title: The Reg3 Conference
+    description: Cras venenatis ultrices magna, a ultricies odio dapibus ut. Cras molestie vitae leo aliquet tempus. Sed rutrum velit ut velit dictum gravida sit amet eu lectus.
+    years:
+      - year: 2023
+        videos:
+          - title: The Reg3 Conference - The 2023 Roundtables
+            description: |-
+              Crypto conferences abound. Even on regulation. Surprisingly, they can sometimes be entertaining. But there’s something missing: sufficient space and time to connect.
+
+              So, in this second year, Reg3 turned the idea of a conference upside down. While still not a summit or a forum, we transformed this edition into a more intimate and quite relaxed event, focused on open-door roundtables where observers are welcome.
+
+              Did you ask for less structured content and deeper interactions?
+
+              Learn more about how we're promoting better regulation for decentralised technology at reg3.eu
+            publishedAt: '2024-01-25T17:07:34Z'
+            thumbnails:
+              default:
+                url: https://i.ytimg.com/vi/aQXdagarn6Q/default.jpg
+                width: 120
+                height: 90
+              medium:
+                url: https://i.ytimg.com/vi/aQXdagarn6Q/mqdefault.jpg
+                width: 320
+                height: 180
+              high:
+                url: https://i.ytimg.com/vi/aQXdagarn6Q/hqdefault.jpg
+                width: 480
+                height: 360
+              standard:
+                url: https://i.ytimg.com/vi/aQXdagarn6Q/sddefault.jpg
+                width: 640
+                height: 480
+              maxres:
+                url: https://i.ytimg.com/vi/aQXdagarn6Q/maxresdefault.jpg
+                width: 1280
+                height: 720
+            channel:
+              name: The Reg3 Conference
+              id: UCoELNEU8d1YJK1HpW_50RXg
+              url: https://www.youtube.com/channel/UCoELNEU8d1YJK1HpW_50RXg
+              thumbnail:
+                default:
+                  url: https://yt3.ggpht.com/VlYenAYzuVQig2AzrjA2X2GcBdm8iTl8z9XwYDNM61FC7l0jf1mYpsumB-NuNzgEBQoPj318rw=s88-c-k-c0x00ffffff-no-rj
+                  width: 88
+                  height: 88
+                medium:
+                  url: https://yt3.ggpht.com/VlYenAYzuVQig2AzrjA2X2GcBdm8iTl8z9XwYDNM61FC7l0jf1mYpsumB-NuNzgEBQoPj318rw=s240-c-k-c0x00ffffff-no-rj
+                  width: 240
+                  height: 240
+                high:
+                  url: https://yt3.ggpht.com/VlYenAYzuVQig2AzrjA2X2GcBdm8iTl8z9XwYDNM61FC7l0jf1mYpsumB-NuNzgEBQoPj318rw=s800-c-k-c0x00ffffff-no-rj
+                  width: 800
+                  height: 800
+            statistics:
+              viewCount: '19'
+              likeCount: '1'
+              favoriteCount: '0'
+              commentCount: '1'
+            duration: PT2M12S
+            url: https://www.youtube.com/watch?v=aQXdagarn6Q
