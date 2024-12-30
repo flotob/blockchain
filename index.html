@@ -1,1668 +1,1730 @@
 ---
-layout: default
+layout: minimal
 title: Florian Glatz | Blockchain Lawyer & Researcher
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Florian Glatz | Blockchain Lawyer & Researcher</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <style>
-        :root {
-            --primary: #121a30;
-            --primary-dark: #000000;
-            --text: #1f2937;
-            --text-light: #6b7280;
-            --bg: #ffffff;
-            --bg-alt: #f9fafb;
-        }
+<style>
+    :root {
+        --primary: #121a30;
+        --primary-dark: #000000;
+        --text: #1f2937;
+        --text-light: #6b7280;
+        --bg: #ffffff;
+        --bg-alt: #f9fafb;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: var(--bg);
-        }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--bg);
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
 
-        .content-wrapper {
-            background: rgba(255, 255, 255, 0.8);
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-        }
+    .content-wrapper {
+        background: rgba(255, 255, 255, 0.8);
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
 
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(135deg, var(--bg-alt) 0%, var(--bg) 100%);
-            animation: fadeIn 1s ease-out;
-        }
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(135deg, var(--bg-alt) 0%, var(--bg) 100%);
+        animation: fadeIn 1s ease-out;
+    }
 
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 0.75rem;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            animation: fadeIn 1s ease-out 0.2s both;
-        }
+    .profile-img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 0.75rem;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        animation: fadeIn 1s ease-out 0.2s both;
+    }
 
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+        animation: fadeIn 1s ease-out 0.4s both;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        color: var(--text-light);
+        margin-bottom: 1rem;
+        animation: fadeIn 1s ease-out 0.6s both;
+    }
+
+    .location {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        color: var(--text-light);
+        margin-bottom: 1rem;
+        font-size: 1.125rem;
+        animation: fadeIn 1s ease-out 0.7s both;
+    }
+
+    .bio {
+        max-width: 800px;
+        margin: 0 auto 1.5rem;
+        font-size: 1.25rem;
+        animation: fadeIn 1s ease-out 0.8s both;
+    }
+
+    .social {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        animation: fadeIn 1s ease-out 1s both;
+    }
+
+    .social a {
+        color: var(--text);
+        text-decoration: none;
+        transition: color 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .social a:hover {
+        color: var(--primary);
+        cursor: pointer;
+    }
+
+    .button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background: var(--primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        transition: all 0.2s;
+        animation: fadeIn 1s ease-out 1.2s both;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background: var(--primary-dark);
+    }
+
+    @media (max-width: 768px) {
         h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-            animation: fadeIn 1s ease-out 0.4s both;
+            font-size: 2rem;
         }
-
         .title {
-            font-size: 1.5rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            animation: fadeIn 1s ease-out 0.6s both;
-        }
-
-        .location {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            font-size: 1.125rem;
-            animation: fadeIn 1s ease-out 0.7s both;
-        }
-
-        .bio {
-            max-width: 800px;
-            margin: 0 auto 1.5rem;
             font-size: 1.25rem;
-            animation: fadeIn 1s ease-out 0.8s both;
         }
-
+        .profile-img {
+            width: 150px;
+            height: 150px;
+        }
+        .bio {
+            font-size: 1.125rem;
+            padding: 0 0.5rem;
+        }
         .social {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            animation: fadeIn 1s ease-out 1s both;
-        }
-
-        .social a {
-            color: var(--text);
-            text-decoration: none;
-            transition: color 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .social a:hover {
-            color: var(--primary);
-            cursor: pointer;
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 0.5rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            animation: fadeIn 1s ease-out 1.2s both;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            background: var(--primary-dark);
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .title {
-                font-size: 1.25rem;
-            }
-            .profile-img {
-                width: 150px;
-                height: 150px;
-            }
-            .bio {
-                font-size: 1.125rem;
-                padding: 0 0.5rem;
-            }
-            .social {
-                flex-wrap: wrap;
-                gap: 1rem;
-                padding: 0 0.5rem;
-            }
-            .social a {
-                font-size: 0.875rem;
-            }
-            .button {
-                padding: 0.625rem 1.25rem;
-                font-size: 0.875rem;
-            }
-            .social a span.common-ground-text {
-                display: none;
-            }
-            .social a span.common-ground-text-mobile {
-                display: inline;
-            }
-            .button svg {
-                display: none;
-            }
-            .social a span {
-                display: none;
-            }
-            .social {
-                gap: 2rem;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .container {
-                padding: 0.5rem;
-            }
-            .content-wrapper {
-                padding: 1.5rem 0.75rem;
-            }
-            h1 {
-                font-size: 1.75rem;
-            }
-            .profile-img {
-                width: 120px;
-                height: 120px;
-            }
-        }
-
-        .button-container {
-            display: flex;
+            flex-wrap: wrap;
             gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
+            padding: 0 0.5rem;
         }
-
+        .social a {
+            font-size: 0.875rem;
+        }
         .button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 0.5rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            animation: fadeIn 1s ease-out 1.2s both;
-            cursor: pointer;
+            padding: 0.625rem 1.25rem;
+            font-size: 0.875rem;
         }
-
-        .button:hover {
-            background: var(--primary-dark);
-            transform: translateY(-1px);
+        .social a span.common-ground-text {
+            display: none;
         }
-
-        .button.secondary {
-            background: transparent;
-            color: var(--text);
-            border: 1px solid var(--text-light);
+        .social a span.common-ground-text-mobile {
+            display: inline;
         }
-
-        .button.secondary:hover {
-            background: rgba(0, 0, 0, 0.05);
-            border-color: var(--text);
+        .button svg {
+            display: none;
         }
-
-        .section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 4rem 1rem;
+        .social a span {
+            display: none;
         }
-
-        .work-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        .social {
             gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .container {
+            padding: 0.5rem;
+        }
+        .content-wrapper {
+            padding: 1.5rem 0.75rem;
+        }
+        h1 {
+            font-size: 1.75rem;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    .button-container {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background: var(--primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        transition: all 0.2s;
+        animation: fadeIn 1s ease-out 1.2s both;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background: var(--primary-dark);
+        transform: translateY(-1px);
+    }
+
+    .button.secondary {
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--text-light);
+    }
+
+    .button.secondary:hover {
+        background: rgba(0, 0, 0, 0.05);
+        border-color: var(--text);
+    }
+
+    .section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 1rem;
+    }
+
+    .work-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .work-card {
+        background: white;
+        border-radius: 16px;
+        overflow: visible;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .card-top {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        overflow: hidden;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .work-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .work-content {
+        padding: 1.5rem 1.5rem 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .work-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: var(--text);
+    }
+
+    .position {
+        display: none;
+    }
+
+    @media (max-width: 640px) {
+        .position {
+            display: block;
+            font-size: 0.75rem;
+            margin-bottom: 0.25rem;
+            color: var(--text);
+        }
+    }
+
+    .work-description {
+        font-size: 1.125rem;
+        color: var(--text-light);
+        line-height: 1.5;
+        margin-bottom: auto;
+    }
+
+    .work-link {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1rem;
+        background: var(--bg-alt);
+        border-radius: 0 0 16px 16px;
+        transition: all 0.2s ease;
+        margin-top: 2rem;
+    }
+
+    .work-link:hover {
+        background: #f3f4f6;
+    }
+
+    .work-link svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    @media (max-width: 1024px) {
+        .work-grid {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 800px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .work-grid {
+            grid-template-columns: 1fr;
+            max-width: 400px;
+            gap: 1rem;
         }
 
         .work-card {
-            background: white;
-            border-radius: 16px;
-            overflow: visible;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-            text-decoration: none;
+            padding: 1rem;
         }
 
         .card-top {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            overflow: hidden;
-            border-radius: 16px 16px 0 0;
+            flex-direction: row;
+            margin-bottom: 0;
         }
 
         .work-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            width: 80px;
+            height: 80px;
+            margin: 0 1rem 0 0;
+            border-radius: 8px;
         }
 
         .work-content {
-            padding: 1.5rem 1.5rem 0;
+            padding: 0;
             flex: 1;
-            display: flex;
-            flex-direction: column;
         }
 
         .work-title {
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            color: var(--text);
+            font-size: 1rem;
+            margin-bottom: 0.125rem;
         }
 
         .position {
-            display: none;
-        }
-
-        @media (max-width: 640px) {
-            .position {
-                display: block;
-                font-size: 0.75rem;
-                margin-bottom: 0.25rem;
-                color: var(--text);
-            }
+            font-size: 0.75rem;
+            margin-bottom: 0.25rem;
+            display: block;
         }
 
         .work-description {
-            font-size: 1.125rem;
-            color: var(--text-light);
-            line-height: 1.5;
-            margin-bottom: auto;
+            font-size: 0.75rem;
+            margin-bottom: 0;
         }
 
         .work-link {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 1rem;
-            background: var(--bg-alt);
-            border-radius: 0 0 16px 16px;
-            transition: all 0.2s ease;
-            margin-top: 2rem;
-        }
-
-        .work-link:hover {
-            background: #f3f4f6;
+            margin: 1.5rem -1rem -1rem;
+            padding: 0.75rem;
+            font-size: 0.75rem;
         }
 
         .work-link svg {
-            width: 24px;
-            height: 24px;
+            width: 16px;
+            height: 16px;
         }
+    }
 
-        @media (max-width: 1024px) {
-            .work-grid {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 800px;
-            }
-        }
+    html {
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        position: relative;
+    }
 
-        @media (max-width: 640px) {
-            .work-grid {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                gap: 1rem;
-            }
+    .hero, .section {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
 
-            .work-card {
-                display: flex;
-                flex-direction: column;
-                padding: 1rem;
-            }
+    .chrome {
+        position: fixed;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(8px);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 100;
+    }
 
-            .card-top {
-                flex-direction: row;
-                margin-bottom: 0;
-            }
+    .chrome.visible {
+        opacity: 1;
+    }
 
-            .work-image {
-                width: 80px;
-                height: 80px;
-                margin: 0 1rem 0 0;
-                border-radius: 8px;
-            }
+    .header {
+        top: 0;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-            .work-content {
-                padding: 0;
-                flex: 1;
-            }
+    .header a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+    }
 
-            .work-title {
-                font-size: 1rem;
-                margin-bottom: 0.125rem;
-            }
+    .footer {
+        bottom: 0;
+        padding: 1rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
 
-            .position {
-                font-size: 0.75rem;
-                margin-bottom: 0.25rem;
-                display: block;
-            }
+    .nav-button {
+        background: var(--bg-alt);
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
 
-            .work-description {
-                font-size: 0.75rem;
-                margin-bottom: 0;
-            }
+    .nav-button:hover {
+        background: #f3f4f6;
+        transform: translateY(-1px);
+    }
 
-            .work-link {
-                margin: 1.5rem -1rem -1rem;
-                padding: 0.75rem;
-                font-size: 0.75rem;
-            }
+    .nav-button svg {
+        width: 20px;
+        height: 20px;
+        stroke: var(--text);
+    }
 
-            .work-link svg {
-                width: 16px;
-                height: 16px;
-            }
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-snap-type: y mandatory;
-            position: relative;
-        }
-
-        .hero, .section {
-            scroll-snap-align: start;
-            scroll-snap-stop: always;
-        }
-
-        .chrome {
-            position: fixed;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 100;
-        }
-
-        .chrome.visible {
-            opacity: 1;
-        }
-
+    @media (max-width: 768px) {
         .header {
-            top: 0;
-            padding: 1rem 2rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 0.75rem 1rem;
         }
-
-        .header a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
         .footer {
-            bottom: 0;
-            padding: 1rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-            display: flex;
-            justify-content: flex-end;
-            gap: 0.5rem;
+            padding: 0.75rem;
         }
-
         .nav-button {
-            background: var(--bg-alt);
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
+            width: 36px;
+            height: 36px;
         }
+    }
 
-        .nav-button:hover {
-            background: #f3f4f6;
-            transform: translateY(-1px);
-        }
+    .work-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
 
-        .nav-button svg {
-            width: 20px;
-            height: 20px;
-            stroke: var(--text);
-        }
+    .work-image.logo {
+        object-fit: contain;
+        padding: 1rem;
+        border-bottom: none;
+        transform: scale(1.1);
+    }
 
-        @media (max-width: 768px) {
-            .header {
-                padding: 0.75rem 1rem;
-            }
-            .footer {
-                padding: 0.75rem;
-            }
-            .nav-button {
-                width: 36px;
-                height: 36px;
-            }
-        }
+    .work-description-mobile {
+        display: none;
+    }
 
-        .work-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .work-image.logo {
-            object-fit: contain;
-            padding: 1rem;
-            border-bottom: none;
-            transform: scale(1.1);
+    @media (max-width: 640px) {
+        .work-description {
+            display: none;
         }
 
         .work-description-mobile {
-            display: none;
+            display: block;
+            font-size: 0.75rem;
+            margin-bottom: 0;
         }
 
-        @media (max-width: 640px) {
-            .work-description {
-                display: none;
-            }
-
-            .work-description-mobile {
-                display: block;
-                font-size: 0.75rem;
-                margin-bottom: 0;
-            }
-
-            .work-image.logo {
-                padding: 0.5rem;
-                transform: scale(1.3);
-            }
+        .work-image.logo {
+            padding: 0.5rem;
+            transform: scale(1.3);
         }
+    }
 
-        .social a span.common-ground-text-mobile {
-            display: none;
-        }
+    .social a span.common-ground-text-mobile {
+        display: none;
+    }
 
-        .menu-button {
-            margin-left: 0;
-        }
+    .menu-button {
+        margin-left: 0;
+    }
 
-        .menu-button {
-            position: relative;
-            width: 40px;
-            height: 40px;
-            border-radius: 20px;
-            background: var(--bg-alt);
-            border: none;
-            cursor: pointer;
-            margin-left: 1rem;
-            transition: all 0.2s ease;
-        }
+    .menu-button {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background: var(--bg-alt);
+        border: none;
+        cursor: pointer;
+        margin-left: 1rem;
+        transition: all 0.2s ease;
+    }
 
-        .menu-button:hover {
-            background: #f3f4f6;
-            transform: translateY(-1px);
-        }
+    .menu-button:hover {
+        background: #f3f4f6;
+        transform: translateY(-1px);
+    }
 
-        .menu-button .line {
-            position: absolute;
-            left: 12px;
-            width: 16px;
-            height: 2px;
-            background: var(--text);
-            transition: all 0.3s ease;
-        }
+    .menu-button .line {
+        position: absolute;
+        left: 12px;
+        width: 16px;
+        height: 2px;
+        background: var(--text);
+        transition: all 0.3s ease;
+    }
 
-        .menu-button .line:nth-child(1) { top: 14px; }
-        .menu-button .line:nth-child(2) { top: 19px; }
-        .menu-button .line:nth-child(3) { top: 24px; }
+    .menu-button .line:nth-child(1) { top: 14px; }
+    .menu-button .line:nth-child(2) { top: 19px; }
+    .menu-button .line:nth-child(3) { top: 24px; }
 
-        .menu-button.active .line:nth-child(1) {
-            transform: rotate(45deg);
-            top: 19px;
-        }
+    .menu-button.active .line:nth-child(1) {
+        transform: rotate(45deg);
+        top: 19px;
+    }
 
-        .menu-button.active .line:nth-child(2) {
-            opacity: 0;
-        }
+    .menu-button.active .line:nth-child(2) {
+        opacity: 0;
+    }
 
-        .menu-button.active .line:nth-child(3) {
-            transform: rotate(-45deg);
-            top: 19px;
-        }
+    .menu-button.active .line:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 19px;
+    }
 
-        .menu-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: white;
-            z-index: 90;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 90;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
 
-        .menu-overlay.visible {
-            opacity: 1;
-            visibility: visible;
-        }
+    .menu-overlay.visible {
+        opacity: 1;
+        visibility: visible;
+    }
 
-        .menu-items {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            text-align: center;
-        }
+    .menu-items {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
 
+    .menu-item {
+        font-size: 4rem;
+        font-weight: 800;
+        color: var(--text);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+        transition: all 0.2s ease;
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    .menu-overlay.visible .menu-item {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .menu-overlay.visible .menu-item:nth-child(1) { transition-delay: 0.1s; }
+    .menu-overlay.visible .menu-item:nth-child(2) { transition-delay: 0.15s; }
+    .menu-overlay.visible .menu-item:nth-child(3) { transition-delay: 0.2s; }
+    .menu-overlay.visible .menu-item:nth-child(4) { transition-delay: 0.25s; }
+    .menu-overlay.visible .menu-item:nth-child(5) { transition-delay: 0.3s; }
+
+    .menu-item:hover {
+        color: var(--primary);
+        transform: translateX(10px);
+    }
+
+    .menu-item.active {
+        color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
         .menu-item {
-            font-size: 4rem;
-            font-weight: 800;
-            color: var(--text);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-            transition: all 0.2s ease;
-            transform: translateY(20px);
-            opacity: 0;
+            font-size: 2.5rem;
         }
+    }
 
-        .menu-overlay.visible .menu-item {
-            transform: translateY(0);
-            opacity: 1;
+    .blog-section {
+        padding: 4rem 1rem;
+        min-height: 100vh;
+        background: var(--bg-alt);
+    }
+
+    .blog-container {
+        max-width: 100%;
+        padding: 0 2rem;
+    }
+
+    .blog-category {
+        margin-bottom: 2rem;
+    }
+
+    .blog-category-title {
+        max-width: 1200px;
+        margin: 0 0 1rem 2rem;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .blog-category-title a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: inherit;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+    }
+
+    .blog-category-title a:hover {
+        opacity: 0.8;
+    }
+
+    .blog-category-title img {
+        height: 2rem;
+        width: auto;
+        opacity: 0.8;
+    }
+
+    .blog-grid {
+        display: flex;
+        gap: 2rem;
+        overflow-x: auto;
+        padding: 1rem 2rem;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .blog-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .blog-card {
+        flex: 0 0 320px;
+        scroll-snap-align: start;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        transition: all 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        background: var(--bg-alt);
+    }
+
+    .blog-content {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .blog-excerpt {
+        font-size: 0.875rem;
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    .blog-category {
+        margin-bottom: 3rem;
+    }
+
+    .blog-category-title {
+        max-width: 1200px;
+        margin: 0 0 1rem 2rem;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text);
+    }
+
+    .blog-category-title a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .blog-category-title svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+        .blog-card {
+            flex: 0 0 280px;
         }
-
-        .menu-overlay.visible .menu-item:nth-child(1) { transition-delay: 0.1s; }
-        .menu-overlay.visible .menu-item:nth-child(2) { transition-delay: 0.15s; }
-        .menu-overlay.visible .menu-item:nth-child(3) { transition-delay: 0.2s; }
-        .menu-overlay.visible .menu-item:nth-child(4) { transition-delay: 0.25s; }
-        .menu-overlay.visible .menu-item:nth-child(5) { transition-delay: 0.3s; }
-
-        .menu-item:hover {
-            color: var(--primary);
-            transform: translateX(10px);
-        }
-
-        .menu-item.active {
-            color: var(--primary);
-        }
-
-        @media (max-width: 768px) {
-            .menu-item {
-                font-size: 2.5rem;
-            }
-        }
-
-        .blog-section {
-            padding: 4rem 1rem;
-            min-height: 100vh;
-            background: var(--bg-alt);
-        }
-
-        .blog-container {
-            max-width: 100%;
-            padding: 0 2rem;
-        }
-
-        .blog-category {
-            margin-bottom: 2rem;
+        
+        .blog-image {
+            height: 160px;
         }
 
         .blog-category-title {
-            max-width: 1200px;
-            margin: 0 0 1rem 2rem;
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--text);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .blog-category-title a {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: inherit;
-            text-decoration: none;
-            transition: opacity 0.2s ease;
-        }
-
-        .blog-category-title a:hover {
-            opacity: 0.8;
-        }
-
-        .blog-category-title img {
-            height: 2rem;
-            width: auto;
-            opacity: 0.8;
+            margin: 0 0 1rem 1rem;
+            font-size: 1.5rem;
         }
 
         .blog-grid {
-            display: flex;
-            gap: 2rem;
-            overflow-x: auto;
-            padding: 1rem 2rem;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
+            padding: 1rem;
+            gap: 1rem;
         }
+    }
 
-        .blog-grid::-webkit-scrollbar {
+    .scroll-indicator {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background: white;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        z-index: 1;
+    }
+
+    .scroll-left {
+        left: 0;
+    }
+
+    .scroll-right {
+        right: 0;
+    }
+
+    .scroll-indicator:hover {
+        background: var(--bg-alt);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .scroll-indicator svg {
+        width: 20px;
+        height: 20px;
+        stroke: var(--text);
+    }
+
+    @media (max-width: 768px) {
+        .blog-card {
+            flex: 0 0 300px;
+        }
+        .blog-container {
+            padding: 0 0.5rem;
+        }
+        .scroll-indicator {
             display: none;
         }
+    }
 
-        .blog-card {
-            flex: 0 0 320px;
-            scroll-snap-align: start;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            transition: all 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            text-decoration: none;
-        }
+    .scroll-container {
+        position: relative;
+        padding: 0 2rem;
+    }
 
-        .blog-image {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            background: var(--bg-alt);
-        }
+    .publications-section {
+        min-height: 100vh;
+        padding: 4rem 1rem;
+        background: var(--bg);
+    }
 
-        .blog-content {
-            padding: 1.5rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
+    .publications-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-        .blog-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 0.75rem;
-            line-height: 1.4;
-        }
+    .publications-row {
+        margin-bottom: 4rem;
+    }
 
-        .blog-excerpt {
-            font-size: 0.875rem;
-            color: var(--text-light);
-            line-height: 1.6;
-        }
+    .publications-category {
+        margin: 0 0 2rem 2rem;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text);
+    }
 
-        @media (max-width: 768px) {
-            .blog-card {
-                flex: 0 0 260px;
-            }
-            .blog-image {
-                height: 160px;
-            }
-            .blog-category-title {
-                margin: 0 0 1rem 1rem;
-                font-size: 1.5rem;
-            }
-        }
+    .publications-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
 
-        .scroll-indicator {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            border-radius: 20px;
-            background: white;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            z-index: 1;
-        }
+    .publication-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+    }
 
-        .scroll-left {
-            left: 0;
-        }
+    .publication-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
 
-        .scroll-right {
-            right: 0;
-        }
+    .publication-card.primary {
+        grid-column: auto;
+    }
 
-        .scroll-indicator:hover {
-            background: var(--bg-alt);
-            transform: translateY(-50%) scale(1.1);
-        }
+    .publication-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        background: var(--bg-alt);
+    }
 
-        .scroll-indicator svg {
-            width: 20px;
-            height: 20px;
-            stroke: var(--text);
-        }
+    .publication-card.secondary .publication-image {
+        object-fit: contain;
+        padding: 2rem;
+        background: white;
+        height: 300px;
+    }
 
-        @media (max-width: 768px) {
-            .blog-card {
-                flex: 0 0 300px;
-            }
-            .blog-container {
-                padding: 0 0.5rem;
-            }
-            .scroll-indicator {
-                display: none;
-            }
-        }
+    .publication-content {
+        padding: 2rem;
+    }
 
-        .scroll-container {
-            position: relative;
-            padding: 0 2rem;
-        }
+    .publication-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--text);
+    }
 
-        .publications-section {
-            min-height: 100vh;
-            padding: 4rem 1rem;
-            background: var(--bg);
-        }
+    .publication-card.primary .publication-title {
+        font-size: 2rem;
+    }
 
-        .publications-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .publication-meta {
+        font-size: 0.875rem;
+        color: var(--text-light);
+        margin-bottom: 1rem;
+    }
 
-        .publications-row {
-            margin-bottom: 4rem;
-        }
+    .publication-description {
+        font-size: 1rem;
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
 
-        .publications-category {
-            margin: 0 0 2rem 2rem;
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--text);
-        }
+    .publication-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
 
+    .publication-link:hover {
+        color: var(--primary);
+    }
+
+    @media (max-width: 1024px) {
         .publications-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            grid-template-columns: 1fr;
         }
-
-        .publication-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+        
+        .publication-card.primary {
+            grid-column: auto;
         }
+    }
 
-        .publication-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    @media (max-width: 640px) {
+        .publications-grid {
+            grid-template-columns: 1fr;
         }
-
+        
         .publication-card.primary {
             grid-column: auto;
         }
 
-        .publication-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            background: var(--bg-alt);
-        }
-
-        .publication-card.secondary .publication-image {
-            object-fit: contain;
-            padding: 2rem;
-            background: white;
-            height: 300px;
-        }
-
-        .publication-content {
-            padding: 2rem;
-        }
-
-        .publication-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text);
+        .publication-card.primary .publication-image {
+            height: 200px;
         }
 
         .publication-card.primary .publication-title {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
-        .publication-meta {
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
+        .publications-category {
+            margin: 0 0 1.5rem 1rem;
+            font-size: 1.5rem;
         }
+    }
 
-        .publication-description {
-            font-size: 1rem;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
+    .publication-card.primary .publication-image {
+        object-fit: contain;
+        padding: 2rem;
+        background: white;
+    }
+
+    .menu-item.active {
+        color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+        .menu-item {
+            font-size: 2.5rem;
         }
+    }
 
-        .publication-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
+    .media-appearances {
+        max-width: 800px;
+        margin: 0 auto;
+    }
 
-        .publication-link:hover {
-            color: var(--primary);
-        }
+    .category {
+        margin-bottom: 2rem;
+    }
 
-        @media (max-width: 1024px) {
-            .publications-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .publication-card.primary {
-                grid-column: auto;
-            }
-        }
+    .videos {
+        margin-left: 1rem;
+    }
 
-        @media (max-width: 640px) {
-            .publications-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .publication-card.primary {
-                grid-column: auto;
-            }
+    .video {
+        margin-bottom: 1rem;
+    }
 
-            .publication-card.primary .publication-image {
-                height: 200px;
-            }
+    .video h4 {
+        margin: 0;
+        font-size: 1.1rem;
+    }
 
-            .publication-card.primary .publication-title {
-                font-size: 1.5rem;
-            }
+    .video .channel {
+        margin: 0.25rem 0 0 0;
+        font-size: 0.9rem;
+        color: #666;
+    }
+</style>
 
-            .publications-category {
-                margin: 0 0 1.5rem 1rem;
-                font-size: 1.5rem;
-            }
-        }
+<header class="chrome header">
+    <a href="/">blockchain.lawyer</a>
+    <button class="menu-button" id="menuButton">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </button>
+</header>
 
-        .publication-card.primary .publication-image {
-            object-fit: contain;
-            padding: 2rem;
-            background: white;
-        }
-
-        .menu-item.active {
-            color: var(--primary);
-        }
-
-        @media (max-width: 768px) {
-            .menu-item {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header class="chrome header">
-        <a href="/">blockchain.lawyer</a>
-        <button class="menu-button" id="menuButton">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </button>
-    </header>
-    <main class="hero">
-        <div class="container">
-            <div class="content-wrapper">
-                <img src="images/bio-photo.jpg" alt="Florian Glatz" class="profile-img">
-                <h1>Florian Glatz</h1>
-                <div class="title">Law and Technology</div>
-                <p class="bio">
-                    Working at the intersection of law, blockchain technology, and software development since 2014.
-                </p>
-                <div class="social">
-                    <a href="https://twitter.com/heckerhut" target="_blank">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
-                        </svg>
-                        <span>Twitter</span>
-                    </a>
-                    <a href="https://github.com/flotob" target="_blank">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
-                        </svg>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://app.cg/u/~hz8ud4jRpdMYcpoWTSMmmz/" target="_blank">
-                        <img src="images/logo-black-transparent.svg" width="24" height="24" alt="Common Ground" style="opacity: 0.8">
-                        <span class="common-ground-text">Common Ground</span>
-                        <span class="common-ground-text-mobile">CG</span>
-                    </a>
-                </div>
-                <div class="button-container">
-                    <a href="mailto:fg@blockchain.lawyer" class="button">
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                        Get in Touch
-                    </a>
-                    <a href="#next-section" class="button secondary">
-                        Learn More
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
-    <section id="next-section" class="section">
-        <div class="work-grid">
-            <div class="work-card">
-                <div class="card-top">
-                    <img src="https://framerusercontent.com/images/hYVNYcaQlCxkrdC7IfgIhm8ri0.png" alt="Common Ground" class="work-image">
-                    <div class="work-content">
-                        <h3 class="work-title">Common Ground</h3>
-                        <p class="work-description">
-                            <span class="position">Co-Founder & Board Member</span>
-                            Co-Founder and board member of the Common Ground Association, developing a user-owned social network using web3 primitives
-                        </p>
-                        <p class="work-description-mobile">
-                            <span class="position">Co-Founder & Board Member</span>
-                            Building a user-owned social network with web3 technology
-                        </p>
-                    </div>
-                </div>
-                <a href="https://commonground.cg" target="_blank" class="work-link">
-                    Learn more
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+<main class="hero">
+    <div class="container">
+        <div class="content-wrapper">
+            <img src="images/bio-photo.jpg" alt="Florian Glatz" class="profile-img">
+            <h1>Florian Glatz</h1>
+            <div class="title">Law and Technology</div>
+            <p class="bio">
+                Working at the intersection of law, blockchain technology, and software development since 2014.
+            </p>
+            <div class="social">
+                <a href="https://twitter.com/heckerhut" target="_blank">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
                     </svg>
+                    <span>Twitter</span>
+                </a>
+                <a href="https://github.com/flotob" target="_blank">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://app.cg/u/~hz8ud4jRpdMYcpoWTSMmmz/" target="_blank">
+                    <img src="images/logo-black-transparent.svg" width="24" height="24" alt="Common Ground" style="opacity: 0.8">
+                    <span class="common-ground-text">Common Ground</span>
+                    <span class="common-ground-text-mobile">CG</span>
                 </a>
             </div>
-            <div class="work-card">
-                <div class="card-top">
-                    <img src="images/euci.png" alt="European Crypto Initiative" class="work-image logo">
-                    <div class="work-content">
-                        <h3 class="work-title">European Crypto Initiative</h3>
-                        <p class="work-description">
-                            <span class="position">Co-Founder & Board Member</span>
-                            Co-Founder and board member of the European Crypto Initiative, a Brussels-based non-profit advocating for better crypto regulation in Europe and beyond.
-                        </p>
-                        <p class="work-description-mobile">
-                            <span class="position">Co-Founder & Board Member</span>
-                            Advocating for better crypto regulation in Europe
-                        </p>
-                    </div>
-                </div>
-                <a href="https://eu.ci" target="_blank" class="work-link">
-                    Learn more
+            <div class="button-container">
+                <a href="mailto:fg@blockchain.lawyer" class="button">
                     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
+                    Get in Touch
                 </a>
-            </div>
-            <div class="work-card">
-                <div class="card-top">
-                    <img src="images/common-ground.jpg" alt="Consulting" class="work-image">
-                    <div class="work-content">
-                        <h3 class="work-title">Consulting</h3>
-                        <p class="work-description">
-                            <span class="position">Law & Code</span>
-                            Helping projects and founders succeed in the web3 space with my decade of knowledge and experience in this unique industry
-                        </p>
-                        <p class="work-description-mobile">
-                            <span class="position">Law & Code</span>
-                            Helping projects and founders succeed in the web3 space
-                        </p>
-                    </div>
-                </div>
-                <a href="mailto:fg@blockchain.lawyer" class="work-link">
-                    Get in touch
+                <a href="#next-section" class="button secondary">
+                    Learn More
                     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                     </svg>
                 </a>
             </div>
         </div>
-    </section>
-    <section id="blogs" class="blog-section section">
-        <div class="blog-container">
-            <div class="blog-category">
-                <h2 class="blog-category-title">
-                    <a href="https://medium.com/@heckerhut" target="_blank">
-                        Medium
-                        <svg width="32" height="32" viewBox="0 0 1043.63 592.71" fill="currentColor">
-                            <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94"></path>
-                        </svg>
-                    </a>
-                </h2>
-                <div class="blog-grid">
-                    <a href="https://heckerhut.medium.com/daos-are-dead-long-live-daos-50de94e8ee1e" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-daos-are-dead-long-live-daos-50de94e8ee1e.jpg" alt="DAOs are Dead, Long Live DAOs" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">DAOs are Dead, Long Live DAOs</h3>
-                            <p class="blog-excerpt">A critical analysis of the evolution and future of Decentralized Autonomous Organizations.</p>
-                        </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/can-the-wikipedia-model-be-applied-to-public-policy-making-ff4444a2ff60" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-can-the-wikipedia-model-be-applied-to-public-policy-making-ff4444a2ff60.jpg" alt="Can the Wikipedia Model be Applied to Public Policy Making?" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Can the Wikipedia Model be Applied to Public Policy Making?</h3>
-                            <p class="blog-excerpt">Exploring collaborative approaches to policy development in the digital age.</p>
-                        </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/a-blockchain-token-taxonomy-fadf5c56139a" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-a-blockchain-token-taxonomy-fadf5c56139a.jpg" alt="A Blockchain Token Taxonomy" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">A Blockchain Token Taxonomy</h3>
-                            <p class="blog-excerpt">A comprehensive framework for understanding and classifying blockchain tokens.</p>
-                        </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/how-we-use-smart-contracts-at-satoshipay-to-change-the-internet-s-economy-forever-today-777988a868d" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-how-we-use-smart-contracts-at-satoshipay-to-change-the-internet-s-economy-forever-today-777988a868d.jpg" alt="How We Use Smart Contracts at SatoshiPay" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">How We Use Smart Contracts at SatoshiPay</h3>
-                            <p class="blog-excerpt">Changing the internet's economy forever, today.</p>
-                        </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/smart-contracts-platforms-and-intermediaries-c3d30f5182a6" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-smart-contracts-platforms-and-intermediaries-c3d30f5182a6.jpg" alt="Smart Contracts, Platforms and Intermediaries" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Smart Contracts, Platforms and Intermediaries</h3>
-                            <p class="blog-excerpt">Exploring the relationship between smart contract technology and traditional intermediaries.</p>
-                        </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/the-political-economy-of-computing-7fffc75423a2" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-the-political-economy-of-computing-7fffc75423a2.jpg" alt="The Political Economy of Computing" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">The Political Economy of Computing</h3>
-                            <p class="blog-excerpt">Understanding the intersection of technology, economics, and politics.</p>
-                        </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/modes-of-contractual-governance-in-an-on-demand-service-economy-1833629f379b" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-modes-of-contractual-governance-in-an-on-demand-service-economy-1833629f379b.jpg" alt="Modes of Contractual Governance" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Modes of Contractual Governance</h3>
-                            <p class="blog-excerpt">Analyzing contractual governance in the on-demand service economy.</p>
-                        </div>
-                    </a>
-                    <a href="https://heckerhut.medium.com/whats-a-smart-contract-in-search-of-a-consensus-c268c830a8ad" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-whats-a-smart-contract-in-search-of-a-consensus-c268c830a8ad.jpg" alt="What's a Smart Contract?" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">What's a Smart Contract?</h3>
-                            <p class="blog-excerpt">In search of a consensus on the definition and implications of smart contracts.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="blog-category">
-                <h2 class="blog-category-title">
-                    <a href="https://app.cg/c/networksociety/" target="_blank">
-                        Network Society
-                        <img src="images/logo-black-transparent.svg" alt="Common Ground">
-                    </a>
-                </h2>
-                <div class="blog-grid">
-                    <a href="https://app.cg/c/networksociety/article/what-is-a-digital-jurisdiction-9KS8MHd9TPrGmXeeBkYW9t/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-what-is-a-digital-jurisdiction-9KS8MHd9TPrGmXeeBkYW9t.jpg" alt="What is a Digital Jurisdiction?" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">What is a Digital Jurisdiction?</h3>
-                            <p class="blog-excerpt">Exploring the concept of jurisdiction in the digital age.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/should-daos-have-constitutions-8QDmXW61MQitjWYLuTiGgN/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-should-daos-have-constitutions-8QDmXW61MQitjWYLuTiGgN.jpg" alt="Should DAOs Have Constitutions?" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Should DAOs Have Constitutions?</h3>
-                            <p class="blog-excerpt">Examining constitutional frameworks in decentralized organizations.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/ongoing-research-on-sovereignty-in-the-digital-age-gdYwt5Uhm5Ty6uGWj9ANL7/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-ongoing-research-on-sovereignty-in-the-digital-age-gdYwt5Uhm5Ty6uGWj9ANL7.jpg" alt="Ongoing Research on Sovereignty in the Digital Age" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Ongoing Research on Sovereignty in the Digital Age</h3>
-                            <p class="blog-excerpt">Investigating the evolution of sovereignty in digital spaces.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/decentralized-justice-state-of-the-art-recurring-criticisms-and-next-generation-research-topics-rM9Hj55BEBhGevLMVVTrbG/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-decentralized-justice-state-of-the-art-recurring-criticisms-and-next-generation-research-topics-rM9Hj55BEBhGevLMVVTrbG.jpg" alt="Decentralized Justice" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Decentralized Justice</h3>
-                            <p class="blog-excerpt">State of the art, recurring criticisms, and next-generation research topics.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/overthrowing-the-network-state-the-rise-of-coordinations-w7vg8EE92xsHbz6fWYHD4y/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-overthrowing-the-network-state-the-rise-of-coordinations-w7vg8EE92xsHbz6fWYHD4y.jpg" alt="Overthrowing the Network State" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Overthrowing the Network State</h3>
-                            <p class="blog-excerpt">The rise of coordinations in digital governance.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/with-ai-regulation-on-the-horizon-compute-clusters-move-to-international-waters-rs3cySS29fLqY3AsSEthSD/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-with-ai-regulation-on-the-horizon-compute-clusters-move-to-international-waters-rs3cySS29fLqY3AsSEthSD.jpg" alt="AI Regulation and Compute Clusters" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">AI Regulation and Compute Clusters</h3>
-                            <p class="blog-excerpt">The migration of compute resources to international waters.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/our-favorite-talks-from-the-network-state-conference-dDEJRm68j1EcTRYivPbK7e/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-our-favorite-talks-from-the-network-state-conference-dDEJRm68j1EcTRYivPbK7e.jpg" alt="Network State Conference Highlights" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Network State Conference Highlights</h3>
-                            <p class="blog-excerpt">Key insights from our favorite talks at the conference.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/how-to-build-a-community-hivemind-notes-from-my-talk-at-the-daoists-global-governance-gathering-oic29gz4bTttyN95TdL9v6/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-how-to-build-a-community-hivemind-notes-from-my-talk-at-the-daoists-global-governance-gathering-oic29gz4bTttyN95TdL9v6.jpg" alt="Building a Community Hivemind" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Building a Community Hivemind</h3>
-                            <p class="blog-excerpt">Notes from the DAOists Global Governance Gathering.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/enshrining-a-dispute-resolution-oracle-in-an-l2-blockchain-pTjp1ycs4gNtQYkjsxpPp5/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-enshrining-a-dispute-resolution-oracle-in-an-l2-blockchain-pTjp1ycs4gNtQYkjsxpPp5.jpg" alt="Dispute Resolution Oracles in L2 Blockchains" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Dispute Resolution Oracles in L2 Blockchains</h3>
-                            <p class="blog-excerpt">Technical implementation of dispute resolution mechanisms.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/institutional-decline-and-the-quiet-revolution-riuTgMXambTqAt9rthfmji/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-institutional-decline-and-the-quiet-revolution-riuTgMXambTqAt9rthfmji.jpg" alt="Institutional Decline and the Quiet Revolution" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Institutional Decline and the Quiet Revolution</h3>
-                            <p class="blog-excerpt">Analyzing the transformation of traditional institutions.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/open-problems-in-daos-dMuTR4tMNnAGtssZS5NCPw/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-open-problems-in-daos-dMuTR4tMNnAGtssZS5NCPw.jpg" alt="Open Problems in DAOs" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Open Problems in DAOs</h3>
-                            <p class="blog-excerpt">Exploring current challenges and future research directions.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/how-web3s-new-consumer-tech-stack-addresses-cryptos-great-filters-dxXwsvpadnGfzDTVCvAyrp/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-how-web3s-new-consumer-tech-stack-addresses-cryptos-great-filters-dxXwsvpadnGfzDTVCvAyrp.jpg" alt="Web3's New Consumer Tech Stack" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Web3's New Consumer Tech Stack</h3>
-                            <p class="blog-excerpt">Addressing crypto's great filters through technology.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/could-ecosystems-form-the-first-network-states-oisu2aouBrREn19a641SPe/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-could-ecosystems-form-the-first-network-states-oisu2aouBrREn19a641SPe.jpg" alt="Could Ecosystems Form the First Network States?" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Could Ecosystems Form the First Network States?</h3>
-                            <p class="blog-excerpt">Examining the potential of ecological systems in digital governance.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/the-prediction-agent-economy-mNHjTHmLgPLSuKNveLMnXi/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-the-prediction-agent-economy-mNHjTHmLgPLSuKNveLMnXi.jpg" alt="The Prediction Agent Economy" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">The Prediction Agent Economy</h3>
-                            <p class="blog-excerpt">Understanding the role of AI agents in economic systems.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/future-state-exploring-emerging-democratic-practices-on-public-blockchains-6vrCWcYvYw6ihKinLGSziV/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-future-state-exploring-emerging-democratic-practices-on-public-blockchains-6vrCWcYvYw6ihKinLGSziV.jpg" alt="Future State" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Future State</h3>
-                            <p class="blog-excerpt">Exploring emerging democratic practices on public blockchains.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/what-is-hypercomputing-9DS6v1bYAVQcv1kqrzUZjk/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-what-is-hypercomputing-9DS6v1bYAVQcv1kqrzUZjk.jpg" alt="What is Hypercomputing?" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">What is Hypercomputing?</h3>
-                            <p class="blog-excerpt">Exploring the frontiers of computational power.</p>
-                        </div>
-                    </a>
-                    <a href="https://app.cg/c/networksociety/article/greetings-from-edge-city-lanna-bUjpySVf5HPEXJVYFS5gKG/" target="_blank" class="blog-card">
-                        <img src="images/blog/blog-greetings-from-edge-city-lanna-bUjpySVf5HPEXJVYFS5gKG.jpg" alt="Greetings from Edge City Lanna" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Greetings from Edge City Lanna</h3>
-                            <p class="blog-excerpt">Dispatches from the frontier of digital urbanism.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="publications" class="publications-section section">
-        <div class="publications-container">
-            <div class="publications-row">
-                <div class="publications-grid">
-                    <div class="publication-card primary">
-                        <img src="https://imageservice.azureedge.net/api/getimage?productId=27489151&width=270&format=webp" alt="Rechtshandbuch Legal Tech" class="publication-image">
-                        <div class="publication-content">
-                            <h3 class="publication-title">Rechtshandbuch Legal Tech</h3>
-                            <div class="publication-meta">Co-Editor with Stephan Breidenbach · 2nd Edition, 2021</div>
-                            <p class="publication-description">The definitive handbook on Legal Tech, exploring the digitalization of legal services and its impact on legal professions, businesses, and consumers. Published by C.H.BECK, this comprehensive guide provides practical examples and analyzes trends for the next 10-15 years.</p>
-                            <a href="https://www.beck-shop.de/breidenbach-glatz-rechtshandbuch-legal-tech/product/27489151" target="_blank" class="publication-link">
-                                Buy now
-                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="publication-card primary">
-                        <img src="https://imageservice.azureedge.net/api/getimage?productId=35466459&width=270&format=webp" alt="FinTech-Handbuch" class="publication-image">
-                        <div class="publication-content">
-                            <h3 class="publication-title">FinTech-Handbuch</h3>
-                            <div class="publication-meta">Contributing Author · 3rd Edition, 2024</div>
-                            <p class="publication-description">A comprehensive guide to the FinTech industry, covering payments, crowdfunding, lending, securities, robo-advisory, InsureTech, and digital currencies. Published by C.H.BECK as part of their Banking Law series.</p>
-                            <a href="https://www.beck-shop.de/moeslein-omlor-fintech-handbuch/product/35466459" target="_blank" class="publication-link">
-                                Buy now
-                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="publications-row">
-                <div class="publications-grid">
-                    <div class="publication-card primary" style="grid-column: 1 / -1">
-                        <div style="display: flex; gap: 2rem; padding: 2rem; background: white;">
-                            <div style="flex: 1;">
-                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                                    <img src="images/publications/rel.svg" alt="REthinking Law Logo" style="height: 2.5rem; width: auto;">
-                                </div>
-                                <h3 class="publication-title" style="font-size: 2.5rem; margin-bottom: 1.5rem;">REthinking Law</h3>
-                                <div class="publication-meta" style="font-size: 1rem; margin-bottom: 1.5rem;">Co-Editor & Co-Founder · 2018-2023</div>
-                                <p class="publication-description" style="font-size: 1.125rem; margin-bottom: 2rem;">A pioneering legal magazine exploring the intersection of law and technology. Published by Handelsblatt Fachmedien in collaboration with the Legal Tech Center at European University Viadrina, REthinking Law brought cutting-edge insights about the digital transformation of legal services to the German-speaking market.</p>
-                                <div style="display: flex; gap: 1rem;">
-                                    <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-light);">
-                                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"></path>
-                                        </svg>
-                                        <span>Published by Handelsblatt Fachmedien</span>
-                                    </div>
-                                    <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-light);">
-                                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                                        </svg>
-                                        <span>5 Years · Multiple Issues</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; flex: 1;">
-                                <img src="images/publications/rl0.jpg" alt="REthinking Law Cover" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); background: white;">
-                                <img src="images/publications/rl1.jpg" alt="REthinking Law Cover" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); background: white;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="interviews" class="blog-section section">
-        <div class="blog-container">
-            <div class="blog-category">
-                <h2 class="blog-category-title">
-                    <a href="#" style="cursor: default">
-                        Podcasts
-                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
-                        </svg>
-                    </a>
-                </h2>
-                <div class="blog-grid">
-                    {% for year in site.data.youtube_videos.media_appearances.podcasts %}
-                    {% for video in year[1] %}
-                    <a href="{{ video.url }}" target="_blank" class="blog-card">
-                        <img src="https://i.ytimg.com/vi/{{ video.url | split: '=' | last }}/maxresdefault.jpg" 
-                             alt="{{ video.title }}" 
-                             class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">{{ video.title }}</h3>
-                            <p class="blog-excerpt">
-                                <span style="color: var(--text); font-weight: 500;">{{ video.channel }}</span><br>
-                                {{ video.description }}
-                            </p>
-                        </div>
-                    </a>
-                    {% endfor %}
-                    {% endfor %}
-                </div>
-            </div>
-
-            <div class="blog-category">
-                <h2 class="blog-category-title">
-                    <a href="#" style="cursor: default">
-                        Lectures
-                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
-                        </svg>
-                    </a>
-                </h2>
-                <div class="blog-grid">
-                    {% for year in site.data.youtube_videos.media_appearances.lectures %}
-                    {% for video in year[1] %}
-                    <a href="{{ video.url }}" target="_blank" class="blog-card">
-                        <img src="https://i.ytimg.com/vi/{{ video.url | split: '=' | last }}/maxresdefault.jpg" 
-                             alt="{{ video.title }}" 
-                             class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">{{ video.title }}</h3>
-                            <p class="blog-excerpt">
-                                <span style="color: var(--text); font-weight: 500;">{{ video.channel }}</span><br>
-                                {{ video.description }}
-                            </p>
-                        </div>
-                    </a>
-                    {% endfor %}
-                    {% endfor %}
-                </div>
-            </div>
-
-            <div class="blog-category">
-                <h2 class="blog-category-title">
-                    <a href="#" style="cursor: default">
-                        Interviews
-                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                        </svg>
-                    </a>
-                </h2>
-                <div class="blog-grid">
-                    {% for year in site.data.youtube_videos.media_appearances.interviews %}
-                    {% for video in year[1] %}
-                    <a href="{{ video.url }}" target="_blank" class="blog-card">
-                        <img src="https://i.ytimg.com/vi/{{ video.url | split: '=' | last }}/maxresdefault.jpg" 
-                             alt="{{ video.title }}" 
-                             class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">{{ video.title }}</h3>
-                            <p class="blog-excerpt">
-                                <span style="color: var(--text); font-weight: 500;">{{ video.channel }}</span><br>
-                                {{ video.description }}
-                            </p>
-                        </div>
-                    </a>
-                    {% endfor %}
-                    {% endfor %}
-                </div>
-            </div>
-
-            <div class="blog-category">
-                <h2 class="blog-category-title">
-                    <a href="#" style="cursor: default">
-                        Press Conferences
-                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
-                        </svg>
-                    </a>
-                </h2>
-                <div class="blog-grid">
-                    {% for year in site.data.youtube_videos.media_appearances.press_conferences %}
-                    {% for video in year[1] %}
-                    <a href="{{ video.url }}" target="_blank" class="blog-card">
-                        <img src="https://i.ytimg.com/vi/{{ video.url | split: '=' | last }}/maxresdefault.jpg" 
-                             alt="{{ video.title }}" 
-                             class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">{{ video.title }}</h3>
-                            <p class="blog-excerpt">
-                                <span style="color: var(--text); font-weight: 500;">{{ video.channel }}</span><br>
-                                {{ video.description }}
-                            </p>
-                        </div>
-                    </a>
-                    {% endfor %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="events" class="blog-section section">
-        <div class="blog-container">
-            <div class="blog-category">
-                <h2 class="blog-category-title">
-                    <a href="#" style="cursor: default">
-                        Policy
-                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"></path>
-                        </svg>
-                    </a>
-                </h2>
-                <div class="blog-grid">
-                    <a href="#" class="blog-card">
-                        <img src="images/common-ground.jpg" alt="MiCA Workshop" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">MiCA Workshop</h3>
-                            <p class="blog-excerpt">Leading discussions on the implementation of the Markets in Crypto-Assets regulation.</p>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-card">
-                        <img src="images/common-ground.jpg" alt="DeFi Policy Forum" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">DeFi Policy Forum</h3>
-                            <p class="blog-excerpt">Shaping the regulatory framework for decentralized finance in Europe.</p>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-card">
-                        <img src="images/common-ground.jpg" alt="Digital Identity Standards" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Digital Identity Standards</h3>
-                            <p class="blog-excerpt">Contributing to the development of EU-wide digital identity frameworks.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="blog-category">
-                <h2 class="blog-category-title">
-                    <a href="#" style="cursor: default">
-                        Hackathons
-                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                        </svg>
-                    </a>
-                </h2>
-                <div class="blog-grid">
-                    <a href="#" class="blog-card">
-                        <img src="images/common-ground.jpg" alt="ETH Berlin" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">ETH Berlin</h3>
-                            <p class="blog-excerpt">Mentoring teams building decentralized governance solutions.</p>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-card">
-                        <img src="images/common-ground.jpg" alt="Legal Hackers Summit" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Legal Hackers Summit</h3>
-                            <p class="blog-excerpt">Organizing workshops on smart contract development for lawyers.</p>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-card">
-                        <img src="images/common-ground.jpg" alt="Web3 Privacy Hackathon" class="blog-image">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Web3 Privacy Hackathon</h3>
-                            <p class="blog-excerpt">Judging privacy-preserving solutions for decentralized applications.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="chrome footer">
-        <button class="nav-button" id="prevSection">
-            <svg fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-            </svg>
-        </button>
-        <button class="nav-button" id="nextSection">
-            <svg fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-        </button>
-    </footer>
-
-    <div class="menu-overlay">
-        <nav class="menu-items">
-            <a href="#next-section" class="menu-item active">Work</a>
-            <a href="#blogs" class="menu-item">Blogs</a>
-            <a href="#publications" class="menu-item">Publications</a>
-            <a href="#interviews" class="menu-item">Interviews</a>
-            <a href="#events" class="menu-item">Events</a>
-        </nav>
     </div>
+</main>
 
-    <script>
-        const sections = ['hero', 'next-section', 'blogs', 'publications', 'interviews', 'events'];
-        let currentSection = 0;
-        let isScrolling = false;
+<section id="next-section" class="section">
+    <div class="work-grid">
+        <div class="work-card">
+            <div class="card-top">
+                <img src="https://framerusercontent.com/images/hYVNYcaQlCxkrdC7IfgIhm8ri0.png" alt="Common Ground" class="work-image">
+                <div class="work-content">
+                    <h3 class="work-title">Common Ground</h3>
+                    <p class="work-description">
+                        <span class="position">Co-Founder & Board Member</span>
+                        Co-Founder and board member of the Common Ground Association, developing a user-owned social network using web3 primitives
+                    </p>
+                    <p class="work-description-mobile">
+                        <span class="position">Co-Founder & Board Member</span>
+                        Building a user-owned social network with web3 technology
+                    </p>
+                </div>
+            </div>
+            <a href="https://commonground.cg" target="_blank" class="work-link">
+                Learn more
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="work-card">
+            <div class="card-top">
+                <img src="images/euci.png" alt="European Crypto Initiative" class="work-image logo">
+                <div class="work-content">
+                    <h3 class="work-title">European Crypto Initiative</h3>
+                    <p class="work-description">
+                        <span class="position">Co-Founder & Board Member</span>
+                        Co-Founder and board member of the European Crypto Initiative, a Brussels-based non-profit advocating for better crypto regulation in Europe and beyond.
+                    </p>
+                    <p class="work-description-mobile">
+                        <span class="position">Co-Founder & Board Member</span>
+                        Advocating for better crypto regulation in Europe
+                    </p>
+                </div>
+            </div>
+            <a href="https://eu.ci" target="_blank" class="work-link">
+                Learn more
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="work-card">
+            <div class="card-top">
+                <img src="images/common-ground.jpg" alt="Consulting" class="work-image">
+                <div class="work-content">
+                    <h3 class="work-title">Consulting</h3>
+                    <p class="work-description">
+                        <span class="position">Law & Code</span>
+                        Helping projects and founders succeed in the web3 space with my decade of knowledge and experience in this unique industry
+                    </p>
+                    <p class="work-description-mobile">
+                        <span class="position">Law & Code</span>
+                        Helping projects and founders succeed in the web3 space
+                    </p>
+                </div>
+            </div>
+            <a href="mailto:fg@blockchain.lawyer" class="work-link">
+                Get in touch
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
 
-        function showChrome() {
-            document.querySelectorAll('.chrome').forEach(el => el.classList.add('visible'));
+<section id="blogs" class="blog-section section">
+    <div class="blog-container">
+        <div class="blog-category">
+            <h2 class="blog-category-title">
+                <a href="https://medium.com/@heckerhut" target="_blank">
+                    Medium
+                    <svg width="32" height="32" viewBox="0 0 1043.63 592.71" fill="currentColor">
+                        <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94"></path>
+                    </svg>
+                </a>
+            </h2>
+            <div class="blog-grid">
+                <a href="https://heckerhut.medium.com/daos-are-dead-long-live-daos-50de94e8ee1e" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-daos-are-dead-long-live-daos-50de94e8ee1e.jpg" alt="DAOs are Dead, Long Live DAOs" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">DAOs are Dead, Long Live DAOs</h3>
+                        <p class="blog-excerpt">A critical analysis of the evolution and future of Decentralized Autonomous Organizations.</p>
+                    </div>
+                </a>
+                <a href="https://heckerhut.medium.com/can-the-wikipedia-model-be-applied-to-public-policy-making-ff4444a2ff60" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-can-the-wikipedia-model-be-applied-to-public-policy-making-ff4444a2ff60.jpg" alt="Can the Wikipedia Model be Applied to Public Policy Making?" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Can the Wikipedia Model be Applied to Public Policy Making?</h3>
+                        <p class="blog-excerpt">Exploring collaborative approaches to policy development in the digital age.</p>
+                    </div>
+                </a>
+                <a href="https://heckerhut.medium.com/a-blockchain-token-taxonomy-fadf5c56139a" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-a-blockchain-token-taxonomy-fadf5c56139a.jpg" alt="A Blockchain Token Taxonomy" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">A Blockchain Token Taxonomy</h3>
+                        <p class="blog-excerpt">A comprehensive framework for understanding and classifying blockchain tokens.</p>
+                    </div>
+                </a>
+                <a href="https://heckerhut.medium.com/how-we-use-smart-contracts-at-satoshipay-to-change-the-internet-s-economy-forever-today-777988a868d" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-how-we-use-smart-contracts-at-satoshipay-to-change-the-internet-s-economy-forever-today-777988a868d.jpg" alt="How We Use Smart Contracts at SatoshiPay" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">How We Use Smart Contracts at SatoshiPay</h3>
+                        <p class="blog-excerpt">Changing the internet's economy forever, today.</p>
+                    </div>
+                </a>
+                <a href="https://heckerhut.medium.com/smart-contracts-platforms-and-intermediaries-c3d30f5182a6" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-smart-contracts-platforms-and-intermediaries-c3d30f5182a6.jpg" alt="Smart Contracts, Platforms and Intermediaries" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Smart Contracts, Platforms and Intermediaries</h3>
+                        <p class="blog-excerpt">Exploring the relationship between smart contract technology and traditional intermediaries.</p>
+                    </div>
+                </a>
+                <a href="https://heckerhut.medium.com/the-political-economy-of-computing-7fffc75423a2" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-the-political-economy-of-computing-7fffc75423a2.jpg" alt="The Political Economy of Computing" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">The Political Economy of Computing</h3>
+                        <p class="blog-excerpt">Understanding the intersection of technology, economics, and politics.</p>
+                    </div>
+                </a>
+                <a href="https://heckerhut.medium.com/modes-of-contractual-governance-in-an-on-demand-service-economy-1833629f379b" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-modes-of-contractual-governance-in-an-on-demand-service-economy-1833629f379b.jpg" alt="Modes of Contractual Governance" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Modes of Contractual Governance</h3>
+                        <p class="blog-excerpt">Analyzing contractual governance in the on-demand service economy.</p>
+                    </div>
+                </a>
+                <a href="https://heckerhut.medium.com/whats-a-smart-contract-in-search-of-a-consensus-c268c830a8ad" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-whats-a-smart-contract-in-search-of-a-consensus-c268c830a8ad.jpg" alt="What's a Smart Contract?" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">What's a Smart Contract?</h3>
+                        <p class="blog-excerpt">In search of a consensus on the definition and implications of smart contracts.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="blog-category">
+            <h2 class="blog-category-title">
+                <a href="https://app.cg/c/networksociety/" target="_blank">
+                    Network Society
+                    <img src="images/logo-black-transparent.svg" alt="Common Ground">
+                </a>
+            </h2>
+            <div class="blog-grid">
+                <a href="https://app.cg/c/networksociety/article/what-is-a-digital-jurisdiction-9KS8MHd9TPrGmXeeBkYW9t/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-what-is-a-digital-jurisdiction-9KS8MHd9TPrGmXeeBkYW9t.jpg" alt="What is a Digital Jurisdiction?" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">What is a Digital Jurisdiction?</h3>
+                        <p class="blog-excerpt">Exploring the concept of jurisdiction in the digital age.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/should-daos-have-constitutions-8QDmXW61MQitjWYLuTiGgN/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-should-daos-have-constitutions-8QDmXW61MQitjWYLuTiGgN.jpg" alt="Should DAOs Have Constitutions?" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Should DAOs Have Constitutions?</h3>
+                        <p class="blog-excerpt">Examining constitutional frameworks in decentralized organizations.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/ongoing-research-on-sovereignty-in-the-digital-age-gdYwt5Uhm5Ty6uGWj9ANL7/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-ongoing-research-on-sovereignty-in-the-digital-age-gdYwt5Uhm5Ty6uGWj9ANL7.jpg" alt="Ongoing Research on Sovereignty in the Digital Age" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Ongoing Research on Sovereignty in the Digital Age</h3>
+                        <p class="blog-excerpt">Investigating the evolution of sovereignty in digital spaces.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/decentralized-justice-state-of-the-art-recurring-criticisms-and-next-generation-research-topics-rM9Hj55BEBhGevLMVVTrbG/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-decentralized-justice-state-of-the-art-recurring-criticisms-and-next-generation-research-topics-rM9Hj55BEBhGevLMVVTrbG.jpg" alt="Decentralized Justice" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Decentralized Justice</h3>
+                        <p class="blog-excerpt">State of the art, recurring criticisms, and next-generation research topics.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/overthrowing-the-network-state-the-rise-of-coordinations-w7vg8EE92xsHbz6fWYHD4y/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-overthrowing-the-network-state-the-rise-of-coordinations-w7vg8EE92xsHbz6fWYHD4y.jpg" alt="Overthrowing the Network State" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Overthrowing the Network State</h3>
+                        <p class="blog-excerpt">The rise of coordinations in digital governance.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/with-ai-regulation-on-the-horizon-compute-clusters-move-to-international-waters-rs3cySS29fLqY3AsSEthSD/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-with-ai-regulation-on-the-horizon-compute-clusters-move-to-international-waters-rs3cySS29fLqY3AsSEthSD.jpg" alt="AI Regulation and Compute Clusters" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">AI Regulation and Compute Clusters</h3>
+                        <p class="blog-excerpt">The migration of compute resources to international waters.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/our-favorite-talks-from-the-network-state-conference-dDEJRm68j1EcTRYivPbK7e/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-our-favorite-talks-from-the-network-state-conference-dDEJRm68j1EcTRYivPbK7e.jpg" alt="Network State Conference Highlights" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Network State Conference Highlights</h3>
+                        <p class="blog-excerpt">Key insights from our favorite talks at the conference.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/how-to-build-a-community-hivemind-notes-from-my-talk-at-the-daoists-global-governance-gathering-oic29gz4bTttyN95TdL9v6/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-how-to-build-a-community-hivemind-notes-from-my-talk-at-the-daoists-global-governance-gathering-oic29gz4bTttyN95TdL9v6.jpg" alt="Building a Community Hivemind" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Building a Community Hivemind</h3>
+                        <p class="blog-excerpt">Notes from the DAOists Global Governance Gathering.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/enshrining-a-dispute-resolution-oracle-in-an-l2-blockchain-pTjp1ycs4gNtQYkjsxpPp5/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-enshrining-a-dispute-resolution-oracle-in-an-l2-blockchain-pTjp1ycs4gNtQYkjsxpPp5.jpg" alt="Dispute Resolution Oracles in L2 Blockchains" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Dispute Resolution Oracles in L2 Blockchains</h3>
+                        <p class="blog-excerpt">Technical implementation of dispute resolution mechanisms.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/institutional-decline-and-the-quiet-revolution-riuTgMXambTqAt9rthfmji/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-institutional-decline-and-the-quiet-revolution-riuTgMXambTqAt9rthfmji.jpg" alt="Institutional Decline and the Quiet Revolution" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Institutional Decline and the Quiet Revolution</h3>
+                        <p class="blog-excerpt">Analyzing the transformation of traditional institutions.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/open-problems-in-daos-dMuTR4tMNnAGtssZS5NCPw/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-open-problems-in-daos-dMuTR4tMNnAGtssZS5NCPw.jpg" alt="Open Problems in DAOs" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Open Problems in DAOs</h3>
+                        <p class="blog-excerpt">Exploring current challenges and future research directions.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/how-web3s-new-consumer-tech-stack-addresses-cryptos-great-filters-dxXwsvpadnGfzDTVCvAyrp/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-how-web3s-new-consumer-tech-stack-addresses-cryptos-great-filters-dxXwsvpadnGfzDTVCvAyrp.jpg" alt="Web3's New Consumer Tech Stack" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Web3's New Consumer Tech Stack</h3>
+                        <p class="blog-excerpt">Addressing crypto's great filters through technology.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/could-ecosystems-form-the-first-network-states-oisu2aouBrREn19a641SPe/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-could-ecosystems-form-the-first-network-states-oisu2aouBrREn19a641SPe.jpg" alt="Could Ecosystems Form the First Network States?" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Could Ecosystems Form the First Network States?</h3>
+                        <p class="blog-excerpt">Examining the potential of ecological systems in digital governance.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/the-prediction-agent-economy-mNHjTHmLgPLSuKNveLMnXi/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-the-prediction-agent-economy-mNHjTHmLgPLSuKNveLMnXi.jpg" alt="The Prediction Agent Economy" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">The Prediction Agent Economy</h3>
+                        <p class="blog-excerpt">Understanding the role of AI agents in economic systems.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/future-state-exploring-emerging-democratic-practices-on-public-blockchains-6vrCWcYvYw6ihKinLGSziV/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-future-state-exploring-emerging-democratic-practices-on-public-blockchains-6vrCWcYvYw6ihKinLGSziV.jpg" alt="Future State" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Future State</h3>
+                        <p class="blog-excerpt">Exploring emerging democratic practices on public blockchains.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/what-is-hypercomputing-9DS6v1bYAVQcv1kqrzUZjk/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-what-is-hypercomputing-9DS6v1bYAVQcv1kqrzUZjk.jpg" alt="What is Hypercomputing?" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">What is Hypercomputing?</h3>
+                        <p class="blog-excerpt">Exploring the frontiers of computational power.</p>
+                    </div>
+                </a>
+                <a href="https://app.cg/c/networksociety/article/greetings-from-edge-city-lanna-bUjpySVf5HPEXJVYFS5gKG/" target="_blank" class="blog-card">
+                    <img src="images/blog/blog-greetings-from-edge-city-lanna-bUjpySVf5HPEXJVYFS5gKG.jpg" alt="Greetings from Edge City Lanna" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Greetings from Edge City Lanna</h3>
+                        <p class="blog-excerpt">Dispatches from the frontier of digital urbanism.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="publications" class="publications-section section">
+    <div class="publications-container">
+        <div class="publications-row">
+            <div class="publications-grid">
+                <div class="publication-card primary">
+                    <img src="https://imageservice.azureedge.net/api/getimage?productId=27489151&width=270&format=webp" alt="Rechtshandbuch Legal Tech" class="publication-image">
+                    <div class="publication-content">
+                        <h3 class="publication-title">Rechtshandbuch Legal Tech</h3>
+                        <div class="publication-meta">Co-Editor with Stephan Breidenbach · 2nd Edition, 2021</div>
+                        <p class="publication-description">The definitive handbook on Legal Tech, exploring the digitalization of legal services and its impact on legal professions, businesses, and consumers. Published by C.H.BECK, this comprehensive guide provides practical examples and analyzes trends for the next 10-15 years.</p>
+                        <a href="https://www.beck-shop.de/breidenbach-glatz-rechtshandbuch-legal-tech/product/27489151" target="_blank" class="publication-link">
+                            Buy now
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="publication-card primary">
+                    <img src="https://imageservice.azureedge.net/api/getimage?productId=35466459&width=270&format=webp" alt="FinTech-Handbuch" class="publication-image">
+                    <div class="publication-content">
+                        <h3 class="publication-title">FinTech-Handbuch</h3>
+                        <div class="publication-meta">Contributing Author · 3rd Edition, 2024</div>
+                        <p class="publication-description">A comprehensive guide to the FinTech industry, covering payments, crowdfunding, lending, securities, robo-advisory, InsureTech, and digital currencies. Published by C.H.BECK as part of their Banking Law series.</p>
+                        <a href="https://www.beck-shop.de/moeslein-omlor-fintech-handbuch/product/35466459" target="_blank" class="publication-link">
+                            Buy now
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="publications-row">
+            <div class="publications-grid">
+                <div class="publication-card primary" style="grid-column: 1 / -1">
+                    <div style="display: flex; gap: 2rem; padding: 2rem; background: white;">
+                        <div style="flex: 1;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                <img src="images/publications/rel.svg" alt="REthinking Law Logo" style="height: 2.5rem; width: auto;">
+                            </div>
+                            <h3 class="publication-title" style="font-size: 2.5rem; margin-bottom: 1.5rem;">REthinking Law</h3>
+                            <div class="publication-meta" style="font-size: 1rem; margin-bottom: 1.5rem;">Co-Editor & Co-Founder · 2018-2023</div>
+                            <p class="publication-description" style="font-size: 1.125rem; margin-bottom: 2rem;">A pioneering legal magazine exploring the intersection of law and technology. Published by Handelsblatt Fachmedien in collaboration with the Legal Tech Center at European University Viadrina, REthinking Law brought cutting-edge insights about the digital transformation of legal services to the German-speaking market.</p>
+                            <div style="display: flex; gap: 1rem;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-light);">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"></path>
+                                    </svg>
+                                    <span>Published by Handelsblatt Fachmedien</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-light);">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    </svg>
+                                    <span>5 Years · Multiple Issues</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; flex: 1;">
+                            <img src="images/publications/rl0.jpg" alt="REthinking Law Cover" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); background: white;">
+                            <img src="images/publications/rl1.jpg" alt="REthinking Law Cover" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); background: white;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="interviews" class="blog-section section">
+    <div class="blog-container">
+        <!-- Podcasts -->
+        <div class="blog-category">
+            <h2 class="blog-category-title">
+                <a href="#" style="cursor: default">
+                    Podcasts
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                    </svg>
+                </a>
+            </h2>
+            <div class="blog-grid">
+                {% for year in site.data.youtube_videos.media_appearances.podcasts %}
+                {% for video in year.videos %}
+                <a href="{{ video.url }}" target="_blank" class="blog-card">
+                    <img src="https://i.ytimg.com/vi/{{ video.url | split: '=' | last }}/maxresdefault.jpg" 
+                         alt="{{ video.title }}" 
+                         class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">{{ video.title }}</h3>
+                        <p class="blog-excerpt">
+                            <span style="color: var(--text); font-weight: 500;">{{ video.channel }}</span>
+                        </p>
+                    </div>
+                </a>
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Lectures -->
+        <div class="blog-category">
+            <h2 class="blog-category-title">
+                <a href="#" style="cursor: default">
+                    Lectures
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
+                    </svg>
+                </a>
+            </h2>
+            <div class="blog-grid">
+                {% for year in site.data.youtube_videos.media_appearances.lectures %}
+                {% for video in year.videos %}
+                <a href="{{ video.url }}" target="_blank" class="blog-card">
+                    <img src="https://i.ytimg.com/vi/{{ video.url | split: '=' | last }}/maxresdefault.jpg" 
+                         alt="{{ video.title }}" 
+                         class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">{{ video.title }}</h3>
+                        <p class="blog-excerpt">
+                            <span style="color: var(--text); font-weight: 500;">{{ video.channel }}</span>
+                        </p>
+                    </div>
+                </a>
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Interviews -->
+        <div class="blog-category">
+            <h2 class="blog-category-title">
+                <a href="#" style="cursor: default">
+                    Interviews
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                </a>
+            </h2>
+            <div class="blog-grid">
+                {% for year in site.data.youtube_videos.media_appearances.interviews %}
+                {% for video in year.videos %}
+                <a href="{{ video.url }}" target="_blank" class="blog-card">
+                    <img src="https://i.ytimg.com/vi/{{ video.url | split: '=' | last }}/maxresdefault.jpg" 
+                         alt="{{ video.title }}" 
+                         class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">{{ video.title }}</h3>
+                        <p class="blog-excerpt">
+                            <span style="color: var(--text); font-weight: 500;">{{ video.channel }}</span>
+                        </p>
+                    </div>
+                </a>
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Press Conferences -->
+        <div class="blog-category">
+            <h2 class="blog-category-title">
+                <a href="#" style="cursor: default">
+                    Press Conferences
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+                    </svg>
+                </a>
+            </h2>
+            <div class="blog-grid">
+                {% for year in site.data.youtube_videos.media_appearances.press_conferences %}
+                {% for video in year.videos %}
+                <a href="{{ video.url }}" target="_blank" class="blog-card">
+                    <img src="https://i.ytimg.com/vi/{{ video.url | split: '=' | last }}/maxresdefault.jpg" 
+                         alt="{{ video.title }}" 
+                         class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">{{ video.title }}</h3>
+                        <p class="blog-excerpt">
+                            <span style="color: var(--text); font-weight: 500;">{{ video.channel }}</span>
+                        </p>
+                    </div>
+                </a>
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="events" class="blog-section section">
+    <div class="blog-container">
+        <div class="blog-category">
+            <h2 class="blog-category-title">
+                <a href="#" style="cursor: default">
+                    Policy
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"></path>
+                    </svg>
+                </a>
+            </h2>
+            <div class="blog-grid">
+                <a href="#" class="blog-card">
+                    <img src="images/common-ground.jpg" alt="MiCA Workshop" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">MiCA Workshop</h3>
+                        <p class="blog-excerpt">Leading discussions on the implementation of the Markets in Crypto-Assets regulation.</p>
+                    </div>
+                </a>
+                <a href="#" class="blog-card">
+                    <img src="images/common-ground.jpg" alt="DeFi Policy Forum" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">DeFi Policy Forum</h3>
+                        <p class="blog-excerpt">Shaping the regulatory framework for decentralized finance in Europe.</p>
+                    </div>
+                </a>
+                <a href="#" class="blog-card">
+                    <img src="images/common-ground.jpg" alt="Digital Identity Standards" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Digital Identity Standards</h3>
+                        <p class="blog-excerpt">Contributing to the development of EU-wide digital identity frameworks.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="blog-category">
+            <h2 class="blog-category-title">
+                <a href="#" style="cursor: default">
+                    Hackathons
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                </a>
+            </h2>
+            <div class="blog-grid">
+                <a href="#" class="blog-card">
+                    <img src="images/common-ground.jpg" alt="ETH Berlin" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">ETH Berlin</h3>
+                        <p class="blog-excerpt">Mentoring teams building decentralized governance solutions.</p>
+                    </div>
+                </a>
+                <a href="#" class="blog-card">
+                    <img src="images/common-ground.jpg" alt="Legal Hackers Summit" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Legal Hackers Summit</h3>
+                        <p class="blog-excerpt">Organizing workshops on smart contract development for lawyers.</p>
+                    </div>
+                </a>
+                <a href="#" class="blog-card">
+                    <img src="images/common-ground.jpg" alt="Web3 Privacy Hackathon" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Web3 Privacy Hackathon</h3>
+                        <p class="blog-excerpt">Judging privacy-preserving solutions for decentralized applications.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="chrome footer">
+    <button class="nav-button" id="prevSection">
+        <svg fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+    <button class="nav-button" id="nextSection">
+        <svg fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </button>
+</footer>
+
+<div class="menu-overlay">
+    <nav class="menu-items">
+        <a href="#next-section" class="menu-item active">Work</a>
+        <a href="#blogs" class="menu-item">Blogs</a>
+        <a href="#publications" class="menu-item">Publications</a>
+        <a href="#interviews" class="menu-item">Interviews</a>
+        <a href="#events" class="menu-item">Events</a>
+    </nav>
+</div>
+
+<script>
+    const sections = ['hero', 'next-section', 'blogs', 'publications', 'interviews', 'events'];
+    let currentSection = 0;
+    let isScrolling = false;
+
+    function showChrome() {
+        document.querySelectorAll('.chrome').forEach(el => el.classList.add('visible'));
+    }
+
+    function hideChrome() {
+        document.querySelectorAll('.chrome').forEach(el => el.classList.remove('visible'));
+    }
+
+    function scrollToSection(index) {
+        if (index >= 0 && index < sections.length) {
+            currentSection = index;
+            const section = document.querySelector(sections[index] === 'hero' ? '.hero' : '#' + sections[index]);
+            section.scrollIntoView({ behavior: 'smooth' });
         }
+    }
 
-        function hideChrome() {
-            document.querySelectorAll('.chrome').forEach(el => el.classList.remove('visible'));
-        }
+    document.getElementById('prevSection').addEventListener('click', () => {
+        scrollToSection(currentSection - 1);
+    });
 
-        function scrollToSection(index) {
-            if (index >= 0 && index < sections.length) {
-                currentSection = index;
-                const section = document.querySelector(sections[index] === 'hero' ? '.hero' : '#' + sections[index]);
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+    document.getElementById('nextSection').addEventListener('click', () => {
+        scrollToSection(currentSection + 1);
+    });
 
-        document.getElementById('prevSection').addEventListener('click', () => {
-            scrollToSection(currentSection - 1);
-        });
-
-        document.getElementById('nextSection').addEventListener('click', () => {
-            scrollToSection(currentSection + 1);
-        });
-
-        let scrollTimeout;
-        window.addEventListener('scroll', () => {
-            clearTimeout(scrollTimeout);
-            hideChrome();
-            
-            scrollTimeout = setTimeout(() => {
-                const scrollPosition = window.scrollY;
-                const windowHeight = window.innerHeight;
-                const newSection = Math.round(scrollPosition / windowHeight);
-                currentSection = newSection;
-                
-                // Only show chrome if we're not at the top section
-                if (currentSection > 0) {
-                    showChrome();
-                }
-            }, 150);
-        });
-
-        // Initial state
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
         hideChrome();
+        
+        scrollTimeout = setTimeout(() => {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const newSection = Math.round(scrollPosition / windowHeight);
+            currentSection = newSection;
+            
+            // Only show chrome if we're not at the top section
+            if (currentSection > 0) {
+                showChrome();
+            }
+        }, 150);
+    });
 
-        const menuButton = document.getElementById('menuButton');
-        const menuOverlay = document.querySelector('.menu-overlay');
+    // Initial state
+    hideChrome();
 
-        menuButton.addEventListener('click', () => {
-            menuButton.classList.toggle('active');
-            menuOverlay.classList.toggle('visible');
-            document.body.style.overflow = menuOverlay.classList.contains('visible') ? 'hidden' : '';
+    const menuButton = document.getElementById('menuButton');
+    const menuOverlay = document.querySelector('.menu-overlay');
+
+    menuButton.addEventListener('click', () => {
+        menuButton.classList.toggle('active');
+        menuOverlay.classList.toggle('visible');
+        document.body.style.overflow = menuOverlay.classList.contains('visible') ? 'hidden' : '';
+    });
+
+    // Close menu when clicking a menu item
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.addEventListener('click', () => {
+            menuButton.classList.remove('active');
+            menuOverlay.classList.remove('visible');
+            document.body.style.overflow = '';
         });
+    });
 
-        // Close menu when clicking a menu item
-        document.querySelectorAll('.menu-item').forEach(item => {
-            item.addEventListener('click', () => {
-                menuButton.classList.remove('active');
-                menuOverlay.classList.remove('visible');
-                document.body.style.overflow = '';
-            });
+    // Horizontal scroll functionality
+    document.querySelectorAll('.scroll-indicator').forEach(button => {
+        button.addEventListener('click', () => {
+            const direction = button.dataset.direction;
+            const grid = button.parentElement.querySelector('.blog-grid');
+            const scrollAmount = direction === 'left' ? -400 : 400;
+            grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         });
+    });
 
-        // Horizontal scroll functionality
+    // Hide scroll buttons on mobile
+    function updateScrollButtons() {
+        const isMobile = window.innerWidth <= 768;
         document.querySelectorAll('.scroll-indicator').forEach(button => {
-            button.addEventListener('click', () => {
-                const direction = button.dataset.direction;
-                const grid = button.parentElement.querySelector('.blog-grid');
-                const scrollAmount = direction === 'left' ? -400 : 400;
-                grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            });
+            button.style.display = isMobile ? 'none' : 'flex';
         });
+    }
 
-        // Hide scroll buttons on mobile
-        function updateScrollButtons() {
-            const isMobile = window.innerWidth <= 768;
-            document.querySelectorAll('.scroll-indicator').forEach(button => {
-                button.style.display = isMobile ? 'none' : 'flex';
-            });
-        }
-
-        window.addEventListener('resize', updateScrollButtons);
-        updateScrollButtons();
-    </script>
-</body>
-</html> 
+    window.addEventListener('resize', updateScrollButtons);
+    updateScrollButtons();
+</script> 

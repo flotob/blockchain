@@ -1,327 +1,222 @@
-- podcasts
-	- 2016
-		- https://www.youtube.com/watch?v=q5V01d3sp80
-			- title: # EB125 – Florian Glatz: Defining A Legal Framework For Decentralized Autonomous Organizations (DAO)
-			- channel: Epicenter Podcast
-			- description: "The relatively new concept of a Decentralized Autonomous Organization (DAO), is often praised as a new type of organizational structure that has no identifiable owner or owners, and whose actions are automated and determined solely by a pre-defined set of rules. Views on DAOs differ widely. On one hand, members of the Bitcoin/blockchain space often portrayal them as AI-like swarm organisms, free from the shackles of nation-states, and that can act at will regardless of laws or regulation. On the other hand, legal experts caution that, like corporations, DAOs and their creators could be held liable in civil lawsuits, and that they may be served a hard dose of reality when they end up in court. We are joined by Florian Glatz, attorney, researcher and software developer (not to mention the proud owner of the awesome domain name blockchain.lawyer). We discuss some of the basic legal concepts surrounding contracts and in what ways smart contracts may or may not fit within our existing legal framework. We also dive deep into DAOs, and address some of the challenges they may pose in the near and distant future. Topics covered include:
-				- The history of innovation in law
-				- How merchant law (Lex Mercatoria) emerged in the 13th century
-				- How we can define smart contracts
-				- The legality of smart contacts
-				- The need for natural language contracts vs. contracts which are written in code
-				- Decentralized Autonomous Organizations
-				- The Slock.it DAO
-				- What would happen if one tried to sue a DAO"
-	- 2017
-		- https://www.youtube.com/watch?v=Ywmd2zSIlD8
-			- title: # A Programming Language For Lawyers - Episode 2
-			- channel: hacking.society
-			- description: "A Programming Language For Lawyers Questions we discuss in our second episode: -Coding for lawyers?
-				- How can lawyers work with smart contracts and blockchain?
-				- What are the different approaches to develop such a legal programming language? -How is this going to change the legal industry? -Do lawyers now have to learn programming? -What is Legal Tech and what will it be used for? Our guests: Kristall, Jurist and Developer Meng Weng Wong, Serial Entrepreneur and Computer Scientist [https://en.wikipedia.org/wiki/Meng_We...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqazE3eGx4amhFNVlqdzFYMEJLSVVNbTZYckV6UXxBQ3Jtc0trajhJRWZ1REZTdjJ3d3lrSnVKTHBwR29aM0pDaDhQV1cyZC1Sb0JkS3o5aTNLcVlXNVRKT2J4ZkNtZGVMQzlYeDlQaEQ4bWRlVkVpcHk0N3hMUkdXakQ3MExDM2ZWUE1Sa25vdUJsdWZYQTRYaERvSQ&q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMeng_Weng_Wong&v=Ywmd2zSIlD8) @mengwong Coding the Future: Lexys: [http://lexys.org/](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa2tIUG9XM1J4cktVbUtyNkJkOVJBYlUyaWUzd3xBQ3Jtc0tsQTNzRTBnY2FDQ2dUbUUwaXA2NTE3Njdfc3VNR2xLY0E3a1k5Mk1wWk02d0ctMm5ib3JjeE05TVBmTWRoMFBDMXZsTVRnZ25XcG5HRElRYnVkeGJMcEVobFprM2sta2ctTFd5ZjNrcHpMMUVzU1VCQQ&q=http%3A%2F%2Flexys.org%2F&v=Ywmd2zSIlD8) Henning Diedrich, Developer and Author [https://www.amazon.com/Ethereum-Block...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa1lnS0ZuZ2JCanBnVWtXcHc0R1pzU2hrbWY2d3xBQ3Jtc0tuTUVlOUxFVEdmRDYtTkpSWC1NNEhtZllMZmhKVU91VWRxdEJQWVE0LTZHMUdnUVpIVEs2T0Z3TW41NmpHdmdwby11SWFIQjlidjlnVGtvQ0ZLSUxrS293STZXUEV5ZmNsSGtMZXdqSG5SckMxbVZRYw&q=https%3A%2F%2Fwww.amazon.com%2FEthereum-Blockchains-Decentralized-Autonomous-Organizations%2Fdp%2F1523930470&v=Ywmd2zSIlD8) @hdiedrich BUZZWORDS presented by Buzz Lightyear The DAO: [https://en.wikipedia.org/wiki/The_DAO...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbDBmUFNPVWNwSnFHM0p4cDB5bVBlVVlJNmdid3xBQ3Jtc0ttUFZsUnM0NWliMXVGNDlRZXAtVDlaemdTdkN2R0U3Tl9ZRmxJd0RjZWptSEwyWnYwY3JEeTJHbzg0RG9qNWRxNnd4VHZUc3NfWjJmZjlvQ09ScDYxdERLREp3MHRxTERoNFpKU2F6YkdLTU5yTkFxZw&q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FThe_DAO_%28organization&v=Ywmd2zSIlD8)) Turing Completeness: [https://en.wikipedia.org/wiki/Turing_...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa0FKZGx3QkNGR3V3ZE1hRHBFSnktTUxkOFFEQXxBQ3Jtc0tsS0VGeGNDRkdPb3ZqdEw3OHhiYU5DT05qRXQ1djVzdUFEbnhSU2RmNURjWHI0TmpqUlJNYUVHTmdsQ3BHdGsteEV2dlM3ZlF1QWpOZEdJQ25zcDFKOEVzSFR3Vkpwd3FucVhiWnNuTkpJVk9DWmEtTQ&q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTuring_completeness&v=Ywmd2zSIlD8) In our podcast series we interview and discuss with a range of experts, entrepreneurs, developers and researchers their ideas about how technology will help create our future society. Hosted by Florian Glatz and Alice Kohn"
-		- https://www.youtube.com/watch?v=U8V_GUDO2Cs
-			- title: # Accessing Justice Online- Episode1
-			- channel: hacking.society
-			- description: "Our guests: Stuart Mast, US-Lawyer Twitter: @stuartmast Read more by Stuart: [http://bit.ly/2n3SIOx](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbTFGM2M0T0ZpUXdQLXRENGxvYjVSa0c5cGNoQXxBQ3Jtc0tuM0VHYkhrLTluQllpdFYwOTNCWHFIVTBZa0tZNG5iTzZRd3NudlN6cnRuMGJ3cFF4d0x2b0dZeGZ4bUpxY21yMUlKQ0RtamlRa3JiZUZCNlpWc00yclBhUWRXZ3lUOERiM052MWladU9aVEZLMjNHaw&q=http%3A%2F%2Fbit.ly%2F2n3SIOx&v=U8V_GUDO2Cs) Dmitry Foremnyi is a justice agent at HiiL, a Dutch NGO which runs an international accelerator for legal tech startups. He is also a co-founder, CEO at Effectius and a contributing editor at Compliance Periscope blog. Dmitry also runs a regular pitching meetup for justice entrepreneurs in Kiev called Legal Startup Crash Test. Twitter: @dimon_burbon [https://innovatingjustice.com/en/](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbUdnb0xUeXhWU1R5V0c0Wk5EbjA4eG1tYmtFd3xBQ3Jtc0trVU9GRnEyN2d6MlRZX3k5cXRVN1JwV01zck1IOG9NUkVRY3FMY1JiQTBrZG43UmRjQVpGenUxblR4ck5hakJIMFJKcGFJblE0dlEtbng2em9TMGoxZklyS0gtVF9oWURsU3lENWF6Z05fWFQxSUMzUQ&q=https%3A%2F%2Finnovatingjustice.com%2Fen%2F&v=U8V_GUDO2Cs) [http://consumeranger.space/](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFhZWnl0T2lCWEY3WUx4ZHUwNkxCY1VMel96Z3xBQ3Jtc0tuOHFacXdIVkExVVFiMkVGUXRLOFNJNUc5Tm9MLVpCc0JBWjJ2WGNveEhXYmoxWTdjSTVOUi12blM5SWtYeDl6aHN6RUg5YU4taTlFZW5oVlJhSldPMTRNQ29oakVFMnQ3OERFWDNLOUVoUi1qWGhtQQ&q=http%3A%2F%2Fconsumeranger.space%2F&v=U8V_GUDO2Cs) Read more: [http://bit.ly/2mhASZB](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbmlhNXZiZnU5VmxxZlU5eTVoTXlpU050NU9lUXxBQ3Jtc0tsSl83U2YzUk9uSkR5VnZHRElnVVNwdmRBcXNXWi12aXNXaDZtakxCSDdDalpyQ1U0YTlVLVhKTktvX1RzV3lnTDlEb2Y4dzNOM2lmR0YxeVRUTXZfZUM0eXZjY1Z1Zm10YlVtb0ZJaHhYR2pJaFhCRQ&q=http%3A%2F%2Fbit.ly%2F2mhASZB&v=U8V_GUDO2Cs) BUZZWORDS presented by Buzz Lightyear Blockchain & Smart Contracts: [http://bit.ly/2mXAzAi](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbWRGdGl3ZUtoT0EwdE9GNnJfX0o5QWtvekJPZ3xBQ3Jtc0tsU3B2dlRQYUJCQVJJQjRpdjdFTUdNWl9TQXM3RWdKaTZhNGpvRXktbXNZQ04yU0JBUHlVUzY2YThJRmZkSEU4UlJyM01reEtnQXk1ODZ4TU1zMGN0VV9WeThUU3l2c3lDSDRCV1VGSG9QWnQ2cEdIOA&q=http%3A%2F%2Fbit.ly%2F2mXAzAi&v=U8V_GUDO2Cs) Escrow: [https://de.wikipedia.org/wiki/Escrow](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbDF0dUhSdjVtNnZ1c3MxdnR6S3RYd2FhUXl4d3xBQ3Jtc0tudEpGMC1vQ3BNVXh2ZW1vQ3VJYkVKM0hPeEFqSDIzdVB5U3hFWU5faDRhaEw5TGVKMnBveE9Bdjd3T01iZUJtQ0tPQjBScTlua2xDNDZXS1ZEaWxzMTR3Zk84OXpMMTBFX3BrNy1wOXJqN2Z5WVVINA&q=https%3A%2F%2Fde.wikipedia.org%2Fwiki%2FEscrow&v=U8V_GUDO2Cs) In our podcast series we interview and discuss with a range of experts, entrepreneurs, developers and researchers their ideas about the future of law and society as a whole. Hosted by Florian Glatz and Alice Kohn"
-	- 2022
-		- https://www.youtube.com/watch?v=HKm05jDCe2c
-			- title: Verkettet sich die Blockchain? Florian Glatz, Blockchain Bundesverband
-			- channel: Business Class by Tilow Bonow
-			- description: "Mit Blockchain werden Datensätze dezentral verkettet, was eine fälschungssichere Buchführung möglich macht, an der beliebig viele Beteiligte mitwirken können. Das ist eine perfekte Basis für eine elektronische Währung, birgt aber auch ein enormes Potenzial für diverse andere Felder, in denen sichere Transaktionen essentiell sind: Finanzmärkte, Handelsketten, die öffentliche Verwaltung und vieles mehr. Unser heutiger Gast ist nicht nur Pionier auf diesem Gebiet, sondern hat als Anwalt und Blockchain-Advokat zwei seiner Leidenschaften vereint. Florian Glatz treibt als Präsident des Blockchain Bundesverbands im deutschen Bundestag die Umsetzung der nationalen Blockchain- Strategie der Bundesregierung voran. Außerdem ist er Mitgründer und Chief Blockchain Officer von Motion Protocol, einem Unternehmen, das eine neue Infrastruktur für die Filmindustrie auf der Basis einer Blockchain etablieren möchte. Kernfrage heute: Welche Meilensteine müssen wir in Deutschland festsetzen, um Blockchain erfolgreich anwenden zu können? Gibt es in diesem Rahmen Leuchtturmprojekte, in der die Blockchain schon heute zum Tragen kommt?"
-		- https://www.youtube.com/watch?v=wuu1bNRUQng
-			- title: So gelingt uns das Web 3.0 – mit Florian Glatz - BTC-ECHO Experts
-			- channel: BTC-ECHO
-			- description: "Jurist, Programmierer und Lobbyist: Florian Glatz engagiert sich auf vielen Wegen für den Blockchain-Sektor. Welche Learnings er aus den letzten Jahren ziehen konnte und warum er fest von den Vorteilen des Web 3.0 überzeugt ist, erzählt er im BTC-ECHO Experts Podcast."
-		- https://www.youtube.com/watch?v=Vg6kXn_fbXs
-			- title: # Florian Glatz: Why Europe Needs a Regulatory Shift to Avoid Crypto Irrelevance
-			- channel: Epicenter Podcast
-			- description: "Florian Glatz, blockchain.lawyer, is one of the most knowledgeable OG's at the intersection of crypto and law. He was last on the show 6 years ago when we talked in great detail about smart contracts and the DAO. We welcomed him back to discuss the regulatory environment, with a focus on Europe. We covered key topics like the recently floated Proof of Work ban, Travel of Funds Regulation (TFR), and Markets in Crypto-assets (MiCA) regulation. We also discussed the European Crypto Initiative, a new lobby organization that Florian co-founded, which is advocating for crypto-friendly regulation on a European level. Topics discussed in this episode:
-				- What Florian got wrong about DAOs when he was on the show in 2016
-				- The story of the Geman blockchain association Bundesblock that Florian co-founded and was president of
-				- The European Crypto Initiative - Why a European-level organization is needed
-				- The most important regulatory questions facing crypto today
-				- Why crypto taxation is a particularly challenging issue
-				- How will competition between different nation states play out?
-				- Whether we will see the rise of new nation states or digital nations"
-	- 2023
-		- https://www.youtube.com/watch?v=ro7Lp7MUNT4
-			- title: Empowering Creators and Communities in Web3 | Florian Glatz | Common Ground
-			- channel: yWhales
-			- description: "In this episode, Mia Murphy, yWhales Co-Founder, and Siva Avvaru, Managing Partner for yWhales Solutions speak with Florian Glatz, Co-founder of Common Ground, an all-in-one communication platform for DAOs & Communities. Florian, Siva, and Mia discuss the growing importance of community building for brands in the Web3 era. Florian discusses why companies need to understand and leverage the power of community building in web3 to be successful today. He shares how Common Ground is helping people, brands, and communities to connect online, emphasizing the need for brands to understand their most active audiences and form meaningful relationships with them."
-		- https://www.youtube.com/watch?v=e1vG0-YHPLo
-			- title: So, Why Crypto? Episode #6 w/Florian Glatz
-			- channel: "SoWhyCrypto"
-			- decription: "Episode #6 w/ Florian Glatz Get ready for an insightful discussion on the future of crypto and the importance of smart contracts with none other than lawyer and tech OG Florian Glatz. Join us as we dive deep into the world of smart contracts, exploring their role in the rapidly evolving crypto landscape, their legal implications, and the importance of immutability.  Discover why smart contracts are set to revolutionize the way we conduct transactions and learn about the challenges that come with building platforms like Uber or Airbnb on top of the blockchain. Don't miss out on this fascinating conversation that is sure to expand your knowledge and leave you with a greater appreciation for the power of smart contracts. Tune in now!"
-			- https://www.youtube.com/watch?v=_0Y2OfLQoTA
-			- title: "# The future of DAOs and the Importance of Governance - Interview with Sebastian Bürgel, HOPR"
-			- channel: "Common Ground"
-			- description: "In this episode of the Finding Common Ground Podcast, Florian Glatz, a lawyer specializing in blockchain technology, interviews Sebastian Bürgel, the CEO and co-founder of HOPR, a privacy-focused blockchain project. Sebastian talks about his journey into the blockchain space, his motivation for starting HOPR, and how the project is developing innovative solutions for privacy and data protection in a decentralized world. The conversation also delves into topics such as decentralized autonomous organizations (DAOs), the need for constitutions in the context of DAOs, and the challenges faced by the blockchain industry as it seeks to establish itself as a viable alternative to traditional centralized systems. Sebastian offers his insights on the opportunities and limitations of blockchain technology, and how it can be used to create a fairer and more transparent world. He also shares his thoughts on the regulatory landscape surrounding blockchain, and how jurisdictions such as Switzerland can provide a supportive environment for blockchain projects to thrive. Overall, this conversation offers a fascinating glimpse into the world of blockchain technology and its potential to reshape the way we think about privacy, data protection, and governance. It is a must-watch for anyone interested in the future of decentralized systems and their impact on society. Who is Sebastian, what is HOPR: Sebastian Bürgel is a blockchain entrepreneur and co-founder of HOPR, a privacy-focused blockchain project based in Switzerland. He has a background in mathematics and has been working in the blockchain space since 2014. HOPR is a decentralized messaging protocol that aims to provide secure communication and data transfer while preserving user privacy. It utilizes a mixnet architecture, similar to the one used by Tor, to ensure that messages are routed through multiple nodes before reaching their destination. This helps to prevent network eavesdropping and ensures that messages remain private and secure. Sebastian and his team at HOPR are working to build a more private and secure internet for users. They believe that everyone has the right to online privacy, and that the current centralized model of the internet puts user data at risk. HOPR aims to address this by building a decentralized messaging protocol that users can trust."
-		- https://www.youtube.com/watch?v=zSRT5P15xPQ
-			- title: The future of blockchain and cryptocurrency - Interview with Franzesco Renzi, Superfluid
-			- channel: Common Ground
-			- description: "In this podcast episode, the host Florian Glatz interviews Francesco Renzi, the co-founder of Superfluid. Superfluid is a protocol for building decentralized applications that allows for continuous, real-time flows of cryptocurrency. Francesco discusses how Superfluid is different from other DeFi protocols and how it can be used to create new kinds of decentralized applications. He explains how Superfluid's streaming technology can be used for things like revenue sharing and real-time payments. The conversation then turns to the topic of security in the crypto space. Francesco discusses the challenges of securing decentralized systems and the importance of a holistic approach to security. He also talks about the limitations of traditional security practices and how they may not work in the context of decentralized systems. In this conversation, they also discuss the challenges of creating legal frameworks for decentralized systems, particularly when it comes to resolving disputes between parties. Francesco emphasizes the need for better solutions to these problems and the importance of avoiding the adoption of traditional finance solutions that may not work in the context of decentralized systems. Overall, the podcast provides a fascinating glimpse into the world of decentralized finance and the challenges and opportunities that come with building new kinds of financial systems."
-		- https://www.youtube.com/watch?v=XnIZFOlgOss
-			- title: # Proving you’re human in a world of AI - with Clément Lesaege, Kleros
-			- channel: Common Ground
-			- description: "In this captivating episode, join Florian Glatz, the visionary founder of Common Ground, as he engages in a fascinating conversation with Clément Lesaege, the brilliant mind behind Kleros. Prepare to dive deep into the world of startups and decentralized dispute resolution. Florian and Clément share their remarkable journeys as entrepreneurs, shedding light on the challenges and triumphs they've encountered while building their groundbreaking companies. Get inspired as they reveal invaluable insights and strategies for overcoming obstacles in the startup landscape. Discover the essence of Common Ground and Kleros as Florian and Clément discuss their respective projects. Common Ground seeks to bridge the gap between traditional institutions and blockchain technology, fostering trust and collaboration. On the other hand, Kleros revolutionizes dispute resolution by leveraging blockchain and crowdsourcing to ensure fairness and transparency. Explore the importance of decentralization, transparency, and community involvement in Florian and Clément's ventures. Gain a deeper understanding of the potential impact of blockchain technology on various industries and its role in shaping a more inclusive and just society. Whether you're an aspiring entrepreneur, a blockchain enthusiast, or simply curious about the future of startups and decentralized systems, this engaging conversation offers a wealth of knowledge and inspiration. Tune in to our YouTube channel and embark on an insightful journey with Florian Glatz and Clément Lesaege. Don't miss out on more captivating interviews with industry leaders on our YouTube channel! Subscribe now and stay tuned for inspiring content."
-		- https://www.youtube.com/watch?v=kyfyWdN2mEc
-			- title: # Helping artists make a living from NFTs - Web3 unleashed - with Darri Ulfsson, Darkblock
-			- channel: Common Ground
-			- description: "In this enlightening episode of "Finding Common Ground," host Florian Glatz welcomes Darri Ulfsson, the innovative founder of Darkblock, to a riveting discussion on the potential of Web3 content infrastructure. Discover how Darkblock is revolutionizing the NFT landscape by allowing multiple pieces of content to be linked to a single NFT, creating a richer digital ownership experience. From his roots as a photographer to becoming a self-taught blockchain and crypto enthusiast, Darri shares his journey towards building a solution that supports artists in a world increasingly moving towards digital art. Watch as Florian and Darri discuss the transformative power of Web3, its current shortcomings, and what it would take to make it a mainstream phenomenon. Listen to Florian's insightful anecdotes from his own experience incorporating Web3 elements into Common Ground, the social network he founded. They take a nostalgic trip back to the early days of the internet, speculate on the future potentials of Web4, and critique the current social media landscape with its issues of data privacy. As the discussion shifts towards NFTs, Darri brings to light his fascination with tokenization and its applications beyond just JPEGs. Learn about a compelling real estate use case that highlights the power of NFTs and take a peek into the future of NFTs and the role Darkblock is playing in it. The conversation takes a deep dive into how artists can add value to their NFTs, from using drops as royalties to tokenizing ebooks, and explores the delicate balance artists need to strike between accessibility of their art and earning a living. Wrapping up, they address the pressing topics of censorship, responsibility in the Web3 world, and how DAOs could potentially change the game of ownership, even extending to fan-owned football clubs. Don't miss this episode that presents a deep understanding of the rapidly evolving Web3 landscape from the experts who are shaping its future. Hit subscribe and stay tuned for more insightful episodes!"
-		- https://www.youtube.com/watch?v=TZJTknJ7W0M
-			- title: # Revolutionizing Work Dynamics: Web3 Insights with Andreas Fauler, Rocketstar Foundation
-			- channel: Common Ground
-			- description: "Andreas emphasizes the strengths of DAOs, particularly their ability to facilitate creative hierarchy and decentralized decision-making. Drawing from his experience in enterprises, he highlights the importance of incorporating project management practices into DAOs. Andreas expresses his concerns about the existing gap between DAOs and traditional organizations, urging for increased collaboration between the two. Learn about Rocketstar Foundation, an innovative initiative founded by Andreas and seven others, dedicated to bridging the gap between Web3 and enterprises through collaborative protocols. As an European co-operative, they are pioneering new ways of work, where members determine their level of contribution to the DAO. Andreas provides insights into the exciting projects that Rocketstar Foundation is actively involved in, showcasing their impact at the forefront of Web3 technologies. Florian also shares his own experiences with cooperatives, discussing his platform Common Ground's journey towards establishing a European cooperative. Discover the superpower of Web3 DAOs and governance as Florian and Andreas explore the advantages of this transformative combination. Andreas reveals his seven data segments, each holding unique value for different types of organizations, further exemplifying the potential of Web3 technologies. Finally, Florian and Andreas delve into their predictions for 2023, discussing the significant trends and future directions within the Web3 landscape. Gain valuable insights into the possibilities that lie ahead in this engaging conversation. Join Florian Glatz on "Finding Common Ground" as he uncovers the potential and impact of Web3 technologies, connecting with visionary guests like Andreas Fauler to explore the collaborative future that awaits us. Subscribe now and be part of the Web3 revolution!"
-		- https://www.youtube.com/watch?v=bOslQjYq6hU
-			- title: # Bitcoin's Journey to Mainstream Adoption - with Katharina Klimkeit
-			- channel: Common Ground
-			- description: "In this engaging episode, host Florian Glatz is joined by entrepreneur Katharina Klimkeit. Known for co-founding the fact-checking platform Facts for Friends, Katharina is also paving the way in the blockchain industry with her latest venture, Orange Society. They initiate the discussion by delving into the realm of Web3, assessing its potential impact and challenges. Katharina, sharing her expertise in the crypto world, dispels common misconceptions surrounding Bitcoin, clarifying its position relative to other cryptocurrencies. The conversation then turns to consider Bitcoin's potential as the new world reserve currency and the crucial role of centralized governance in Decentralized Autonomous Organizations (DAOs). Shifting gears, Katharina narrates her journey with Facts for Friends, highlighting how it tackles the ever-increasing problem of misinformation in our digital age, exacerbated by AI and deep fake technologies. The discussion gets more introspective as they tackle the concept of censorship, the prospect of a universal biometric identity, and the balance of freedom and responsibility in leading an autonomous life. Towards the end, they discuss their visions for a future that is both non-censored and decentralized. Katharina also shares insights into her latest initiative, Orange Society, aimed at mainstreaming Bitcoin and making it more attractive for mass adoption. They conclude the episode with an honest examination of Bitcoin's image problem and discuss what it needs for easier adoption. Florian closes the conversation by asking Katharina for her best advice for aspiring founders, particularly women. Don't forget to subscribe to our channel to stay updated with our future episodes and join the conversation by sharing your thoughts in the comments section"
-		- https://www.youtube.com/watch?v=X0WvzDkysG4
-			- title: # Cryptocurrency, Proof of Humanity and Biometrics - Tiago Sada, Worldcoin
-			- channel: Common Ground
-			- description: "Welcome back to another episode of "Finding Common Ground," where we delve into conversations exploring the nexus of technology, society, and the future. In this episode, our host Florian Glatz, the founder of Common Ground, invites Tiago Sada, the lead of product engineering and design at Tools for Humanity and a significant contributor to the innovative project, Worldcoin. Tiago, with his background in computer science and robotics, shares his journey into the vibrant realm of Web3 and offers insightful predictions on the impending cryptocurrency boom. The conversation shifts gears to unpack the concept of Worldcoin, a project co-founded by Sam Altman, well-known for his role at OpenAI. Worldcoin aims to democratize access to AI systems and devise more reliable methods of online identity authentication. Tiago sheds light on the complexities of building Worldcoin, addressing the ethical and technological challenges associated with developing an effective biometric identification system. Watch as we delve deeper into the heart of Worldcoin's biometric technology, discussing the 'Orb' device, the World ID protocol, and its application. Florian and Tiago explore the project's controversial aspects, particularly the use of biometrics, and the inherent issues associated with validating human identities in the digital world. In this candid discussion, Tiago elucidates on Worldcoin's fundraising efforts, its vision of being a public good, and how data is managed securely within the system. We close with an intriguing look at Worldcoin's 'white hat' program and the steps they're taking to ensure the security of their revolutionary technology. Don't forget to subscribe for more thought-provoking discussions on the future of technology and society. Hit the bell icon to stay notified about our latest releases. Let's find common ground together."
-		- https://www.youtube.com/watch?v=VSenn0D-B4Y
-			- title: # Inside the Mind of a Crypto Visionary: A Deep Dive - with Antonius Gress, Blockbrain
-			- channel: Common Ground
-			- description: "In this insightful episode of Finding Common Ground, your host Florian Glatz sits down with the “Master of Data,” Antonius Gress, Co-founder of Blockbrain. Watch as Antonius unpacks his journey from co-founding a social platform in 2014 to his present-day focus on blockchain technology. Dive headfirst into the Web3 revolution as we discuss its current state and the roadmap to mass adoption. Explore the many layers of integrating blockchain into big corporations, the challenges faced, and the reasons why some promising projects haven't seen the light of day. Delve into the constructive dialogue between industry leaders, start-ups, politicians, and regulators in the crypto sphere, all working towards creating a harmonious Web3 world. Learn about Blockbrain, an innovative platform designed to protect investors and their portfolios. Understand how traditional financial KPIs are being adapted and applied in the cryptocurrency realm. Join the discussion on custodial versus self-custodial wallets as Antonius shares his unique perspective. Discover the exciting intersection of AI and crypto. From leveraging natural language processing to identify potentially harmful smart contracts to being alert about AI-driven fraud, the conversation covers it all. Hear about Blockbrain's collaboration with academic institutions and the complexities they face while building and preparing data sets for research. Gain insights into how you can bring value to this process. Finally, we round off the episode by looking into the crystal ball of crypto, speculating on the potential for a new bull market. Whether you're a tech enthusiast, an investor, or someone curious about the future of finance, this episode is sure to provide a wealth of insights. Hit that subscribe button, like the video if you enjoyed the content, and don't forget to ring the bell icon to stay updated with the latest discussions on the show. Welcome to the crypto revolution"
-		- https://www.youtube.com/watch?v=OjuL-2ljiDE
-			- title: # Web3, Wealth, and the Future of Africa - with Andy Tudhope
-			- channel: Common Ground
-			- description: "Join Florian Glatz as he engages in a riveting conversation with Africa-based Web3 pioneer, Andy Tudhope. In this video, we dive into Andy's fascinating journey from an aspiring teacher to a key player in the world of Web3, a journey ignited by a single Bitcoin from his father in 2011. The discussion centers on the evolution of Web3, contrasting Andy's early expectations with the current state of affairs. We navigate the labyrinth of regulations, placing a special emphasis on Ethereum and the U.S. Securities and Exchange Commission's role in the crypto ecosystem. Andy, with his African roots, holds an optimistic vision for Africa's potential in shaping the future of crypto. He speaks of a future where solutions are built on Web3 by Africans for Africans, a prospect that carries immense promise. We explore abstract concepts of public goods and beauty, unveiling how they intertwine with Andy's work. The conversation then turns to Andy's personal literary creation, "The Blue Book", a testament to his love for this new digital frontier. Our deep dive extends to the Kernel community, Andy's creation designed to nurture interest and skills in Web3. We also delve into the inception of Florian's Common Ground-project, born out of a hopeful mission by 'The Fellowship' to deliver a gift to the world. Wrapping up, Andy shares practical advice for those new to the Web3 world, offering insightful tips on how to explore this burgeoning scene. This video is a must-watch for anyone keen on understanding the intersection of idealistic philosophies, technology, and beauty in a digital age. Don't forget to like, comment, and subscribe for more insightful conversations!"
-	- 2024
-		- https://www.youtube.com/watch?v=1h0tTAbNTBs
-			- title: Blockchain-Brillanz: Florians Perspektiven zu web3 nfts und der Common Ground-Zukunft
-			- channel: DerBlockTalk
-			- description: "🎙️ Tauche mit uns in die faszinierende Welt von Blockchain, Web3 und NFTs ein! In unserem aktuellen Podcast-Interview sprechen wir mit dem Experten Florian über die Evolution der Blockchain-Technologie, die aufregenden Entwicklungen in Web3 und die wegweisende Common Ground App für den Austausch im Web3 Raum. Erfahre mehr über Florians einzigartige Perspektiven und Learnings im Kryptospace, während wir Schlüsselthemen wie die Bedeutung von Web3, den NFT-Markt und die transformative Kraft von Common Ground erkunden. Dieses Gespräch bietet nicht nur spannende Einblicke, sondern auch Inspiration für die Zukunft der dezentralen Welt. Abonniere unseren Podcast für weitere tiefgehende Gespräche mit führenden Persönlichkeiten der Blockchain-Branche! Verpasse nicht die Möglichkeit, an vorderster Front dabei zu sein und mehr über die Innovationen in den Bereichen Blockchain, Web3, NFTs und CommonGround zu erfahren. 🚀🌐 "
-		- https://www.youtube.com/watch?v=YuUxIa53jKU
-			- title: # Pt 1. Common Ground: The Path to Sustainable Crypto Communities
-			- channel: KEEZ
-			- description: "Revolutionizing Coordination: An In-Depth Look at Common Ground Dive into an in-depth conversation about Common Ground, a groundbreaking project aimed at transforming data ownership and coordination in the crypto space. Explore the vision of a decentralized ecosystem, the integration of on-chain identities, governance decisions, and the future of work. Understand how Common Ground plans to leverage legal frameworks and the power of community to create an honest, user-owned platform. Hear insights on the challenges and strategies for retaining users, and the exciting prospects of an upcoming public token sale that aims to put ownership in the hands of the community. This episode is a must-watch for anyone interested in the future of decentralized technology and community-driven projects.
-		- https://www.youtube.com/watch?v=BinI5onWTcM
-			- title: # Pt 2. Unfiltered Insights: The State of Crypto
-			- channel: KEEZ
-			- description: "In this episode, we dive deep into an insightful conversation with Florian, a seasoned lawyer in the crypto space with a unique perspective on its evolution and challenges. Florian reflects on his journey from legal advocacy and public speaking to becoming an opinion leader on Twitter through authentic and controversial shitposting. He shares his thoughts on the current state of the crypto industry, the need for genuine app development, and the crucial role of truthful communication in media. The discussion also explores broader societal issues like social media influence, political shifts, and the impact of misinformation. Join us for an eye-opening dialogue about the future direction of cryptocurrency and its potential to effect meaningful change."
+#website #blockchainlawyer #podcasts #interviews #lectures #recordings
 
 - lectures
 	- 2017
 		- https://www.youtube.com/watch?v=foDmytkzIWo
 			- title: # Blockchain for Dummys - Was verbirgt sich hinter der Technologie? | Legal Transformation Days 2017
 			- channel: Fachmedien Otto Schmdit
-			- description: "Blockchain for Dummys - Was verbirgt sich hinter der Technologie? Welchen Eindruck haben Sie von den Legal Transformation Days? Die Antworten gib es im Video! [#ltd17](https://www.youtube.com/hashtag/ltd17) Florian Glatz: Blockchain Lawyer Legal Transformation Days: Eine Veranstaltung der Handelsblatt Fachmedien | www.legal-transformation.de"
 		- https://www.youtube.com/watch?v=rXMZn-jbN5o
 			- title: # Blockchain: A New Foundational Layer for Law?
 			- channel: Adjy Leak
-			- description: "Einführung in den Themenblock 'Blockchain' durch Florian Glatz Transparenz der Lieferkette: UN Global Compact und Blockchain (Christoph Regierer) Smart Contracts: Kann das Zivilrecht der Finanzwelt 2.0 einen rechtlichen Rahmen geben? (Nina-Luisa Siedler) hacking.law Legal Tech Conference Berlin"
 	- 2018
 		- https://www.youtube.com/watch?v=MbkEKjBaIZ8
 			- title: # Data Protection Panel - Privacy For Everyone
 			- channel: Adjy Leak
-			- description: "Panel: Silvan Jongerius (techGDPR), Jan Christian Sahl, Florian Glatz (BLOCKCHAIN.LAWYER) Moderated by Tom Braegelmann (LEVERTON) Privacy for Everyone Berlin - 03 January 2018"
 		- https://www.youtube.com/watch?v=bEge_HAB7io
 			- title: Law was Code before Code was Law - Florian Glatz
 			- channel: Jelle Herold
-			- description: "Presentation by Florian Glatz from Statebox/Bundesblock/Blockchain Embassy Title: Law was Code before Code was Law Presented at the Second Statebox Summit — The Very Blockchain Meetup"
 		- https://www.youtube.com/watch?v=FLuUmHWdtgE
 			- title: Panel "blockchain, law, blockchainlaw?"
 			- channel: blockchain, law blockchainlaw?
-			- description: "During the conference "blockchain, law, blockchainlaw?" (25/26 Jan 2018), the panelists Shermin Voshmgir, Sven Laepple, Friederike Ernst and Nina Siedler discussed how Blockchain may impact society. The discussion was moderated by Ela Kagel. Florian Glatz introduced the discussion with some thoughts on regulation issues."
 		- https://www.youtube.com/watch?v=7NTGJZueMOU
 			- title: The Legal Classification of Tokens: the Tokens Zoo
 			- channel: Florence G'sell
-			- description: "Florian GLATZ is an attorney at Blockchain Lawyer in Berlin. The Interdisciplinary Workshop on Blockchains took place on July 2 2018 at ENS Ulm (Paris) and was co-organized by Alexis COLLOMB (ILB, CNAM), Primavera de FILIPPI; (CERSA, Berkman Center), Vincent DANOS (CNRS, ENS) and Florence G'SELL (IFG, Université de Lorraine), with the support of BNP Paribas and CDC."
 		- https://www.youtube.com/watch?v=a35-ty-m4ZI
 			- title: # Blockchain Masters – 3. Mai 2018 Florian Glatz
 			- channel: eco Verband
-			- description: "Treffen Sie Florian Glatz auf den Blockchain Masters. Mehr Informationen finden Sie unter: [https://blockchain-masters.com/](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa0xaeEplSTdzdm9qS3V2LWdISnlIOHItTkh1UXxBQ3Jtc0tuNTFrME5lTjl6amx1RFhSY1FGanN6eHh1N2dJNWVyQVk4MmRkQ0xGanNEOEg5aWo0NWxkS0RIdThQNE1ONDNpWXdmbzhrVmNCRGMtQkI5NjAyVENBN2k4aF9aeGJBeWktWDl3Ql9fc3h1dy1HUExnQQ&q=https%3A%2F%2Fblockchain-masters.com%2F&v=a35-ty-m4ZI) [https://web.eco.de/themen/](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbjQyODRCY2xwMHRqT1k3ZE1yS2pYYkpaTEhoUXxBQ3Jtc0ttSlJkNlFBamZ0czdoazZCcG9zNC1HWTg1c050WW1oQlI2MjZoRDZVSFNYUjI3YktHU2hkNC1qV0VabXhwM0Z0dzR0U2tTdXNadV9rQXFEcUtraEpjM09Mc2hDQmdfLTJyNHFOeVdhZEZPemhIdXZPSQ&q=https%3A%2F%2Fweb.eco.de%2Fthemen%2F&v=a35-ty-m4ZI) Blockchain-Experten, IT-Verantwortliche und Business-Entscheider treffen sich am 3. Mai 2018 in Hamburg, um sich im umfangreichen Konferenzprogramm für Fortgeschrittene über Trends, Lösungen und Erfahrungen auszutauschen. Blockchain Masters präsentiert innovative Konzepte, Projekte und Ideen jenseits der Finanz- und Versicherungsbranche. Erhalten Sie Impulse, wie Unternehmen und öffentliche Verwaltung mit Blockchain-Lösungen ihre Effizienz steigern, Prozesse optimieren und diese smart und sicher umsetzen."
 		- https://www.youtube.com/watch?v=UFK75Bsj3_Y
 			- title: # Decentralization: Expectations vs. Reality | Epicenter Insights
 			- channel: Adjy Leak
-			- description: "Welcome to the first edition of Epicenter Insights, an event series brought to you by the team behind Epicenter, the leading blockchain podcast. Once upon a time, the development of privacy-centric technology, decentralized technologies and many open source projects was driven primarily by ideological aims. The advent of blockchain, tokenization and ICOs enable the monetization of open source as well as decentralized networks. This has led to a massive influx of resources, but also led to complicated issues around incentives and ethics. Some of the key questions facing us are:
-				- How should decentralized networks be monetized? How should monetary benefits be distributed among users, developers, operators and investors?
-				
-				- Who will control decentralized protocols? Do democratic values have any role in this?
-				
-				- What is the fundamental objective? Is it decentralization? Censorship-resistance? Permissionless innovation?
-				
-				- Could regulation actually contribute to achieving fairer outcomes?
-				
-				- Is it a bad thing, if blockchain technology increases inequality? Is this inevitable or does it depend on how these protocols are designed?
-				
-				- What does a traditional venture capital model have to contribute?
-				
-				- Lack of capital has rarely been a constraint for crypto projects in the last two years. Are we moving to a world-after-capital? If so, what are the implications for investors and the industry as a whole?
-
-					Debate Panel We're looking forward to the discussion moderated by Brian Fabian Crain with our guests: ⭐️Liz Steninger (@liz315) Liz is the CEO and Managing Director of Least Authority, a company and S4 (Simple Secure Storage Service) aimed at empowering individuals to protect their personal data from governments and corporate interests ⭐️Eleftherios Diakomichalis (@lftherios) Ele is the co-founder of oscoin, which aims to build a community owned and operated network for code collaboration and incentivization. ⭐️Florian Glatz (@heckerhut) Florian is a lawyer and researched specializing in blockchain ⭐️Ravi Kurani (@KuraniRavi) Ravi is an investor at Earlybird Capital, focused on blockchain and crypto space ⭐️Brian Fabian Crain (@crainbf) Brian is a co-founder and co-host of blockchain podcast Epicenter. He is also co-founder of Chorus One, a company building validators for Proof-of-Stake networks. "
 		- https://www.youtube.com/watch?v=5ZlUhQap4jE
 			- title: Das Initial Coin Offering: Sinn und Unsin
 			- channel: Adjy Leak
-			- description: "Florian Glatz, Blockchain Lawyer Berlin Legal Tech 2018"
 	- 2019
 		- https://www.youtube.com/watch?v=5MnULmZ9-zw
 				- title: Session 3: "Ethereum Fundamentals I" with Florian Glatz
 				- channel: Blockchain Embassy Berlin
-				- description: "Live Stream Recording from the Blockchain Embassy in Berlin. The course is a collaboration between the German Blockchain Bundesverband and ReDI School for Digital Integration."
 		- https://www.youtube.com/watch?v=0rJGSPbkkSQ
 			- title: # Future of Trading Panel
 			- channel: StarkWare
-			- description: "Will Harborne (DeversiFi), Bartek Kiepuszewski (MakerDAO), Florian Glatz (Fundament Group) Moderator: Balaji Srinivasan StarkWare Sessions 2019"
 		- https://www.youtube.com/watch?v=e75g43s9CZk
 			- title: Florian Glatz: Motion Protocol - echter Use Case für Blockchain Technologie in der Filmindustrie
 			- channel: Legal Tech Center
-			- description: "Florian Glatz ist als Rechtsanwalt, Software Entwickler und Unternehmer im Bereich Blockchain tätig. Er ist Mitgründer des Legal Tech Centers und Präsident des Blockchain Bundesverbands. Als Anwalt berät er Blockchain-Startups rund um das Thema Initial Coin Offering. Als Entwickler fokussiert er sich auf innovative Anwendungen der Blockchain im Bereich Law und Finance. Am 22. Februar 2019 fand zum dritten Mal die Berlin Legal Tech Conference statt. Die ganztägige Konferenz brachte juristische Vordenker und Innovatoren aus der deutschen, europäischen und internationalen Rechtstechnik zusammen, um die Rechtsdienstleistungsbranche von morgen zu gestalten. Die Veranstaltung lud zu spannenden Vorträgen von wegweisenden Rechtsexperten, anregenden Diskussionen mit gleichgesinnten Kollegen und wertvollen Networking-Möglichkeiten ein."
 	- 2020
 		- https://www.youtube.com/watch?v=KJa0-CflEcM
 			- title: Florian Glatz keynote at Blockchain House
 			- channel: filmfestivals.com
-			- description: "www.Filmfestivals.com NON STOP FILM FESTIVALS The place to be for the film festival circuit fans!"
 		- https://www.youtube.com/watch?v=OHypxw0MwjM
 			- title: Blockchain...after the hype
 			- channel: Creative Europe MEDIA Deutschland
-			- description: "Online Seminar "Blockchain...after the hype" Blockchain has been the buzzword at festivals and markets for some years now, but how is it really that it can help the film industry to develop their business models, and why is it that you as a film producer or film financier should be aware of this new technology? With Maria Tanjala (Filmchain, UK), Florian Glatz (Cinemarket, D), Rose-Marie Couture and Wendy Bernfeld (Blockfilm, NL/CA), moderated by Tine Klint (LevelK, DA) Organized by the Creative Europe Desks Denmark, Berlin-Brandenburg and France in cooperation with Erich Pommer Institut."
 		- https://www.youtube.com/watch?v=rB8NyrHIMM0
 			- title:【第四屆精華回顧】Florian Glatz ─ 政府如何監管與推動區塊鏈
 			- channel: 臺灣區塊鏈愛好者
-			- description: "[ 歐洲倡議成立區塊鏈組織，推動相關發展🇪🇺 ] 在 [#歐盟委員會](https://www.youtube.com/hashtag/%E6%AD%90%E7%9B%9F%E5%A7%94%E5%93%A1%E6%9C%83) 的鼓勵下，來自歐洲與全球的成員，共同成立了 國際可信區塊鏈應用協會 [#INATBA](https://www.youtube.com/hashtag/inatba) ，來為歐盟委員會提出建議，並打造區塊鏈基礎設施，以提供 [#公共服務](https://www.youtube.com/hashtag/%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8B%99) 📍 [#第五屆區塊鏈愛好者年會](https://www.youtube.com/hashtag/%E7%AC%AC%E4%BA%94%E5%B1%86%E5%8D%80%E5%A1%8A%E9%8F%88%E6%84%9B%E5%A5%BD%E8%80%85%E5%B9%B4%E6%9C%83) 11/21 花博爭豔館登場：[https://www.chain.tw/](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbndjcnM1anF4eURIYXpuRmJhQkdWcEhnbk5YUXxBQ3Jtc0tuNVRTaWpaZVFOeVdDUndGT19hMXhaUEFGMlhzUkpYbXk4SmZ4RXZwR3Mtckh4VHBzM0NpQkM1U0Y3dGx2eUl6MVdmdGtqZEp4SGRYYjhoaUZKZUFEZTVBcGRlWFdDVEN5dnBfWEFhcmhybnNEaGJtbw&q=https%3A%2F%2Fwww.chain.tw%2F&v=rB8NyrHIMM0) [#區塊鏈應用](https://www.youtube.com/hashtag/%E5%8D%80%E5%A1%8A%E9%8F%88%E6%87%89%E7%94%A8) [#精華片段](https://www.youtube.com/hashtag/%E7%B2%BE%E8%8F%AF%E7%89%87%E6%AE%B5)"
 	- 2021
 		- https://www.youtube.com/watch?v=Ta2J9PVQPIQ
 			- title: Overview of MiCAR | Marina Markezic, Simon Polrot & Florian Glatz from EUCI | Chainist Meetup
 			- channel: Chainist
-			- description: "This is the recording of our 37th meetup which took place on 4 May 2021. ----- Summer 2020 was dubbed the 'Defi Summer'. The hype around crypto projects such as MakerDAO, Uniswap, Compound, Aave, Sushi etc. exploded immensely after our first meetup on the topic. Coinscident? Who knows? ;) One thing is clear: laws and regulations are coming. Especially, the European Commissions Proposal for a Regulation on Markets in Crypto-assets (MiCAR). This European legislation will impact EU based crypto projects. How? In a lot of different ways: It will establish rules for: The issuance and initial sale of tokens. The content of a projects Whitepapers. The issuance of asset-referenced tokens. It will introduce and regulate e-money tokens. There will also be a regulation of 'insider trading' that projects will have to comply with, just like in the stock markets. And a lot more. And because of all that paper stuff coming our way, we are glad to have our very special guests for this meetup: The team of the European Crypto Initiative (EUCI). Marina Markezic, Simon Polrot and Florian Glatz are the experts in questions on crypto regulation. And for questions on what such regulation means for projects, devs, users, token holders etc. The EUCI team is currently on a mission to make sure that Europe doesn't miss out on the oppertunity to build and join a global, more transparent, secure, natively digital, financial market. They are working to improve the proposed crypto regulation, engage members of the European Parliament, the European Commission and the European Council to share and defend their positions. They also work with other initiatives and industry bodies to amplify shared positions and gain support from lawmakers and the broader private sector. In this meetup Marina, Simon and Florian give an overview of the current proposal for crypto regulation in the EU and we will have a chance to discuss crypto regulation and how it could or should be done! If you would like to support the team and their efforts check out [https://euci.io](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqblhoMnpWSk9VdzV1MWN3TEtTSm5PcDBLeExCZ3xBQ3Jtc0trVmNKT2sxRXgwRVZ5dU82R20xZDhDalRvQW5Vc0o3akJ4TDgzT2Q3TjJJNUNDTVhoYW9rejFMQ2dyVnhNNW9jTTJoODVDVEIzS2RCRFNuMmttWm1WbXY4U2hpVzc1aW9KWGRDRG1IYjRhVkVLT2F4OA&q=https%3A%2F%2Feuci.io%2F&v=Ta2J9PVQPIQ)!"
-			- 
 		- https://www.youtube.com/watch?v=DAwocP94X7U
 			- title: Blockchain in Use conference 2021: Public Administration Track
 			- channel: BerChain
-			- description: "The Blockchain in Use conference 2021 Public Admin session featured as speakers: Michael Kolain, Deutsches Forschungsinstitut für öffentliche Verwaltung, Matthias L. Jugel, Ubirch, Tillmann Heiss, KfW, Matti Große, ITDZ, Franziska Köhler (BAMF), Florian Glatz (Bundesblock). Berlin has been coined as the “Blockchain capital of the world” many times. There is no doubt that the blockchain community is among the most in the world. But how can the city itself and the public administration capitalize on the potential of the technology and which are the most promising areas of application? We have invited a set of experts in the area to share their opinion and experiences in Public Administration and blockchain integration in a 1.5-hour discussion. The session host is Shoshana Schnipenkoetter, Innovation Manager at Berlin Partner for Business and Technology Blockchain in Use Conference After the success of Blockchain in Use 2020, this year Blockchain in Use 2021 is back with new tracks. BerChain e.V teamed up once more with Berlin Partner for Business and Technology to bring to you Blockchain in Use 2021, a 5-day online event series exploring the ‘Blockchain-in-use’ across several industries with five new verticals around the latest blockchain real-world applications that are already implemented or close to being implemented."
 		- https://www.youtube.com/watch?v=j51-ifV95Sk
 			- title: FEST | Online Conference - Blockchain, a giant leap for the film industry?
 			- channel: FEST
-			- description: "FEST's online conference cycle about the immediate future of the film industry happened between the 19th - 23rd of July, 2021. This is a recording of the conference regarding Blockchain and its potential for film financing and distribution. It was hosted by Jorge Pereira, film journalist, and the panelists were Irina Albita, Filmchain founder; Sam Klebanov, Cinezen CEO and founder; Florian Glatz, President of German Blockchain Association. Find out more: www.fest.pt"
 		- https://www.youtube.com/watch?v=pmTvl2d-Ydg
 			- title: # Panel 11: Markets in Crypto-assets Act
 			- channel: EU Blockchain Observatory
-			- description: "This is the recording of a panel discussion co-organised by the EU Blockchain Observatory and Forum and INATBA, focused on the MiCA regulation. The panel was organised in the frame of the EU Blockchain Week 2021, under the auspices of the Slovenian Presidency of the EU, and took place on the 14th of September 2021."
 		- https://www.youtube.com/watch?v=PwKIH_68xd0
 			- title: # DeFi vs. regulators: who will win?
 			- channel: [ETHCC] Livestream 3
-			- description: "The talk will cover the last developments in crypto and DeFi regulation with a critical analysis and provide with insights on what the future may hold for crypto projects. Also featuring ideas that would help everyone get along in the long run."
 	- 2022
 		- https://www.youtube.com/watch?v=Av68nzkTTIw
 			- title: # Incentive Design x Policy Workshop (Radicle x BlueYard)
 			- channel: Radworks
-			- description: "This is the recording of the lightening talks and Q&A round from the Incentive Design x Policy Workshop hosted on July 6th, 2022 in Berlin. Reason behind the workshop: One reason why we think there is not more concrete legislation on our 'sandbox' of play in web3 is due to a lack of aligned incentives. In web3, protocols are good at customizing templatized models to incentivize their communities in certain ways, but there are gaps in this approach. BlueYard and radicle were excited to be bringing together a mix of advocates, policy makers, academics and protocol builders to share their perspectives and innovate on the future of collaboration between policy and crypto. What We Hoped to Accomplish:
 		- https://www.youtube.com/watch?v=mKETg_rIuCU
 			- title: # The Reg3 Conf '22 - 3) On Decentralised Tech - The impact of global regulations on open projects.
 			- channel: The Reg3 Conference
-			- description: "This panel discussed how MiCA and other major national legislations are impacting decentralised technology projects. With Felix Lutsch, Chief Commercial Officer at Chorus One Stefan George, Co-Founder and CTO at Gnosis Moderated by Florian Glatz, Vice-President at EUCI and Co-Founder at Common Ground"
 		- https://www.youtube.com/watch?v=5ay_nVdXAiI
 			- title: The Influence of Crypto Regulation on Open Blockchains: Opportunities and Challenges
 			- channel: Ethereum Foundation
-			- description: "With the wider adoption, the use of open blockchains and dapps built on top of it is becoming progressively regulated by governments all over the world (especially in the EU and the U.S.). Understanding and adjusting to these regulations is becoming a reality for many projects in the ecosystem, especially the ones facing the users and the community. What will be the impact of regulation on the Ethereum ecosystem and how it might change the existing use cases, designs and utilities? Speaker(s): Florian Glatz, Marina Markezic, Simon Polrot Skill level: Intermediate Track: Opportunity & Global Impact Keywords: Regulation,DAOs,decentrlization"
 		- https://www.youtube.com/watch?v=YBIxUqMoRqs
 			- title: Simon Polrot , Marina Markezic & Florian Glatz:Crypto / Web3 in Europe ; what happened, what's next?
 			- channel: [ETHCC] Livestream 4
-			- description: "This talk by the 3 founders of EUCI (Simon Polrot, Marina Markzeic, Florian Glatz) will cover all the recent regulatory developments in Europe with respect to crypto / web3 and provide insights on their impact and potential future evolutions."
 	- 2023
 		- https://www.youtube.com/watch?v=KBrZL8nekWE
 			- title: # Regulating the Unregulated: Response Strategies for the Upcoming DeFi Regulationsn - Marina Markezic
 			- channel: ETHDenver
-			- description: "For the first time in history, the regulators are coming up with a regulation for decentralised entities, specifically decentralised finance. Next year, we expect DeFi regulatory proposals from major crypto markets (EU and USA) and international organisations (IOSCO, Bank of International Settlements). Those proposals will significantly impact how the DeFi products will be built, designed and offered on the market. In this talk, we will briefly update you on the current regulatory situation and propose response strategies for the community to adopt. Besides education and sharing best use cases and practices, it is essential to showcase the unique contribution DeFi and decentralised use cases can provide to the more considerable societal challenges. Marina Markezic Founders European Crypto Initiative Marina is the co-founder and the executive director of EUCI, which aims to propel EU regulation to become Defi-friendly. Since 2017 Marina has been advising crypto projects on governance and legal matters with a focus on decentralization, DeFi and NFTs. She previously led the advisory team of a blockchain accelerator and co-founded a crowdinvesting platform. Florian Glatz is Vice President of the European Crypto Initiative (EUCI) and co-founder of Common Ground (commonground.cg), a novel social network built for web3 communities and DAOs. A visionary at heart, Florian paves the way for self-sovereign identities, community-led decision-making and a user-owned data economy. Trained as a lawyer and software developer, Florian is an expert on key issues at the intersection of crypto assets and regulation. Full-time in the industry since 2014, Florian has co-founded and led the German Blockchain Association (Bundesblock) as President before expanding his influence into the European crypto policy sphere. Within EUCI, Florian advocates for the importance of decentralized projects and financial privacy in the context of the MiCA and AML regulations. As a major result, the EU dropped the term "unhosted wallets" in favour of "self-custodial wallets" and has allowed DeFi, NFTs and other foundational innovations to stay exempt from immediate regulation, giving the nascent ecosystem a chance to innovate. Florian is the publisher of the print magazine REthinking Law, and books on Legal Tech and Blockchain. Florian loves sharing his passion for crypto with others and over time has motivated many people to join the revolution. In his free time, he enjoys contemplating metaphysics and consciousness."
 		- https://www.youtube.com/watch?v=JxaliYmeLYg
 			- title: # Florian Glatz (VP, European Crypto Initiative) — Is Europe Masterminding Crypto Regulation?
 			- channel: TOA (Tech Open Air)
-			- description: "In May 2023, the European Union states approved the world's first comprehensive set of rules to regulate cryptoassets. Is Europe then ahead of everyone, when it comes to regulation?"
-			- Understand the overlap between the goals of web3 and that of regulation enforcers
-			- Provide insight into existing and historical incentive models that have aligned interests across various stakeholder groups + innovate on new ones
-
-				A special thank you to our speakers:
-				
-				- Trent McConaghy (Ocean Protocol)
-				- Dr. Friederike Ernst (Gnosis)
-				- Florian Glatz (European Crypto Initiative)"
 		- https://www.youtube.com/watch?v=2n7jt8jHXxU
 			- title: Empowering Communities through Ownership: Florian Glatz's Insights on Communication Infrastructure
 			- channel: aeternity blockchain
-			- description: "In an enlightening session at the Cryptocastle Conferences in September 2023, Florian Glatz from Common Ground will share valuable insights on the pivotal role of community-owned communication infrastructure in the digital age."
 		- https://www.youtube.com/watch?v=WYnVQRRyuoM
 			- title: # Community-owned Communication Infrastructure - Commonground - Florian Glatz
 			- channel: The DAOist
-			- description: "Commonground is the caviar of dog-fooding we know we want and somehow keep refusing to chow on. Our collaboration platforms provide some structure, but do not flow into agency. Communities, consciously or not, conspire to keep you captive, in mild reverie and often not so mild strife. This might be related to the structure - not the agent. Florian leads us to conclude that debate is not the point of cooperation. Broadcasting is not dialogue. Convincing is not discovery. The Pearl of Coordination lies hidden while we dive with our mouths open. "The atomic unit of coordination" is communication. It stacks up once communities can own their infrastructure, with no super admin. Community hyperstructures achieving coordinated action as a swarm of sovereign collectives will only come once communication is achieved and sustained with a healthy dose of sovereignty. Commonground sets out to fix the platform dilemma by creating web3 enabled high context co-creation space that feels like home to humans independently of their prior "web" experience."
 	- 2024
 		- https://www.youtube.com/watch?v=6o1KHAYZuD8
 			- title: Welcome remarks | The Future of Crypto-Assets in Europe and beyond Conference | EUCI
 			- Channel: European Crypto Initiative
-			- Description: "Live from Brussels, The Future of Crypto-Assets in Europe and beyond brought together a broad range of EU and international policymakers and private stakeholders to discuss financial stability, monetary sovereignty and also the need to harness the vast amount of innovation taking place in this space. Marina Markezic, EUCI Florian Glatz, EUCI Simon Polrot, EUCI"
 		- https://www.youtube.com/watch?v=iXWgSmAsJPc
 			- title: Funding the Future: Innovative Approaches to Financing Crypto Policy Work - Bangkok 2024
 			- channel: Funding the Commons
-			- description: "Funding the Future: Innovative Approaches to Financing Crypto Policy Work: This session highlighted the challenges of sustaining grassroots advocacy in crypto policy. From navigating underfunded initiatives to influencing landmark regulations like MiCA, Marina and Florian explored how retroactive and outcome-based funding could reshape the future of public policy efforts. Speakers: Marina Markezic (EUCI) and Florian Glatz (EUCI) This session was part of the 11th edition of Funding the Commons, held in Bangkok."
 		- https://www.youtube.com/watch?v=Wgyf9Ggz1YI
 			- title: # Eine neue Perspektive auf Web3 Communities
 			- channel: Hanseatic Blockchain Institute
-			- description: "Die Idee von Web3, das auf dezentralen Technologien wie Blockchain basiert, eröffnet neue Möglichkeiten für die Organisation von Gemeinschaften. Florian Glatz, wird spannende Einblicke geben, wie CommonGround diese Vision umsetzt. Die Gestaltung der Community-Interaktion in dieser neuen Ära digitaler Zusammenarbeit ist von entscheidender Bedeutung, da sie nicht nur die Effizienz, sondern auch die Demokratisierung und Teilhabe in den Mittelpunkt rückt. Die Dynamik von Web3 verspricht nicht nur Transparenz, sondern auch eine höhere Beteiligung der Community-Mitglieder. Wie Florian Glatz diese Prinzipien in die Praxis umsetzt und welche Erfahrungen bereits gesammelt wurden, findet ihr in diesem Vortrag."
 		- https://www.youtube.com/watch?v=-0XcTqbnE-U
 			- title: What are we even doing here | Florian Glatz (August 2024)
 			- channel: Ethereum Berlin
-			- description: "Ethereum 10 years later..."
 		- https://www.youtube.com/watch?v=oFRvY5NcULg
 			- title: # HCPP24 | Florian Glatz - What are we even doing here?
 			- channel: Parallel Polis
-			- description: "Crypto was built on a web of trust by like-minded nerds. Today, we don't recognize the field anymore: it's been coopted by lizard-brains and their zero-sum money games. Those not coopted by toxic memes still remember why we started out together. Our mission is not yet fulfilled, the promised land has not yet been reached, all in spite of the positive propaganda eminating from the new "fintech elite". Let's remember why we are here and how we can still save the world from itself. I am here to synthesize a new message of hope. To tell a story that wakes up not only us but everyone who can read the signs. ▲▲▲ Florian is a lawyer, author, advocate; builder, coder, and eternal optimist. Currently working on Common Ground, a new attempt at building crypto's missing app layer; and European Crypto Initiative - a think tank for better crypto regulation in EU. ▲▲▲ Hackers Congress Paralelní Polis (HCPP) is the flagship event of Paralelní Polis, which since 2014 has been regularly attended by over 500 fans and IT experts from all over the world. HCPP is held annually in Prague on the first weekend of October. The main thematic pillars of the three-day congress are Freedom & Cryptoanarchy, Decentralized Economics, & Cryptocurrencies, Political Art & Hacking, and Science & Technology. ▲▲▲ Paralelní Polis is a one-­of-­a-­kind nonprofit organization that combines art, social sciences, and modern technologies. The ideas of liberty, independence, innovative thinking, and the development of society are the underlying foundations of the project. The project intends to remain state-free as it operates entirely without support from the government. Most of the funds come from the voluntary contributions of our donors and partly from commercial activities such as running a unique co­working space and the world’s first bitcoin-­only cafe. It was founded by members of a contemporary-­art group Ztohoven, and Slovak and Czech hacker­spaces. Its main goal is to promote economic, social, and digital freedom. We try to be a vocal voice of freedom in order to shape the public discourse and ultimately work towards a freer future."
 		- https://www.youtube.com/watch?v=9PS67asKERQ
 			- title: Bridging the Gap: How to Effectively talk to Regulators? | Devcon SEA
 			- Channel: Ethereum Foundation
-			- Description: "Regulators are eager to learn more about different aspects of blockchain. Over the years we can see is a growing interest in a dialogue with the industry participants and specifically technical experts. Now more than ever it is crucial for the community to speak with an informed and empowered voice. The workshop we are proposing aims to share all the knowledge we have accumulated over the last 4 years working with (mostly EU) regulators to empower technical experts and founders. Speaker(s): Marina Markezic, Florian Glatz Skill level: Expert Track: Real World Ethereum Keywords: Core Protocol, Best Practices, Auditing, Regulation, advocacy. Devcon is the Ethereum conference for developers, researchers, thinkers, and makers. Devcon SEA was held in Bangkok, Thailand on Nov 12 - Nov 15, 2024. Devcon is organized and presented by the Ethereum Foundation. To find out more, please visit https://ethereum.foundation"
 
 - interviews
 	- 2017
 		- https://www.youtube.com/watch?v=jpWPou0_1gU
 			- title: # Was bringt die Blockchain für Rechtsanwälte?
 			- channel: Christian Schebitz
-			- description: "Interview von Christian Schebitz mit Blockchain Lawyer Florian Glatz. Hier geht es zum Beitrag "Die Blockchain für Anwälte verständlich erklärt." [https://www.rechtsanwalt.com/anwaltsb...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbC1RMzZvYm5qU2VpeEI4VjBYWnZSVXNKc29aQXxBQ3Jtc0trQTVndkZid0RyaF94VHI1MEpLdTdQMmlMQWwwcXh0eXZoNnpfeHhuaXQtX1F3cDc1MExTS0hfVm52YmVVbjRLUXl6b0VRU19OWTlaZGZpRUo0NlBORTJjaXJ3NVQ0ekJMNVFvZllBWHdkWVZFaHBLVQ&q=https%3A%2F%2Fwww.rechtsanwalt.com%2Fanwaltsblog%2Fdie-blockchain-fuer-anwaelte-verstaendlich-erklaert%2F&v=jpWPou0_1gU)"
 		- https://www.youtube.com/watch?v=JdxSCalTTLk
 			- title: Warum braucht es einen Blockchain Bundesverband?
 			- channel: Blockchain Bundesverband
-			- description: "Florian Glatz, spricht über die Gründe weshalb es einen Blockchain Bundesverband braucht."
 		- https://www.youtube.com/watch?v=vCKesPyj3rM
 			- title: Gründung und Wahl des Vorstands des Blockchain Bundesverband
 			- channel: Blockchain Bundesverband
-			- description: "Florian Glatz, spricht über die Gründung des Verbands und seine Wahl zum ersten Vorsitzenden."
 		- https://www.youtube.com/watch?v=rVRXnF1T_a4
 			- title: # Ziele des Blockchain Bundesverband
 			- channel: Blockchain Bundesverband
-			- description: "Florian Glatz, spricht über die Ziele des Blockchain Bundesverbands"
 		- https://www.youtube.com/watch?v=i0yLhM3yRwQ
 			- title: # Forderungen des Blockchain Bundesverband
 			- channel: Blockchain Bundesverband
-			- description: "Florian Glatz, spricht über die ersten Forderungen die der Verband gemeinsam beschlossen hat."
 	- 2018
 		- https://www.youtube.com/watch?v=nbBgznfb8Hs
 			- title: Crypto enthusiasts seek Bitcoin alternatives
 			- channel: AP Archive
-			- description: "(19 Feb 2018) LEADIN: Despite recent fluctuations, crypto currency Bitcoin has become known to the mass market and increased dramatically in value from where it started. But with fame comes problems. The relatively slow transaction time and high fees mean some crypto enthusiasts are now looking beyond Bitcoin. STORYLINE: This cafe in Wedding - one of Berlin's hippest districts - might look like any other trendy coffee shop in Europe. But, it's also one of dozens of restaurants and cafes in Berlin, often called "the capital of Bitcoin", which accept cryptocurrencies as payment. Here at the Mirage Bistrot - which fuses Italian coffee with French food - customers can pay in Bitcoin, but also in Litecoins or Ether, two other cryptocurrencies based on Blockchain technology. Most still pay with euros, of course. But, the option is there. Florian Glatz, the president of the German Blockchain Association and a "Blockchain lawyer", can whip out his smartphone, open a cryptocurrency app and make a payment. "We are a new cafe and we want to be a part of the trends that are happening. We believe in the future and we want to be innovative," says Jochen Kuepper, the owner of the cafe. While paying for a coffee with Bitcoin might sound futuristic to some, it's already falling out of favour with some cryptocurrency enthusiasts. The number of transactions on the Blockchain - the universal ledger where all Bitcoin transactions are processed - are limited. As Bitcoin has become more popular, the number of transactions requested has gone up exponentially. This resulted in a lag and higher fees per transaction. It can now take up to an hour for each transaction to be processed. The fees can go as high as 20 US dollars per transaction. "Bitcoin came to be with the goal of becoming a digital alternative to cash. But now we have to honestly say that this experiment has failed," says Florian Glatz, President of the German Blockchain Association. "Bitcoin has rather become a digital gold. It is valued very highly and it is constantly becoming worth more. And it has become expensive to exchange Bitcoin which all means that people are not moving their Bitcoins anymore. They certainly don't buy coffee with them anymore." Over the past few years, hundreds of alternative cryptocurrencies have entered the market. Some are similar to Bitcoin, using the same type of Blockchain technology, but each with a twist or improvement which they claim reduces transaction times and fees. Some are targeted at specific groups, for transactions within an industry or within a geographical area. Some even use other technologies, moving on from Blockchain technology that some consider too cumbersome, too energy-hungry and not made for large-scale global usage. "I think that Bitcoin, in its original form, is better suited as a digital gold. And there is a clear need for that. And there will be another currency for the daily life," says Glatz. Berlin is called the "capital of Bitcoin" because of the large number of shops, restaurants and institutions that accept it as payment. But it's also a hub for cryptocurrency innovation. Like here at the IOTA foundation office, in the trendy district of Prenzlauer Berg. IOTA is the technology behind cryptocurrency MIOTA and it's focused on the "Internet of Things" - the concept where machines are connected to the internet and communicate with each other. IOTA doesn't use Blockchain technology. Instead, Schiener and his colleagues have invented a different type of ledger, which they say can scale up as more users start using MIOTA coins."
 		- https://www.youtube.com/watch?v=Y38Lau8a44s
 			- title: # The Agile Law Firm and the Future of Law -Episode 4
 			- channe: hacking.society
-			- description: "We were invited to the Legal Edge conferece in Sofia ([https://edge.legal](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbEkzczdnR2RuRnhBTWFwRUcwV0l0WGFMZVBYUXxBQ3Jtc0trTkdycXlzVktFYk11XzhKdUFqZlQ1Nm1iYlZBaVdyaXk2alN5cFoxcFE1cUd6R21VY1dLTFFxR0tscTFYa1FEWjZBZGNNX0ZBR3A1eUJPSEJ5S1dObjhFT1RkRndrNGhpbFF1cTZNZGFwTWpRUks0UQ&q=https%3A%2F%2Fedge.legal%2F&v=Y38Lau8a44s)) where we saw a range of great speakers discuss Legal Tech. Among them was Sascha Theissen, a lawyer with a doctorate degree in Computer Science! He's an absolute visionary when it comes to all things legal tech. In this interview, Sascha recounts his story of how he transformed the collaboration of an inhouse legal team at a big firm by introducing Agile methodologies ([https://en.wikipedia.org/wiki/Agile_s...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbUhkV3FtTGpoUV8yOHlUN3VLY0t3REplS3VuQXxBQ3Jtc0trbVR4eV9od1EyeEVYa0p5Z3dCb3dLcTFkU0ZXdUJBQ2tmY2YxR0w4RDNvZnhMRktJZTFVeUpfakx5WTRURk84aXBFSXRSUkFsVDdfajEwQWYwMlB1ZktIcjFWTDJOdHRkRHoxWHBjM3VSMDZrT3VYdw&q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAgile_software_development&v=Y38Lau8a44s)) to the lawyers. Beyond that, we discuss the impact of technology on the legal practice of today and tomorrow."
 	- 2019
 		- https://www.youtube.com/watch?v=KQD8jh0Q2Go
 			- title: Blitzinterview Florian Glatz Berlin Legal Tech Konferenz 2019
 			- channel: FFI-Verlag
-			- description: "Blitzinterview mit Florian Glatz, dem Co-Initiator der Berlin Legal Tech Konferenz 2019 für legal-tech.de."
 	- 2021
 		- https://www.youtube.com/watch?v=okpwor-wy-c&t=1s
 			- title: Cryptocurrency, DeFi & Regulation: Interview with Crypto Lawyer Florian Glatz at EthCC Paris 2021
 			- Channel: Cursed Mining
-			- Description: "We met Florian Glatz, Crypto Lawyer in action at EthCC4 and talked about cryptocurrency & regulations regarding Ethereum, DeFi and beyond. Florian has founded the European Crypto Initiative - among many things they are a place where you can get informed about what is going on with blockchain & law. https://eu.ci"
 	- 2024
 		- https://www.youtube.com/watch?v=jEUNkVTSwtQ&
 			- title: FLORIAN GLATZ: LAWYER, AUTHOR, ADVOCATE; BUILDER, CODER, ETERNAL OPTIMIST
 			- channel: Bitjoin Studios
-			- description: "Florian is a lawyer, author, advocate; builder, coder, and eternal optimist. He is currently working on Common Ground, a new attempt at creating crypto’s missing app layer, and the European Crypto Initiative—a think tank for improved crypto regulation in the EU. Follow Florian Twitter:   [![](https://www.gstatic.com/youtube/img/watch/social_media/twitter_1x_v2.png) / heckerhut](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbjRXMGFkSGNna2pqc0xmdmJnYmRTVUZMSVBIZ3xBQ3Jtc0trclNtbWRHNzVfdXRRcWtzREVHS2VMOF9lTF9VM0xmYzZ3SnRhTXlILXU5ekFMejdRSVhJeTdXTjR2aXg0Z2lEalBkWDNCQ0Vpc0hiSlVxaC1MOHJtNUg3ZHg1TzV0c09oa1A5ci1ma1o1OXdmUGNncw&q=https%3A%2F%2Ftwitter.com%2Fheckerhut&v=jEUNkVTSwtQ)   We sent Tom Gillespie to the 11th Annual Hackers Congress at Paralelní Polis in Prague. HCPP is the flagship event of Paralelní Polis, which has been regularly attended by over 500 fans and IT experts from all over the world. HCPP is held annually in Prague combining art, social sciences, and modern technology. It is based on the ideas of freedom, independence, and the innovative development of society."
+- podcasts
+	- 2016
+		- https://www.youtube.com/watch?v=q5V01d3sp80
+			- title: # EB125 – Florian Glatz: Defining A Legal Framework For Decentralized Autonomous Organizations (DAO)
+			- channel: Epicenter Podcast
+	- 2017
+		- https://www.youtube.com/watch?v=Ywmd2zSIlD8
+			- title: # A Programming Language For Lawyers - Episode 2
+			- channel: hacking.society
+		- https://www.youtube.com/watch?v=U8V_GUDO2Cs
+			- title: # Accessing Justice Online- Episode1
+			- channel: hacking.society
+	- 2022
+		- https://www.youtube.com/watch?v=HKm05jDCe2c
+			- title: Verkettet sich die Blockchain? Florian Glatz, Blockchain Bundesverband
+			- channel: Business Class by Tilow Bonow
+		- https://www.youtube.com/watch?v=wuu1bNRUQng
+			- title: So gelingt uns das Web 3.0 – mit Florian Glatz - BTC-ECHO Experts
+			- channel: BTC-ECHO
+		- https://www.youtube.com/watch?v=Vg6kXn_fbXs
+			- title: # Florian Glatz: Why Europe Needs a Regulatory Shift to Avoid Crypto Irrelevance
+			- channel: Epicenter Podcast
+	- 2023
+		- https://www.youtube.com/watch?v=ro7Lp7MUNT4
+			- title: Empowering Creators and Communities in Web3 | Florian Glatz | Common Ground
+			- channel: yWhales
+		- https://www.youtube.com/watch?v=e1vG0-YHPLo
+			- title: So, Why Crypto? Episode #6 w/Florian Glatz
+			- channel: "SoWhyCrypto"
+			- https://www.youtube.com/watch?v=_0Y2OfLQoTA
+			- title: "# The future of DAOs and the Importance of Governance - Interview with Sebastian Bürgel, HOPR"
+			- channel: "Common Ground"
+		- https://www.youtube.com/watch?v=zSRT5P15xPQ
+			- title: The future of blockchain and cryptocurrency - Interview with Franzesco Renzi, Superfluid
+			- channel: Common Ground
+		- https://www.youtube.com/watch?v=XnIZFOlgOss
+			- title: # Proving you’re human in a world of AI - with Clément Lesaege, Kleros
+			- channel: Common Ground
+		- https://www.youtube.com/watch?v=kyfyWdN2mEc
+			- title: # Helping artists make a living from NFTs - Web3 unleashed - with Darri Ulfsson, Darkblock
+			- channel: Common Ground
+		- https://www.youtube.com/watch?v=TZJTknJ7W0M
+			- title: # Revolutionizing Work Dynamics: Web3 Insights with Andreas Fauler, Rocketstar Foundation
+			- channel: Common Ground
+		- https://www.youtube.com/watch?v=bOslQjYq6hU
+			- title: # Bitcoin's Journey to Mainstream Adoption - with Katharina Klimkeit
+			- channel: Common Ground
+		- https://www.youtube.com/watch?v=X0WvzDkysG4
+			- title: # Cryptocurrency, Proof of Humanity and Biometrics - Tiago Sada, Worldcoin
+			- channel: Common Ground
+		- https://www.youtube.com/watch?v=VSenn0D-B4Y
+			- title: # Inside the Mind of a Crypto Visionary: A Deep Dive - with Antonius Gress, Blockbrain
+			- channel: Common Ground
+		- https://www.youtube.com/watch?v=OjuL-2ljiDE
+			- title: # Web3, Wealth, and the Future of Africa - with Andy Tudhope
+			- channel: Common Ground
+	- 2024
+		- https://www.youtube.com/watch?v=1h0tTAbNTBs
+			- title: Blockchain-Brillanz: Florians Perspektiven zu web3 nfts und der Common Ground-Zukunft
+			- channel: DerBlockTalk
+		- https://www.youtube.com/watch?v=YuUxIa53jKU
+			- title: # Pt 1. Common Ground: The Path to Sustainable Crypto Communities
+			- channel: KEEZ
+		- https://www.youtube.com/watch?v=BinI5onWTcM
+			- title: # Pt 2. Unfiltered Insights: The State of Crypto
+			- channel: KEEZ
 
 - press conferences
 	- 2017
 		- https://www.youtube.com/watch?v=kjb8i5ZqCN0
 			- title: # Press conference on the founding of the Bundesverbands Blockchain e.V. (30.06.2017)
 			- channel: Vlogchain
-			- description: "Press conference on the founding of the Bundesverbands Blockchain e.V. on 30.06.2017 in the House of the Federal Press Conference, Berlin"

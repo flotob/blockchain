@@ -1,9 +1,12 @@
 {
-  "name": "blog-image-fetcher",
+  "name": "md-to-yaml-converter",
   "version": "1.0.0",
-  "type": "module",
+  "description": "Convert markdown YouTube video list to YAML format",
+  "main": "md-to-yaml.js",
   "dependencies": {
-    "node-fetch": "^3.3.2",
-    "puppeteer": "^23.11.1"
+    "js-yaml": "^4.1.0"
+  },
+  "scripts": {
+    "convert": "node md-to-yaml.js"
   }
 }

@@ -1,119 +1,279 @@
 media_appearances:
   podcasts:
-    2024:
-      - url: "https://www.youtube.com/watch?v=1h0tTAbNTBs"
-        title: "Blockchain-Brillanz: Florians Perspektiven zu web3 nfts und der Common Ground-Zukunft"
-        channel: "DerBlockTalk"
-        description: "Tauche mit uns in die faszinierende Welt von Blockchain, Web3 und NFTs ein!"
-      - url: "https://www.youtube.com/watch?v=YuUxIa53jKU"
-        title: "Common Ground: The Path to Sustainable Crypto Communities"
-        channel: "KEEZ"
-        description: "Revolutionizing Coordination: An In-Depth Look at Common Ground"
-      - url: "https://www.youtube.com/watch?v=BinI5onWTcM"
-        title: "Unfiltered Insights: The State of Crypto"
-        channel: "KEEZ"
-        description: "A deep dive into the current state of crypto and its future direction"
-    2023:
-      - url: "https://www.youtube.com/watch?v=wuu1bNRUQng"
-        title: "So gelingt uns das Web 3.0"
-        channel: "BTC-ECHO"
-        description: "Jurist, Programmierer und Lobbyist: Florian Glatz engagiert sich auf vielen Wegen für den Blockchain-Sektor"
-      - url: "https://www.youtube.com/watch?v=Vg6kXn_fbXs"
-        title: "Why Europe Needs a Regulatory Shift to Avoid Crypto Irrelevance"
-        channel: "Epicenter Podcast"
-        description: "Discussion about the regulatory environment, with a focus on Europe"
-    2022:
-      - url: "https://www.youtube.com/watch?v=HKm05jDCe2c"
-        title: "Verkettet sich die Blockchain?"
-        channel: "Business Class by Tilow Bonow"
-        description: "Mit Blockchain werden Datensätze dezentral verkettet"
-    2016:
-      - url: "https://www.youtube.com/watch?v=q5V01d3sp80"
-        title: "EB125 – Florian Glatz: Defining A Legal Framework For DAOs"
-        channel: "Epicenter Podcast"
-        description: "Discussion about the legal framework for Decentralized Autonomous Organizations"
+    - year: 2024
+      videos:
+        - url: https://www.youtube.com/watch?v=1h0tTAbNTBs
+          title: "Pt 1. Common Ground: The Path to Sustainable Crypto Communities"
+          channel: DerBlockTalk
+        - url: https://www.youtube.com/watch?v=YuUxIa53jKU
+          title: "Pt 2. Unfiltered Insights: The State of Crypto"
+          channel: KEEZ
+        - url: https://www.youtube.com/watch?v=BinI5onWTcM
+          title: "Pt 2. Unfiltered Insights: The State of Crypto"
+          channel: KEEZ
+    - year: 2023
+      videos:
+        - url: https://www.youtube.com/watch?v=ro7Lp7MUNT4
+          title: So, Why Crypto? Episode 6 w/Florian Glatz
+          channel: yWhales
+        - url: https://www.youtube.com/watch?v=e1vG0-YHPLo
+          title: >-
+            " The future of DAOs and the Importance of Governance - Interview
+            with Sebastian Bürgel, HOPR"
+          channel: "\"SoWhyCrypto\""
+        - url: https://www.youtube.com/watch?v=_0Y2OfLQoTA
+          title: >-
+            The future of blockchain and cryptocurrency - Interview with
+            Franzesco Renzi, Superfluid
+          channel: "\"Common Ground\""
+        - url: https://www.youtube.com/watch?v=zSRT5P15xPQ
+          title: Proving you’re human in a world of AI - with Clément Lesaege, Kleros
+          channel: Common Ground
+        - url: https://www.youtube.com/watch?v=XnIZFOlgOss
+          title: >-
+            Helping artists make a living from NFTs - Web3 unleashed - with
+            Darri Ulfsson, Darkblock
+          channel: Common Ground
+        - url: https://www.youtube.com/watch?v=kyfyWdN2mEc
+          title: >-
+            Revolutionizing Work Dynamics: Web3 Insights with Andreas Fauler,
+            Rocketstar Foundation
+          channel: Common Ground
+        - url: https://www.youtube.com/watch?v=TZJTknJ7W0M
+          title: Bitcoin's Journey to Mainstream Adoption - with Katharina Klimkeit
+          channel: Common Ground
+        - url: https://www.youtube.com/watch?v=bOslQjYq6hU
+          title: >-
+            Cryptocurrency, Proof of Humanity and Biometrics - Tiago Sada,
+            Worldcoin
+          channel: Common Ground
+        - url: https://www.youtube.com/watch?v=X0WvzDkysG4
+          title: >-
+            Inside the Mind of a Crypto Visionary: A Deep Dive - with Antonius
+            Gress, Blockbrain
+          channel: Common Ground
+        - url: https://www.youtube.com/watch?v=VSenn0D-B4Y
+          title: Web3, Wealth, and the Future of Africa - with Andy Tudhope
+          channel: Common Ground
+        - url: https://www.youtube.com/watch?v=OjuL-2ljiDE
+          title: Web3, Wealth, and the Future of Africa - with Andy Tudhope
+          channel: Common Ground
+    - year: 2022
+      videos:
+        - url: https://www.youtube.com/watch?v=HKm05jDCe2c
+          title: So gelingt uns das Web 3.0 – mit Florian Glatz - BTC-ECHO Experts
+          channel: Business Class by Tilow Bonow
+        - url: https://www.youtube.com/watch?v=wuu1bNRUQng
+          title: >-
+            Florian Glatz: Why Europe Needs a Regulatory Shift to Avoid Crypto
+            Irrelevance
+          channel: BTC-ECHO
+        - url: https://www.youtube.com/watch?v=Vg6kXn_fbXs
+          title: >-
+            Florian Glatz: Why Europe Needs a Regulatory Shift to Avoid Crypto
+            Irrelevance
+          channel: Epicenter Podcast
+    - year: 2017
+      videos:
+        - url: https://www.youtube.com/watch?v=Ywmd2zSIlD8
+          title: Accessing Justice Online- Episode1
+          channel: hacking.society
+        - url: https://www.youtube.com/watch?v=U8V_GUDO2Cs
+          title: Accessing Justice Online- Episode1
+          channel: hacking.society
+    - year: 2016
+      videos:
+        - url: https://www.youtube.com/watch?v=q5V01d3sp80
+          title: >-
+            EB125 – Florian Glatz: Defining A Legal Framework For Decentralized
+            Autonomous Organizations (DAO)
+          channel: Epicenter Podcast
   lectures:
-    2023:
-      - url: "https://www.youtube.com/watch?v=KBrZL8nekWE"
-        title: "Regulating the Unregulated: Response Strategies for the Upcoming DeFi Regulations"
-        channel: "ETHDenver"
-        description: "Discussion about regulatory proposals from major crypto markets"
-    2018:
-      - url: "https://www.youtube.com/watch?v=bEge_HAB7io"
-        title: "Law was Code before Code was Law"
-        channel: "Jelle Herold"
-        description: "Presentation at the Second Statebox Summit"
-      - url: "https://www.youtube.com/watch?v=7NTGJZueMOU"
-        title: "The Legal Classification of Tokens: the Tokens Zoo"
-        channel: "Florence G'sell"
-        description: "Workshop on Blockchains at ENS Ulm (Paris)"
-    2017:
-      - url: "https://www.youtube.com/watch?v=foDmytkzIWo"
-        title: "Blockchain for Dummys - Was verbirgt sich hinter der Technologie?"
-        channel: "Fachmedien Otto Schmdit"
-        description: "Legal Transformation Days 2017"
+    - year: 2024
+      videos:
+        - url: https://www.youtube.com/watch?v=6o1KHAYZuD8
+          title: >-
+            Funding the Future: Innovative Approaches to Financing Crypto Policy
+            Work - Bangkok 2024
+          channel: European Crypto Initiative
+        - url: https://www.youtube.com/watch?v=iXWgSmAsJPc
+          title: Eine neue Perspektive auf Web3 Communities
+          channel: Funding the Commons
+        - url: https://www.youtube.com/watch?v=Wgyf9Ggz1YI
+          title: What are we even doing here | Florian Glatz (August 2024)
+          channel: Hanseatic Blockchain Institute
+        - url: https://www.youtube.com/watch?v=-0XcTqbnE-U
+          title: HCPP24 | Florian Glatz - What are we even doing here?
+          channel: Ethereum Berlin
+        - url: https://www.youtube.com/watch?v=oFRvY5NcULg
+          title: >-
+            Bridging the Gap: How to Effectively talk to Regulators? | Devcon
+            SEA
+          channel: Parallel Polis
+        - url: https://www.youtube.com/watch?v=9PS67asKERQ
+          title: >-
+            Bridging the Gap: How to Effectively talk to Regulators? | Devcon
+            SEA
+          channel: Ethereum Foundation
+    - year: 2023
+      videos:
+        - url: https://www.youtube.com/watch?v=KBrZL8nekWE
+          title: >-
+            Florian Glatz (VP, European Crypto Initiative) — Is Europe
+            Masterminding Crypto Regulation?
+          channel: ETHDenver
+        - url: https://www.youtube.com/watch?v=JxaliYmeLYg
+          title: >-
+            Empowering Communities through Ownership: Florian Glatz's Insights
+            on Communication Infrastructure
+          channel: TOA (Tech Open Air)
+        - url: https://www.youtube.com/watch?v=2n7jt8jHXxU
+          title: >-
+            Community-owned Communication Infrastructure - Commonground -
+            Florian Glatz
+          channel: aeternity blockchain
+        - url: https://www.youtube.com/watch?v=WYnVQRRyuoM
+          title: >-
+            Community-owned Communication Infrastructure - Commonground -
+            Florian Glatz
+          channel: The DAOist
+    - year: 2022
+      videos:
+        - url: https://www.youtube.com/watch?v=Av68nzkTTIw
+          title: >-
+            The Reg3 Conf '22 - 3) On Decentralised Tech - The impact of global
+            regulations on open projects.
+          channel: Radworks
+        - url: https://www.youtube.com/watch?v=mKETg_rIuCU
+          title: >-
+            The Influence of Crypto Regulation on Open Blockchains:
+            Opportunities and Challenges
+          channel: The Reg3 Conference
+        - url: https://www.youtube.com/watch?v=5ay_nVdXAiI
+          title: >-
+            Simon Polrot , Marina Markezic & Florian Glatz:Crypto / Web3 in
+            Europe ; what happened, what's next?
+          channel: Ethereum Foundation
+        - url: https://www.youtube.com/watch?v=YBIxUqMoRqs
+          title: >-
+            Simon Polrot , Marina Markezic & Florian Glatz:Crypto / Web3 in
+            Europe ; what happened, what's next?
+          channel: "[ETHCC] Livestream 4"
+    - year: 2021
+      videos:
+        - url: https://www.youtube.com/watch?v=Ta2J9PVQPIQ
+          title: "Blockchain in Use conference 2021: Public Administration Track"
+          channel: Chainist
+        - url: https://www.youtube.com/watch?v=DAwocP94X7U
+          title: >-
+            FEST | Online Conference - Blockchain, a giant leap for the film
+            industry?
+          channel: BerChain
+        - url: https://www.youtube.com/watch?v=j51-ifV95Sk
+          title: "Panel 11: Markets in Crypto-assets Act"
+          channel: FEST
+        - url: https://www.youtube.com/watch?v=pmTvl2d-Ydg
+          title: "DeFi vs. regulators: who will win?"
+          channel: EU Blockchain Observatory
+        - url: https://www.youtube.com/watch?v=PwKIH_68xd0
+          title: "DeFi vs. regulators: who will win?"
+          channel: "[ETHCC] Livestream 3"
+    - year: 2020
+      videos:
+        - url: https://www.youtube.com/watch?v=KJa0-CflEcM
+          title: Blockchain...after the hype
+          channel: filmfestivals.com
+        - url: https://www.youtube.com/watch?v=OHypxw0MwjM
+          title: 【第四屆精華回顧】Florian Glatz ─ 政府如何監管與推動區塊鏈
+          channel: Creative Europe MEDIA Deutschland
+        - url: https://www.youtube.com/watch?v=rB8NyrHIMM0
+          title: 【第四屆精華回顧】Florian Glatz ─ 政府如何監管與推動區塊鏈
+          channel: 臺灣區塊鏈愛好者
+    - year: 2019
+      videos:
+        - url: https://www.youtube.com/watch?v=5MnULmZ9-zw
+          title: Future of Trading Panel
+          channel: Blockchain Embassy Berlin
+        - url: https://www.youtube.com/watch?v=0rJGSPbkkSQ
+          title: >-
+            Florian Glatz: Motion Protocol - echter Use Case für Blockchain
+            Technologie in der Filmindustrie
+          channel: StarkWare
+        - url: https://www.youtube.com/watch?v=e75g43s9CZk
+          title: >-
+            Florian Glatz: Motion Protocol - echter Use Case für Blockchain
+            Technologie in der Filmindustrie
+          channel: Legal Tech Center
+    - year: 2018
+      videos:
+        - url: https://www.youtube.com/watch?v=MbkEKjBaIZ8
+          title: Law was Code before Code was Law - Florian Glatz
+          channel: Adjy Leak
+        - url: https://www.youtube.com/watch?v=bEge_HAB7io
+          title: Panel "blockchain, law, blockchainlaw?"
+          channel: Jelle Herold
+        - url: https://www.youtube.com/watch?v=FLuUmHWdtgE
+          title: "The Legal Classification of Tokens: the Tokens Zoo"
+          channel: blockchain, law blockchainlaw?
+        - url: https://www.youtube.com/watch?v=7NTGJZueMOU
+          title: Blockchain Masters – 3. Mai 2018 Florian Glatz
+          channel: Florence G'sell
+        - url: https://www.youtube.com/watch?v=a35-ty-m4ZI
+          title: "Decentralization: Expectations vs. Reality | Epicenter Insights"
+          channel: eco Verband
+        - url: https://www.youtube.com/watch?v=UFK75Bsj3_Y
+          title: "Das Initial Coin Offering: Sinn und Unsin"
+          channel: Adjy Leak
+        - url: https://www.youtube.com/watch?v=5ZlUhQap4jE
+          title: "Das Initial Coin Offering: Sinn und Unsin"
+          channel: Adjy Leak
+    - year: 2017
+      videos:
+        - url: https://www.youtube.com/watch?v=foDmytkzIWo
+          title: "Blockchain: A New Foundational Layer for Law?"
+          channel: Fachmedien Otto Schmdit
+        - url: https://www.youtube.com/watch?v=rXMZn-jbN5o
+          title: "Blockchain: A New Foundational Layer for Law?"
+          channel: Adjy Leak
   interviews:
-    2023:
-      - url: "https://www.youtube.com/watch?v=ro7Lp7MUNT4"
-        title: "Empowering Creators and Communities in Web3"
-        channel: "yWhales"
-        description: "Discussion about Common Ground and community building in Web3"
-      - url: "https://www.youtube.com/watch?v=e1vG0-YHPLo"
-        title: "So, Why Crypto? Episode #6"
-        channel: "SoWhyCrypto"
-        description: "Insightful discussion on the future of crypto and smart contracts"
-      - url: "https://www.youtube.com/watch?v=_0Y2OfLQoTA"
-        title: "The future of DAOs and the Importance of Governance"
-        channel: "Common Ground"
-        description: "Interview with Sebastian Bürgel, HOPR"
-      - url: "https://www.youtube.com/watch?v=zSRT5P15xPQ"
-        title: "The future of blockchain and cryptocurrency"
-        channel: "Common Ground"
-        description: "Interview with Franzesco Renzi, Superfluid"
-      - url: "https://www.youtube.com/watch?v=XnIZFOlgOss"
-        title: "Proving you're human in a world of AI"
-        channel: "Common Ground"
-        description: "Interview with Clément Lesaege, Kleros"
-      - url: "https://www.youtube.com/watch?v=kyfyWdN2mEc"
-        title: "Helping artists make a living from NFTs"
-        channel: "Common Ground"
-        description: "Interview with Darri Ulfsson, Darkblock"
-      - url: "https://www.youtube.com/watch?v=TZJTknJ7W0M"
-        title: "Revolutionizing Work Dynamics: Web3 Insights"
-        channel: "Common Ground"
-        description: "Interview with Andreas Fauler, Rocketstar Foundation"
-      - url: "https://www.youtube.com/watch?v=bOslQjYq6hU"
-        title: "Bitcoin's Journey to Mainstream Adoption"
-        channel: "Common Ground"
-        description: "Interview with Katharina Klimkeit"
-      - url: "https://www.youtube.com/watch?v=X0WvzDkysG4"
-        title: "Cryptocurrency, Proof of Humanity and Biometrics"
-        channel: "Common Ground"
-        description: "Interview with Tiago Sada, Worldcoin"
-      - url: "https://www.youtube.com/watch?v=VSenn0D-B4Y"
-        title: "Inside the Mind of a Crypto Visionary"
-        channel: "Common Ground"
-        description: "Interview with Antonius Gress, Blockbrain"
-      - url: "https://www.youtube.com/watch?v=OjuL-2ljiDE"
-        title: "Web3, Wealth, and the Future of Africa"
-        channel: "Common Ground"
-        description: "Interview with Andy Tudhope"
+    - year: 2024
+      videos:
+        - url: https://www.youtube.com/watch?v=jEUNkVTSwtQ
+          title: >-
+            FLORIAN GLATZ: LAWYER, AUTHOR, ADVOCATE; BUILDER, CODER, ETERNAL
+            OPTIMIST
+          channel: Bitjoin Studios
+    - year: 2021
+      videos:
+        - url: https://www.youtube.com/watch?v=okpwor-wy-c
+          title: >-
+            Cryptocurrency, DeFi & Regulation: Interview with Crypto Lawyer
+            Florian Glatz at EthCC Paris 2021
+          channel: Cursed Mining
+    - year: 2019
+      videos:
+        - url: https://www.youtube.com/watch?v=KQD8jh0Q2Go
+          title: Blitzinterview Florian Glatz Berlin Legal Tech Konferenz 2019
+          channel: FFI-Verlag
+    - year: 2017
+      videos:
+        - url: https://www.youtube.com/watch?v=JdxSCalTTLk
+          title: Gründung und Wahl des Vorstands des Blockchain Bundesverband
+          channel: Blockchain Bundesverband
+        - url: https://www.youtube.com/watch?v=vCKesPyj3rM
+          title: Ziele des Blockchain Bundesverband
+          channel: Blockchain Bundesverband
+        - url: https://www.youtube.com/watch?v=rVRXnF1T_a4
+          title: Forderungen des Blockchain Bundesverband
+          channel: Blockchain Bundesverband
+        - url: https://www.youtube.com/watch?v=i0yLhM3yRwQ
+          title: Forderungen des Blockchain Bundesverband
+          channel: Blockchain Bundesverband
   press_conferences:
-    2021:
-      - url: "https://www.youtube.com/watch?v=pmTvl2d-Ydg"
-        title: "Panel 11: Markets in Crypto-assets Act"
-        channel: "EU Blockchain Observatory"
-        description: "Panel discussion focused on the MiCA regulation"
-      - url: "https://www.youtube.com/watch?v=PwKIH_68xd0"
-        title: "DeFi vs. regulators: who will win?"
-        channel: "[ETHCC] Livestream 3"
-        description: "Latest developments in crypto and DeFi regulation"
-    2020:
-      - url: "https://www.youtube.com/watch?v=KJa0-CflEcM"
-        title: "Florian Glatz keynote at Blockchain House"
-        channel: "filmfestivals.com"
-        description: "Keynote speech about blockchain technology"
-      - url: "https://www.youtube.com/watch?v=OHypxw0MwjM"
-        title: "Blockchain...after the hype"
-        channel: "Creative Europe MEDIA Deutschland"
-        description: "Online Seminar about blockchain in the film industry" 
+    - year: 2017
+      videos:
+        - url: https://www.youtube.com/watch?v=kjb8i5ZqCN0
+          title: >-
+            Press conference on the founding of the Bundesverbands Blockchain
+            e.V. (30.06.2017)
+          channel: Vlogchain
