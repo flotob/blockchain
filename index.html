@@ -2120,7 +2120,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 </div>
 
 <!-- Store data in a hidden div -->
-<div id="youtubeData" style="display: none;" data-videos="{{ site.data.youtube_videos | jsonify | replace: '"', '&quot;' }}" data-events="{{ site.data.event_urls | jsonify | replace: '"', '&quot;' }}"></div>
+<div id="youtubeData" style="display: none;" data-videos="{{ site.data.youtube_videos | jsonify | replace: '"', '&quot;' }}" data-events="{{ site.data.event_videos | jsonify | replace: '"', '&quot;' }}"></div>
 
 <!-- Add YouTube IFrame API -->
 <script src="https://www.youtube.com/iframe_api"></script>
@@ -2276,17 +2276,25 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 
     // Function to open cinema mode
     function openCinema(video) {
-        // Get all videos from all categories and flatten them into a single array
-        const mediaVideos = Object.values(youtubeData.media_appearances)
-            .flat();
-        const eventVideos = getAllEventVideos();
+        // Determine if this is an event video
+        const isEventVideo = !!video.eventTitle;
         
-        const allVideosArray = [...mediaVideos, ...eventVideos]
-            .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+        // Get the appropriate video list based on the type
+        let videoList;
+        if (isEventVideo) {
+            // For event videos, only show videos from the same event
+            videoList = getAllEventVideos().filter(v => v.eventTitle === video.eventTitle);
+        } else {
+            // For media appearances, only show other media appearances
+            videoList = Object.values(youtubeData.media_appearances).flat();
+        }
         
-        const startIndex = allVideosArray.findIndex(v => v.url === video.url);
+        // Sort videos by date
+        videoList.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
         
-        buildPlaylist(allVideosArray);
+        const startIndex = videoList.findIndex(v => v.url === video.url);
+        
+        buildPlaylist(videoList);
         cinemaModal.classList.add('visible');
         document.body.style.overflow = 'hidden';
         
