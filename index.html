@@ -2033,9 +2033,16 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         });
         cinemaDescription.textContent = video.description;
 
-        // Update active state in playlist
+        // Update active state in playlist and scroll into view
         document.querySelectorAll('.playlist-item').forEach((item, i) => {
             item.classList.toggle('active', i === index);
+            if (i === index) {
+                // Scroll the active item into view with smooth behavior
+                item.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
         });
     }
 
@@ -2095,9 +2102,13 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         const startIndex = allVideosArray.findIndex(v => v.url === video.url);
         
         buildPlaylist(allVideosArray);
-        loadVideo(video, startIndex);
         cinemaModal.classList.add('visible');
         document.body.style.overflow = 'hidden';
+        
+        // Small delay to ensure playlist items are rendered before scrolling
+        setTimeout(() => {
+            loadVideo(video, startIndex);
+        }, 100);
     }
 
     // Update video card click handlers
