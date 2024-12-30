@@ -710,7 +710,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         display: flex;
         flex-direction: column;
         text-decoration: none;
-        height: 380px;
+        height: 340px;
         position: relative;
     }
 
@@ -745,14 +745,14 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     }
 
     .blog-content {
-        padding: 1rem;
+        padding: 0.75rem;
         flex: 1;
         display: flex;
         flex-direction: column;
     }
 
     .blog-title {
-        font-size: 1rem;
+        font-size: 0.875rem;
         font-weight: 600;
         color: var(--text);
         margin-bottom: 0.5rem;
@@ -761,6 +761,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        max-height: 2.5rem;
     }
 
     .channel-info {
@@ -815,7 +816,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     @media (max-width: 768px) {
         .blog-card {
             flex: 0 0 280px;
-            height: 360px;
+            height: 320px;
         }
         
         .blog-image-container {
@@ -1486,7 +1487,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                             <div class="channel-details">
                                 <div class="channel-name">{{ video.channel.name }}</div>
                                 <div class="video-meta">
-                                    <span class="video-views">{{ video.statistics.viewCount | divided_by: 1000 }}K views</span>
+                                    <span class="video-views">{% assign view_count = video.statistics.viewCount | plus: 0 %}{% if view_count < 1000 %}{{ view_count }} views{% else %}{{ view_count | divided_by: 1000 }}K views{% endif %}</span>
                                     <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
                                 </div>
                             </div>
@@ -1525,7 +1526,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                             <div class="channel-details">
                                 <div class="channel-name">{{ video.channel.name }}</div>
                                 <div class="video-meta">
-                                    <span class="video-views">{{ video.statistics.viewCount | divided_by: 1000 }}K views</span>
+                                    <span class="video-views">{% assign view_count = video.statistics.viewCount | plus: 0 %}{% if view_count < 1000 %}{{ view_count }} views{% else %}{{ view_count | divided_by: 1000 }}K views{% endif %}</span>
                                     <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
                                 </div>
                             </div>
@@ -1564,7 +1565,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                             <div class="channel-details">
                                 <div class="channel-name">{{ video.channel.name }}</div>
                                 <div class="video-meta">
-                                    <span class="video-views">{{ video.statistics.viewCount | divided_by: 1000 }}K views</span>
+                                    <span class="video-views">{% assign view_count = video.statistics.viewCount | plus: 0 %}{% if view_count < 1000 %}{{ view_count }} views{% else %}{{ view_count | divided_by: 1000 }}K views{% endif %}</span>
                                     <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
                                 </div>
                             </div>
@@ -1603,7 +1604,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                             <div class="channel-details">
                                 <div class="channel-name">{{ video.channel.name }}</div>
                                 <div class="video-meta">
-                                    <span class="video-views">{{ video.statistics.viewCount | divided_by: 1000 }}K views</span>
+                                    <span class="video-views">{% assign view_count = video.statistics.viewCount | plus: 0 %}{% if view_count < 1000 %}{{ view_count }} views{% else %}{{ view_count | divided_by: 1000 }}K views{% endif %}</span>
                                     <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
                                 </div>
                             </div>
