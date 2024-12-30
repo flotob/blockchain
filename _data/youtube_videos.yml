@@ -2020,6 +2020,69 @@ media_appearances:
         commentCount: '5'
       duration: PT34M48S
       url: https://www.youtube.com/watch?v=BinI5onWTcM
+    - title: The future of DAOs and the Importance of Governance - Interview with Sebastian Bürgel, HOPR
+      description: |-
+        In this episode of the Finding Common Ground Podcast, Florian Glatz, a lawyer specializing in blockchain technology, interviews Sebastian Bürgel, the CEO and co-founder of HOPR, a privacy-focused blockchain project. Sebastian talks about his journey into the blockchain space, his motivation for starting HOPR, and how the project is developing innovative solutions for privacy and data protection in a decentralized world. 
+
+        The conversation also delves into topics such as decentralized autonomous organizations (DAOs), the need for constitutions in the context of DAOs, and the challenges faced by the blockchain industry as it seeks to establish itself as a viable alternative to traditional centralized systems. 
+
+        Sebastian offers his insights on the opportunities and limitations of blockchain technology, and how it can be used to create a fairer and more transparent world. He also shares his thoughts on the regulatory landscape surrounding blockchain, and how jurisdictions such as Switzerland can provide a supportive environment for blockchain projects to thrive.
+
+        Overall, this conversation offers a fascinating glimpse into the world of blockchain technology and its potential to reshape the way we think about privacy, data protection, and governance. It is a must-watch for anyone interested in the future of decentralized systems and their impact on society.
+
+        Who is Sebastian, what is HOPR:
+
+        Sebastian Bürgel is a blockchain entrepreneur and co-founder of HOPR, a privacy-focused blockchain project based in Switzerland. He has a background in mathematics and has been working in the blockchain space since 2014. 
+
+        HOPR is a decentralized messaging protocol that aims to provide secure communication and data transfer while preserving user privacy. It utilizes a mixnet architecture, similar to the one used by Tor, to ensure that messages are routed through multiple nodes before reaching their destination. This helps to prevent network eavesdropping and ensures that messages remain private and secure.
+
+        Sebastian and his team at HOPR are working to build a more private and secure internet for users. They believe that everyone has the right to online privacy, and that the current centralized model of the internet puts user data at risk. HOPR aims to address this by building a decentralized messaging protocol that users can trust.
+      publishedAt: '2023-05-03T16:00:32Z'
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/XVKqpKfIXc0/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/XVKqpKfIXc0/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/XVKqpKfIXc0/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/XVKqpKfIXc0/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/XVKqpKfIXc0/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channel:
+        name: Common Ground
+        id: UC1jydw5LShbEAfyqWxTRSiA
+        url: https://www.youtube.com/channel/UC1jydw5LShbEAfyqWxTRSiA
+        thumbnail:
+          default:
+            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s88-c-k-c0x00ffffff-no-rj
+            width: 88
+            height: 88
+          medium:
+            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s240-c-k-c0x00ffffff-no-rj
+            width: 240
+            height: 240
+          high:
+            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s800-c-k-c0x00ffffff-no-rj
+            width: 800
+            height: 800
+      statistics:
+        viewCount: '139'
+        likeCount: '6'
+        favoriteCount: '0'
+        commentCount: '2'
+      duration: PT1H23M42S
+      url: https://www.youtube.com/watch?v=XVKqpKfIXc0
   lectures:
     - title: Blockchain for Dummys - Was verbirgt sich hinter der Technologie? | Legal Transformation Days 2017
       description: |-
