@@ -2147,7 +2147,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             </h2>
             <p class="event-description">{{ event.description }}</p>
             <div class="blog-grid">
-                {% for year_data in event.years reversed %}
+                {% for year_data in event.years %}
                     {% for video in year_data.videos %}
                         <a href="{{ video.url }}" target="_blank" class="blog-card">
                             <div class="blog-image-container">
@@ -2181,7 +2181,8 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 
         <!-- Other events in a grid -->
         <div class="other-events-grid">
-            {% for event in other_events %}
+            {% assign reversed_other_events = other_events | reverse %}
+            {% for event in reversed_other_events %}
             <div class="blog-category">
                 <h2 class="blog-category-title">
                     <a href="#" style="cursor: default">
@@ -2193,7 +2194,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                 </h2>
                 <p class="event-description">{{ event.description }}</p>
                 <div class="blog-grid">
-                    {% for year_data in event.years reversed %}
+                    {% for year_data in event.years %}
                         {% for video in year_data.videos %}
                             <a href="{{ video.url }}" target="_blank" class="blog-card">
                                 <div class="blog-image-container">
