@@ -710,6 +710,8 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         display: flex;
         flex-direction: column;
         text-decoration: none;
+        height: 380px;
+        position: relative;
     }
 
     .blog-card:hover {
@@ -717,77 +719,107 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.15);
     }
 
-    .blog-image {
+    .blog-image-container {
+        position: relative;
         width: 100%;
         height: 180px;
-        object-fit: cover;
         background: var(--bg-alt);
     }
 
+    .blog-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .video-duration {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+
     .blog-content {
-        padding: 1.5rem;
+        padding: 1rem;
         flex: 1;
         display: flex;
         flex-direction: column;
     }
 
     .blog-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 600;
         color: var(--text);
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.5rem;
         line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
-    .blog-excerpt {
-        font-size: 0.875rem;
-        color: var(--text-light);
-        line-height: 1.6;
-    }
-
-    .blog-category {
-        margin-bottom: 3rem;
-    }
-
-    .blog-category-title {
-        max-width: 1200px;
-        margin: 0 0 1rem 2rem;
-        font-size: 1.75rem;
-        font-weight: 700;
-        color: var(--text);
-    }
-
-    .blog-category-title a {
+    .channel-info {
         display: flex;
         align-items: center;
-        gap: 1rem;
-        color: inherit;
-        text-decoration: none;
+        gap: 0.5rem;
+        margin-top: auto;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-    .blog-category-title svg {
-        width: 1.5rem;
-        height: 1.5rem;
-        opacity: 0.8;
+    .channel-logo {
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    .channel-details {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .channel-name {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text);
+        margin-bottom: 0.125rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .video-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        color: var(--text-light);
+    }
+
+    .video-views::after {
+        content: "•";
+        margin-left: 0.5rem;
+        opacity: 0.5;
+    }
+
+    .video-date {
+        white-space: nowrap;
     }
 
     @media (max-width: 768px) {
         .blog-card {
             flex: 0 0 280px;
+            height: 360px;
         }
         
-        .blog-image {
+        .blog-image-container {
             height: 160px;
-        }
-
-        .blog-category-title {
-            margin: 0 0 1rem 1rem;
-            font-size: 1.5rem;
-        }
-
-        .blog-grid {
-            padding: 1rem;
-            gap: 1rem;
         }
     }
 
@@ -1426,6 +1458,45 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 
 <section id="interviews" class="blog-section section">
     <div class="blog-container">
+        <!-- Interviews -->
+        <div class="blog-category">
+            <h2 class="blog-category-title">
+                <a href="#" style="cursor: default">
+                    Interviews
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                </a>
+            </h2>
+            <div class="blog-grid">
+                {% for video in site.data.youtube_videos.media_appearances.interviews %}
+                <a href="{{ video.url }}" target="_blank" class="blog-card">
+                    <div class="blog-image-container">
+                        <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}" 
+                             alt="{{ video.title }}" 
+                             class="blog-image">
+                        <div class="video-duration">{{ video.duration | replace: "PT", "" | replace: "H", ":" | replace: "M", ":" | replace: "S", "" }}</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">{{ video.title }}</h3>
+                        <div class="channel-info">
+                            <img src="{{ video.channel.thumbnail.default.url }}" 
+                                 alt="{{ video.channel.name }}" 
+                                 class="channel-logo">
+                            <div class="channel-details">
+                                <div class="channel-name">{{ video.channel.name }}</div>
+                                <div class="video-meta">
+                                    <span class="video-views">{{ video.statistics.viewCount | divided_by: 1000 }}K views</span>
+                                    <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
         <!-- Podcasts -->
         <div class="blog-category">
             <h2 class="blog-category-title">
@@ -1437,20 +1508,30 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                 </a>
             </h2>
             <div class="blog-grid">
-                {% for year in site.data.youtube_videos.media_appearances.podcasts %}
-                {% for video in year.videos %}
+                {% for video in site.data.youtube_videos.media_appearances.podcasts %}
                 <a href="{{ video.url }}" target="_blank" class="blog-card">
-                    <img src="https://i.ytimg.com/vi/{{ video.url | split: '=' | last }}/maxresdefault.jpg" 
-                         alt="{{ video.title }}" 
-                         class="blog-image">
+                    <div class="blog-image-container">
+                        <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}" 
+                             alt="{{ video.title }}" 
+                             class="blog-image">
+                        <div class="video-duration">{{ video.duration | replace: "PT", "" | replace: "H", ":" | replace: "M", ":" | replace: "S", "" }}</div>
+                    </div>
                     <div class="blog-content">
                         <h3 class="blog-title">{{ video.title }}</h3>
-                        <p class="blog-excerpt">
-                            <span style="color: var(--text); font-weight: 500;">{{ video.channel }}</span>
-                        </p>
+                        <div class="channel-info">
+                            <img src="{{ video.channel.thumbnail.default.url }}" 
+                                 alt="{{ video.channel.name }}" 
+                                 class="channel-logo">
+                            <div class="channel-details">
+                                <div class="channel-name">{{ video.channel.name }}</div>
+                                <div class="video-meta">
+                                    <span class="video-views">{{ video.statistics.viewCount | divided_by: 1000 }}K views</span>
+                                    <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </a>
-                {% endfor %}
                 {% endfor %}
             </div>
         </div>
@@ -1466,49 +1547,30 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                 </a>
             </h2>
             <div class="blog-grid">
-                {% for year in site.data.youtube_videos.media_appearances.lectures %}
-                {% for video in year.videos %}
+                {% for video in site.data.youtube_videos.media_appearances.lectures %}
                 <a href="{{ video.url }}" target="_blank" class="blog-card">
-                    <img src="https://i.ytimg.com/vi/{{ video.url | split: '=' | last }}/maxresdefault.jpg" 
-                         alt="{{ video.title }}" 
-                         class="blog-image">
+                    <div class="blog-image-container">
+                        <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}" 
+                             alt="{{ video.title }}" 
+                             class="blog-image">
+                        <div class="video-duration">{{ video.duration | replace: "PT", "" | replace: "H", ":" | replace: "M", ":" | replace: "S", "" }}</div>
+                    </div>
                     <div class="blog-content">
                         <h3 class="blog-title">{{ video.title }}</h3>
-                        <p class="blog-excerpt">
-                            <span style="color: var(--text); font-weight: 500;">{{ video.channel }}</span>
-                        </p>
+                        <div class="channel-info">
+                            <img src="{{ video.channel.thumbnail.default.url }}" 
+                                 alt="{{ video.channel.name }}" 
+                                 class="channel-logo">
+                            <div class="channel-details">
+                                <div class="channel-name">{{ video.channel.name }}</div>
+                                <div class="video-meta">
+                                    <span class="video-views">{{ video.statistics.viewCount | divided_by: 1000 }}K views</span>
+                                    <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </a>
-                {% endfor %}
-                {% endfor %}
-            </div>
-        </div>
-
-        <!-- Interviews -->
-        <div class="blog-category">
-            <h2 class="blog-category-title">
-                <a href="#" style="cursor: default">
-                    Interviews
-                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                    </svg>
-                </a>
-            </h2>
-            <div class="blog-grid">
-                {% for year in site.data.youtube_videos.media_appearances.interviews %}
-                {% for video in year.videos %}
-                <a href="{{ video.url }}" target="_blank" class="blog-card">
-                    <img src="https://i.ytimg.com/vi/{{ video.url | split: '=' | last }}/maxresdefault.jpg" 
-                         alt="{{ video.title }}" 
-                         class="blog-image">
-                    <div class="blog-content">
-                        <h3 class="blog-title">{{ video.title }}</h3>
-                        <p class="blog-excerpt">
-                            <span style="color: var(--text); font-weight: 500;">{{ video.channel }}</span>
-                        </p>
-                    </div>
-                </a>
-                {% endfor %}
                 {% endfor %}
             </div>
         </div>
@@ -1524,20 +1586,30 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
                 </a>
             </h2>
             <div class="blog-grid">
-                {% for year in site.data.youtube_videos.media_appearances.press_conferences %}
-                {% for video in year.videos %}
+                {% for video in site.data.youtube_videos.media_appearances.press_conferences %}
                 <a href="{{ video.url }}" target="_blank" class="blog-card">
-                    <img src="https://i.ytimg.com/vi/{{ video.url | split: '=' | last }}/maxresdefault.jpg" 
-                         alt="{{ video.title }}" 
-                         class="blog-image">
+                    <div class="blog-image-container">
+                        <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}" 
+                             alt="{{ video.title }}" 
+                             class="blog-image">
+                        <div class="video-duration">{{ video.duration | replace: "PT", "" | replace: "H", ":" | replace: "M", ":" | replace: "S", "" }}</div>
+                    </div>
                     <div class="blog-content">
                         <h3 class="blog-title">{{ video.title }}</h3>
-                        <p class="blog-excerpt">
-                            <span style="color: var(--text); font-weight: 500;">{{ video.channel }}</span>
-                        </p>
+                        <div class="channel-info">
+                            <img src="{{ video.channel.thumbnail.default.url }}" 
+                                 alt="{{ video.channel.name }}" 
+                                 class="channel-logo">
+                            <div class="channel-details">
+                                <div class="channel-name">{{ video.channel.name }}</div>
+                                <div class="video-meta">
+                                    <span class="video-views">{{ video.statistics.viewCount | divided_by: 1000 }}K views</span>
+                                    <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </a>
-                {% endfor %}
                 {% endfor %}
             </div>
         </div>

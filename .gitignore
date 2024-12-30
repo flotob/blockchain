@@ -1,8 +1,21 @@
-.cursorrules
+# Environment variables
+.env
+.env.local
+.env.*
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
+.cursorrules
+
 node_modules
 .sass-cache
 .sass-cache/*
 _site
 _site/*
-.idea

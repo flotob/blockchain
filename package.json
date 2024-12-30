@@ -4,6 +4,8 @@
   "description": "Convert markdown YouTube video list to YAML format",
   "main": "md-to-yaml.js",
   "dependencies": {
+    "dotenv": "^16.4.7",
+    "googleapis": "^144.0.0",
     "js-yaml": "^4.1.0"
   },
   "scripts": {
