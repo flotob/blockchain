@@ -1579,6 +1579,87 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             font-size: 0.875rem;
         }
     }
+
+    /* Add this to your existing styles */
+    .other-events-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    @media (max-width: 1200px) {
+        .other-events-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .other-events-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .other-events-grid .blog-category {
+        margin-bottom: 0;
+    }
+
+    .other-events-grid .blog-grid {
+        padding: 1rem;
+    }
+
+    /* Update the other-events-grid styles */
+    .other-events-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .other-events-grid .blog-category {
+        margin-bottom: 0;
+        background: white;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 20px -8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .other-events-grid .blog-category:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.15);
+    }
+
+    .other-events-grid .blog-category-title {
+        margin: 0 0 1rem 0;
+    }
+
+    .other-events-grid .event-description {
+        margin: 0 0 1.5rem 0;
+        font-size: 0.9375rem;
+    }
+
+    .other-events-grid .blog-grid {
+        padding: 0;
+        overflow: visible;
+    }
+
+    .other-events-grid .blog-card {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    @media (max-width: 1200px) {
+        .other-events-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .other-events-grid {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
 
 <!-- Cinema Modal -->
@@ -2050,7 +2131,11 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 <section id="events" class="blog-section section">
     <div class="blog-container">
         {% assign events = site.data.event_videos.events %}
-        {% for event in events %}
+        {% assign main_events = events | where_exp: "event", "event.title == 'Berlin Legal Tech'" %}
+        {% assign other_events = events | where_exp: "event", "event.title != 'Berlin Legal Tech'" %}
+
+        <!-- Main event (Berlin Legal Tech) -->
+        {% for event in main_events %}
         <div class="blog-category">
             <h2 class="blog-category-title">
                 <a href="#" style="cursor: default">
@@ -2093,6 +2178,53 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             </div>
         </div>
         {% endfor %}
+
+        <!-- Other events in a grid -->
+        <div class="other-events-grid">
+            {% for event in other_events %}
+            <div class="blog-category">
+                <h2 class="blog-category-title">
+                    <a href="#" style="cursor: default">
+                        {{ event.title }}
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                    </a>
+                </h2>
+                <p class="event-description">{{ event.description }}</p>
+                <div class="blog-grid">
+                    {% for year_data in event.years reversed %}
+                        {% for video in year_data.videos %}
+                            <a href="{{ video.url }}" target="_blank" class="blog-card">
+                                <div class="blog-image-container">
+                                    <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}" 
+                                         alt="{{ video.title }}"
+                                         class="blog-image"
+                                         onerror="this.src='{{ video.thumbnails.high.url }}'">
+                                    <div class="blog-platform-badge">
+                                        {{ year_data.year }}
+                                    </div>
+                                </div>
+                                <div class="blog-content">
+                                    <h3 class="blog-title">{{ video.title }}</h3>
+                                    <div class="channel-info">
+                                        <img src="{{ video.channel.thumbnail.default.url }}" alt="{{ video.channel.name }}" class="channel-logo">
+                                        <div class="channel-details">
+                                            <div class="channel-name">{{ video.channel.name }}</div>
+                                            <div class="video-meta">
+                                                <span class="video-views">{% assign view_count = video.statistics.viewCount | plus: 0 %}{% if view_count < 1000 %}{{ view_count }} views{% else %}{{ view_count | divided_by: 1000 }}K views{% endif %}</span>
+                                                <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </section>
 
