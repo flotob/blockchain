@@ -3066,8 +3066,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function getTheme() {
-        return localStorage.getItem('theme') || 
-               (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        return localStorage.getItem('theme') || 'light';
     }
     
     setTheme(getTheme());
