@@ -20,6 +20,6 @@ buttons:
     icon: email
     type: primary
   - text: Learn More
-    url: "#next-section"
+    url: "#work"
     icon: arrow_down
     type: secondary 
