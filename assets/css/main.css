@@ -291,8 +291,8 @@ h1 {
 }
 
 .work-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     position: relative;
     overflow: visible;
 }
@@ -302,8 +302,7 @@ h1 {
     gap: 2rem;
     overflow-x: auto;
     scrollbar-width: none;
-    padding: 0 2rem 2rem 0;
-    margin-right: calc(-1 * (100vw - 1200px) / 2);
+    padding: 0 2rem 2rem calc(50vw - 600px + 2rem);
 }
 
 .work-grid::-webkit-scrollbar {
@@ -321,7 +320,7 @@ h1 {
     background: linear-gradient(
         to right,
         transparent,
-        var(--bg) 70%
+        var(--bg) 50%
     );
     display: none;
 }
