@@ -131,11 +131,11 @@ function initNavigation() {
 
     // Button click handlers
     upButton.addEventListener('click', () => {
-        console.log('Up button clicked');
+        if (window.DEBUG) console.log('Up button clicked');
         handleNavigation('up');
     });
     downButton.addEventListener('click', () => {
-        console.log('Down button clicked');
+        if (window.DEBUG) console.log('Down button clicked');
         handleNavigation('down');
     });
 
@@ -160,7 +160,7 @@ function updateSectionElements() {
         // Special handling for hero section
         const element = id === 'hero' ? document.querySelector('.hero') : document.getElementById(id);
         if (!element) {
-            console.warn(`Section ${id} not found`);
+            if (window.DEBUG) console.warn(`Section ${id} not found`);
             return null;
         }
 
@@ -436,23 +436,23 @@ function getNextScrollPosition(direction) {
 
 // Handle navigation button clicks
 function handleNavigation(direction) {
-    console.log('Navigation triggered:', direction);
+    if (window.DEBUG) console.log('Navigation triggered:', direction);
     if (isNavigating) {
-        console.log('Already navigating, ignoring');
+        if (window.DEBUG) console.log('Already navigating, ignoring');
         return;
     }
     
     // Early exit if at document boundaries
     if (direction === 'down' && isAtDocumentBottom(5)) {
-        console.log('Already at bottom, ignoring');
+        if (window.DEBUG) console.log('Already at bottom, ignoring');
         updateButtonStates(); // Ensure buttons are in correct state
         return;
     }
     
     const targetScroll = getNextScrollPosition(direction);
-    console.log('Target scroll position:', targetScroll);
+    if (window.DEBUG) console.log('Target scroll position:', targetScroll);
     if (targetScroll === window.scrollY) {
-        console.log('No scroll needed, already at target');
+        if (window.DEBUG) console.log('No scroll needed, already at target');
         return;
     }
     
@@ -472,14 +472,16 @@ function handleNavigation(direction) {
         const viewportHeight = window.innerHeight;
         const diff = Math.abs(currentScroll - targetScroll);
         
-        console.log('Checking scroll end:', {
-            currentScroll,
-            targetScroll,
-            difference: diff,
-            isNavigating,
-            stuckCount,
-            lastScrollDiff: Math.abs(currentScroll - lastScroll)
-        });
+        if (window.DEBUG) {
+            console.log('Checking scroll end:', {
+                currentScroll,
+                targetScroll,
+                difference: diff,
+                isNavigating,
+                stuckCount,
+                lastScrollDiff: Math.abs(currentScroll - lastScroll)
+            });
+        }
         
         // Check if we're stuck (no scroll movement)
         if (Math.abs(currentScroll - lastScroll) < 0.1) {
@@ -497,11 +499,13 @@ function handleNavigation(direction) {
         if (isAtTarget || hasPassedTarget || isStuck) {
             isNavigating = false;
             updateButtonStates();
-            console.log('Navigation complete:', { 
-                reason: isAtTarget ? 'reached target' : 
-                        hasPassedTarget ? 'passed target' : 
-                        'stuck at position'
-            });
+            if (window.DEBUG) {
+                console.log('Navigation complete:', { 
+                    reason: isAtTarget ? 'reached target' : 
+                            hasPassedTarget ? 'passed target' : 
+                            'stuck at position'
+                });
+            }
             
             // If we're stuck and there's still a significant difference,
             // try to jump to the next section only if we're not at document boundaries
@@ -515,7 +519,7 @@ function handleNavigation(direction) {
                 // Only try next section if we're not at the boundaries
                 if ((direction === 'down' && !isLastSection) || 
                     (direction === 'up' && !isFirstSection)) {
-                    console.log('Stuck with large difference, trying next section');
+                    if (window.DEBUG) console.log('Stuck with large difference, trying next section');
                     setTimeout(() => {
                         const currentIndex = sectionElements.indexOf(currentSection);
                         const nextSection = direction === 'down' ? 
@@ -523,7 +527,7 @@ function handleNavigation(direction) {
                             sectionElements[currentIndex - 1];
                             
                         if (nextSection) {
-                            console.log('Jumping to next section:', nextSection.id);
+                            if (window.DEBUG) console.log('Jumping to next section:', nextSection.id);
                             window.scrollTo({
                                 top: nextSection.top,
                                 behavior: 'smooth'
@@ -594,7 +598,7 @@ function initKeyboardNavigation() {
         // Only handle if not in an input field
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
         
-        console.log('Key pressed:', e.key);
+        if (window.DEBUG) console.log('Key pressed:', e.key);
         
         switch (e.key) {
             case 'ArrowDown':
