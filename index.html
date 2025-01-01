@@ -473,12 +473,12 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         <a href="#" id="privacyLink">Privacy Policy</a>
     </div>
     <div class="nav-buttons">
-        <button class="nav-button" id="prevSection">
+        <button class="nav-button" id="prevSection" data-nav="up">
             <svg fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
             </svg>
         </button>
-        <button class="nav-button" id="nextSection">
+        <button class="nav-button" id="nextSection" data-nav="down">
             <svg fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
@@ -503,7 +503,7 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
 <script src="https://www.youtube.com/iframe_api"></script>
 
 <script>
-    // Get video data from the data attribute
+    // YouTube Initialization
     const youtubeData = JSON.parse(
         document.getElementById('youtubeData')
             .dataset.videos
@@ -516,6 +516,11 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             .replace(/&quot;/g, '"')
     );
 
+    // YouTube player variables
+    let player;
+    let currentVideoIndex = 0;
+    let allVideos = [];
+
     // DOM elements for cinema mode
     const cinemaModal = document.querySelector('.cinema-modal');
     const cinemaClose = document.querySelector('.cinema-close');
@@ -527,14 +532,92 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     const cinemaDescription = document.querySelector('.cinema-description');
     const cinemaPlaylist = document.querySelector('.cinema-playlist');
 
+    // Chrome visibility functions
+    function hideChrome() {
+        const chromeElements = document.querySelectorAll('.chrome');
+        chromeElements.forEach(element => {
+            element.classList.remove('visible');
+        });
+    }
+
+    function showChrome() {
+        const chromeElements = document.querySelectorAll('.chrome');
+        chromeElements.forEach(element => {
+            element.classList.add('visible');
+        });
+    }
+
+    // Scroll Navigation Variables
     const sections = ['hero', 'work', 'blogs', 'publications', 'interviews', 'events'];
     let currentSection = 0;
     let isScrolling = false;
 
-    // Add YouTube player variables
-    let player;
-    let currentVideoIndex = 0;
-    let allVideos = [];
+    // Section Observer Setup
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const section = entry.target;
+                const index = sections.indexOf(section.id || 'hero');
+                if (index !== -1) {
+                    currentSection = index;
+                    updateButtonStates(); // Update buttons when section changes
+                }
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when section is 50% visible
+    });
+
+    // Function to update navigation button states
+    function updateButtonStates() {
+        const prevButton = document.getElementById('prevSection');
+        const nextButton = document.getElementById('nextSection');
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+        
+        // Can scroll up if we're not at the top
+        prevButton.disabled = scrollY <= 0;
+        
+        // Can scroll down if there's more content below
+        const remainingScroll = docHeight - (scrollY + windowHeight);
+        nextButton.disabled = remainingScroll <= 10;
+    }
+
+    function scrollToSection(index) {
+        const sections = ['hero', 'work', 'blogs', 'publications', 'interviews', 'events'];
+        if (index < 0 || index >= sections.length) return;
+        
+        const targetSection = document.querySelector(sections[index] === 'hero' ? '.hero' : '#' + sections[index]);
+        if (!targetSection) return;
+        
+        // Get the section's position
+        const rect = targetSection.getBoundingClientRect();
+        const absoluteTop = rect.top + window.scrollY;
+        
+        // If we're already in the section, scroll by viewport height
+        if (window.scrollY >= absoluteTop && window.scrollY < absoluteTop + rect.height) {
+            window.scrollBy({
+                top: index > currentSection ? window.innerHeight : -window.innerHeight,
+                behavior: 'smooth'
+            });
+        } else {
+            // Otherwise scroll to section start
+            window.scrollTo({
+                top: absoluteTop,
+                behavior: 'smooth'
+            });
+        }
+        
+        currentSection = index;
+        setTimeout(updateButtonStates, 100);
+    }
+
+    // Observe all sections
+    sections.forEach(sectionId => {
+        const section = document.querySelector(sectionId === 'hero' ? '.hero' : '#' + sectionId);
+        if (section) sectionObserver.observe(section);
+    });
 
     // Function to initialize YouTube player
     function onYouTubeIframeAPIReady() {
@@ -748,30 +831,6 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         });
     });
 
-    function showChrome() {
-        document.querySelectorAll('.chrome').forEach(el => el.classList.add('visible'));
-    }
-
-    function hideChrome() {
-        document.querySelectorAll('.chrome').forEach(el => el.classList.remove('visible'));
-    }
-
-    function scrollToSection(index) {
-        if (index >= 0 && index < sections.length) {
-            currentSection = index;
-            const section = document.querySelector(sections[index] === 'hero' ? '.hero' : '#' + sections[index]);
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-
-    document.getElementById('prevSection').addEventListener('click', () => {
-        scrollToSection(currentSection - 1);
-    });
-
-    document.getElementById('nextSection').addEventListener('click', () => {
-        scrollToSection(currentSection + 1);
-    });
-
     let scrollTimeout;
     window.addEventListener('scroll', () => {
         clearTimeout(scrollTimeout);
@@ -780,18 +839,19 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
         scrollTimeout = setTimeout(() => {
             const scrollPosition = window.scrollY;
             const windowHeight = window.innerHeight;
-            const newSection = Math.round(scrollPosition / windowHeight);
-            currentSection = newSection;
             
             // Only show chrome if we're not at the top section
-            if (currentSection > 0) {
+            if (scrollPosition > windowHeight / 2) {
                 showChrome();
             }
+            
+            // Let navigation.js handle button states
         }, 150);
     });
 
     // Initial state
     hideChrome();
+    // Let navigation.js handle initial button states
 
     const menuButton = document.getElementById('menuButton');
     const menuOverlay = document.querySelector('.menu-overlay');
@@ -832,7 +892,6 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
     window.addEventListener('resize', updateScrollButtons);
     updateScrollButtons();
 
-    // Add after the cinemaClose click event listener
     // Handle escape key press
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && cinemaModal.classList.contains('visible')) {
@@ -843,6 +902,8 @@ title: Florian Glatz | Blockchain Lawyer & Researcher
             }
         }
     });
+
+    // Navigation handled by navigation.js
 </script> 
 
 {%- include legalese.html -%}
