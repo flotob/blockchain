@@ -28,5 +28,5 @@ projects:
     description: Using my superpowers to help projects that I believe contribute to a better world
     description_mobile: Using my superpowers to help projects that I believe contribute to a better world
     image: images/probono.png
-    url: https://commonground.cg
-    image_type: default                
+    url: mailto:fg@blockchain.lawyer
+    image_type: default         
