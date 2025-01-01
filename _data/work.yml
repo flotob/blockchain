@@ -23,8 +23,8 @@ projects:
     url: mailto:fg@blockchain.lawyer
     image_type: default 
 
-  - title: Pro Bono
-    role: Lawyer
+  - title: Pro Bono Work
+    role: Everything, everywhere all at once
     description: Using my superpowers to help projects that I believe contribute to a better world
     description_mobile: Using my superpowers to help projects that I believe contribute to a better world
     image: images/probono.png
