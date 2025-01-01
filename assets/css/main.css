@@ -346,11 +346,11 @@ h1 {
 }
 
 .work-card {
-    width: 360px;
+    width: 380px;
     flex: 0 0 auto;
     background: var(--bg);
     border-radius: 16px;
-    overflow: visible;
+    overflow: hidden;
     box-shadow: 0 4px 6px -1px var(--shadow-light), 0 2px 4px -1px var(--shadow-light);
     transition: all 0.3s ease;
     display: flex;
@@ -374,16 +374,16 @@ h1 {
 }
 
 .work-content {
-    padding: 1.5rem 1.5rem 0;
+    padding: 1.25rem 1.25rem 0;
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .work-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     color: var(--text);
 }
 
@@ -401,9 +401,9 @@ h1 {
 }
 
 .work-description {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--text-light);
-    line-height: 1.5;
+    line-height: 1.4;
     margin-bottom: auto;
 }
 
@@ -419,7 +419,7 @@ h1 {
     background: var(--bg-alt);
     border-radius: 0 0 16px 16px;
     transition: all 0.2s ease;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .work-link:hover {
@@ -440,59 +440,26 @@ h1 {
 
 @media (max-width: 640px) {
     .work-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
         gap: 1rem;
+        padding: 0 1rem 1rem 1rem;
     }
 
     .work-card {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    .card-top {
-        flex-direction: row;
-        margin-bottom: 0;
-    }
-
-    .work-image {
-        width: 80px;
-        height: 80px;
-        margin: 0 1rem 0 0;
-        border-radius: 8px;
-    }
-
-    .work-content {
-        padding: 0;
-        flex: 1;
+        width: 300px;
     }
 
     .work-title {
-        font-size: 1rem;
-        margin-bottom: 0.125rem;
+        font-size: 1.25rem;
+    }
+
+    .work-description {
+        font-size: 0.875rem;
     }
 
     .position {
         font-size: 0.75rem;
         margin-bottom: 0.25rem;
         display: block;
-    }
-
-    .work-description {
-        font-size: 0.75rem;
-        margin-bottom: 0;
-    }
-
-    .work-link {
-        margin: 1.5rem -1rem -1rem;
-        padding: 0.75rem;
-        font-size: 0.75rem;
-    }
-
-    .work-link svg {
-        width: 16px;
-        height: 16px;
     }
 }
 
