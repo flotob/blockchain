@@ -9,7 +9,7 @@ projects:
 
   - title: European Crypto Initiative
     role: Co-Founder & Board Member
-    description: Co-Founder and board member of the European Crypto Initiative, a Brussels-based non-profit advocating for better crypto regulation in Europe and beyond.
+    description: Co-Founder and board member of the European Crypto Initiative, a Brussels-based non-profit advocating for better crypto regulation in Europe
     description_mobile: Advocating for better crypto regulation in Europe
     image: images/euci.png
     url: https://eu.ci
@@ -22,3 +22,11 @@ projects:
     image: images/common-ground.jpg
     url: mailto:fg@blockchain.lawyer
     image_type: default 
+
+  - title: Pro Bono
+    role: Lawyer
+    description: Using my superpowers to help projects that I believe contribute to a better world
+    description_mobile: Using my superpowers to help projects that I believe contribute to a better world
+    image: images/probono.png
+    url: https://commonground.cg
+    image_type: default                
