@@ -1,0 +1,29 @@
+{% assign work = site.data.work %}
+<section id="next-section" class="section">
+    <div class="work-grid">
+        {% for project in work.projects %}
+        <div class="work-card">
+            <div class="card-top">
+                <img src="{{ project.image }}" alt="{{ project.title }}" class="work-image{% if project.image_type == 'logo' %} logo{% endif %}">
+                <div class="work-content">
+                    <h3 class="work-title">{{ project.title }}</h3>
+                    <p class="work-description">
+                        <span class="position">{{ project.role }}</span>
+                        {{ project.description }}
+                    </p>
+                    <p class="work-description-mobile">
+                        <span class="position">{{ project.role }}</span>
+                        {{ project.description_mobile }}
+                    </p>
+                </div>
+            </div>
+            <a href="{{ project.url }}" target="_blank" class="work-link">
+                {% if project.url contains 'mailto:' %}Get in touch{% else %}Learn more{% endif %}
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>

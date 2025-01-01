@@ -1,0 +1,25 @@
+title: Florian Glatz
+subtitle: Law and Technology
+bio: Working at the intersection of law, blockchain technology, and software development since 2014.
+image: images/bio-photo.jpg
+social_links:
+  - platform: twitter
+    url: https://twitter.com/heckerhut
+    icon: twitter
+  - platform: github
+    url: https://github.com/flotob
+    icon: github
+  - platform: common_ground
+    url: https://app.cg/u/~hz8ud4jRpdMYcpoWTSMmmz/
+    icon: common_ground
+    text: Common Ground
+    text_mobile: CG
+buttons:
+  - text: Get in Touch
+    url: mailto:fg@blockchain.lawyer
+    icon: email
+    type: primary
+  - text: Learn More
+    url: "#next-section"
+    icon: arrow_down
+    type: secondary 

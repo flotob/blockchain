@@ -1,0 +1,24 @@
+projects:
+  - title: Common Ground
+    role: Co-Founder & Board Member
+    description: Co-Founder and board member of the Common Ground Association, developing a user-owned social network using web3 primitives
+    description_mobile: Building a user-owned social network with web3 technology
+    image: https://framerusercontent.com/images/hYVNYcaQlCxkrdC7IfgIhm8ri0.png
+    url: https://commonground.cg
+    image_type: default
+
+  - title: European Crypto Initiative
+    role: Co-Founder & Board Member
+    description: Co-Founder and board member of the European Crypto Initiative, a Brussels-based non-profit advocating for better crypto regulation in Europe and beyond.
+    description_mobile: Advocating for better crypto regulation in Europe
+    image: images/euci.png
+    url: https://eu.ci
+    image_type: logo
+
+  - title: Consulting
+    role: Law & Code
+    description: Helping projects and founders succeed in the web3 space with my decade of knowledge and experience in this unique industry
+    description_mobile: Helping projects and founders succeed in the web3 space
+    image: images/common-ground.jpg
+    url: mailto:fg@blockchain.lawyer
+    image_type: default 

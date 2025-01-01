@@ -1,0 +1,199 @@
+<!-- Legal Modals -->
+<div class="legal-modal" id="imprintModal">
+    <div class="legal-modal-content">
+        <button class="legal-modal-close">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <div class="legal-modal-body">
+            <div class="legal-tabs">
+                <button class="legal-tab active" data-lang="en">English</button>
+                <button class="legal-tab" data-lang="de">Deutsch</button>
+            </div>
+            <div class="legal-content" id="imprintContent">
+                <div class="legal-lang-content active" data-lang="en">
+                    <h2>Imprint</h2>
+                    <div class="legal-section">
+                        <h3><br>Contact</h3>
+                        <p>Florian Tobias Glatz, Rechtsanwalt<br>Bar Membership: Berlin Chamber of Lawyers<br>Exempt
+                            from obligation to maintain a domestic firm</p>
+                        <p><a
+                                href="mailto:fg@blockchain.lawyer">fg@blockchain.lawyer</a><br>DE.BRAK.fc8a0c8a-382b-40d2-bdd2-211beaefb818.019b<br>Rua
+                            de Sao Ciro 15, 1200-798 Lissabon, Portugal</p>
+                    </div>
+                    <div class="legal-section">
+                        <h3>Supervision</h3>
+                        <p>Chamber of Lawyers<br>Littenstraße 9<br>10179 Berlin, Germany</p>
+                        <p><i>Professionally insured with <a href="https://www.hdi.global/" target="_blank">HDI</a></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="legal-lang-content" data-lang="de">
+                    <h2>Impressum</h2>
+                    <div class="legal-section">
+                        <h3><br>Kontakt</h3>
+                        <p>Florian Tobias Glatz, Rechtsanwalt<br>Kammermitgliedschaft:
+                            Berlin<br>Kanzleipflichtbefreiung: nach §29a II BRAO
+                            (Inland)</p>
+                        <p><a
+                                href="mailto:fg@blockchain.lawyer">fg@blockchain.lawyer</a><br>DE.BRAK.fc8a0c8a-382b-40d2-bdd2-211beaefb818.019b<br>Rua
+                            de Sao Ciro 15, 1200-798 Lissabon, Portugal</p>
+                    </div>
+                    <div class="legal-section">
+                        <h3>Aufsichtsbehörde</h3>
+                        <p>Rechtsanwaltskammer Berlin<br>Littenstraße 9<br>10179 Berlin, Germany</p>
+                        <p><i>Berufshaftpflichtversicherung: <a href="https://www.hdi.global/"
+                                    target="_blank">HDI</a></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="legal-modal" id="privacyModal">
+    <div class="legal-modal-content">
+        <button class="legal-modal-close">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <div class="legal-modal-body">
+            <div class="legal-tabs">
+                <button class="legal-tab active" data-lang="en">English</button>
+                <button class="legal-tab" data-lang="de">Deutsch</button>
+            </div>
+            <div class="legal-content" id="privacyContent">
+                <div class="legal-lang-content active" data-lang="en">
+                    <h2>Privacy Policy</h2>
+                    <div class="legal-section">
+                        <p>This website is hosted via Github Pages and collects no personal data by itself. Third party
+                            services may collect data, please refer to the following links for more information:</p>
+                        <ul class="legal-links">
+                            <li><a href="https://github.com/flotob/blockchain" target="_blank">🔗 Source Code on
+                                    Github</a></li>
+                            <li><a href="https://github.com/github/site-policy/tree/main/Policies/privacy-policies"
+                                    target="_blank">🔗 Privacy Policies of Github</a></li>
+                            <li><a href="https://policies.google.com/privacy" target="_blank">🔗 Privacy Policy of
+                                    YouTube (Google)</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="legal-lang-content" data-lang="de">
+                    <h2>Privacy Policy</h2>
+                    <div class="legal-section">
+                        <p>Diese Website wird via Github Pages gehostet und sammelt selbst keine personenbezogenen
+                            Daten. Dienste von Drittanbietern
+                            können Daten erheben, bitte sehen Sie sich die folgenden Links an:</p>
+                        <ul class="legal-links">
+                            <li><a href="https://github.com/flotob/blockchain" target="_blank">🔗 Source Code on
+                                    Github</a></li>
+                            <li><a href="https://github.com/github/site-policy/tree/main/Policies/privacy-policies"
+                                    target="_blank">🔗 Privacy
+                                    Policies von Github</a></li>
+                            <li><a href="https://policies.google.com/privacy" target="_blank">🔗 Privacy Policy von
+                                    YouTube (Google)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Add this to your existing script
+    document.addEventListener('DOMContentLoaded', function () {
+        const imprintModal = document.getElementById('imprintModal');
+        const privacyModal = document.getElementById('privacyModal');
+        const imprintLink = document.getElementById('imprintLink');
+        const privacyLink = document.getElementById('privacyLink');
+        const closeButtons = document.querySelectorAll('.legal-modal-close');
+        const legalTabs = document.querySelectorAll('.legal-tab');
+        const themeToggle = document.getElementById('themeToggle');
+
+        // Theme toggle functionality
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
+
+        function getTheme() {
+            return /*localStorage.getItem('theme') || */'light';
+        }
+
+        setTheme(getTheme());
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = getTheme();
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+
+        // Modal functionality
+        function openModal(modal) {
+            modal.classList.add('visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modal) {
+            modal.classList.remove('visible');
+            document.body.style.overflow = '';
+        }
+
+        imprintLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(imprintModal);
+        });
+
+        privacyLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(privacyModal);
+        });
+
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                closeModal(button.closest('.legal-modal'));
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal(imprintModal);
+                closeModal(privacyModal);
+            }
+        });
+
+        legalTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const lang = tab.dataset.lang;
+                const modal = tab.closest('.legal-modal');
+
+                // Update active tab
+                modal.querySelectorAll('.legal-tab').forEach(t => {
+                    t.classList.toggle('active', t === tab);
+                });
+
+                // Update active content
+                modal.querySelectorAll('.legal-lang-content').forEach(content => {
+                    content.classList.toggle('active', content.dataset.lang === lang);
+                });
+            });
+        });
+
+        // Close modal when clicking outside
+        [imprintModal, privacyModal].forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal(modal);
+                }
+            });
+        });
+    });
+</script>
