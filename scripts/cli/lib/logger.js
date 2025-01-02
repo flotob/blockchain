@@ -8,6 +8,10 @@ export class Logger {
   }
 
   startSpinner(text) {
+    if (this.verbose) {
+      console.log(chalk.blue('→'), text);
+      return { stop: () => {}, succeed: () => {}, fail: () => {}, warn: () => {}, info: () => {}, start: () => {} };
+    }
     this.spinner = ora(text).start();
     return this.spinner;
   }
@@ -36,7 +40,8 @@ export class Logger {
       console.error(chalk.red('✗'), message);
     }
     if (error && this.verbose) {
-      console.error(chalk.red(error.stack || error));
+      console.error(chalk.red('Error details:'));
+      console.error(chalk.red(error.stack || error.message || error));
     }
   }
 
@@ -62,9 +67,10 @@ export class Logger {
     if (this.verbose) {
       if (this.spinner) {
         const currentText = this.spinner.text;
-        this.spinner.info(chalk.gray(message)).start(currentText);
+        console.log(chalk.gray('➤'), message);
+        this.spinner.start(currentText);
       } else {
-        console.debug(chalk.gray('➤'), message);
+        console.log(chalk.gray('➤'), message);
       }
     }
   }
@@ -72,6 +78,8 @@ export class Logger {
   updateSpinner(text) {
     if (this.spinner) {
       this.spinner.text = text;
+    } else if (this.verbose) {
+      console.log(chalk.blue('→'), text);
     }
   }
 } 

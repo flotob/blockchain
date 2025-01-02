@@ -6,12 +6,24 @@ import chalk from 'chalk';
 export class YAMLHandler {
   constructor(basePath = process.cwd()) {
     this.basePath = basePath;
+    console.log('YAMLHandler initialized with base path:', this.basePath);
   }
 
   async readYAML(filePath) {
     try {
-      const fullPath = path.join(this.basePath, filePath);
+      const fullPath = path.isAbsolute(filePath) ? filePath : path.join(this.basePath, filePath);
+      console.log('Attempting to read YAML from:', fullPath);
+      
+      try {
+        await fs.access(fullPath);
+        console.log('File exists and is accessible');
+      } catch (e) {
+        console.error('File access error:', e.message);
+        throw new Error(`YAML file not found or not accessible: ${fullPath}`);
+      }
+      
       const content = await fs.readFile(fullPath, 'utf8');
+      console.log('File read successfully, parsing YAML...');
       return yaml.load(content);
     } catch (error) {
       if (error.code === 'ENOENT') {
@@ -23,7 +35,8 @@ export class YAMLHandler {
 
   async writeYAML(filePath, data) {
     try {
-      const fullPath = path.join(this.basePath, filePath);
+      const fullPath = path.isAbsolute(filePath) ? filePath : path.join(this.basePath, filePath);
+      console.log('Writing YAML to:', fullPath);
       const yamlStr = yaml.dump(data, {
         indent: 2,
         lineWidth: -1,
@@ -35,7 +48,6 @@ export class YAMLHandler {
     }
   }
 
-  // Validate required fields in YAML structure
   validateStructure(data, requiredFields, context = '') {
     for (const [field, spec] of Object.entries(requiredFields)) {
       const value = data[field];
