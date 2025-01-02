@@ -53,7 +53,7 @@ export class YouTubeAPI {
             name: video.snippet.channelTitle,
             id: video.snippet.channelId,
             url: `https://www.youtube.com/channel/${video.snippet.channelId}`,
-            thumbnail: channelResponse?.snippet?.thumbnails,
+            thumbnail: channelResponse?.thumbnail
           },
           statistics: video.statistics,
           duration: video.contentDetails.duration,
@@ -85,7 +85,26 @@ export class YouTubeAPI {
         id: channelId
       });
 
-      return channelResponse.data.items[0]?.snippet || null;
+      const channelData = channelResponse.data.items[0]?.snippet;
+      if (!channelData) return null;
+
+      return {
+        name: channelData.title,
+        id: channelId,
+        url: `https://www.youtube.com/channel/${channelId}`,
+        thumbnail: {
+          default: {
+            url: channelData.thumbnails?.default?.url,
+            width: channelData.thumbnails?.default?.width,
+            height: channelData.thumbnails?.default?.height
+          },
+          medium: {
+            url: channelData.thumbnails?.medium?.url,
+            width: channelData.thumbnails?.medium?.width,
+            height: channelData.thumbnails?.medium?.height
+          }
+        }
+      };
     } catch (error) {
       console.warn(chalk.yellow(`Warning: Could not fetch channel details for video ${videoId}`));
       return null;
