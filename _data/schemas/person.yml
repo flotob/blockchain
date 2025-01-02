@@ -1,0 +1,9 @@
+# Required properties
+name: "Florian Glatz"
+
+# Recommended by Google
+image: "https://blockchain.lawyer/images/bio-photo.jpg"
+sameAs:
+  - "https://twitter.com/heckerhut"
+  - "https://github.com/flotob"
+  - "https://app.cg/u/~hz8ud4jRpdMYcpoWTSMmmz/" 

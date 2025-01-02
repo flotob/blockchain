@@ -1,0 +1,9 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.data.schemas.person.name }}",
+  "image": "{{ site.data.schemas.person.image }}",
+  "sameAs": {{ site.data.schemas.person.sameAs | jsonify }}
+}
+</script> 
