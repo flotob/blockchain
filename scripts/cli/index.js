@@ -8,6 +8,7 @@ import chalk from 'chalk';
 import debug from 'debug';
 import { updateYouTubeData } from './commands/youtube.js';
 import { updateEventData } from './commands/events.js';
+import { browseNotion } from './commands/notion.js';
 
 console.log('Imports completed');
 
@@ -31,6 +32,7 @@ async function interactive() {
       choices: [
         { name: 'Update Everything', value: 'update-all' },
         { name: 'Update Individual Sections', value: 'update-individual' },
+        { name: 'Browse Notion Pages', value: 'browse-notion' },
         { name: 'Validate Content', value: 'validate' },
         { name: 'Exit', value: 'exit' }
       ]
@@ -88,6 +90,11 @@ async function interactive() {
     return;
   }
 
+  if (action === 'browse-notion') {
+    await browseNotion({ verbose: program.opts().verbose });
+    return;
+  }
+
   console.log(chalk.yellow(`${action} mode selected - to be implemented`));
 }
 
@@ -130,6 +137,18 @@ program
     } catch (error) {
       console.error(chalk.red('Error in update command:'), error);
       console.error(chalk.red('Stack trace:'), error.stack);
+      process.exit(1);
+    }
+  });
+
+program
+  .command('notion')
+  .description('Browse Notion pages')
+  .action(async () => {
+    try {
+      await browseNotion({ verbose: program.opts().verbose });
+    } catch (error) {
+      console.error(chalk.red('Error:'), error);
       process.exit(1);
     }
   });

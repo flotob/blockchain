@@ -5,6 +5,7 @@
   "main": "md-to-yaml.js",
   "type": "module",
   "dependencies": {
+    "@notionhq/client": "^2.2.14",
     "dotenv": "^16.4.7",
     "googleapis": "^144.0.0",
     "js-yaml": "^4.1.0",
