@@ -54,7 +54,7 @@
             "key": {{ project.key | jsonify }},
             "notion_source": {{ project.notion_source | jsonify }},
             "slides": [
-                {% assign project_slides = site.slides | where: "project", project.key | sort: "order" %}
+                {% assign project_slides = site.slides | where: "project", project.notion_source | sort: "order" %}
                 {% for slide in project_slides %}
                 {
                     "title": {{ slide.title | jsonify }},

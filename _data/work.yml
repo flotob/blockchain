@@ -15,6 +15,7 @@ projects:
     image: images/euci.png
     url: https://eu.ci
     image_type: logo
+    notion_source: 16ff33c1f6c0803092bbcd4da6ed51f7
 
   - title: Consulting
     role: Law & Code
