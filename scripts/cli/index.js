@@ -16,26 +16,56 @@ program
 
 // Helper for interactive mode
 async function interactive() {
-  const { mode } = await inquirer.prompt([
+  const { action } = await inquirer.prompt([
     {
       type: 'list',
-      name: 'mode',
+      name: 'action',
       message: 'What would you like to do?',
       choices: [
-        { name: 'Fetch new content', value: 'fetch' },
-        { name: 'Validate existing content', value: 'validate' },
+        { name: 'Update Everything', value: 'update-all' },
+        { name: 'Update Individual Sections', value: 'update-individual' },
+        { name: 'Validate Content', value: 'validate' },
         { name: 'Exit', value: 'exit' }
       ]
     }
   ]);
 
-  if (mode === 'exit') {
+  if (action === 'exit') {
     console.log(chalk.blue('Goodbye!'));
     process.exit(0);
   }
 
-  // We'll implement these modes later
-  console.log(chalk.yellow(`${mode} mode selected - to be implemented`));
+  if (action === 'update-individual') {
+    const { section } = await inquirer.prompt([
+      {
+        type: 'list',
+        name: 'section',
+        message: 'Which section would you like to update?',
+        choices: [
+          { name: 'Interviews (YouTube)', value: 'youtube' },
+          { name: 'Events', value: 'events' },
+          { name: 'Back', value: 'back' }
+        ]
+      }
+    ]);
+
+    if (section === 'back') {
+      return interactive();
+    }
+
+    // Temporary placeholder for section updates
+    console.log(chalk.yellow(`Updating ${section} section - to be implemented`));
+    return;
+  }
+
+  if (action === 'update-all') {
+    console.log(chalk.yellow('Starting update of all sections...'));
+    // We'll implement the full update sequence here
+    return;
+  }
+
+  // Placeholder for validate
+  console.log(chalk.yellow(`${action} mode selected - to be implemented`));
 }
 
 // Basic command structure
@@ -44,12 +74,20 @@ program
   .description('Run in interactive mode')
   .action(interactive);
 
-// Example direct command (we'll add more later)
+// Direct commands (we'll expand these later)
 program
-  .command('hello')
-  .description('Test command - says hello')
+  .command('update-all')
+  .description('Update all content sections')
   .action(() => {
-    console.log(chalk.green('Hello! CLI is working!'));
+    console.log(chalk.green('Updating all sections...'));
+  });
+
+program
+  .command('update')
+  .description('Update a specific section')
+  .argument('<section>', 'Section to update (youtube|events)')
+  .action((section) => {
+    console.log(chalk.green(`Updating ${section}...`));
   });
 
 // Error handling
