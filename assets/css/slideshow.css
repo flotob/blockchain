@@ -331,18 +331,6 @@
     --text-primary: #1e293b;
     --text-secondary: #64748b;
     --border: #e2e8f0;
-    --primary: #3b82f6;
-    --primary-dark: #2563eb;
-}
-
-[data-theme="dark"] {
-    --background: #1e293b;
-    --background-secondary: #334155;
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --border: #475569;
-    --primary: #60a5fa;
-    --primary-dark: #3b82f6;
 }
 
 /* Mobile Responsive */
