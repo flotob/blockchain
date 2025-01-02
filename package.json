@@ -11,16 +11,22 @@
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {
-    "rollup": "^4.9.4",
-    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-json": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "chalk": "^5.4.1",
+    "commander": "^13.0.0",
+    "debug": "^4.4.0",
+    "inquirer": "^12.3.0",
+    "ora": "^8.1.1",
+    "rollup": "^4.9.4",
     "rollup-plugin-node-polyfills": "^0.2.1"
   },
   "scripts": {
     "convert": "node md-to-yaml.js",
     "fetch-events": "node scripts/fetch_event_data.js",
     "build:js": "rollup -c",
-    "watch:js": "rollup -c -w"
+    "watch:js": "rollup -c -w",
+    "site": "node scripts/cli/index.js"
   }
 }
