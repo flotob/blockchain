@@ -115,7 +115,13 @@ export async function updateEventData(options = { verbose: false }) {
 
     return true;
   } catch (error) {
-    logger.error('Failed to update event data', error);
+    logger.error('Failed to update event data:', error);
+    if (error.stack) {
+      logger.debug('Stack trace:', error.stack);
+    }
+    if (error.errors) {
+      logger.debug('Validation errors:', JSON.stringify(error.errors, null, 2));
+    }
     return false;
   }
 } 

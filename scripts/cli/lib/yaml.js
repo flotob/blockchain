@@ -53,8 +53,12 @@ export class YAMLHandler {
       const value = data[field];
       const fieldPath = context ? `${context}.${field}` : field;
 
-      if (value === undefined) {
+      if (value === undefined && !spec.optional) {
         throw new Error(`Missing required field: ${fieldPath}`);
+      }
+
+      if (value === undefined) {
+        continue;
       }
 
       if (spec.type && typeof value !== spec.type) {
