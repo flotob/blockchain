@@ -56,6 +56,16 @@ export async function updateWorkSlides(options = { verbose: false }) {
       // Create project slides directory
       const projectDir = path.join(SLIDES_DIR, project.notion_source);
       logger.debug(`Creating project directory: ${projectDir}`);
+      
+      // Clean up existing directory if it exists
+      try {
+        await fs.rm(projectDir, { recursive: true, force: true });
+        logger.debug(`Cleaned up existing directory: ${projectDir}`);
+      } catch (error) {
+        logger.debug(`No existing directory to clean up: ${error.message}`);
+      }
+      
+      // Create fresh directory
       await fs.mkdir(projectDir, { recursive: true });
 
       try {
