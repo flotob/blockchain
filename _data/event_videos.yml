@@ -1,6 +1,5 @@
 events:
   - title: Berlin Legal Tech
-    description: "A groundbreaking annual series that featured Europe’s first legal tech hackathon and conference, attracting over 1,650 participants from 30 countries. Across its editions, the event hosted more than 130 lectures and 80 project pitches, bringing together lawyers, developers, and legal engineers to create innovative solutions and compete for prizes."
     years:
       - year: 2017
         videos:
@@ -325,7 +324,6 @@ events:
             duration: PT1H50M44S
             url: https://www.youtube.com/watch?v=0zqljqjuLYI
   - title: Swiss Legal Tech
-    description: "An annual series of hackathons and conferences based in Zurich, inspired by the Berlin Legal Tech model, tailored to Switzerland’s legal and financial sectors."
     years:
       - year: 2017
         videos:
@@ -378,7 +376,6 @@ events:
             duration: PT4M50S
             url: https://www.youtube.com/watch?v=80hlBsmhWf0
   - title: Legal Tech Summer School
-    description: "A free, annual educational program designed for students, combining hands-on workshops, expert-led sessions, and collaborative projects to explore the intersection of law and technology."
     years:
       - year: 2020
         videos:
@@ -427,7 +424,6 @@ events:
             duration: PT1M56S
             url: https://www.youtube.com/watch?v=b2IrpVaZAwM
   - title: The Reg3 Conference
-    description: "An ongoing annual conference series that brings policymakers and developers together to address challenges such as decentralized governance, compliance, and blockchain regulation."
     years:
       - year: 2023
         videos:
@@ -483,6 +479,6 @@ events:
               viewCount: '19'
               likeCount: '1'
               favoriteCount: '0'
-              commentCount: '1'
+              commentCount: '0'
             duration: PT2M12S
             url: https://www.youtube.com/watch?v=aQXdagarn6Q

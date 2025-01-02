@@ -1,5 +1,6 @@
 <div class="blog-container">
     {% assign events = site.data.event_videos.events %}
+    {% assign event_metadata = site.data.event_metadata.events %}
     {% assign main_events = events | where_exp: "event", "event.title == 'Berlin Legal Tech'" %}
     {% assign other_events = events | where_exp: "event", "event.title != 'Berlin Legal Tech'" %}
 
@@ -16,7 +17,8 @@
                 </svg>
             </a>
         </h2>
-        <p class="event-description">{{ event.description }}</p>
+        {% assign metadata = event_metadata | where: "title", event.title | first %}
+        <p class="event-description">{{ metadata.description }}</p>
         <div class="blog-grid">
             {% for year_data in event.years %}
             {% for video in year_data.videos %}
@@ -66,7 +68,8 @@
                     </svg>
                 </a>
             </h2>
-            <p class="event-description">{{ event.description }}</p>
+            {% assign metadata = event_metadata | where: "title", event.title | first %}
+            <p class="event-description">{{ metadata.description }}</p>
             <div class="blog-grid">
                 {% for year_data in event.years %}
                 {% for video in year_data.videos %}
