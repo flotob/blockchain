@@ -4,6 +4,8 @@ import { Command } from 'commander';
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 import debug from 'debug';
+import { updateYouTubeData } from './commands/youtube.js';
+import { updateEventData } from './commands/events.js';
 
 const log = debug('site-cli');
 const program = new Command();
@@ -12,7 +14,8 @@ const program = new Command();
 program
   .name('site')
   .description('CLI tool for managing website content and data')
-  .version('0.1.0');
+  .version('0.1.0')
+  .option('-v, --verbose', 'enable verbose logging');
 
 // Helper for interactive mode
 async function interactive() {
@@ -53,41 +56,51 @@ async function interactive() {
       return interactive();
     }
 
-    // Temporary placeholder for section updates
-    console.log(chalk.yellow(`Updating ${section} section - to be implemented`));
+    if (section === 'youtube') {
+      await updateYouTubeData({ verbose: program.opts().verbose });
+    } else if (section === 'events') {
+      await updateEventData({ verbose: program.opts().verbose });
+    }
     return;
   }
 
   if (action === 'update-all') {
     console.log(chalk.yellow('Starting update of all sections...'));
-    // We'll implement the full update sequence here
+    await updateYouTubeData({ verbose: program.opts().verbose });
+    await updateEventData({ verbose: program.opts().verbose });
+    console.log(chalk.green('All sections updated successfully!'));
     return;
   }
 
-  // Placeholder for validate
   console.log(chalk.yellow(`${action} mode selected - to be implemented`));
 }
 
-// Basic command structure
+// Command structure
 program
   .command('interactive')
   .description('Run in interactive mode')
   .action(interactive);
 
-// Direct commands (we'll expand these later)
 program
   .command('update-all')
   .description('Update all content sections')
-  .action(() => {
-    console.log(chalk.green('Updating all sections...'));
+  .action(async () => {
+    await updateYouTubeData({ verbose: program.opts().verbose });
+    await updateEventData({ verbose: program.opts().verbose });
   });
 
 program
   .command('update')
   .description('Update a specific section')
   .argument('<section>', 'Section to update (youtube|events)')
-  .action((section) => {
-    console.log(chalk.green(`Updating ${section}...`));
+  .action(async (section) => {
+    if (section === 'youtube') {
+      await updateYouTubeData({ verbose: program.opts().verbose });
+    } else if (section === 'events') {
+      await updateEventData({ verbose: program.opts().verbose });
+    } else {
+      console.log(chalk.yellow(`Unknown section: ${section}`));
+    }
   });
 
 // Error handling
