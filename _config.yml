@@ -18,6 +18,8 @@ collections:
   research:
     output: true
     permalink: /research/:path/
+  slides:
+    output: false
 
 # Plugins
 plugins:

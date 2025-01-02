@@ -18,7 +18,6 @@ class Slideshow {
         // State
         this.currentProject = null;
         this.currentSlideIndex = 0;
-        this.slides = [];
         
         // Load project data
         this.projectData = JSON.parse(document.getElementById('project-data').textContent);
@@ -59,47 +58,13 @@ class Slideshow {
         });
     }
     
-    async loadNotionSlides(projectKey) {
-        try {
-            const response = await fetch(`/_slides/${projectKey}/`);
-            if (!response.ok) throw new Error('Failed to load slides');
-            const files = await response.json();
-            return files
-                .filter(file => file.endsWith('.md'))
-                .sort()
-                .map(file => ({ type: 'markdown', path: `/_slides/${projectKey}/${file}` }));
-        } catch (error) {
-            console.error('Error loading slides:', error);
-            return [];
-        }
-    }
-
-    async loadMarkdownContent(path) {
-        try {
-            const response = await fetch(path);
-            if (!response.ok) throw new Error('Failed to load markdown');
-            return await response.text();
-        } catch (error) {
-            console.error('Error loading markdown:', error);
-            return '';
-        }
-    }
-
-    async openSlideshow(projectTitle) {
+    openSlideshow(projectTitle) {
         this.currentProject = this.projectData.find(p => p.title === projectTitle);
-        if (!this.currentProject) return;
-
-        if (this.currentProject.notion_source) {
-            this.slides = await this.loadNotionSlides(this.currentProject.key);
-        } else {
-            return; // No slides to show
-        }
-        
-        if (this.slides.length === 0) return;
+        if (!this.currentProject || !this.currentProject.slides || this.currentProject.slides.length === 0) return;
         
         this.currentSlideIndex = 0;
         this.modal.classList.add('active');
-        await this.updateSlide();
+        this.updateSlide();
         this.updateNavigation();
     }
     
@@ -109,17 +74,14 @@ class Slideshow {
         this.currentSlideIndex = 0;
     }
     
-    async updateSlide() {
-        if (!this.currentProject || !this.slides[this.currentSlideIndex]) return;
+    updateSlide() {
+        if (!this.currentProject || !this.currentProject.slides[this.currentSlideIndex]) return;
         
-        const slide = this.slides[this.currentSlideIndex];
-        if (slide.type === 'markdown') {
-            const content = await this.loadMarkdownContent(slide.path);
-            this.slideContent.innerHTML = this.renderMarkdownSlide(content);
-        }
+        const slide = this.currentProject.slides[this.currentSlideIndex];
+        this.slideContent.innerHTML = this.renderSlide(slide);
     }
 
-    renderMarkdownSlide(markdown) {
+    renderSlide(slide) {
         const watermark = `
             <div class="slide-watermark">
                 <img src="${this.currentProject.image}" alt="${this.currentProject.title} logo">
@@ -138,7 +100,7 @@ class Slideshow {
                     <div class="slide-counter">
                         <span class="slide-counter-current">${this.currentSlideIndex + 1}</span>
                         <span>/</span>
-                        <span>${this.slides.length}</span>
+                        <span>${this.currentProject.slides.length}</span>
                     </div>
                     <span>${this.currentProject.role}</span>
                 </div>
@@ -155,7 +117,8 @@ class Slideshow {
 
         const content = `
             <div class="slide-text">
-                ${this.md.render(markdown)}
+                <h3>${this.md.render(slide.title || '')}</h3>
+                <div class="content">${this.md.render(slide.content || '')}</div>
             </div>
         `;
 
@@ -165,11 +128,12 @@ class Slideshow {
     updateNavigation() {
         if (!this.currentProject) return;
         
+        const slides = this.currentProject.slides;
         this.prevButton.disabled = this.currentSlideIndex === 0;
-        this.nextButton.disabled = this.currentSlideIndex === this.slides.length - 1;
+        this.nextButton.disabled = this.currentSlideIndex === slides.length - 1;
         
         // Update indicators
-        this.indicators.innerHTML = this.slides.map((_, index) => `
+        this.indicators.innerHTML = slides.map((_, index) => `
             <button class="indicator ${index === this.currentSlideIndex ? 'active' : ''}"
                     role="tab"
                     aria-selected="${index === this.currentSlideIndex}"
@@ -183,26 +147,26 @@ class Slideshow {
         });
     }
     
-    async previousSlide() {
+    previousSlide() {
         if (this.currentSlideIndex > 0) {
             this.currentSlideIndex--;
-            await this.updateSlide();
+            this.updateSlide();
             this.updateNavigation();
         }
     }
     
-    async nextSlide() {
-        if (this.currentProject && this.currentSlideIndex < this.slides.length - 1) {
+    nextSlide() {
+        if (this.currentProject && this.currentSlideIndex < this.currentProject.slides.length - 1) {
             this.currentSlideIndex++;
-            await this.updateSlide();
+            this.updateSlide();
             this.updateNavigation();
         }
     }
     
-    async goToSlide(index) {
-        if (this.currentProject && index >= 0 && index < this.slides.length) {
+    goToSlide(index) {
+        if (this.currentProject && index >= 0 && index < this.currentProject.slides.length) {
             this.currentSlideIndex = index;
-            await this.updateSlide();
+            this.updateSlide();
             this.updateNavigation();
         }
     }

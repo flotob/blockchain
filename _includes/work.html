@@ -52,7 +52,17 @@
             "description_mobile": {{ project.description_mobile | jsonify }},
             "url": {{ project.url | jsonify }},
             "key": {{ project.key | jsonify }},
-            "notion_source": {{ project.notion_source | jsonify }}
+            "notion_source": {{ project.notion_source | jsonify }},
+            "slides": [
+                {% assign project_slides = site.slides | where: "project", project.key | sort: "order" %}
+                {% for slide in project_slides %}
+                {
+                    "title": {{ slide.title | jsonify }},
+                    "content": {{ slide.content | jsonify }},
+                    "order": {{ slide.order | jsonify }}
+                }{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ]
         }{% unless forloop.last %},{% endunless %}
         {% endfor %}
     ]

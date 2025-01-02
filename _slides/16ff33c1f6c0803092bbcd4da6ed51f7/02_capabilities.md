@@ -1,3 +1,8 @@
+---
+project: 16ff33c1f6c0803092bbcd4da6ed51f7
+order: 2
+title: capabilities
+---
 # Platform Capabilities
 
 - **Decentralized Governance:** Empowering users with decision-making authority.

@@ -54,7 +54,7 @@ export async function updateWorkSlides(options = { verbose: false }) {
       logger.debug(`Notion source: ${project.notion_source}`);
       
       // Create project slides directory
-      const projectDir = path.join(SLIDES_DIR, project.title.toLowerCase().replace(/[^a-z0-9]+/g, '_'));
+      const projectDir = path.join(SLIDES_DIR, project.notion_source);
       logger.debug(`Creating project directory: ${projectDir}`);
       await fs.mkdir(projectDir, { recursive: true });
 
@@ -73,13 +73,24 @@ export async function updateWorkSlides(options = { verbose: false }) {
           const markdown = await notion.getSlideContent(slide.id);
           logger.debug(`Got markdown content (${markdown.length} chars)`);
           
-          // Create numbered filename
-          const filename = `${String(slide.index).padStart(2, '0')}_${slide.title.toLowerCase().replace(/[^a-z0-9]+/g, '_')}.md`;
+          // Create front matter
+          const frontMatter = [
+            '---',
+            `project: ${project.notion_source}`,
+            `order: ${slide.index}`,
+            `title: ${slide.title}`,
+            '---',
+            ''
+          ].join('\n');
+          
+          // Create numbered filename with title
+          const safeTitle = slide.title.toLowerCase().replace(/[^a-z0-9]+/g, '_');
+          const filename = `${String(slide.index).padStart(2, '0')}_${safeTitle}.md`;
           const filepath = path.join(projectDir, filename);
           logger.debug(`Writing to: ${filepath}`);
           
-          // Save markdown file
-          await fs.writeFile(filepath, markdown, 'utf8');
+          // Save markdown file with front matter
+          await fs.writeFile(filepath, frontMatter + markdown, 'utf8');
           logger.success(`Saved slide: ${filename}`);
         }
         
