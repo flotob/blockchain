@@ -102,6 +102,11 @@ export class YouTubeAPI {
             url: channelData.thumbnails?.medium?.url,
             width: channelData.thumbnails?.medium?.width,
             height: channelData.thumbnails?.medium?.height
+          },
+          high: {
+            url: channelData.thumbnails?.high?.url,
+            width: channelData.thumbnails?.high?.width,
+            height: channelData.thumbnails?.high?.height
           }
         }
       };

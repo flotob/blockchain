@@ -20,7 +20,7 @@ const EVENT_URLS_SCHEMA = {
     type: 'object',
     arrayOf: {
       title: { type: 'string' },
-      description: { type: 'string' },
+      description: { type: 'string', optional: true },
       years: {
         type: 'object',
         arrayOf: {
@@ -64,9 +64,12 @@ export async function updateEventData(options = { verbose: false }) {
       logger.startSpinner(`Processing event: ${event.title}...`);
       const enrichedEvent = {
         title: event.title,
-        description: event.description,
         years: []
       };
+
+      if (event.description) {
+        enrichedEvent.description = event.description;
+      }
 
       // Process each year's videos
       for (const yearData of event.years) {
