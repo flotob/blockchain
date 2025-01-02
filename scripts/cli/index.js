@@ -9,6 +9,7 @@ import debug from 'debug';
 import { updateYouTubeData } from './commands/youtube.js';
 import { updateEventData } from './commands/events.js';
 import { browseNotion } from './commands/notion.js';
+import { updateWorkSlides } from './commands/work.js';
 
 console.log('Imports completed');
 
@@ -33,6 +34,7 @@ async function interactive() {
         { name: 'Update Everything', value: 'update-all' },
         { name: 'Update Individual Sections', value: 'update-individual' },
         { name: 'Browse Notion Pages', value: 'browse-notion' },
+        { name: 'Update Work Slides', value: 'update-work' },
         { name: 'Validate Content', value: 'validate' },
         { name: 'Exit', value: 'exit' }
       ]
@@ -95,6 +97,11 @@ async function interactive() {
     return;
   }
 
+  if (action === 'update-work') {
+    await updateWorkSlides({ verbose: program.opts().verbose });
+    return;
+  }
+
   console.log(chalk.yellow(`${action} mode selected - to be implemented`));
 }
 
@@ -147,6 +154,18 @@ program
   .action(async () => {
     try {
       await browseNotion({ verbose: program.opts().verbose });
+    } catch (error) {
+      console.error(chalk.red('Error:'), error);
+      process.exit(1);
+    }
+  });
+
+program
+  .command('work')
+  .description('Update work slides from Notion')
+  .action(async () => {
+    try {
+      await updateWorkSlides({ verbose: program.opts().verbose });
     } catch (error) {
       console.error(chalk.red('Error:'), error);
       process.exit(1);

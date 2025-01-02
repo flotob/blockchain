@@ -37,10 +37,9 @@ export async function browseNotion(options = { verbose: false }) {
 async function navigatePages(notion, logger, currentPageId = null) {
   try {
     let items = [];
-    
-    // Add navigation options
     const choices = [];
     
+    // Add back navigation if we're not at root
     if (navigationStack.length > 0) {
       choices.push({
         name: '📂 .. (Go back)',
@@ -48,14 +47,9 @@ async function navigatePages(notion, logger, currentPageId = null) {
       });
     }
 
-    if (currentPageId) {
-      // Get children of current page
-      items = await notion.getChildren(currentPageId);
-    } else {
-      // Root level - start with a search
-      const searchResult = await notion.searchPages('');
-      items = searchResult;
-    }
+    // Use currentPageId if provided, otherwise use rootPageId from the API instance
+    const pageId = currentPageId || notion.rootPageId;
+    items = await notion.getChildren(pageId);
 
     // Add items to choices
     items.forEach(item => {
