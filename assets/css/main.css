@@ -2129,3 +2129,11 @@ body,
         font-size: 0.6875rem;
     }
 }
+
+.work-link.slideshow-trigger {
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    line-height: inherit;
+}

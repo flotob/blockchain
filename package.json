@@ -3,13 +3,24 @@
   "version": "1.0.0",
   "description": "Convert markdown YouTube video list to YAML format",
   "main": "md-to-yaml.js",
+  "type": "module",
   "dependencies": {
     "dotenv": "^16.4.7",
     "googleapis": "^144.0.0",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^13.0.1"
+  },
+  "devDependencies": {
+    "rollup": "^4.9.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.0.1",
+    "rollup-plugin-node-polyfills": "^0.2.1"
   },
   "scripts": {
     "convert": "node md-to-yaml.js",
-    "fetch-events": "node scripts/fetch_event_data.js"
+    "fetch-events": "node scripts/fetch_event_data.js",
+    "build:js": "rollup -c",
+    "watch:js": "rollup -c -w"
   }
 }

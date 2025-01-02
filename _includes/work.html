@@ -18,14 +18,61 @@
                         </p>
                     </div>
                 </div>
+                {% if project.slides %}
+                <button class="work-link slideshow-trigger" data-project-title="{{ project.title }}">
+                    View Details
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </button>
+                {% else %}
                 <a href="{{ project.url }}" target="_blank" class="work-link">
                     {% if project.url contains 'mailto:' %}Get in touch{% else %}Learn more{% endif %}
                     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
                 </a>
+                {% endif %}
             </div>
             {% endfor %}
         </div>
     </div>
 </section>
+
+<!-- Store project data for slideshow -->
+<script type="application/json" id="project-data">
+    [
+        {% for project in work.projects %}
+        {
+            "title": {{ project.title | jsonify }},
+            "image": {{ project.image | jsonify }},
+            "image_type": {{ project.image_type | jsonify }},
+            "role": {{ project.role | jsonify }},
+            "description": {{ project.description | jsonify }},
+            "description_mobile": {{ project.description_mobile | jsonify }},
+            "url": {{ project.url | jsonify }},
+            "slides": {% if project.slides %}[
+                {% for slide in project.slides %}
+                {
+                    "type": {{ slide.type | jsonify }},
+                    {% if slide.type == "text" %}
+                    "title": {{ slide.title | jsonify }},
+                    "content": {{ slide.content | jsonify }}
+                    {% elsif slide.type == "image" %}
+                    "image": {{ slide.image | jsonify }},
+                    "title": {{ slide.title | jsonify }},
+                    "description": {{ slide.description | jsonify }}
+                    {% elsif slide.type == "bullet" %}
+                    "title": {{ slide.title | jsonify }},
+                    "items": {{ slide.items | jsonify }}
+                    {% elsif slide.type == "stats" %}
+                    "title": {{ slide.title | jsonify }},
+                    "stats": {{ slide.stats | jsonify }}
+                    {% endif %}
+                }{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ]{% else %}null{% endif %}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ]
+</script>

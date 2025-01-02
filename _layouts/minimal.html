@@ -34,12 +34,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v={{ site.data.version.hash }}">
     <link rel="manifest" href="/site.webmanifest?v={{ site.data.version.hash }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.data.version.hash }}">
+    <link rel="stylesheet" href="{{ '/assets/css/slideshow.css' | relative_url }}?v={{ site.data.version.hash }}">
 </head>
 <body>
     {{ content }}
     
+    <!-- Include Slideshow Modal -->
+    {%- include slideshow_modal.html -%}
+    
     <!-- JavaScript -->
+    <script src="{{ '/assets/js/vendor.js' | relative_url }}?v={{ site.data.version.hash }}"></script>
     <script src="{{ '/assets/js/navigation.js' | relative_url }}?v={{ site.data.version.hash }}"></script>
     <script src="{{ '/assets/js/pwa.js' | relative_url }}?v={{ site.data.version.hash }}"></script>
+    <script src="{{ '/assets/js/slideshow.js' | relative_url }}?v={{ site.data.version.hash }}"></script>
 </body>
 </html> 
