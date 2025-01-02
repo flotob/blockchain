@@ -1,0 +1,56 @@
+books:
+  - type: "Book"
+    name: "Rechtshandbuch Legal Tech"
+    authors:
+      - name: "Stephan Breidenbach"
+      - name: "Florian Glatz"
+    publisher:
+      name: "C.H.BECK"
+    inLanguage: "de"
+    isbn: "978-3-406-74650-1"
+    datePublished: "2021"
+    edition: "2"
+    about:
+      - "Legal Tech"
+      - "Legal Services"
+      - "Digital Transformation"
+    url: "https://www.beck-shop.de/breidenbach-glatz-rechtshandbuch-legal-tech/product/27489151"
+    image: "https://imageservice.azureedge.net/api/getimage?productId=27489151&width=270&format=webp"
+    description: "The definitive handbook on Legal Tech, exploring the digitalization of legal services and its impact on legal professions, businesses, and consumers. Published by C.H.BECK, this comprehensive guide provides practical examples and analyzes trends for the next 10-15 years."
+
+  - type: "Book"
+    name: "FinTech-Handbuch"
+    contributor:
+      name: "Florian Glatz"
+    publisher:
+      name: "C.H.BECK"
+    inLanguage: "de"
+    isbn: "978-3-406-78401-5"
+    datePublished: "2024"
+    edition: "3"
+    about:
+      - "FinTech"
+      - "Digital Finance"
+      - "Banking Law"
+    url: "https://www.beck-shop.de/moeslein-omlor-fintech-handbuch/product/35466459"
+    image: "https://imageservice.azureedge.net/api/getimage?productId=35466459&width=270&format=webp"
+    description: "A comprehensive guide to the FinTech industry, covering payments, crowdfunding, lending, securities, robo-advisory, InsureTech, and digital currencies. Published by C.H.BECK as part of their Banking Law series."
+
+periodicals:
+  - type: "Periodical"
+    name: "REthinking Law"
+    publisher:
+      name: "Handelsblatt Fachmedien"
+    editor:
+      name: "Florian Glatz"
+    inLanguage: "de"
+    isbn: "9781946511720"
+    datePublished: "2018"
+    dateModified: "2023"
+    about:
+      - "Legal Technology"
+      - "Digital Law"
+      - "Legal Innovation"
+    collaboratingOrganization:
+      name: "Legal Tech Center at European University Viadrina"
+    description: "A pioneering legal magazine exploring the intersection of law and technology. Published by Handelsblatt Fachmedien in collaboration with the Legal Tech Center at European University Viadrina, REthinking Law brought cutting-edge insights about the digital transformation of legal services to the German-speaking market." 
