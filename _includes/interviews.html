@@ -1,0 +1,176 @@
+<div class="blog-container">
+    <!-- Interviews -->
+    <div class="blog-category">
+        <h2 class="blog-category-title">
+            <a href="#" style="cursor: default">
+                Interviews
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                    </path>
+                </svg>
+            </a>
+        </h2>
+        <div class="blog-grid">
+            {% assign sorted_interviews = site.data.youtube_videos.media_appearances.interviews | sort: "publishedAt" |
+            reverse %}
+            {% for video in sorted_interviews %}
+            <a href="{{ video.url }}" target="_blank" class="blog-card">
+                <div class="blog-image-container">
+                    <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}"
+                        alt="{{ video.title }}" class="blog-image">
+                    <div class="video-duration">{{ video.duration | replace: "PT", "" | replace: "H", ":" | replace: "M",
+                        ":" | replace: "S", "" }}</div>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">{{ video.title }}</h3>
+                    <div class="channel-info">
+                        <img src="{{ video.channel.thumbnail.default.url }}" alt="{{ video.channel.name }}"
+                            class="channel-logo">
+                        <div class="channel-details">
+                            <div class="channel-name">{{ video.channel.name }}</div>
+                            <div class="video-meta">
+                                <span class="video-views">{% assign view_count = video.statistics.viewCount | plus: 0 %}{%
+                                    if view_count < 1000 %}{{ view_count }} views{% else %}{{ view_count | divided_by: 1000
+                                        }}K views{% endif %}</span>
+                                        <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Podcasts -->
+    <div class="blog-category">
+        <h2 class="blog-category-title">
+            <a href="#" style="cursor: default">
+                Podcasts
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z">
+                    </path>
+                </svg>
+            </a>
+        </h2>
+        <div class="blog-grid">
+            {% assign sorted_podcasts = site.data.youtube_videos.media_appearances.podcasts | sort: "publishedAt" | reverse
+            %}
+            {% for video in sorted_podcasts %}
+            <a href="{{ video.url }}" target="_blank" class="blog-card">
+                <div class="blog-image-container">
+                    <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}"
+                        alt="{{ video.title }}" class="blog-image">
+                    <div class="video-duration">{{ video.duration | replace: "PT", "" | replace: "H", ":" | replace: "M",
+                        ":" | replace: "S", "" }}</div>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">{{ video.title }}</h3>
+                    <div class="channel-info">
+                        <img src="{{ video.channel.thumbnail.default.url }}" alt="{{ video.channel.name }}"
+                            class="channel-logo">
+                        <div class="channel-details">
+                            <div class="channel-name">{{ video.channel.name }}</div>
+                            <div class="video-meta">
+                                <span class="video-views">{% assign view_count = video.statistics.viewCount | plus: 0 %}{%
+                                    if view_count < 1000 %}{{ view_count }} views{% else %}{{ view_count | divided_by: 1000
+                                        }}K views{% endif %}</span>
+                                        <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Lectures -->
+    <div class="blog-category">
+        <h2 class="blog-category-title">
+            <a href="#" style="cursor: default">
+                Lectures
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
+                </svg>
+            </a>
+        </h2>
+        <div class="blog-grid">
+            {% assign sorted_lectures = site.data.youtube_videos.media_appearances.lectures | sort: "publishedAt" | reverse
+            %}
+            {% for video in sorted_lectures %}
+            <a href="{{ video.url }}" target="_blank" class="blog-card">
+                <div class="blog-image-container">
+                    <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}"
+                        alt="{{ video.title }}" class="blog-image">
+                    <div class="video-duration">{{ video.duration | replace: "PT", "" | replace: "H", ":" | replace: "M",
+                        ":" | replace: "S", "" }}</div>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">{{ video.title }}</h3>
+                    <div class="channel-info">
+                        <img src="{{ video.channel.thumbnail.default.url }}" alt="{{ video.channel.name }}"
+                            class="channel-logo">
+                        <div class="channel-details">
+                            <div class="channel-name">{{ video.channel.name }}</div>
+                            <div class="video-meta">
+                                <span class="video-views">{% assign view_count = video.statistics.viewCount | plus: 0 %}{%
+                                    if view_count < 1000 %}{{ view_count }} views{% else %}{{ view_count | divided_by: 1000
+                                        }}K views{% endif %}</span>
+                                        <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Press Conferences -->
+    <div class="blog-category">
+        <h2 class="blog-category-title">
+            <a href="#" style="cursor: default">
+                Press Conferences
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z">
+                    </path>
+                </svg>
+            </a>
+        </h2>
+        <div class="blog-grid">
+            {% assign sorted_press = site.data.youtube_videos.media_appearances.press_conferences | sort: "publishedAt" |
+            reverse %}
+            {% for video in sorted_press %}
+            <a href="{{ video.url }}" target="_blank" class="blog-card">
+                <div class="blog-image-container">
+                    <img src="{{ video.thumbnails.maxres.url | default: video.thumbnails.high.url }}"
+                        alt="{{ video.title }}" class="blog-image">
+                    <div class="video-duration">{{ video.duration | replace: "PT", "" | replace: "H", ":" | replace: "M",
+                        ":" | replace: "S", "" }}</div>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">{{ video.title }}</h3>
+                    <div class="channel-info">
+                        <img src="{{ video.channel.thumbnail.default.url }}" alt="{{ video.channel.name }}"
+                            class="channel-logo">
+                        <div class="channel-details">
+                            <div class="channel-name">{{ video.channel.name }}</div>
+                            <div class="video-meta">
+                                <span class="video-views">{% assign view_count = video.statistics.viewCount | plus: 0 %}{%
+                                    if view_count < 1000 %}{{ view_count }} views{% else %}{{ view_count | divided_by: 1000
+                                        }}K views{% endif %}</span>
+                                        <span class="video-date">{{ video.publishedAt | date: "%b %-d, %Y" }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
