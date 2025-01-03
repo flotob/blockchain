@@ -3,7 +3,7 @@ class Slideshow {
         // DOM Elements
         this.modal = document.querySelector('.slideshow-modal');
         this.closeButton = this.modal.querySelector('.modal-close');
-        this.slideContent = this.modal.querySelector('.slide-content');
+        this.slideContent = this.modal.querySelector('.modal-content');
         this.prevButton = this.modal.querySelector('.nav-button.prev');
         this.nextButton = this.modal.querySelector('.nav-button.next');
         this.indicators = this.modal.querySelector('.slide-indicators');
@@ -78,7 +78,9 @@ class Slideshow {
         if (!this.currentProject || !this.currentProject.slides[this.currentSlideIndex]) return;
         
         const slide = this.currentProject.slides[this.currentSlideIndex];
-        this.slideContent.innerHTML = this.renderSlide(slide);
+        const slideContent = this.modal.querySelector('.slide-content');
+        slideContent.innerHTML = this.renderSlide(slide);
+        this.updateNavigation();
     }
 
     renderSlide(slide) {
@@ -91,27 +93,7 @@ class Slideshow {
         const header = `
             <div class="slide-header">
                 <h2>${this.currentProject.title}</h2>
-            </div>
-        `;
-
-        const footer = `
-            <div class="slide-footer">
-                <div class="slide-footer-left">
-                    <div class="slide-counter">
-                        <span class="slide-counter-current">${this.currentSlideIndex + 1}</span>
-                        <span>/</span>
-                        <span>${this.currentProject.slides.length}</span>
-                    </div>
-                    <span>${this.currentProject.role}</span>
-                </div>
-                <div class="slide-footer-right">
-                    <a href="${this.currentProject.url}" target="_blank">
-                        Visit Website
-                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                        </svg>
-                    </a>
-                </div>
+                ${watermark}
             </div>
         `;
 
@@ -122,7 +104,30 @@ class Slideshow {
             </div>
         `;
 
-        return header + watermark + content + footer;
+        const footer = `
+            <div class="slide-footer">
+                <div class="slide-footer-top">
+                    <div class="slide-footer-left">
+                        <div class="slide-counter">
+                            <span class="slide-counter-current">${this.currentSlideIndex + 1}</span>
+                            <span>/</span>
+                            <span>${this.currentProject.slides.length}</span>
+                        </div>
+                        <span>${this.currentProject.role}</span>
+                    </div>
+                    <div class="slide-footer-right">
+                        <a href="${this.currentProject.url}" target="_blank">
+                            Visit Website
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        return header + content + footer;
     }
     
     updateNavigation() {
