@@ -118,7 +118,6 @@ class Slideshow {
         const content = `
             <div class="slide-content">
                 <div class="slide-text">
-                    <h3>${this.md.render(slide.title || '')}</h3>
                     <div class="content">${this.md.render(slide.content || '')}</div>
                 </div>
             </div>
@@ -133,7 +132,7 @@ class Slideshow {
                             <span>/</span>
                             <span>${this.currentProject.slides.length}</span>
                         </div>
-                        <span>${this.currentProject.role}</span>
+                        <span>${this.md.render(slide.title || '')}</span>
                     </div>
                     <div class="slide-footer-right">
                         <a href="${this.currentProject.url}" target="_blank">

@@ -247,6 +247,10 @@
     color: var(--text-primary);
 }
 
+.slide-text > h3 {
+    display: none;
+}
+
 .slide-text .content {
     font-size: 0.9rem;
     line-height: 1.7;
