@@ -21,7 +21,7 @@ Among the aspects that make Common Ground unique are:
 - **passkey-based onboarding** with zero-click smart wallet on favorite ecosystem chain
 - **custom roles & granular permissions** in communities, including token-gated access
 - **proof of personhood** and other onchain credentials for additional access-gating
-- **community-owned accounts **governed by votes of onchain roles
+- **community-owned accounts** governed by votes of onchain roles
 ### ***Convergence***
 
 Apps will tend to aggregate end users and commoditize blockspace over time. Common Ground empowers communities regardless of their technical skills to coordinate around shared purpose and take advantage of burgeoning onchain economies to accomplish their objectives. At no prior point in crypto’s 15 year history have all the primitives been available that Common Ground relies upon. That includes
