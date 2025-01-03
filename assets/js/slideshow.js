@@ -2,6 +2,7 @@ class Slideshow {
     constructor() {
         // DOM Elements
         this.modal = document.querySelector('.slideshow-modal');
+        this.modalContainer = this.modal.querySelector('.modal-container');
         this.modalContent = this.modal.querySelector('.modal-content');
         this.closeButton = this.modal.querySelector('.modal-close');
         this.slideContent = this.modal.querySelector('.modal-content');
@@ -47,6 +48,14 @@ class Slideshow {
         this.closeButton.addEventListener('click', () => this.closeSlideshow());
         this.prevButton.addEventListener('click', () => this.previousSlide());
         this.nextButton.addEventListener('click', () => this.nextSlide());
+        
+        // Close on background click
+        this.modalContainer.addEventListener('click', (e) => {
+            // Only close if clicking the modal container itself, not its children
+            if (e.target === this.modalContainer) {
+                this.closeSlideshow();
+            }
+        });
         
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
