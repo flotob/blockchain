@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {%- include meta/universal.html -%}
+        {%- include meta/{{ page.meta | default: 'default' }}.html -%}
+    </head>
+    <body>
+        {{ content }}
+    </body>
+</html>

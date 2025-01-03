@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {%- include meta/universal.html -%}
-  {%- include meta/{{ page.meta | default: 'default' }}.html -%}
-  {%- include meta/spa.html -%}
-</head>
-<body>
-  {{ content }}
-  {%- include slideshow_modal.html -%}
-</body>
-</html> 
+---
+layout: base
+---
+{{ content }}
+{%- include slideshow_modal.html -%}
