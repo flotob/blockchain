@@ -19,6 +19,7 @@ class Slideshow {
         // State
         this.currentProject = null;
         this.currentSlideIndex = 0;
+        this.scrollPosition = 0;
         
         // Touch interaction state
         this.touchStart = null;
@@ -71,6 +72,7 @@ class Slideshow {
         
         this.currentSlideIndex = 0;
         this.modal.classList.add('active');
+        this.lockScroll();
         this.updateSlide();
         this.updateNavigation();
         
@@ -265,6 +267,26 @@ class Slideshow {
     
     isMobile() {
         return window.innerWidth <= 768;
+    }
+
+    lockScroll() {
+        // Store current scroll position
+        this.scrollPosition = window.pageYOffset;
+        // Add styles to body
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${this.scrollPosition}px`;
+        document.body.style.width = '100%';
+    }
+
+    unlockScroll() {
+        // Remove styles from body
+        document.body.style.removeProperty('overflow');
+        document.body.style.removeProperty('position');
+        document.body.style.removeProperty('top');
+        document.body.style.removeProperty('width');
+        // Restore scroll position
+        window.scrollTo(0, this.scrollPosition);
     }
 }
 

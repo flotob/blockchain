@@ -690,3 +690,13 @@
     font-family: var(--font-mono);
     font-size: 0.875em;
 } 
+
+.slide-text .content h1,
+.slide-text .content h2,
+.slide-text .content h3,
+.slide-text .content h4,
+.slide-text .content h5,
+.slide-text .content h6 {
+    animation: none;
+    font-family: 'Kalam', cursive;
+}
