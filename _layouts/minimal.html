@@ -1,56 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>{% if page.title %}{{ page.title }}{% endif %}</title>
-    
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="Florian Glatz | Blockchain Lawyer">
-    <meta name="description" content="Working at the intersection of law, blockchain technology, and software development since 2014.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://blockchain.lawyer/">
-    <meta property="og:title" content="Florian Glatz | Blockchain Lawyer">
-    <meta property="og:description" content="Working at the intersection of law, blockchain technology, and software development since 2014.">
-    <meta property="og:image" content="https://blockchain.lawyer/social-preview.png">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://blockchain.lawyer/">
-    <meta name="twitter:title" content="Florian Glatz | Blockchain Lawyer">
-    <meta name="twitter:description" content="Working at the intersection of law, blockchain technology, and software development since 2014.">
-    <meta name="twitter:image" content="https://blockchain.lawyer/social-preview.png">
-    
-    <!-- Schema.org -->
-    {%- include schemas/person.html -%}
-    {%- include schemas/publications.html -%}
-    
-    <!-- Theme and Icons -->
-    <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v={{ site.data.version.hash }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v={{ site.data.version.hash }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v={{ site.data.version.hash }}">
-    <link rel="manifest" href="/site.webmanifest?v={{ site.data.version.hash }}">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.data.version.hash }}">
-    <link rel="stylesheet" href="{{ '/assets/css/slideshow.css' | relative_url }}?v={{ site.data.version.hash }}">
+  {%- include meta/universal.html -%}
+  {%- include meta/{{ page.meta | default: 'default' }}.html -%}
+  {%- include meta/spa.html -%}
 </head>
 <body>
-    {{ content }}
-    
-    <!-- Include Slideshow Modal -->
-    {%- include slideshow_modal.html -%}
-    
-    <!-- JavaScript -->
-    <script src="{{ '/assets/js/vendor.js' | relative_url }}?v={{ site.data.version.hash }}"></script>
-    <script src="{{ '/assets/js/navigation.js' | relative_url }}?v={{ site.data.version.hash }}"></script>
-    <script src="{{ '/assets/js/pwa.js' | relative_url }}?v={{ site.data.version.hash }}"></script>
-    <script src="{{ '/assets/js/slideshow.js' | relative_url }}?v={{ site.data.version.hash }}"></script>
+  {{ content }}
+  {%- include slideshow_modal.html -%}
 </body>
 </html> 

@@ -54,29 +54,50 @@ author:
     twitter: heckerhut
     github: flotob
 
-# Defaults
+# Sitemap settings
 defaults:
+  - scope:
+      path: ""
+    values:
+      sitemap: true
   - scope:
       path: ""
       type: "blog_posts"
     values:
       layout: "post"
+      meta: seo
       comments: false
+      sitemap:
+        priority: 0.8
+        changefreq: "monthly"
   - scope:
       path: ""
       type: "videos"
     values:
       layout: "video"
+      sitemap:
+        priority: 0.7
+        changefreq: "monthly"
   - scope:
       path: ""
       type: "publications"
     values:
       layout: "publication"
+      sitemap:
+        priority: 0.9
+        changefreq: "yearly"
   - scope:
       path: ""
       type: "research"
     values:
       layout: "research"
+      sitemap:
+        priority: 0.9
+        changefreq: "yearly"
+  - scope:
+      path: "404.html"
+    values:
+      sitemap: false
 
 # Exclude from processing
 exclude:

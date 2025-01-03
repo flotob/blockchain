@@ -1,0 +1,30 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.title }}",
+  "description": "{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}",
+  "image": "{{ site.url }}{{ page.image }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "Florian Glatz",
+    "url": "https://blockchain.lawyer",
+    "image": "{{ site.url }}/social-preview.png",
+    "sameAs": [
+      "https://twitter.com/heckerhut",
+      "https://github.com/heckerhut",
+      "https://medium.com/@heckerhut",
+      "https://www.linkedin.com/in/florianglatz/"
+    ],
+    "jobTitle": "Blockchain Lawyer",
+    "description": "Working at the intersection of law, blockchain technology, and software development since 2014.",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Ludwig Maximilian University of Munich"
+    }    
+  }
+}
+</script> 

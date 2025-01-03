@@ -1,45 +1,39 @@
 ---
 layout: minimal
+meta: seo
 ---
+<!-- Debug: {{ page.meta }} -->
+<main class="post">
+  <article>
+    <header>
+      <h1>{{ page.title }}</h1>
+      <div class="meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %d, %Y" }}
+        </time>
+        {% if page.categories %}
+        <span class="categories">
+          {% for category in page.categories %}
+          <a href="/{{ category }}">{{ category | capitalize }}</a>
+          {% endfor %}
+        </span>
+        {% endif %}
+      </div>
+    </header>
 
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <div class="post-meta">
-      <time datetime="{{ page.publishedAt | date_to_xmlschema }}">
-        {{ page.publishedAt | date: "%B %-d, %Y" }}
-      </time>
-      {% if page.author %}
-      • <span class="post-author">{{ page.author }}</span>
-      {% endif %}
-    </div>
-  </header>
-
-  <div class="post-content">
     {% if page.image %}
-    <img src="{{ page.image }}" alt="{{ page.title }}" class="post-image">
-    {% endif %}
-    
-    {% if page.excerpt %}
-    <div class="post-excerpt">
-      {{ page.excerpt }}
-    </div>
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="featured-image">
     {% endif %}
 
-    {% if page.url %}
-    <div class="post-link">
-      <a href="{{ page.url }}" target="_blank" rel="noopener">Read the full post</a>
+    <div class="content">
+      {{ content }}
     </div>
-    {% endif %}
-  </div>
 
-  {% if page.tags.size > 0 %}
-  <footer class="post-footer">
-    <div class="post-tags">
-      {% for tag in page.tags %}
-      <span class="tag">{{ tag }}</span>
-      {% endfor %}
-    </div>
-  </footer>
-  {% endif %}
-</article> 
+    <footer>
+      <div class="share">
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener">Share on Twitter</a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title | url_encode }}" target="_blank" rel="noopener">Share on LinkedIn</a>
+      </div>
+    </footer>
+  </article>
+</main> 

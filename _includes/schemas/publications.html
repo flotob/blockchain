@@ -2,65 +2,65 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
+  "@type": "ItemList",
+  "itemListElement": [
+    {% assign position = 1 %}
     {% for book in site.data.schemas.publications.books %}
     {
-      "@type": "{{ book.type }}",
-      "name": "{{ book.name }}",
-      {% if book.authors %}
-      "author": [
-        {% for author in book.authors %}
-        {
+      "@type": "ListItem",
+      "position": {{ position }},
+      "item": {
+        "@type": "{{ book.type }}",
+        "name": "{{ book.name }}",
+        {% if book.authors %}
+        "author": [
+          {% for author in book.authors %}
+          {
+            "@type": "Person",
+            "name": "{{ author.name }}"
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ],
+        {% endif %}
+        {% if book.contributor %}
+        "contributor": {
           "@type": "Person",
-          "name": "{{ author.name }}"
-        }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-      ],
-      {% endif %}
-      {% if book.contributor %}
-      "contributor": {
-        "@type": "Person",
-        "name": "{{ book.contributor.name }}"
-      },
-      {% endif %}
-      "publisher": {
-        "@type": "Organization",
-        "name": "{{ book.publisher.name }}"
-      },
-      "inLanguage": "{{ book.inLanguage }}",
-      "isbn": "{{ book.isbn }}",
-      "datePublished": "{{ book.datePublished }}",
-      "edition": "{{ book.edition }}",
-      "about": {{ book.about | jsonify }},
-      "url": "{{ book.url }}",
-      "description": "{{ book.description }}"
+          "name": "{{ book.contributor.name }}"
+        },
+        {% endif %}
+        "url": "{{ book.url }}",
+        "datePublished": "{{ book.datePublished }}",
+        "publisher": {
+          "@type": "Organization",
+          "name": "{{ book.publisher.name }}"
+        }
+      }
     }{% unless forloop.last %},{% endunless %}
+    {% assign position = position | plus: 1 %}
     {% endfor %}
-    {% if site.data.schemas.publications.books and site.data.schemas.publications.periodicals %},{% endif %}
+    {% if site.data.schemas.publications.periodicals %}
+    ,
     {% for periodical in site.data.schemas.publications.periodicals %}
     {
-      "@type": "{{ periodical.type }}",
-      "name": "{{ periodical.name }}",
-      "publisher": {
-        "@type": "Organization",
-        "name": "{{ periodical.publisher.name }}"
-      },
-      "editor": {
-        "@type": "Person",
-        "name": "{{ periodical.editor.name }}"
-      },
-      "inLanguage": "{{ periodical.inLanguage }}",
-      "isbn": "{{ periodical.isbn }}",
-      "datePublished": "{{ periodical.datePublished }}",
-      "dateModified": "{{ periodical.dateModified }}",
-      "about": {{ periodical.about | jsonify }},
-      "collaboratingOrganization": {
-        "@type": "Organization",
-        "name": "{{ periodical.collaboratingOrganization.name }}"
-      },
-      "description": "{{ periodical.description }}"
+      "@type": "ListItem",
+      "position": {{ position }},
+      "item": {
+        "@type": "{{ periodical.type }}",
+        "name": "{{ periodical.name }}",
+        "editor": {
+          "@type": "Person",
+          "name": "{{ periodical.editor.name }}"
+        },
+        "datePublished": "{{ periodical.datePublished }}",
+        "publisher": {
+          "@type": "Organization",
+          "name": "{{ periodical.publisher.name }}"
+        }
+      }
     }{% unless forloop.last %},{% endunless %}
+    {% assign position = position | plus: 1 %}
     {% endfor %}
+    {% endif %}
   ]
 }
 </script> 

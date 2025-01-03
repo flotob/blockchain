@@ -1,0 +1,20 @@
+<!-- Primary Meta Tags -->
+<meta name="title" content="{{ page.title }} | Florian Glatz">
+<meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{{ page.title }} | Florian Glatz">
+<meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
+<meta property="og:image" content="{{ site.url }}{{ page.image }}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+<meta name="twitter:title" content="{{ page.title }} | Florian Glatz">
+<meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
+<meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+
+<!-- Schema.org -->
+{%- include schemas/post.html -%} 
