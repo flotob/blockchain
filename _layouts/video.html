@@ -1,0 +1,68 @@
+---
+layout: minimal
+---
+
+<article class="video">
+  <header class="video-header">
+    <h1 class="video-title">{{ page.title }}</h1>
+    <div class="video-meta">
+      <time datetime="{{ page.publishedAt | date_to_xmlschema }}">
+        {{ page.publishedAt | date: "%B %-d, %Y" }}
+      </time>
+      {% if page.channel %}
+      • <span class="video-channel">
+          <img src="{{ page.channel.thumbnail.default.url }}" alt="{{ page.channel.name }}">
+          {{ page.channel.name }}
+        </span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="video-content">
+    <div class="video-player">
+      <div id="youtubePlayer" data-video-id="{{ page.url | split: '=' | last }}"></div>
+    </div>
+    
+    {% if page.description %}
+    <div class="video-description">
+      {{ page.description | newline_to_br }}
+    </div>
+    {% endif %}
+
+    {% if page.statistics %}
+    <div class="video-stats">
+      <span class="views">{{ page.statistics.viewCount }} views</span>
+      {% if page.statistics.likeCount %}
+      • <span class="likes">{{ page.statistics.likeCount }} likes</span>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+
+  {% if page.tags.size > 0 %}
+  <footer class="video-footer">
+    <div class="video-tags">
+      {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  </footer>
+  {% endif %}
+</article>
+
+<script>
+  // Initialize YouTube player when API is ready
+  function onYouTubeIframeAPIReady() {
+    new YT.Player('youtubePlayer', {
+      height: '100%',
+      width: '100%',
+      videoId: '{{ page.url | split: "=" | last }}',
+      playerVars: {
+        autoplay: 0,
+        rel: 0,
+        modestbranding: 1
+      }
+    });
+  }
+</script>
+<script src="https://www.youtube.com/iframe_api"></script> 

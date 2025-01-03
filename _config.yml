@@ -12,12 +12,18 @@ permalink: /:categories/:title/
 
 # Collections
 collections:
-  projects:
+  blog_posts:
     output: true
-    permalink: /projects/:path/
+    permalink: /blog/:categories/:title/
+  videos:
+    output: true
+    permalink: /videos/:categories/:title/
+  publications:
+    output: true
+    permalink: /publications/:title/
   research:
     output: true
-    permalink: /research/:path/
+    permalink: /research/:title/
   slides:
     output: false
 
@@ -52,15 +58,20 @@ author:
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: "blog_posts"
     values:
       layout: "post"
       comments: false
   - scope:
       path: ""
-      type: "projects"
+      type: "videos"
     values:
-      layout: "project"
+      layout: "video"
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publication"
   - scope:
       path: ""
       type: "research"

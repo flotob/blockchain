@@ -10,6 +10,7 @@ import { updateYouTubeData } from './commands/youtube.js';
 import { updateEventData } from './commands/events.js';
 import { browseNotion } from './commands/notion.js';
 import { updateWorkSlides } from './commands/work.js';
+import convertBlogPosts from './commands/convert-blog-posts.js';
 
 console.log('Imports completed');
 
@@ -171,6 +172,11 @@ program
       process.exit(1);
     }
   });
+
+program
+  .command('convert-blog-posts')
+  .description('Convert blog posts from YML to Jekyll collection files')
+  .action(convertBlogPosts);
 
 // Error handling
 program.exitOverride();
