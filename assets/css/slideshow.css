@@ -224,7 +224,11 @@
 .slide-text {
     flex: 1 1 auto;
     width: 100%;
-    background: transparent;
+    background-color: var(--paper-bg);
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 20px 20px;
     font-size: 0.9rem;
     overflow-y: auto;
     padding: 2rem;
@@ -245,6 +249,8 @@
     font-size: 0.9rem;
     line-height: 1.7;
     color: var(--text-secondary);
+    position: relative;
+    z-index: 1;
 }
 
 .slide-stats {
@@ -351,6 +357,8 @@
     --text-primary: #1e293b;
     --text-secondary: #64748b;
     --border: #e2e8f0;
+    --paper-bg: #fffdf7;
+    --grid-color: rgba(184, 174, 152, 0.09);
 }
 
 /* Mobile Responsive */
@@ -499,20 +507,28 @@
 
 .slide-text .content table {
     width: 100%;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     border-collapse: collapse;
+    background: transparent;
 }
 
 .slide-text .content th,
 .slide-text .content td {
-    padding: 0.75rem;
-    border: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--text-primary);
     text-align: left;
+    background: transparent;
 }
 
 .slide-text .content th {
-    background: var(--background-alt);
     font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 3px solid var(--text-primary);
+}
+
+/* Remove the extra styles we don't need */
+.slide-text .content tr:hover td {
+    background: transparent;
 }
 
 .slide-text .content code {
