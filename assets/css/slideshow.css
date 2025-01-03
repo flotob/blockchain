@@ -158,6 +158,8 @@
 .slide-content {
     flex: 1 1 auto;
     overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -231,6 +233,8 @@
     width: 100%;
     font-size: 0.9rem;
     overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
     position: relative;
     padding: 2rem;
 }
