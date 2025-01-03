@@ -472,23 +472,68 @@
 /* Markdown styles within slides */
 .slide-text .content,
 .slide-caption p,
-.slide-bullet .bullet-list li {
-    /* Base text styles */
-    font-size: 1.125rem;
+.slide-bullet .bullet-list li,
+.slide-text h3,
+.slide-caption h3,
+.slide-bullet h3,
+.slide-text .content table th,
+.slide-text .content table td,
+.slide-text .content blockquote,
+.slide-text .content ul,
+.slide-text .content ol {
+    font-family: 'Kalam', cursive;
     line-height: 1.6;
     color: var(--text-primary);
 }
 
-.slide-text .content p,
-.slide-caption p {
-    margin-bottom: 1rem;
+/* Base text - use regular weight */
+.slide-text .content,
+.slide-caption p,
+.slide-bullet .bullet-list li {
+    font-size: 1.15rem;
+    font-weight: 400;
 }
 
+/* Headings - use bold weight */
+.slide-text h3,
+.slide-caption h3,
+.slide-bullet h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Tables - use light weight for better readability in dense information */
+.slide-text .content table {
+    font-family: 'Kalam', cursive;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.slide-text .content table th {
+    font-weight: 700;
+}
+
+/* Keep code blocks in monospace */
+.slide-text .content code,
+.slide-text .content pre {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+}
+
+/* Strong text - use bold weight */
 .slide-text .content strong,
 .slide-caption p strong,
 .slide-bullet .bullet-list li strong {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-primary);
+}
+
+/* Blockquotes - use light weight for elegant look */
+.slide-text .content blockquote {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.7;
 }
 
 .slide-text .content em,
@@ -591,4 +636,57 @@
 
 .slideshow-trigger:focus {
     outline: none;  /* Ensure outline is removed on focus */
+}
+
+/* Add drag handle to header */
+.slide-header::before {
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.5rem;
+    height: 0.25rem;
+    background: var(--border);
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+@media (max-width: 768px) {
+    .modal-close {
+        display: none;
+    }
+    
+    .slide-header {
+        padding-top: 1.75rem;  /* Extra space for the handle */
+    }
+    
+    .slide-header::before {
+        opacity: 1;
+    }
+    
+    /* Make header look interactive */
+    .slide-header {
+        cursor: grab;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    
+    .slide-header:active {
+        cursor: grabbing;
+    }
+} 
+
+/* Keep table content more structured */
+.slide-text .content table {
+    font-family: system-ui, -apple-system, sans-serif;  /* Keep tables in system font */
+    font-size: 0.9rem;
+}
+
+/* Keep code blocks in monospace */
+.slide-text .content code,
+.slide-text .content pre {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
 } 

@@ -2,6 +2,7 @@ class Slideshow {
     constructor() {
         // DOM Elements
         this.modal = document.querySelector('.slideshow-modal');
+        this.modalContent = this.modal.querySelector('.modal-content');
         this.closeButton = this.modal.querySelector('.modal-close');
         this.slideContent = this.modal.querySelector('.modal-content');
         this.prevButton = this.modal.querySelector('.nav-button.prev');
@@ -18,6 +19,12 @@ class Slideshow {
         // State
         this.currentProject = null;
         this.currentSlideIndex = 0;
+        
+        // Touch interaction state
+        this.touchStart = null;
+        this.currentTranslate = 0;
+        this.isDragging = false;
+        this.startTime = 0;
         
         // Load project data
         this.projectData = JSON.parse(document.getElementById('project-data').textContent);
@@ -66,10 +73,19 @@ class Slideshow {
         this.modal.classList.add('active');
         this.updateSlide();
         this.updateNavigation();
+        
+        // Bind touch events after slide is rendered
+        if (this.isMobile()) {
+            this.header = this.modal.querySelector('.slide-header');
+            this.bindTouchEvents();
+        }
     }
     
     closeSlideshow() {
+        this.modalContent.style.transform = '';
+        this.modal.style.background = '';
         this.modal.classList.remove('active');
+        this.unlockScroll();
         this.currentProject = null;
         this.currentSlideIndex = 0;
     }
@@ -174,6 +190,81 @@ class Slideshow {
             this.updateSlide();
             this.updateNavigation();
         }
+    }
+    
+    bindTouchEvents() {
+        if (!this.header) return;
+        
+        // Remove existing listeners first to prevent duplicates
+        this.header.removeEventListener('touchstart', this.handleTouchStart);
+        this.header.removeEventListener('touchmove', this.handleTouchMove);
+        this.header.removeEventListener('touchend', this.handleTouchEnd);
+        
+        // Add new listeners
+        this.header.addEventListener('touchstart', (e) => this.handleTouchStart(e));
+        this.header.addEventListener('touchmove', (e) => this.handleTouchMove(e));
+        this.header.addEventListener('touchend', (e) => this.handleTouchEnd(e));
+    }
+    
+    handleTouchStart(e) {
+        this.touchStart = e.touches[0].clientY;
+        this.isDragging = true;
+        this.startTime = Date.now();
+        this.modalContent.style.transition = 'none';
+        this.modal.style.transition = 'none';
+    }
+    
+    handleTouchMove(e) {
+        if (!this.isDragging) return;
+        
+        const currentY = e.touches[0].clientY;
+        const diff = currentY - this.touchStart;
+        
+        // Only allow dragging down
+        if (diff < 0) return;
+        
+        // Add resistance to the drag
+        this.currentTranslate = diff * 0.5;
+        
+        // Apply transform only to the content
+        this.modalContent.style.transform = `translateY(${this.currentTranslate}px)`;
+        
+        // Super aggressive fade - start fading immediately
+        const fadeProgress = Math.min(this.currentTranslate / (window.innerHeight * 0.3), 1);
+        this.modal.style.background = `rgba(0, 0, 0, ${0.95 * (1 - fadeProgress * 2)})`;
+        
+        // Prevent default scroll
+        e.preventDefault();
+    }
+    
+    handleTouchEnd(e) {
+        if (!this.isDragging) return;
+        
+        this.isDragging = false;
+        this.modalContent.style.transition = 'transform 0.3s ease';
+        this.modal.style.transition = 'background 0.3s ease';
+        
+        // Calculate velocity
+        const time = Date.now() - this.startTime;
+        const velocity = this.currentTranslate / time;
+        
+        // Dismiss if dragged far enough or flicked fast enough
+        if (this.currentTranslate > window.innerHeight * 0.3 || velocity > 0.5) {
+            this.modalContent.style.transform = `translateY(${window.innerHeight}px)`;
+            this.modal.style.background = 'rgba(0, 0, 0, 0)';
+            setTimeout(() => this.closeSlideshow(), 300);
+        } else {
+            // Snap back
+            this.modalContent.style.transform = 'translateY(0)';
+            this.modal.style.background = 'rgba(0, 0, 0, 0.95)';
+        }
+        
+        this.touchStart = null;
+        this.currentTranslate = 0;
+    }
+    
+    isMobile() {
+        return window.innerWidth <= 768;
     }
 }
 
