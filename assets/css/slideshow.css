@@ -229,14 +229,11 @@
 }
 
 .slide-text {
-    flex: 1 1 auto;
     width: 100%;
     font-size: 0.9rem;
-    overflow-y: auto;
-    overflow-x: hidden;
-    overscroll-behavior-x: none;
     position: relative;
     padding: 2rem;
+    /* Remove overflow and flex properties */
 }
 
 .slide-text::-webkit-scrollbar {
@@ -699,4 +696,14 @@
 .slide-text .content h6 {
     animation: none;
     font-family: 'Kalam', cursive;
+}
+
+/* Hide scrollbar but keep functionality */
+.slide-content::-webkit-scrollbar {
+    display: none;
+}
+
+.slide-content {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }

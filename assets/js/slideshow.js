@@ -116,13 +116,15 @@ class Slideshow {
         `;
 
         const content = `
-            <div class="slide-text">
-                <h3>${this.md.render(slide.title || '')}</h3>
-                <div class="content">${this.md.render(slide.content || '')}</div>
+            <div class="slide-content">
+                <div class="slide-text">
+                    <h3>${this.md.render(slide.title || '')}</h3>
+                    <div class="content">${this.md.render(slide.content || '')}</div>
+                </div>
             </div>
         `;
 
-        const footer = `
+        const footerTop = `
             <div class="slide-footer">
                 <div class="slide-footer-top">
                     <div class="slide-footer-left">
@@ -145,7 +147,7 @@ class Slideshow {
             </div>
         `;
 
-        return header + content + footer;
+        return header + content + footerTop;
     }
     
     updateNavigation() {
