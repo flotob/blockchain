@@ -19,3 +19,7 @@ node_modules
 .sass-cache/*
 _site
 _site/*
+
+# Notion images
+/assets/images/notion/*
+!/assets/images/notion/.gitkeep

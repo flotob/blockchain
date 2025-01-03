@@ -1,5 +1,8 @@
 import { Client } from '@notionhq/client';
 import chalk from 'chalk';
+import fetch from 'node-fetch';
+import path from 'path';
+import fs from 'fs/promises';
 
 export class NotionAPI {
   constructor(apiKey) {
@@ -7,6 +10,60 @@ export class NotionAPI {
       throw new Error('Notion API key is required');
     }
     this.notion = new Client({ auth: apiKey });
+    this.maxRetries = 3;
+    this.maxImageSize = 5 * 1024 * 1024; // 5MB
+  }
+
+  // Image handling utilities
+  async downloadImage(url, localPath, retries = this.maxRetries) {
+    for (let attempt = 1; attempt <= retries; attempt++) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Failed to download image: ${response.statusText}`);
+        }
+
+        const buffer = await response.buffer();
+        await this.validateImage(buffer);
+        await fs.writeFile(localPath, buffer);
+        return true;
+      } catch (error) {
+        console.error(chalk.yellow(`Attempt ${attempt} failed to download image: ${error.message}`));
+        if (attempt === retries) {
+          throw new Error(`Failed to download image after ${retries} attempts: ${error.message}`);
+        }
+        await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
+      }
+    }
+  }
+
+  getImageExtension(url) {
+    const match = url.match(/\.([a-zA-Z0-9]+)(?:\?|$)/);
+    return match ? match[1].toLowerCase() : 'jpg';
+  }
+
+  generateImageFilename(blockId, extension) {
+    return `${blockId}.${extension}`;
+  }
+
+  async validateImage(buffer) {
+    // Check file size
+    if (buffer.length > this.maxImageSize) {
+      throw new Error(`Image size exceeds maximum allowed size of ${this.maxImageSize / 1024 / 1024}MB`);
+    }
+
+    // Check file type (basic check)
+    const header = buffer.slice(0, 4).toString('hex');
+    const validHeaders = {
+      'ffd8ffe0': 'jpg',
+      '89504e47': 'png',
+      '47494638': 'gif',
+      '52494646': 'webp'
+    };
+
+    if (!Object.keys(validHeaders).some(h => header.startsWith(h))) {
+      throw new Error('Invalid image format. Only jpg, png, gif, and webp are supported.');
+    }
   }
 
   // Get children of a page or database
@@ -184,8 +241,45 @@ export class NotionAPI {
     }
   }
 
-  // Get slide content and convert to markdown
-  async getSlideContent(slideId, retries = 3) {
+  async processNotionImage(block, projectId) {
+    const imageUrl = block.image.file?.url || block.image.external?.url;
+    const caption = block.image.caption?.length > 0 
+      ? this._richTextToMarkdown(block.image.caption) 
+      : '';
+
+    if (!imageUrl) {
+      console.warn(chalk.yellow(`No image URL found for block ${block.id}`));
+      return `![${caption}](missing-image)\n\n`;
+    }
+
+    // For external images, use them directly
+    if (block.image.external?.url) {
+      return `![${caption}](${imageUrl})\n\n`;
+    }
+
+    try {
+      // For Notion-hosted images, download and store locally
+      const extension = this.getImageExtension(imageUrl);
+      const filename = this.generateImageFilename(block.id, extension);
+      const publicPath = `/assets/images/notion/${projectId}/${filename}`;
+      const localPath = path.join(process.cwd(), 'assets', 'images', 'notion', projectId, filename);
+
+      // Ensure directory exists
+      await fs.mkdir(path.dirname(localPath), { recursive: true });
+
+      // Download image
+      await this.downloadImage(imageUrl, localPath);
+      
+      return `![${caption}](${publicPath})\n\n`;
+    } catch (error) {
+      console.error(chalk.red(`Failed to process image in block ${block.id}:`, error.message));
+      // Fallback to original URL if processing fails
+      return `![${caption}](${imageUrl})\n\n`;
+    }
+  }
+
+  // Update getSlideContent to handle images
+  async getSlideContent(slideId, projectId, retries = 3) {
     for (let attempt = 1; attempt <= retries; attempt++) {
       try {
         const blocks = await this.notion.blocks.children.list({
@@ -197,7 +291,16 @@ export class NotionAPI {
           throw new Error(`No content found for slide: ${slideId}`);
         }
 
-        return this._blocksToMarkdown(blocks.results);
+        let markdown = '';
+        for (const block of blocks.results) {
+          if (block.type === 'image') {
+            markdown += await this.processNotionImage(block, projectId);
+          } else {
+            markdown += this._blockToMarkdown(block);
+          }
+        }
+
+        return markdown;
       } catch (error) {
         if (attempt === retries) {
           throw new Error(`Failed to fetch slide ${slideId} after ${retries} attempts: ${error.message}`);
@@ -208,58 +311,62 @@ export class NotionAPI {
   }
 
   // Convert Notion blocks to markdown
-  _blocksToMarkdown(blocks) {
-    let markdown = '';
-
-    for (const block of blocks) {
-      switch (block.type) {
-        case 'paragraph':
-          markdown += this._richTextToMarkdown(block.paragraph.rich_text) + '\n\n';
-          break;
-        
-        case 'heading_1':
-          markdown += '# ' + this._richTextToMarkdown(block.heading_1.rich_text) + '\n\n';
-          break;
-        
-        case 'heading_2':
-          markdown += '## ' + this._richTextToMarkdown(block.heading_2.rich_text) + '\n\n';
-          break;
-        
-        case 'heading_3':
-          markdown += '### ' + this._richTextToMarkdown(block.heading_3.rich_text) + '\n\n';
-          break;
-
-        case 'bulleted_list_item':
-          markdown += '- ' + this._richTextToMarkdown(block.bulleted_list_item.rich_text) + '\n';
-          break;
-
-        case 'numbered_list_item':
-          markdown += '1. ' + this._richTextToMarkdown(block.numbered_list_item.rich_text) + '\n';
-          break;
-
-        case 'code':
-          markdown += '```' + (block.code.language || '') + '\n';
-          markdown += this._richTextToMarkdown(block.code.rich_text) + '\n';
-          markdown += '```\n\n';
-          break;
-
-        case 'quote':
-          markdown += '> ' + this._richTextToMarkdown(block.quote.rich_text) + '\n\n';
-          break;
-
-        case 'image':
-          const caption = block.image.caption?.length > 0 
-            ? this._richTextToMarkdown(block.image.caption) 
-            : '';
-          markdown += `![${caption}](${block.image.file?.url || block.image.external?.url})\n\n`;
-          break;
-
-        default:
-          console.log(chalk.yellow(`Unsupported block type: ${block.type}`));
-      }
+  _blockToMarkdown(block) {
+    // If it's an array, process each block
+    if (Array.isArray(block)) {
+      return block.map(b => this._blockToMarkdown(b)).join('');
     }
 
-    return markdown.trim();
+    let markdown = '';
+    switch (block.type) {
+      case 'paragraph':
+        markdown += this._richTextToMarkdown(block.paragraph.rich_text) + '\n\n';
+        break;
+      
+      case 'heading_1':
+        markdown += '# ' + this._richTextToMarkdown(block.heading_1.rich_text) + '\n\n';
+        break;
+      
+      case 'heading_2':
+        markdown += '## ' + this._richTextToMarkdown(block.heading_2.rich_text) + '\n\n';
+        break;
+      
+      case 'heading_3':
+        markdown += '### ' + this._richTextToMarkdown(block.heading_3.rich_text) + '\n\n';
+        break;
+
+      case 'bulleted_list_item':
+        markdown += '- ' + this._richTextToMarkdown(block.bulleted_list_item.rich_text) + '\n';
+        break;
+
+      case 'numbered_list_item':
+        markdown += '1. ' + this._richTextToMarkdown(block.numbered_list_item.rich_text) + '\n';
+        break;
+
+      case 'code':
+        markdown += '```' + (block.code.language || '') + '\n';
+        markdown += this._richTextToMarkdown(block.code.rich_text) + '\n';
+        markdown += '```\n\n';
+        break;
+
+      case 'quote':
+        markdown += '> ' + this._richTextToMarkdown(block.quote.rich_text) + '\n\n';
+        break;
+
+      case 'image':
+        const caption = block.image.caption?.length > 0 
+          ? this._richTextToMarkdown(block.image.caption) 
+          : '';
+        
+        // For now, use direct URL - we'll update this in processSlideContent
+        markdown += `![${caption}](${block.image.file?.url || block.image.external?.url})\n\n`;
+        break;
+
+      default:
+        console.log(chalk.yellow(`Unsupported block type: ${block.type}`));
+    }
+
+    return markdown;
   }
 
   // Convert Notion rich text to markdown

@@ -14,3 +14,4 @@ title: mission
 ## Vision
 
 A vibrant, transparent, and inclusive European ecosystem where **crypto innovation** thrives under **fair and predictable** regulatory conditions, empowering individuals, businesses, and communities.
+

@@ -15,3 +15,4 @@ The **European Crypto Initiative (EUCI)** is a non-profit advocacy group dedicat
 ## Why EUCI?
 
 We believe that Europe should be at the forefront of responsible innovation, setting global standards in crypto and blockchain while ensuring privacy, security, and inclusivity for all.
+

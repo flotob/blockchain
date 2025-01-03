@@ -3,7 +3,7 @@ project: 16ff33c1f6c0803092bbcd4da6ed51f7
 order: 1
 title: vision
 ---
-# The orchestration layer for onchain communities
+# Bringing communities onchain
 
 Common Ground is community-oriented social app that seamlessly integrated powerful web3 capabilities for individuals and groups to act onchain. Primitives like identity, roles and governance are woven into higher-level objects, to build an interconnected, antifragile network of communities that inherits the availability and security guarantees of the underlying decentralized blockchain architecture.
 
@@ -35,3 +35,4 @@ Apps will tend to aggregate end users and commoditize blockspace over time. Comm
 - emergence of **onchain culture and communities** coordinating around coinship
 - broad support of **PWAs with native push notifications** across all major mobile OS
 Common Ground consumes category leading protocols and embeds them into a hypersocial, community-centric context. Aggregating users across ecosystems, offering a best-in-class mobile & desktop experience, with web3-features seamlessly baked in.
+

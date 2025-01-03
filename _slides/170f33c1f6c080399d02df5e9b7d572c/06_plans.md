@@ -18,3 +18,4 @@ title: plans
 ## Call to Action
 
 We invite all **stakeholders, innovators, and advocates** to collaborate with us. By working together, we can ensure that Europe remains a leader in shaping the global crypto narrative—responsibly, inclusively, and for the benefit of all.
+

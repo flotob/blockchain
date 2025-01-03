@@ -21,3 +21,4 @@ title: partners
 - **Startup accelerators** that foster new talent and cutting-edge solutions
 - **Open-source communities** contributing to decentralized frameworks
 > Our diverse network of supporters spans government agencies, blockchain pioneers, and grassroots organizations. Together, we strive to shape a regulatory environment that promotes fair competition, consumer protection, and technological advancement.
+

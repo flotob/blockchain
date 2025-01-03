@@ -14,6 +14,7 @@ const REPO_ROOT = path.join(__dirname, '..', '..', '..');
 
 const WORK_FILE = path.join(REPO_ROOT, '_data', 'work.yml');
 const SLIDES_DIR = path.join(REPO_ROOT, '_slides');
+const IMAGES_DIR = path.join(REPO_ROOT, 'assets', 'images', 'notion');
 
 export async function updateWorkSlides(options = { verbose: false }) {
   const logger = new Logger(options.verbose);
@@ -53,20 +54,22 @@ export async function updateWorkSlides(options = { verbose: false }) {
       logger.startSpinner(`Processing ${project.title}...`);
       logger.debug(`Notion source: ${project.notion_source}`);
       
-      // Create project slides directory
-      const projectDir = path.join(SLIDES_DIR, project.notion_source);
-      logger.debug(`Creating project directory: ${projectDir}`);
+      // Create project directories
+      const projectSlidesDir = path.join(SLIDES_DIR, project.notion_source);
+      const projectImagesDir = path.join(IMAGES_DIR, project.notion_source);
       
-      // Clean up existing directory if it exists
+      // Clean up existing directories
       try {
-        await fs.rm(projectDir, { recursive: true, force: true });
-        logger.debug(`Cleaned up existing directory: ${projectDir}`);
+        await fs.rm(projectSlidesDir, { recursive: true, force: true });
+        await fs.rm(projectImagesDir, { recursive: true, force: true });
+        logger.debug(`Cleaned up existing directories for ${project.title}`);
       } catch (error) {
-        logger.debug(`No existing directory to clean up: ${error.message}`);
+        logger.debug(`No existing directories to clean up: ${error.message}`);
       }
       
-      // Create fresh directory
-      await fs.mkdir(projectDir, { recursive: true });
+      // Create fresh directories
+      await fs.mkdir(projectSlidesDir, { recursive: true });
+      await fs.mkdir(projectImagesDir, { recursive: true });
 
       try {
         // Get all slide pages
@@ -79,8 +82,8 @@ export async function updateWorkSlides(options = { verbose: false }) {
           logger.startSpinner(`Processing slide: ${slide.title}`);
           logger.debug(`Slide ID: ${slide.id}`);
           
-          // Get slide content as markdown
-          const markdown = await notion.getSlideContent(slide.id);
+          // Get slide content as markdown, passing project ID for image handling
+          const markdown = await notion.getSlideContent(slide.id, project.notion_source);
           logger.debug(`Got markdown content (${markdown.length} chars)`);
           
           // Create front matter
@@ -96,7 +99,7 @@ export async function updateWorkSlides(options = { verbose: false }) {
           // Create numbered filename with title
           const safeTitle = slide.title.toLowerCase().replace(/[^a-z0-9]+/g, '_');
           const filename = `${String(slide.index).padStart(2, '0')}_${safeTitle}.md`;
-          const filepath = path.join(projectDir, filename);
+          const filepath = path.join(projectSlidesDir, filename);
           logger.debug(`Writing to: ${filepath}`);
           
           // Save markdown file with front matter
@@ -112,12 +115,12 @@ export async function updateWorkSlides(options = { verbose: false }) {
     }
 
     logger.success('Slides update completed');
-    logger.stopSpinner(); // Stop any remaining spinners
+    logger.stopSpinner();
     return true;
   } catch (error) {
     logger.error('Failed to update slides:', error);
     logger.debug('Full error:', error);
-    logger.stopSpinner(); // Stop spinner on error too
+    logger.stopSpinner();
     return false;
   }
 } 
