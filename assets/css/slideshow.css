@@ -161,6 +161,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    background-color: var(--paper-bg);
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 20px 20px;
 }
 
 .slide-watermark {
@@ -224,13 +229,9 @@
 .slide-text {
     flex: 1 1 auto;
     width: 100%;
-    background-color: var(--paper-bg);
-    background-image: 
-        linear-gradient(var(--grid-color) 1px, transparent 1px),
-        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-    background-size: 20px 20px;
     font-size: 0.9rem;
     overflow-y: auto;
+    position: relative;
     padding: 2rem;
 }
 
