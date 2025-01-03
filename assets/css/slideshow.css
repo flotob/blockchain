@@ -159,7 +159,7 @@
     flex: 1 1 auto;
     overflow-y: auto;
     overflow-x: hidden;
-    overscroll-behavior-x: none;
+    overscroll-behavior: none;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -696,6 +696,18 @@
 .slide-text .content h6 {
     animation: none;
     font-family: 'Kalam', cursive;
+    margin-top: 2rem;      /* More space before heading */
+    margin-bottom: 1rem;   /* Less space after heading */
+}
+
+/* First heading shouldn't have top margin */
+.slide-text .content > h1:first-child,
+.slide-text .content > h2:first-child,
+.slide-text .content > h3:first-child,
+.slide-text .content > h4:first-child,
+.slide-text .content > h5:first-child,
+.slide-text .content > h6:first-child {
+    margin-top: 0;
 }
 
 /* Hide scrollbar but keep functionality */
