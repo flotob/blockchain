@@ -1,3 +1,12 @@
+/* Slideshow Modal */
+:root {
+    --slide-ratio: 1.5;  /* 3/2 ratio - between 16:10 and 4:3 */
+    --slide-max-width: 1200px;
+    --slide-max-height: 85vh;
+    --slide-padding: 3rem;
+    --slide-padding-mobile: 1rem;
+}
+
 .slideshow-modal {
     position: fixed;
     top: 0;
@@ -21,16 +30,21 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 2rem 3rem;
+    align-items: center;  /* Changed from flex-start to center */
+    padding: var(--slide-padding);
     background: rgba(0, 0, 0, 0.85);
 }
 
 .modal-content {
-    max-width: 1200px;
-    width: 100%;
-    height: 100%;
-    max-height: 85vh;
+    width: min(
+        var(--slide-max-width),
+        calc(var(--slide-max-height) * var(--slide-ratio)),
+        calc(100vw - (var(--slide-padding) * 2))
+    );
+    height: min(
+        var(--slide-max-height),
+        calc((100vw - (var(--slide-padding) * 2)) / var(--slide-ratio))
+    );
     display: flex;
     flex-direction: column;
     background: var(--background);
@@ -201,7 +215,7 @@
 
 .slide-image img {
     max-width: 100%;
-    max-height: calc(70vh - 4rem);
+    max-height: calc(100% - 4rem);
     object-fit: contain;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -232,8 +246,7 @@
     width: 100%;
     font-size: 0.9rem;
     position: relative;
-    padding: 2rem;
-    /* Remove overflow and flex properties */
+    padding: 2rem 4rem;
 }
 
 .slide-text::-webkit-scrollbar {
@@ -370,11 +383,15 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .modal-container {
-        padding: 1rem;
+        padding: var(--slide-padding-mobile);
     }
     
     .modal-content {
-        max-height: 95vh;
+        width: calc(100vw - (var(--slide-padding-mobile) * 2));
+        height: min(
+            var(--slide-max-height),
+            calc((100vw - (var(--slide-padding-mobile) * 2)) / var(--slide-ratio))
+        );
     }
     
     .slide-header {
@@ -722,4 +739,45 @@
 .slide-content {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+
+/* Add styling for markdown content images */
+.slide-text .content img {
+    max-width: 80%;
+    width: auto;
+    max-height: 60vh;
+    object-fit: contain;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile adjustments for content images */
+@media (max-width: 768px) {
+    .slide-text {
+        padding: 1.5rem 2rem;
+    }
+    
+    .slide-text .content img {
+        max-width: 100%;
+        max-height: 40vh;
+        margin: 1.5rem auto;
+    }
+}
+
+/* Desktop-specific header adjustments */
+@media (min-width: 769px) {
+    .slide-header {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .slide-header h2 {
+        font-size: 1.125rem;
+    }
+
+    .slide-watermark {
+        width: 48px;
+        height: 48px;
+    }
 }
