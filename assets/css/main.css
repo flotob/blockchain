@@ -561,9 +561,9 @@ html {
 
 .work-image.logo {
     object-fit: contain;
-    padding: 1rem;
+    padding: 2rem;
     border-bottom: none;
-    transform: scale(1.1);
+    /*transform: scale(1.1);*/
 }
 
 .work-description-mobile {

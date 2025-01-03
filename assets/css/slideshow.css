@@ -140,6 +140,7 @@
     border-radius: 1rem;
     font-size: 0.75rem;
     font-weight: 500;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 .slide-counter-current {

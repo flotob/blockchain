@@ -12,7 +12,7 @@ projects:
     role: Co-Founder & Board Member
     description: Co-Founder and board member of the European Crypto Initiative, a Brussels-based non-profit advocating for better crypto regulation in Europe
     description_mobile: Advocating for better crypto regulation in Europe
-    image: images/euci.png
+    image: images/euci.svg
     url: https://eu.ci
     image_type: logo
     notion_source: 170f33c1f6c080399d02df5e9b7d572c
