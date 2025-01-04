@@ -1,7 +1,7 @@
 ---
 title: Law and the AI Delusion
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/p/a2e92d5fb21d
+date: 2008-10-31T00:00:00.000Z
+original_url: 
 is_draft: true
 hero_image: 
 ---

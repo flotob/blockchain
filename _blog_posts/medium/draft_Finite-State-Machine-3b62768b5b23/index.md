@@ -1,7 +1,7 @@
 ---
 title: Finite State Machine
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/p/3b62768b5b23
+date: 2008-10-31T00:00:00.000Z
+original_url: 
 is_draft: true
 hero_image: 
 ---

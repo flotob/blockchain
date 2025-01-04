@@ -1,7 +1,7 @@
 ---
 title: About Law and Technological Reductionism
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/p/b50a110675d4
+date: 2008-10-31T00:00:00.000Z
+original_url: 
 is_draft: true
 hero_image: 
 ---

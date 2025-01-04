@@ -1,8 +1,8 @@
 ---
 title: Glimpses into the future
 or why we do what we do
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/p/8e3a56d14368
+date: 2008-10-31T00:00:00.000Z
+original_url: 
 is_draft: true
 hero_image: 
 ---

@@ -1,17 +1,17 @@
 ---
 title: The Political Economy
 of Computing
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/@heckerhut
+date: 2015-05-13T00:00:00.000Z
+original_url: https://medium.com/@heckerhut/the-political-economy-of-computing-7fffc75423a2
 is_draft: false
-hero_image: images/1*RVB-TczCbA-CGSV6ApgIgQ.jpeg
+hero_image: /assets/images/medium/2015-05-13_The-Political-Economy-of-Computing-7fffc75423a2-1*RVB-TczCbA-CGSV6ApgIgQ.jpeg
 ---
 
 Taking technological change seriously in the social sciences.
 
 * * *
 
-!\[\](images/1\*RVB-TczCbA-CGSV6ApgIgQ.jpeg)
+!\[\](/assets/images/medium/2015-05-13\_The-Political-Economy-of-Computing-7fffc75423a2-1\*RVB-TczCbA-CGSV6ApgIgQ.jpeg)
 
 ## The Political Economy  
 of Computing
@@ -74,7 +74,7 @@ Kallinikos contrasts automation with the workings of prior, human-centric system
 
 Talking about governance structures, law and technology both become first-class citizens. Looking at [current trends](https://medium.com/@heckerhut/modes-of-contractual-governance-in-an-on-demand-service-economy-1833629f379b), however, it seems that technological governance is overtaking the legal domain. [Oliver Goodenough](http://www.vermontlaw.edu/directory/person?name=Goodenough,Oliver), a contemporary advocate of [software-driven legal innovation](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2538224), put it in those terms at [Stanford’s Future Law Conference](https://conferences.law.stanford.edu/futurelaw2015/materials/):
 
-!\[\](images/1\*QwG\_UIcsXPqFTNtv-h-\_Zg.png)
+!\[\](/assets/images/medium/2015-05-13\_The-Political-Economy-of-Computing-7fffc75423a2-1\*QwG\_UIcsXPqFTNtv-h-\_Zg.png)
 
 Quite drastic, to say the least! But what exactly is this _“something else”_ that is going to replace the “_rule of law_”?
 

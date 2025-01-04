@@ -1,7 +1,7 @@
 ---
 title: Rule Engines and Crypto Assets
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/p/75b535be18d9
+date: 2008-10-31T00:00:00.000Z
+original_url: 
 is_draft: true
 hero_image: 
 ---

@@ -1,20 +1,20 @@
 ---
 title: The Berlin Legal Tech 2017 Hackathon: Retrospective and Future Roadmaps
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/@heckerhut
+date: 2017-02-12T00:00:00.000Z
+original_url: https://medium.com/@heckerhut/the-berlin-legal-tech-2017-hackathon-retrospective-and-future-roadmaps-88f50d45aac8
 is_draft: false
-hero_image: images/1*Ommq_ktI2-bMKIrkPEWQTQ.jpeg
+hero_image: /assets/images/medium/2017-02-12_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1*taXey05Vh_3e1Hn1-Xf3TA.png
 ---
 
 While my mind is still trying to grasp the magnitude of the last three days, I feel compelled to share a first glimpse into what happened…
 
 * * *
 
-!\[\](images/1\*taXey05Vh\_3e1Hn1-Xf3TA.png)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*taXey05Vh\_3e1Hn1-Xf3TA.png)
 
 ### The Berlin Legal Tech 2017 Hackathon: Retrospective and Future Roadmaps
 
-!\[\](images/1\*dkfLt5Xaj4GFreXVIcNEtA.png)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*dkfLt5Xaj4GFreXVIcNEtA.png)
 
 While my mind is still trying to grasp the magnitude of the last three days, I feel compelled to share a first glimpse into what happened here on our blog.
 
@@ -38,65 +38,65 @@ My friend and partner in crime [Gernot Halbleib](https://www.linkedin.com/in/ger
 
 Legal Engineers is what we called those participants that are both lawyers and tech-savvy and the same time. Despite the bad rep that lawyers have gained in the IT domain, there is a growing number of such **unicorns** that are both mastering digital tools and capable of legal reasoning.
 
-!\[\](images/1\*Ei3mcDBrV0ku1SwRdF4JnA.png)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*Ei3mcDBrV0ku1SwRdF4JnA.png)
 
 To do **Legal Engineering** right, however, it needs more than just Legal Engineers. According to our vision of how Legal Engineering will unlock new levels of **access to justice and the scalability of law** itself, a positive digitale future requires the collaboration of Lawyers, who are the domain experts, Developers, who are masters at digital tools and Legal Engineers, who are the translators between the other two.
 
 We were very positively surprised when a survey among our group of participants shortly before the event yielded the following statistics in terms of the self-identified skillset of our participants:
 
-!\[\](images/1\*1PLQiweBkHje7BxxiR7cMA.png)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*1PLQiweBkHje7BxxiR7cMA.png)
 
 #### Idea Hacking
 
 Our Idea Hacking sessions enabled all participants to get into a creative mood. Guided by legal engineers and legal tech pioneers, ideas were categorized, channeled and sharpened.
 
-!\[\](images/1\*C8t9TalLg1jWcBp49IKCqA.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*C8t9TalLg1jWcBp49IKCqA.jpeg)
 
 Ideas were collected on huge amounts of paper, which we then plastered all over the beautiful walls of our space.
 
-!\[\](images/1\*tbKPEY6eA12hPAaN1F85-A.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*tbKPEY6eA12hPAaN1F85-A.jpeg)
 
 Ultimately though, it were the voices of our legal hackers that guided the idea finding process.
 
-!\[\](images/1\*cny86rIe6tUrkOTPWeVz9A.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*cny86rIe6tUrkOTPWeVz9A.jpeg)
 
 #### Team Building
 
 Repeatedly during the Idea Hacking phase, our legal hackers gathered for idea pitching sessions, both to sharpen their own concepts as well as to inspire others to collaborate further on their idea. Dozens of ideas were pitched, sometimes repeatedly as they evolved.
 
-!\[\](images/1\*2SOSAeW8h7u7ia9ZhF\_rbQ.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*2SOSAeW8h7u7ia9ZhF\_rbQ.jpeg)
 
-!\[\](images/1\*q7WXTGJvg1U\_2ghC8Y5X4A.jpeg)!\[\](images/1\*qyyJMwR2Nj0g3Dm8iKWBWw.jpeg)!\[\](images/1\*Ommq\_ktI2-bMKIrkPEWQTQ.jpeg)!\[\](images/1\*EHuvh8EB6XxAur7TSyL8nA.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*q7WXTGJvg1U\_2ghC8Y5X4A.jpeg)!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*qyyJMwR2Nj0g3Dm8iKWBWw.jpeg)!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*Ommq\_ktI2-bMKIrkPEWQTQ.jpeg)!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*EHuvh8EB6XxAur7TSyL8nA.jpeg)
 
 #### Prototype Hacking
 
 A core tenet of Hackathons is the “getting-your-hands-dirty” part, where you go from **idea to prototype.** The huge motivation we felt from our participants made it easy to make that jump. According to plan, groups emerged that perfectly mirrored the overall distribution of skillsets: interdisciplinary groups of lawyers, developers and legal engineers gathered around the dozen+ tables we had spread throughout the IOTA Foundation’s Office.
 
-!\[\](images/1\*-b7GGZSTT1ZGE7D31UD\_vA.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*-b7GGZSTT1ZGE7D31UD\_vA.jpeg)
 
 * * *
 
-!\[\](images/1\*ASu97uiyFgf-fyzzQmi02Q.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*ASu97uiyFgf-fyzzQmi02Q.jpeg)
 
 * * *
 
-!\[\](images/1\*jeWzjNEnElXUwFXHuy5qJA.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*jeWzjNEnElXUwFXHuy5qJA.jpeg)
 
 * * *
 
-!\[\](images/1\*iLHJA6Wz8cTl4aaElUKzqw.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*iLHJA6Wz8cTl4aaElUKzqw.jpeg)
 
 * * *
 
-!\[\](images/1\*T2KhjRvdI\_R1AAc-mY\_XfA.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*T2KhjRvdI\_R1AAc-mY\_XfA.jpeg)
 
 One of the masterminds behind the scenes that made all of this possible, Natalie Eichler ❤
 
-!\[\](images/1\*UHj16WgSvFLhQAWKst6SFA.png)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*UHj16WgSvFLhQAWKst6SFA.png)
 
 Our Team Building was concluded with each team filling out an idea sheet, that provoked them to rethink and sharpen the outcome of their collaborative work process.
 
-!\[\](images/1\*HTjJrya0VbIQZQQADw04tg.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*HTjJrya0VbIQZQQADw04tg.jpeg)
 
 #### Workshops
 
@@ -104,11 +104,11 @@ In some industries, Hackathons are a well-established concept. Accordingly, Hack
 
 Based on principles of inclusion and self-organized knowledge-transfer, we offered a set of external stimuli to kickstart the desired processes. On the first day, we offered a set of on-site **Bootcamp Prototyping Workshops**, that helped our non-technical participants to get some useful guidelines of how to get from idea to prototype.
 
-!\[\](images/1\*zte2ucwE4\_8yQ0w2Y8QNKQ.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*zte2ucwE4\_8yQ0w2Y8QNKQ.jpeg)
 
 Another course held by Gernot Halbleib introduced several hands-on examples of what can be done with leading document automation tools such as [XpressDox](http://xpressdox.com/) and [Abbyy](http://abbyy.de), two of our Technology Partners. Fittingly, the course introduced basics of algorithmic thinking to lawyers, as well as typical workflows in legal practice to the developers present.
 
-!\[\](images/1\*dkCZqT\_YYh9JI-vXKTYkLg.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*dkCZqT\_YYh9JI-vXKTYkLg.jpeg)
 
 On the second day, Thursday Februrary 9th, we had a **full-day workshop track** in a second space, thanks to support from [legalBase](http://legalbase.de). You can rewatch the morning sessions on [Youtube](https://www.youtube.com/playlist?list=PL3bvPCw5QCLJukbfwnu3hvtXX89wCDPWW) or watch it right here right now in the embedded video player below:
 
@@ -118,11 +118,11 @@ Our hacking space was open 48hours for our Legal Hackers, complete with free foo
 
 Our Legal Hackers used the opportunity and stayed overnight, hacking away on their ideas, prototypes and presentations.
 
-!\[\](images/1\*XSWEnl06DwYGD96x2VWqXQ.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*XSWEnl06DwYGD96x2VWqXQ.jpeg)
 
 * * *
 
-!\[\](images/1\*eQToJdqp9P6Up6LKIAoLFQ.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*eQToJdqp9P6Up6LKIAoLFQ.jpeg)
 
 #### Final Pitches & Award Ceremony
 
@@ -132,27 +132,27 @@ In front of a crowd of roughly 100 people, including a jury of four, comprised o
 
 The outcome was simply incredible. Our interdisciplinary teams had managed to build really sophisticated implementations of their ideas in form of apps, websites and function algorithms.
 
-!\[\](images/1\*D2NUYKj5IcObsfi4Ra\_bKg.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*D2NUYKj5IcObsfi4Ra\_bKg.jpeg)
 
 The audience was stunned, when a virtual legal secretary suddenly started to speak and organize documents and emails in front of the audience’s eye.
 
-!\[\](images/1\*0V0uvlRL5d7dJETr0gJWsw.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*0V0uvlRL5d7dJETr0gJWsw.jpeg)
 
 * * *
 
-!\[\](images/1\*BgsndG3Ak5820Vf8CnuC3Q.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*BgsndG3Ak5820Vf8CnuC3Q.jpeg)
 
 * * *
 
-!\[\](images/1\*\_\_mq5TM2bwExz3vcs8L7aA.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*\_\_mq5TM2bwExz3vcs8L7aA.jpeg)
 
 * * *
 
-!\[\](images/1\*5ehuIqUbo5Ur8lImTMtwJQ.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*5ehuIqUbo5Ur8lImTMtwJQ.jpeg)
 
 * * *
 
-!\[\](images/1\*6f-jo7PDHIXgeygAJD93MA.jpeg)
+!\[\](/assets/images/medium/2017-02-12\_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1\*6f-jo7PDHIXgeygAJD93MA.jpeg)
 
 * * *
 

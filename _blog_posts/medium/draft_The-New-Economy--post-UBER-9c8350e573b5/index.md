@@ -1,7 +1,7 @@
 ---
 title: The New Economy: post-UBER
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/p/9c8350e573b5
+date: 2008-10-31T00:00:00.000Z
+original_url: 
 is_draft: true
 hero_image: 
 ---

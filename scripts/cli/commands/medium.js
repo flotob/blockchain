@@ -16,6 +16,9 @@ const turndownService = new TurndownService({
   codeBlockStyle: 'fenced'
 });
 
+// Bitcoin whitepaper publication date for drafts
+const SATOSHI_DATE = '2008-10-31T00:00:00.000Z';
+
 async function processContentWithTimeout($, postDir, timeout = 30000) {
   return Promise.race([
     processContent($, postDir),
@@ -94,25 +97,34 @@ export async function importMediumArticles() {
         const title = $('h1.p-name').text() || $('h3.graf--title').text();
         logger.debug(`Found title: ${title}`);
         
-        // Get date from footer text
-        const footerText = $('footer').text();
-        const dateMatch = footerText.match(/Exported from Medium on ([^.]+)/);
-        const exportDate = dateMatch ? new Date(dateMatch[1]) : null;
-        logger.debug(`Found export date: ${exportDate}`);
+        // Get canonical URL from footer's canonical link
+        const canonicalUrl = $('footer a.p-canonical').attr('href');
+        logger.debug(`Found canonical URL: ${canonicalUrl}`);
         
-        // Get original URL from footer link
-        const originalUrl = $('footer a').first().attr('href');
-        logger.debug(`Found original URL: ${originalUrl}`);
+        // Determine if it's a draft
+        const isDraft = path.basename(post).startsWith('draft_');
         
-        // Get content from article body
-        const articleContent = $('section[data-field="body"]');
-        logger.debug(`Found content section: ${articleContent.length > 0}`);
+        // Get date from filename for published posts, use Satoshi date for drafts
+        let publishDate;
+        if (isDraft) {
+          publishDate = SATOSHI_DATE;
+          logger.debug('Draft post, using Satoshi date');
+        } else {
+          try {
+            const dateFromFilename = path.basename(post).split('_')[0];
+            publishDate = new Date(dateFromFilename).toISOString();
+            logger.debug(`Extracted date from filename: ${publishDate}`);
+          } catch (error) {
+            logger.error(`Error parsing date from filename, using current date: ${error}`);
+            publishDate = new Date().toISOString();
+          }
+        }
         
         const metadata = {
           title,
-          date: exportDate ? exportDate.toISOString() : null,
-          original_url: originalUrl,
-          is_draft: path.basename(post).startsWith('draft_'),
+          date: publishDate,
+          original_url: canonicalUrl || '',
+          is_draft: isDraft,
           article_id: path.basename(post, '.html')
         };
         logger.debug(`Extracted metadata: ${JSON.stringify(metadata, null, 2)}`);
@@ -235,11 +247,23 @@ ${content}`;
           ? firstParagraph.substring(0, 200) + '...'
           : firstParagraph;
 
+        // Verify image exists before adding to YAML
+        let imagePath = '';
+        if (metadata.hero_image) {
+          const fullImagePath = path.join(process.cwd(), metadata.hero_image.replace(/^\//, ''));
+          try {
+            await fs.access(fullImagePath);
+            imagePath = metadata.hero_image;
+          } catch (error) {
+            logger.debug(`Hero image not found at ${fullImagePath}, skipping`);
+          }
+        }
+
         // Add to blog_posts.yml
         blogPostsYaml.medium_archive.push({
           title: metadata.title || 'Untitled',
           url: metadata.original_url || '',
-          image: metadata.hero_image || '',  // Use the hero image path
+          image: imagePath,  // Only use path if file exists
           excerpt: excerpt,
           publishedAt: metadata.date,
           isDraft: metadata.is_draft === 'true'
@@ -269,13 +293,19 @@ ${content}`;
       await yamlHandler.writeYAML('_data/blog_posts.yml', blogPostsYaml);
       logger.success('Updated blog_posts.yml');
     } catch (error) {
+      logger.stopSpinner(); // Stop spinner before throwing
       logger.error(`Error writing blog_posts.yml: ${error}`);
       throw error;
     }
 
+    logger.stopSpinner(); // Ensure spinner is stopped before finishing
+    logger.success('Medium import completed successfully');
+    process.exit(0); // Explicitly exit
+
   } catch (error) {
+    logger.stopSpinner(); // Stop spinner in case of error
     logger.error(`Failed to import Medium articles: ${error}`);
-    throw error;
+    process.exit(1); // Exit with error code
   }
 }
 
@@ -293,10 +323,15 @@ async function downloadImage(url, postDir) {
       throw new Error(`Failed to download image: ${response.status} ${response.statusText}`);
     }
 
-    // Extract filename from URL or generate one
+    // Extract filename from URL and make it unique using the post directory name
     const urlParts = url.split('/');
-    const filename = urlParts[urlParts.length - 1];
-    const imageDir = path.join(postDir, 'images');
+    const originalFilename = urlParts[urlParts.length - 1];
+    const postDirName = path.basename(postDir);
+    // Prepend post directory name to ensure uniqueness
+    const filename = `${postDirName}-${originalFilename}`;
+    
+    // Create assets/images/medium directory if it doesn't exist
+    const imageDir = path.join(process.cwd(), 'assets', 'images', 'medium');
     await fs.mkdir(imageDir, { recursive: true });
     
     const imagePath = path.join(imageDir, filename);
@@ -304,10 +339,11 @@ async function downloadImage(url, postDir) {
     await fs.writeFile(imagePath, buffer);
     
     logger.debug(`Saved image to ${imagePath}`);
-    return path.join('images', filename); // Return relative path
+    // Return path relative to site root for use in markdown and YAML
+    return path.join('/assets/images/medium', filename);
   } catch (error) {
     logger.error(`Error downloading image ${url}: ${error}`);
-    return url; // Fall back to original URL if download fails
+    return null; // Return null instead of falling back to URL
   }
 }
 
@@ -346,19 +382,28 @@ async function processContent($, postDir) {
     logger.debug('Processing figures and images...');
     const imagePromises = [];
     let heroImage = '';  // Track the first image we process
+    let foundFirstImage = false;  // Track if we've found the first image
     
     article.find('figure').each((i, el) => {
       const img = $(el).find('img');
       const src = img.attr('src');
       if (src) {
         logger.debug(`Found image: ${src}`);
+        
+        // Set hero image to first image found, regardless of download status
+        if (!foundFirstImage) {
+          foundFirstImage = true;
+          const urlParts = src.split('/');
+          const originalFilename = urlParts[urlParts.length - 1];
+          const postDirName = path.basename(postDir);
+          const filename = `${postDirName}-${originalFilename}`;
+          heroImage = path.join('/assets/images/medium', filename);
+          logger.debug(`Set hero image: ${heroImage}`);
+        }
+        
         // Download image and replace with local path
         const promise = downloadImage(src, postDir).then(localPath => {
-          if (!heroImage) {
-            heroImage = localPath;  // Store the first image path
-            logger.debug(`Set hero image: ${heroImage}`);
-          }
-          $(el).replaceWith(`![](${localPath})`);
+          $(el).replaceWith(`![](${localPath || src})`); // Use original URL in content if download failed
         });
         imagePromises.push(promise);
       } else {

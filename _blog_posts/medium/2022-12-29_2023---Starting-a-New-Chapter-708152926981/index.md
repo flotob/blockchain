@@ -1,9 +1,9 @@
 ---
 title: 2023 — Starting a New Chapter
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/@heckerhut
+date: 2022-12-29T00:00:00.000Z
+original_url: https://medium.com/@heckerhut/2023-starting-a-new-chapter-708152926981
 is_draft: false
-hero_image: images/1*HRN5b8BAueclAtNwMdVLBQ.png
+hero_image: /assets/images/medium/2022-12-29_2023---Starting-a-New-Chapter-708152926981-1*HRN5b8BAueclAtNwMdVLBQ.png
 ---
 
 Read what’s next for crypto and where I’m moving my new blog.
@@ -31,7 +31,7 @@ That’s why I’ve decided to build [Common Ground](https://commonground.cg/) -
 
 Behind Common Ground stands an incredible team of builders, investors and communities, that are united by a shared vision of a better internet.
 
-!\[\](images/1\*HRN5b8BAueclAtNwMdVLBQ.png)
+!\[\](/assets/images/medium/2022-12-29\_2023---Starting-a-New-Chapter-708152926981-1\*HRN5b8BAueclAtNwMdVLBQ.png)
 
 Common Ground brings together essential features for communities, including chat, voice, blogging and much, much more. Hence, I’m moving my blog there. I’ve already published one significant post under my new moniker “ada” about what I call the “Builder-Operator-Separation”, explaining how builders in the web3 space can create extralegal spaces with radical decentralization.
 

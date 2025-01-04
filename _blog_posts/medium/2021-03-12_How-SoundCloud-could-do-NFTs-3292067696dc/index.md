@@ -1,9 +1,9 @@
 ---
 title: How SoundCloud could do NFTs
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/@heckerhut
+date: 2021-03-12T00:00:00.000Z
+original_url: https://medium.com/@heckerhut/how-soundcloud-could-do-nfts-3292067696dc
 is_draft: false
-hero_image: images/1*2gFGN6oWksFMq1Mhm-WfLQ.jpeg
+hero_image: /assets/images/medium/2021-03-12_How-SoundCloud-could-do-NFTs-3292067696dc-1*fjcIMsiLr_y9c8rnIAqhhw.png
 ---
 
 This blog post describes a hypothetical scenario where SoundCloud the music streaming company would start empowering creators and fans to…
@@ -12,13 +12,13 @@ This blog post describes a hypothetical scenario where SoundCloud the music stre
 
 ### How SoundCloud could do NFTs
 
-!\[\](images/1\*fjcIMsiLr\_y9c8rnIAqhhw.png)
+!\[\](/assets/images/medium/2021-03-12\_How-SoundCloud-could-do-NFTs-3292067696dc-1\*fjcIMsiLr\_y9c8rnIAqhhw.png)
 
 _This blog post describes a hypothetical scenario where SoundCloud the music streaming company would start empowering creators and fans to engage in NFT creation, collection and trade to bootstrap a creator-driven economy around music._
 
 In my 2016 post on “[A Blockchain Token Taxonomy](https://heckerhut.medium.com/a-blockchain-token-taxonomy-fadf5c56139a)” I have described the fundamental distinction between fungible and non-fungible tokens. The latter, NFT for short, are currently receiving massive adoption and media attention. Three years after [CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties) have famously proven the viability of the concept, creators of digital art have recently started to create and successfully sell NFT-based collectibles associated with digital art pieces. Platforms such as Rarible and OpenSea facilitate the issuance and trading of these digital collectibles.
 
-!\[\](images/1\*XF3DysxUegnPVX0u5-yU-w.png)
+!\[\](/assets/images/medium/2021-03-12\_How-SoundCloud-could-do-NFTs-3292067696dc-1\*XF3DysxUegnPVX0u5-yU-w.png)
 
 In March 2021, the first NFT for a digital art piece was auctioned by [Christies](https://www.christies.com/features/Monumental-collage-by-Beeple-is-first-purely-digital-artwork-NFT-to-come-to-auction-11510-7.aspx), achieving a final prize of USD 69 Mio for the token.
 
@@ -28,7 +28,7 @@ Blockchain-wise, the Ethereum blockchain is the main infrastructure used, employ
 
 Recently, the famous rock band Kings of Leon has announced its plans to sell their new album with the help of NFTs.
 
-!\[\](images/1\*EQs-yfnezVfoTRvCR7EvKQ.png)
+!\[\](/assets/images/medium/2021-03-12\_How-SoundCloud-could-do-NFTs-3292067696dc-1\*EQs-yfnezVfoTRvCR7EvKQ.png)
 
 #### Problems in the music industry today
 
@@ -103,7 +103,7 @@ So, when looking at Spotify in particular, SoundCloud has finally come to the po
 **Jack Dorsey  
 **The only true competitor SoundCloud may face, is Jack Dorsey. The Twitter founder who is [auctioning his first tweet as an NFT](https://www.theverge.com/2021/3/9/22321464/jack-dorsey-nft-tweet-auction-bitcoin-donate-charity) with the highest bid currently at [USD 2.5 million](https://v.cent.co/tweet/20), just [recently bought the music streaming service Tidal](https://www.nytimes.com/2021/03/04/business/media/tidal-square-jay-z-dorsey.html) with this financial services company Square for USD 300 million from Jay-Z.
 
-!\[\](images/1\*2gFGN6oWksFMq1Mhm-WfLQ.jpeg)
+!\[\](/assets/images/medium/2021-03-12\_How-SoundCloud-could-do-NFTs-3292067696dc-1\*2gFGN6oWksFMq1Mhm-WfLQ.jpeg)
 
 Jack gets it. And he wants to own a piece of the burgeoning creator economy. Combining end-to-end music streaming with NFTs, market infrastructure and payment gateways, opens huge opportunities.
 

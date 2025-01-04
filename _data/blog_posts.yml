@@ -1,44 +1,3 @@
-medium_posts:
-  - title: DAOs are Dead, Long Live DAOs
-    url: https://heckerhut.medium.com/daos-are-dead-long-live-daos-50de94e8ee1e
-    image: images/blog/blog-daos-are-dead-long-live-daos-50de94e8ee1e.jpg
-    excerpt: A critical analysis of the evolution and future of Decentralized Autonomous Organizations.
-    publishedAt: '2023-05-17'
-  - title: Can the Wikipedia Model be Applied to Public Policy Making?
-    url: https://heckerhut.medium.com/can-the-wikipedia-model-be-applied-to-public-policy-making-ff4444a2ff60
-    image: images/blog/blog-can-the-wikipedia-model-be-applied-to-public-policy-making-ff4444a2ff60.jpg
-    excerpt: Exploring collaborative approaches to policy development in the digital age.
-    publishedAt: '2021-02-03'
-  - title: A Blockchain Token Taxonomy
-    url: https://heckerhut.medium.com/a-blockchain-token-taxonomy-fadf5c56139a
-    image: images/blog/blog-a-blockchain-token-taxonomy-fadf5c56139a.jpg
-    excerpt: A comprehensive framework for understanding and classifying blockchain tokens.
-    publishedAt: '2016-09-10'
-  - title: How We Use Smart Contracts at SatoshiPay
-    url: https://heckerhut.medium.com/how-we-use-smart-contracts-at-satoshipay-to-change-the-internet-s-economy-forever-today-777988a868d
-    image: images/blog/blog-how-we-use-smart-contracts-at-satoshipay-to-change-the-internet-s-economy-forever-today-777988a868d.jpg
-    excerpt: Changing the internet's economy forever, today.
-    publishedAt: '2016-02-01'
-  - title: Smart Contracts, Platforms and Intermediaries
-    url: https://heckerhut.medium.com/smart-contracts-platforms-and-intermediaries-c3d30f5182a6
-    image: images/blog/blog-smart-contracts-platforms-and-intermediaries-c3d30f5182a6.jpg
-    excerpt: Exploring the relationship between smart contract technology and traditional intermediaries.
-    publishedAt: '2015-05-18'
-  - title: The Political Economy of Computing
-    url: https://heckerhut.medium.com/the-political-economy-of-computing-7fffc75423a2
-    image: images/blog/blog-the-political-economy-of-computing-7fffc75423a2.jpg
-    excerpt: Understanding the intersection of technology, economics, and politics.
-    publishedAt: '2015-05-13'
-  - title: Modes of Contractual Governance
-    url: https://heckerhut.medium.com/modes-of-contractual-governance-in-an-on-demand-service-economy-1833629f379b
-    image: images/blog/blog-modes-of-contractual-governance-in-an-on-demand-service-economy-1833629f379b.jpg
-    excerpt: Analyzing contractual governance in the on-demand service economy.
-    publishedAt: '2015-05-04'
-  - title: What's a Smart Contract?
-    url: https://heckerhut.medium.com/whats-a-smart-contract-in-search-of-a-consensus-c268c830a8ad
-    image: images/blog/blog-whats-a-smart-contract-in-search-of-a-consensus-c268c830a8ad.jpg
-    excerpt: In search of a consensus on the definition and implications of smart contracts.
-    publishedAt: '2014-12-12'
 network_society_posts:
   - title: What is a Digital Jurisdiction?
     url: https://app.cg/c/networksociety/article/what-is-a-digital-jurisdiction-9KS8MHd9TPrGmXeeBkYW9t/
@@ -126,555 +85,519 @@ network_society_posts:
     excerpt: Dispatches from the frontier of digital urbanism.
     publishedAt: '2024-10-25'
 medium_archive:
-  - title: What’s a Smart Contract? In search of a consensus.
-    url: https://medium.com/@heckerhut
-    image: images/1*WWtCLYSV4T5ml_L-gn-aIA.png
-    excerpt: The concept of smart contracts is gaining traction among wider audiences and with it arises the need for a clear working definition.
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: Modes of Contractual Governance in an On-Demand Service Economy
-    url: https://medium.com/@heckerhut
-    image: images/1*TW0XuppLblpprR_C6Gc2zg.jpeg
-    excerpt: What has been dubbed the ‘Uber-for-X’ approach in the startup world, and the transformation to a on-demand service economy by scholars such…
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: The Political Economy
-    url: https://medium.com/@heckerhut
-    image: images/1*RVB-TczCbA-CGSV6ApgIgQ.jpeg
-    excerpt: Taking technological change seriously in the social sciences.
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: Smart Contracts, Platforms and Intermediaries
-    url: https://medium.com/@heckerhut
-    image: images/1*CRRgDz78LN-Otvy5rgGg-Q.png
-    excerpt: Crypto Economics as a mixed human-machine system fueled by economic incentivisation mechanisms is an alternative to monolithic platforms.
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: The Quiet Death of Ripple’s Codiu§ Project
-    url: https://medium.com/@heckerhut
-    image: images/1*k-u8b0QF3Ty2QmpkMwQdNw.png
-    excerpt: Why decentralized infrastructure has still a long way to go
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: Either that or it will turn out that for the type of trust that Codius is able to create, people…
-    url: https://medium.com/@heckerhut
-    image: ''
-    excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: How we use Smart Contracts at SatoshiPay to change the Internet’s economy forever. Today!
-    url: https://medium.com/@heckerhut
-    image: images/1*38k0dOwQsQhT37-i-MkEVw.png
-    excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: Re-reading this post, especially the part on ‘Consensus Pools and Strong Subjectivity’ in light of…
-    url: https://medium.com/@heckerhut
-    image: ''
-    excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: A Blockchain Token Taxonomy
-    url: https://medium.com/@heckerhut
-    image: ''
-    excerpt: Tokens were one of the first applications based on a blockchain infrastructure that pushed the technology beyond its original use as an…
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: Rock ‘n Roll! Hat tip to Manuel Aráoz
-    url: https://medium.com/@heckerhut
-    image: ''
-    excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: 'The Berlin Legal Tech 2017 Hackathon: Retrospective and Future Roadmaps'
-    url: https://medium.com/@heckerhut
-    image: images/1*Ommq_ktI2-bMKIrkPEWQTQ.jpeg
-    excerpt: While my mind is still trying to grasp the magnitude of the last three days, I feel compelled to share a first glimpse into what happened…
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: It was actually the fourth devcon.
-    url: https://medium.com/@heckerhut
-    image: ''
-    excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: This blog post is full of misleading information.
-    url: https://medium.com/@heckerhut
-    image: ''
-    excerpt: “I am not a lawyer” — you should’ve stopped right there.
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: Calling all legal professionals and tech innovators
-    url: https://medium.com/@heckerhut
-    image: images/1*yCFDpH38Ju3odNgTFigbCw.jpeg
-    excerpt: Join us at the Swiss Legal Tech Hackathon & Conference 2018
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: Thank you Sameer, I really needed to read this.
-    url: https://medium.com/@heckerhut
-    image: ''
-    excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: Can the Wikipedia-model be applied to Public Policy-Making?
-    url: https://medium.com/@heckerhut
-    image: images/1*kVQ1n33xwujNNEo1Xy8hvQ.png
-    excerpt: In this post I argue why public policy-making is broken and propose a new model of how it could be fixed. To test these ideas in practice…
-    publishedAt: '2025-01-02T23:00:00.000Z'
-    isDraft: false
-  - title: How SoundCloud could do NFTs
-    url: https://medium.com/@heckerhut
-    image: images/1*2gFGN6oWksFMq1Mhm-WfLQ.jpeg
-    excerpt: This blog post describes a hypothetical scenario where SoundCloud the music streaming company would start empowering creators and fans to…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+  - title: DAOs are Dead! Long live DAOs!
+    url: https://medium.com/@heckerhut/daos-are-dead-long-live-daos-50de94e8ee1e
+    image: /assets/images/medium/2023-05-17_DAOs-are-Dead--Long-live-DAOs--50de94e8ee1e-1*3IDcQk4Ide70iVm5i4VEvQ.png
+    excerpt: This article was funded by the CollectiveBrain community. Join the community to become a paid knowledge contributor or start out as an…
+    publishedAt: '2023-05-17T00:00:00.000Z'
     isDraft: false
   - title: 2023 — Starting a New Chapter
-    url: https://medium.com/@heckerhut
-    image: images/1*HRN5b8BAueclAtNwMdVLBQ.png
-    excerpt: Read what’s next for crypto and where I’m moving my new blog.
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    url: https://medium.com/@heckerhut/2023-starting-a-new-chapter-708152926981
+    image: ''
+    excerpt: Starting-a-New-Chapter-708152926981-1*HRN5b8BAueclAtNwMdVLBQ.png
+    publishedAt: '2022-12-29T00:00:00.000Z'
     isDraft: false
-  - title: DAOs are Dead! Long live DAOs!
-    url: https://medium.com/@heckerhut
-    image: images/1*3IDcQk4Ide70iVm5i4VEvQ.png
-    excerpt: This article was funded by the CollectiveBrain community. Join the community to become a paid knowledge contributor or start out as an…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+  - title: How SoundCloud could do NFTs
+    url: https://medium.com/@heckerhut/how-soundcloud-could-do-nfts-3292067696dc
+    image: /assets/images/medium/2021-03-12_How-SoundCloud-could-do-NFTs-3292067696dc-1*fjcIMsiLr_y9c8rnIAqhhw.png
+    excerpt: This blog post describes a hypothetical scenario where SoundCloud the music streaming company would start empowering creators and fans to…
+    publishedAt: '2021-03-12T00:00:00.000Z'
+    isDraft: false
+  - title: Can the Wikipedia-model be applied to Public Policy-Making?
+    url: https://medium.com/@heckerhut/can-the-wikipedia-model-be-applied-to-public-policy-making-ff4444a2ff60
+    image: /assets/images/medium/2021-02-03_Can-the-Wikipedia-model-be-applied-to-Public-Policy-Making--ff4444a2ff60-1*kVQ1n33xwujNNEo1Xy8hvQ.png
+    excerpt: In this post I argue why public policy-making is broken and propose a new model of how it could be fixed. To test these ideas in practice…
+    publishedAt: '2021-02-03T00:00:00.000Z'
+    isDraft: false
+  - title: Calling all legal professionals and tech innovators
+    url: https://medium.com/@heckerhut/calling-all-legal-professionals-and-tech-innovators-838fe178a617
+    image: /assets/images/medium/2018-07-13_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1*L5uGxgwHCvHcTN5MD-VbjA.png
+    excerpt: Join us at the Swiss Legal Tech Hackathon & Conference 2018
+    publishedAt: '2018-07-13T00:00:00.000Z'
+    isDraft: false
+  - title: 'The Berlin Legal Tech 2017 Hackathon: Retrospective and Future Roadmaps'
+    url: https://medium.com/@heckerhut/the-berlin-legal-tech-2017-hackathon-retrospective-and-future-roadmaps-88f50d45aac8
+    image: /assets/images/medium/2017-02-12_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1*taXey05Vh_3e1Hn1-Xf3TA.png
+    excerpt: While my mind is still trying to grasp the magnitude of the last three days, I feel compelled to share a first glimpse into what happened…
+    publishedAt: '2017-02-12T00:00:00.000Z'
+    isDraft: false
+  - title: A Blockchain Token Taxonomy
+    url: https://medium.com/@heckerhut/a-blockchain-token-taxonomy-fadf5c56139a
+    image: ''
+    excerpt: Tokens were one of the first applications based on a blockchain infrastructure that pushed the technology beyond its original use as an…
+    publishedAt: '2016-09-10T00:00:00.000Z'
+    isDraft: false
+  - title: How we use Smart Contracts at SatoshiPay to change the Internet’s economy forever. Today!
+    url: https://medium.com/@heckerhut/how-we-use-smart-contracts-at-satoshipay-to-change-the-internet-s-economy-forever-today-777988a868d
+    image: /assets/images/medium/2016-02-01_How-we-use-Smart-Contracts-at-SatoshiPay-to-change-the-Internet-s-economy-forever--Today--777988a868d-1*38k0dOwQsQhT37-i-MkEVw.png
+    excerpt: '* * *'
+    publishedAt: '2016-02-01T00:00:00.000Z'
+    isDraft: false
+  - title: The Quiet Death of Ripple’s Codiu§ Project
+    url: https://medium.com/@heckerhut/the-quiet-death-of-ripple-s-codiu-project-782c11a17c02
+    image: /assets/images/medium/2015-06-13_The-Quiet-Death-of-Ripple-s-Codiu--Project-782c11a17c02-1*jD9N_laS4ciIMLEwlPhvDw.jpeg
+    excerpt: Why decentralized infrastructure has still a long way to go
+    publishedAt: '2015-06-13T00:00:00.000Z'
+    isDraft: false
+  - title: Smart Contracts, Platforms and Intermediaries
+    url: https://medium.com/@heckerhut/smart-contracts-platforms-and-intermediaries-c3d30f5182a6
+    image: /assets/images/medium/2015-05-18_Smart-Contracts--Platforms-and-Intermediaries-c3d30f5182a6-1*1ii5ybYk8nyVRXrdPOePeg.png
+    excerpt: Crypto Economics as a mixed human-machine system fueled by economic incentivisation mechanisms is an alternative to monolithic platforms.
+    publishedAt: '2015-05-18T00:00:00.000Z'
+    isDraft: false
+  - title: The Political Economy
+    url: https://medium.com/@heckerhut/the-political-economy-of-computing-7fffc75423a2
+    image: /assets/images/medium/2015-05-13_The-Political-Economy-of-Computing-7fffc75423a2-1*RVB-TczCbA-CGSV6ApgIgQ.jpeg
+    excerpt: Taking technological change seriously in the social sciences.
+    publishedAt: '2015-05-13T00:00:00.000Z'
+    isDraft: false
+  - title: Modes of Contractual Governance in an On-Demand Service Economy
+    url: https://medium.com/@heckerhut/modes-of-contractual-governance-in-an-on-demand-service-economy-1833629f379b
+    image: /assets/images/medium/2015-05-04_Modes-of-Contractual-Governance-in-an-On-Demand-Service-Economy-1833629f379b-1*TW0XuppLblpprR_C6Gc2zg.jpeg
+    excerpt: What has been dubbed the ‘Uber-for-X’ approach in the startup world, and the transformation to a on-demand service economy by scholars such…
+    publishedAt: '2015-05-04T00:00:00.000Z'
+    isDraft: false
+  - title: What’s a Smart Contract? In search of a consensus.
+    url: https://medium.com/@heckerhut/whats-a-smart-contract-in-search-of-a-consensus-c268c830a8ad
+    image: /assets/images/medium/2014-12-12_What-s-a-Smart-Contract--In-search-of-a-consensus--c268c830a8ad-1*WWtCLYSV4T5ml_L-gn-aIA.png
+    excerpt: The concept of smart contracts is gaining traction among wider audiences and with it arises the need for a clear working definition.
+    publishedAt: '2014-12-12T00:00:00.000Z'
     isDraft: false
   - title: A Big Thank You
-    url: https://medium.com/p/a2ea97df92bd
+    url: ''
     image: ''
     excerpt: 'Sponsoren, die namentlich genannt werden müssen:'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: A holistic definition of Smart Contracts
-    url: https://medium.com/p/d6a7aa7f5168
+    url: ''
     image: ''
     excerpt: In my last post I closely followed Nick Szabo’s definition of smart contracts. In this post I’d like to give you a wider picture of the…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: A new justification for statism
-    url: https://medium.com/p/9e13ac114ca8
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: About Law and Technological Reductionism
-    url: https://medium.com/p/b50a110675d4
+    url: ''
     image: ''
     excerpt: The true cost of decentralization
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: 'Algorithmic governance: the behavior-shaping constraints of software'
-    url: https://medium.com/p/41cf49b199f9
+    url: ''
     image: ''
     excerpt: Formalizing human relationships
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: An ethical argument for public blockchains
-    url: https://medium.com/p/4c5fd6661fa6
+    url: ''
     image: ''
     excerpt: Public, immutable, append-only databases are necessary to re-establish the ethical demand inherent to a human society in the digital…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Are text-based real-time applications the new Store Front in E-Commerce?
-    url: https://medium.com/p/ec01fc9ada1b
+    url: ''
     image: ''
     excerpt: mention Twitters MAU problem vs. revenue problem
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Autonomous Corporations and Memetics
-    url: https://medium.com/p/c3a1a9271896
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: 'Bitcoin: Finance meets rich data'
-    url: https://medium.com/p/32ada67d089f
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Blockchain in Terms of the Law
-    url: https://medium.com/p/72c0ffdf366
+    url: ''
     image: ''
     excerpt: On Friday, 7th of August 2020, the German Ministry of Finance released a draft law for implementing tokenized financial securities – or…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Blockchains and DAOs are the Future of Collective Rights Management
-    url: https://medium.com/p/e288f8535dbb
+    url: ''
     image: ''
     excerpt: (1) What are collecting societies?
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Bootstrapping DeFi Protocols with NFTs in the Metaverse
-    url: https://medium.com/p/44d9f1e50f54
-    image: images/1*PPWFezQCChlZfhkcnlNv9w.jpeg
+    url: ''
+    image: /assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*FmAR2IkDpT9aIHKLU9w7EA.png
     excerpt: by Florian Glatz with Raul Calvo
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Building Common Ground
-    url: https://medium.com/p/182eb3725852
+    url: ''
     image: ''
     excerpt: Web3 is one of the most misunderstood tech buzzword in recent history. While those building “it” cannot stop praising how impactful this…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Can the legal system be rebuilt?
-    url: https://medium.com/p/15b9cec6b35
+    url: ''
     image: ''
     excerpt: I write these words as a lawyer who was taught the same things that people have been taught before him for hundreds of years. Despite of…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Collective Rights Management Agencies
-    url: https://medium.com/p/47465a5fd48d
-    image: images/1*l742RPSPWPkg6kz_vxdSLQ.png
+    url: ''
+    image: /assets/images/medium/draft_Collective-Rights-Management-Agencies--in-the-Age-of-Blockchain-47465a5fd48d-1*l742RPSPWPkg6kz_vxdSLQ.png
     excerpt: Centralize the rules Distribute their execution
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Contracts and Agency
-    url: https://medium.com/p/40d31f9bc376
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Converging trends in law and technology
-    url: https://medium.com/p/d4f0a058054d
+    url: ''
     image: ''
     excerpt: Economics is the study of human decision-making. Behavioral Economics identifies behavioral patterns that are unique to humans or a subset…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Conversational Bots & Chat and their potential to change legal practice
-    url: https://medium.com/p/a909586f6150
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Defining the extra-legal space of operational compliance under which decentralized applications…
-    url: https://medium.com/p/e3fd1c058c3a
+    url: ''
     image: ''
     excerpt: Expand on points made in previous post
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Drawing Lines in Sandy Grounds
-    url: https://medium.com/p/1753c897bdac
+    url: ''
     image: ''
     excerpt: “All things that we think of as specifiable or technically constrained, very quickly end up embedded in a larger social ecosystem which in…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Ethereum and Cybernetics
-    url: https://medium.com/p/d26c67201b52
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Factum Law and behavior-shaping constraints of software
-    url: https://medium.com/p/1e20127f7a79
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Finite State Machine
-    url: https://medium.com/p/3b62768b5b23
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Formalization of human language and interaction as the ultimate frontier of a decentralized society
-    url: https://medium.com/p/947a6c2c1bbc
+    url: ''
     image: ''
     excerpt: Infrastructure a. Society b. Technology
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Freedom from Contract
-    url: https://medium.com/p/f0fb63e1f557
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Fundamental problems in redesigning human-centric systems with technology
-    url: https://medium.com/p/39205cbfd968
+    url: ''
     image: ''
     excerpt: blubb
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Glimpses into the future
-    url: https://medium.com/p/8e3a56d14368
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Heteromation
-    url: https://medium.com/p/66d3e5e96ebb
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: How to get Cinnamon Desktop-like Behavior on OS X Mavericks
-    url: https://medium.com/p/ec52b7878d66
-    image: images/1*CoBV0dUWKL37pOMj2z-3Rg.png
+    url: ''
+    image: /assets/images/medium/draft_How-to-get-Cinnamon-Desktop-like-Behavior-on-OS-X-Mavericks-ec52b7878d66-1*IEljsagdKVEr1DM_IrUvrA.png
     excerpt: Yes, it’s a Hack!
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Identity, Granularity, Simplicity, Formalization
-    url: https://medium.com/p/5821f0f8f70e
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: If there is a web there is a spider
-    url: https://medium.com/p/fe910e95a4ff
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Integration through
-    url: https://medium.com/p/51202c94bc85
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Is it still a smart contract if it’s not decentralized?
-    url: https://medium.com/p/aa45d499d9fe
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Is law about to be Turing’d?
-    url: https://medium.com/p/c65d3f45ade9
+    url: ''
     image: ''
     excerpt: There is a growing dissonance between the scope of economic transactions and that of jurisdictions.
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: 'Is law being Turing’d? #2'
-    url: https://medium.com/p/7590dd334d5c
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Konsensmechanismen im Recht
-    url: https://medium.com/p/6a1d88114a77
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Law & Tech
-    url: https://medium.com/p/fbe069b9cee4
+    url: ''
     image: ''
     excerpt: Kann das Thema “Law & Tech” greifbar gemacht werden? Was sind die definierenden Eigenschaften dieses Bereichs? Macht es überhaupt Sinn…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Law and the AI Delusion
-    url: https://medium.com/p/a2e92d5fb21d
+    url: ''
     image: ''
     excerpt: The surge of weak AI systems in the legal domain serves to distract us from the fact that we cannot build a true AI and therefore need to…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Law through a computational lens
-    url: https://medium.com/p/424c447cc090
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: LAWTOMATION
-    url: https://medium.com/p/d44bcf46b83
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: League of Legend Tribunals
-    url: https://medium.com/p/daf9b49b1d04
+    url: ''
     image: ''
     excerpt: http://euw.leagueoflegends.com/tribunal/en/review/
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: My neo-liberal crisis
-    url: https://medium.com/p/6e4f3aa0de0e
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Normative values in technological systems
-    url: https://medium.com/p/41011900faed
+    url: ''
     image: ''
     excerpt: The history of the human race and the effects of computation is rich of interesting features. It is a story closely linked to the role of…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Regulation without intermediaries? Legal challenges of decentralized crypto-economic networks
-    url: https://medium.com/p/fe124a055ff1
+    url: ''
     image: ''
     excerpt: The public Ethereum network is gearing up to become a major change agent in the world of contemporary trade and finance. With it’s rise…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Regulatory challenges of software-based disintermediation of financial services
-    url: https://medium.com/p/9f342e1d8b3b
+    url: ''
     image: ''
     excerpt: The CSBS, the Conference of State Bank Supervisors has very recently proposed a framework for future regulation regarding the provision of…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: 'Reputation: the new commodity'
-    url: https://medium.com/p/6abc080e1bca
+    url: ''
     image: ''
     excerpt: If you talk to anyone that is involved in the wider Bitcoin space you will soon discover that mostly every advanced service in a Crypto…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: 'Revisiting Lawrence Lessig’s “Code is Law”: Distributed Consensus Networks and the Future of Law'
-    url: https://medium.com/p/d683fd25e49b
+    url: ''
     image: ''
     excerpt: Fifteen years ago Lawrence Lessig, a constitutional professor at Harvard University, published a book about the laws of cyberspace. The…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Rule Engines and Crypto Assets
-    url: https://medium.com/p/75b535be18d9
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: 'Science: the reverse-engineering of human gut feelings'
-    url: https://medium.com/p/74db59f44132
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: 'Smart Contracts: Is the code you execute to do legally relevant real-world transactions (contracts)…'
-    url: https://medium.com/p/90072d6baaf9
+    url: ''
     image: ''
     excerpt: 'Speaking Code: Smart contracts are a legal chimera: They are both a record in terms of civil procedure documenting the parties agreement in…'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: 'Smart Contracts: The Big Picture'
-    url: https://medium.com/p/aad8cae13eda
+    url: ''
     image: ''
     excerpt: Two phases of contracting
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Smart contracts and the two phases of contracting
-    url: https://medium.com/p/10adae93d5e3
+    url: ''
     image: ''
     excerpt: Talking about smart contracts, there are different perspectives of looking at the concept and its wider implications. One that is probably…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Smart contracts vs. Decentralization
-    url: https://medium.com/p/ea349de00c42
+    url: ''
     image: ''
     excerpt: \- One and the same? -
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Technological Reductionism
-    url: https://medium.com/p/78b1cd5ced66
+    url: ''
     image: ''
     excerpt: The true cost of decentralization?
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: The Blockchain as a persistent audit trail
-    url: https://medium.com/p/7bc3a27acbe4
+    url: ''
     image: ''
     excerpt: Today, startup culture is well and alive almost anywhere you go. Living in Berlin is especially exciting, since there is a major push…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: The concept of trust on different levels of emergence
-    url: https://medium.com/p/6a807a39e79e
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: The curious desire of humans
-    url: https://medium.com/p/bb49bbbc24c2
+    url: ''
     image: ''
     excerpt: In this post I want to share my personal story of how I stumbled into the rabbit hole that is the block chain and its many beautiful…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: The Dawn of Apomediation
-    url: https://medium.com/p/52c544d5aa6c
+    url: ''
     image: ''
     excerpt: Mation?
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: The Death of Contract
-    url: https://medium.com/p/e3d26b85c7a8
+    url: ''
     image: ''
     excerpt: Smart Contracts through the Prism of Legal Realism
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: The friendly vampire attack
-    url: https://medium.com/p/6826326f25d6
+    url: ''
     image: ''
     excerpt: Discord > DAO Token Launch > Token integration by Discord
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: The Happy Path
-    url: https://medium.com/p/dc56f5bd7739
+    url: ''
     image: ''
     excerpt: Smart vs. Legal Contracts
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: The legality of Apomediation
-    url: https://medium.com/p/4d0d1638847d
+    url: ''
     image: ''
     excerpt: Tl;dr
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: The Meme of Bitcoin
-    url: https://medium.com/p/257c2bab6030
+    url: ''
     image: ''
     excerpt: Looking at the Rise and Rise of Bitcoin and the birth of the Blockchain as a separate field of research and entrepreneurial activity in its…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: 'The New Economy: post-UBER'
-    url: https://medium.com/p/9c8350e573b5
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: 'The picture you show: that’s not a whale. It’s a whale shark. Which is a fish.'
-    url: https://medium.com/p/1ce1c2449163
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: The Renaissance of Contract
-    url: https://medium.com/p/9d4c6cd04492
+    url: ''
     image: ''
     excerpt: Contracts
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: The rise of digital bearer bonds
-    url: https://medium.com/p/2d2fd7d126da
+    url: ''
     image: ''
     excerpt: After the rise and fall of utility token, a new digital asset class emerges on the horizon. Looking back, many utility token were born out…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: The waning distinction between business and consumer
-    url: https://medium.com/p/f1faf285460b
+    url: ''
     image: ''
     excerpt: Recently I had the chance to attend a conference celebrating (in a weird, lawyery sense of the word) the tenth birthday of the EU Directive…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Trust in socio-technological systems
-    url: https://medium.com/p/74bfb3c52f6
+    url: ''
     image: ''
     excerpt: Today there are two fundamental systems in place to ensure that information-sensitive tasks such as bookkeeping are carried out correctly…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: User Experience and Law
-    url: https://medium.com/p/a5469037eea6
+    url: ''
     image: ''
     excerpt: We engage in contractual relationships through digital interfaces to a growing extent. Worded contracts are are on their way out, making…
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Value Creation and Exchange in Digital Economic Networks
-    url: https://medium.com/p/e7a4f3a4306a
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Where humans meet machines
-    url: https://medium.com/p/bc9a470ebbb2
+    url: ''
     image: ''
     excerpt: '* * *'
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true
   - title: Will the Web stay free forever?
-    url: https://medium.com/p/dc3e67cc252a
+    url: ''
     image: ''
     excerpt: Before we start
-    publishedAt: '2025-01-02T23:00:00.000Z'
+    publishedAt: '2008-10-31T00:00:00.000Z'
     isDraft: true

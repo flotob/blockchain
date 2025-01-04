@@ -1,7 +1,7 @@
 ---
 title: The Meme of Bitcoin
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/p/257c2bab6030
+date: 2008-10-31T00:00:00.000Z
+original_url: 
 is_draft: true
 hero_image: 
 ---

@@ -1,7 +1,7 @@
 ---
 title: A Blockchain Token Taxonomy
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/@heckerhut
+date: 2016-09-10T00:00:00.000Z
+original_url: https://medium.com/@heckerhut/a-blockchain-token-taxonomy-fadf5c56139a
 is_draft: false
 hero_image: 
 ---

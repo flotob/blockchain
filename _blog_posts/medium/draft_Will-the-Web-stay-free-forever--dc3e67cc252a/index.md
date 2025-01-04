@@ -1,7 +1,7 @@
 ---
 title: Will the Web stay free forever?
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/p/dc3e67cc252a
+date: 2008-10-31T00:00:00.000Z
+original_url: 
 is_draft: true
 hero_image: 
 ---

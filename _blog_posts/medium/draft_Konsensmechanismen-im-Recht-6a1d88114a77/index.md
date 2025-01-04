@@ -1,7 +1,7 @@
 ---
 title: Konsensmechanismen im Recht
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/p/6a1d88114a77
+date: 2008-10-31T00:00:00.000Z
+original_url: 
 is_draft: true
 hero_image: 
 ---

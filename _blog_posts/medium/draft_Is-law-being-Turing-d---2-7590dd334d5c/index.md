@@ -1,7 +1,7 @@
 ---
 title: Is law being Turing’d? #2
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/p/7590dd334d5c
+date: 2008-10-31T00:00:00.000Z
+original_url: 
 is_draft: true
 hero_image: 
 ---

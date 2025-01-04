@@ -1,7 +1,7 @@
 ---
 title: The picture you show: that’s not a whale. It’s a whale shark. Which is a fish.
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/p/1ce1c2449163
+date: 2008-10-31T00:00:00.000Z
+original_url: 
 is_draft: true
 hero_image: 
 ---

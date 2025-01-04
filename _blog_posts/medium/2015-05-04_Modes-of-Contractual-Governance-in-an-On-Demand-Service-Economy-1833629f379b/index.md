@@ -1,16 +1,16 @@
 ---
 title: Modes of Contractual Governance in an On-Demand Service Economy
-date: 2025-01-02T23:00:00.000Z
-original_url: https://medium.com/@heckerhut
+date: 2015-05-04T00:00:00.000Z
+original_url: https://medium.com/@heckerhut/modes-of-contractual-governance-in-an-on-demand-service-economy-1833629f379b
 is_draft: false
-hero_image: images/1*TW0XuppLblpprR_C6Gc2zg.jpeg
+hero_image: /assets/images/medium/2015-05-04_Modes-of-Contractual-Governance-in-an-On-Demand-Service-Economy-1833629f379b-1*TW0XuppLblpprR_C6Gc2zg.jpeg
 ---
 
 What has been dubbed the ‘Uber-for-X’ approach in the startup world, and the transformation to a on-demand service economy by scholars such…
 
 * * *
 
-!\[\](images/1\*TW0XuppLblpprR\_C6Gc2zg.jpeg)
+!\[\](/assets/images/medium/2015-05-04\_Modes-of-Contractual-Governance-in-an-On-Demand-Service-Economy-1833629f379b-1\*TW0XuppLblpprR\_C6Gc2zg.jpeg)
 
 ### Modes of Contractual Governance in an On-Demand Service Economy
 
