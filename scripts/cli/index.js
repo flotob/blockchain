@@ -11,6 +11,7 @@ import { updateEventData } from './commands/events.js';
 import { browseNotion } from './commands/notion.js';
 import { updateWorkSlides } from './commands/work.js';
 import convertBlogPosts from './commands/convert-blog-posts.js';
+import { importMediumArticles } from './commands/medium.js';
 
 console.log('Imports completed');
 
@@ -36,6 +37,7 @@ async function interactive() {
         { name: 'Update Individual Sections', value: 'update-individual' },
         { name: 'Browse Notion Pages', value: 'browse-notion' },
         { name: 'Update Work Slides', value: 'update-work' },
+        { name: 'Import Medium Archive', value: 'import-medium' },
         { name: 'Validate Content', value: 'validate' },
         { name: 'Exit', value: 'exit' }
       ]
@@ -100,6 +102,11 @@ async function interactive() {
 
   if (action === 'update-work') {
     await updateWorkSlides({ verbose: program.opts().verbose });
+    return;
+  }
+
+  if (action === 'import-medium') {
+    await importMediumArticles({ verbose: program.opts().verbose });
     return;
   }
 
@@ -177,6 +184,18 @@ program
   .command('convert-blog-posts')
   .description('Convert blog posts from YML to Jekyll collection files')
   .action(convertBlogPosts);
+
+program
+  .command('import-medium')
+  .description('Import Medium archive from export')
+  .action(async () => {
+    try {
+      await importMediumArticles({ verbose: program.opts().verbose });
+    } catch (error) {
+      console.error(chalk.red('Error:'), error);
+      process.exit(1);
+    }
+  });
 
 // Error handling
 program.exitOverride();
