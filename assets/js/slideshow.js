@@ -5,10 +5,7 @@ class Slideshow {
         this.modalContainer = this.modal.querySelector('.modal-container');
         this.modalContent = this.modal.querySelector('.modal-content');
         this.closeButton = this.modal.querySelector('.modal-close');
-        this.slideContent = this.modal.querySelector('.modal-content');
-        this.prevButton = this.modal.querySelector('.nav-button.prev');
-        this.nextButton = this.modal.querySelector('.nav-button.next');
-        this.indicators = this.modal.querySelector('.slide-indicators');
+        this.headerContainer = this.modalContainer.querySelector('.modal-header-container');
         
         // Initialize markdown-it
         this.md = window.markdownit({
@@ -21,18 +18,29 @@ class Slideshow {
         this.currentProject = null;
         this.currentSlideIndex = 0;
         this.scrollPosition = 0;
+        this.isDesktop = window.matchMedia('(min-width: 768px)').matches;
         
         // Touch interaction state
         this.touchStart = null;
         this.currentTranslate = 0;
         this.isDragging = false;
         this.startTime = 0;
+        this.boundTouchHandlers = {
+            start: null,
+            move: null,
+            end: null
+        };
         
         // Load project data
         this.projectData = JSON.parse(document.getElementById('project-data').textContent);
         
         // Bind event listeners
         this.bindEvents();
+        
+        // Listen for resize events to update isDesktop
+        window.addEventListener('resize', () => {
+            this.isDesktop = window.matchMedia('(min-width: 768px)').matches;
+        });
     }
     
     bindEvents() {
@@ -46,15 +54,17 @@ class Slideshow {
         
         // Modal controls
         this.closeButton.addEventListener('click', () => this.closeSlideshow());
-        this.prevButton.addEventListener('click', () => this.previousSlide());
-        this.nextButton.addEventListener('click', () => this.nextSlide());
         
-        // Close on background click
-        this.modalContainer.addEventListener('click', (e) => {
-            // Only close if clicking the modal container itself, not its children
-            if (e.target === this.modalContainer) {
+        // Close on background click (desktop only)
+        this.modal.addEventListener('click', (e) => {
+            if (this.isDesktop && e.target === this.modal) {
                 this.closeSlideshow();
             }
+        });
+        
+        // Prevent click propagation from modal content
+        this.modalContainer.addEventListener('click', (e) => {
+            e.stopPropagation();
         });
         
         // Keyboard navigation
@@ -80,37 +90,23 @@ class Slideshow {
         if (!this.currentProject || !this.currentProject.slides || this.currentProject.slides.length === 0) return;
         
         this.currentSlideIndex = 0;
-        this.modal.classList.add('active');
-        this.lockScroll();
-        this.updateSlide();
-        this.updateNavigation();
         
-        // Bind touch events after slide is rendered
-        if (this.isMobile()) {
-            this.header = this.modal.querySelector('.slide-header');
+        // Let CSS handle the transform animation
+        this.modal.classList.add('active');
+        
+        // Update header
+        this.updateHeader();
+        
+        // Only bind touch events on mobile
+        if (!this.isDesktop) {
             this.bindTouchEvents();
         }
-    }
-    
-    closeSlideshow() {
-        this.modalContent.style.transform = '';
-        this.modal.style.background = '';
-        this.modal.classList.remove('active');
-        this.unlockScroll();
-        this.currentProject = null;
-        this.currentSlideIndex = 0;
-    }
-    
-    updateSlide() {
-        if (!this.currentProject || !this.currentProject.slides[this.currentSlideIndex]) return;
         
-        const slide = this.currentProject.slides[this.currentSlideIndex];
-        const slideContent = this.modal.querySelector('.slide-content');
-        slideContent.innerHTML = this.renderSlide(slide);
+        this.updateSlide();
         this.updateNavigation();
     }
-
-    renderSlide(slide) {
+    
+    updateHeader() {
         const watermark = `
             <div class="slide-watermark">
                 <img src="${this.currentProject.image}" alt="${this.currentProject.title} logo">
@@ -123,7 +119,56 @@ class Slideshow {
                 ${watermark}
             </div>
         `;
+        
+        this.headerContainer.innerHTML = header;
+    }
+    
+    closeSlideshow() {
+        // Reset touch state
+        this.isDragging = false;
+        this.touchStart = null;
+        this.currentTranslate = 0;
+        
+        // Cleanup touch events
+        this.unbindTouchEvents();
+        
+        // First, trigger the slide-out animation and backdrop fade
+        this.modalContainer.style.transform = this.isDesktop ? 'translateX(100%)' : 'translateY(100%)';
+        this.modal.style.background = 'rgba(0, 0, 0, 0)';
+        
+        // Wait for the animation to complete before removing active class
+        setTimeout(() => {
+            this.modal.classList.remove('active');
+            // Clean up transform and background related styles
+            this.modalContainer.style.removeProperty('transform');
+            this.modalContainer.style.removeProperty('transition');
+            this.modal.style.removeProperty('background');
+            
+            // Reset state
+            this.currentProject = null;
+            this.currentSlideIndex = 0;
+        }, 300); // Match the transition duration from CSS
+    }
+    
+    updateSlide() {
+        if (!this.currentProject || !this.currentProject.slides[this.currentSlideIndex]) return;
+        
+        const slide = this.currentProject.slides[this.currentSlideIndex];
+        this.modalContent.innerHTML = this.renderSlide(slide);
+        
+        // Update element references after rendering
+        this.prevButton = this.modalContent.querySelector('.nav-button.prev');
+        this.nextButton = this.modalContent.querySelector('.nav-button.next');
+        this.indicators = this.modalContent.querySelector('.slide-indicators');
+        
+        // Rebind navigation events
+        this.prevButton.addEventListener('click', () => this.previousSlide());
+        this.nextButton.addEventListener('click', () => this.nextSlide());
+        
+        this.updateNavigation();
+    }
 
+    renderSlide(slide) {
         const content = `
             <div class="slide-content">
                 <div class="slide-text">
@@ -149,10 +194,25 @@ class Slideshow {
                         </a>
                     </div>
                 </div>
+                <div class="modal-navigation">
+                    <button class="nav-button prev" aria-label="Previous slide">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    
+                    <div class="slide-indicators" role="tablist"></div>
+                    
+                    <button class="nav-button next" aria-label="Next slide">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         `;
 
-        return header + content + footerTop;
+        return content + footerTop;
     }
     
     updateNavigation() {
@@ -202,25 +262,42 @@ class Slideshow {
     }
     
     bindTouchEvents() {
-        if (!this.header) return;
+        // Create bound handlers that we can later remove
+        this.boundTouchHandlers = {
+            start: (e) => this.handleTouchStart(e),
+            move: (e) => this.handleTouchMove(e),
+            end: (e) => this.handleTouchEnd(e)
+        };
         
-        // Remove existing listeners first to prevent duplicates
-        this.header.removeEventListener('touchstart', this.handleTouchStart);
-        this.header.removeEventListener('touchmove', this.handleTouchMove);
-        this.header.removeEventListener('touchend', this.handleTouchEnd);
+        // Add new listeners to the header container
+        this.headerContainer.addEventListener('touchstart', this.boundTouchHandlers.start);
+        this.headerContainer.addEventListener('touchmove', this.boundTouchHandlers.move);
+        this.headerContainer.addEventListener('touchend', this.boundTouchHandlers.end);
+    }
+    
+    unbindTouchEvents() {
+        if (!this.headerContainer || !this.boundTouchHandlers) return;
         
-        // Add new listeners
-        this.header.addEventListener('touchstart', (e) => this.handleTouchStart(e));
-        this.header.addEventListener('touchmove', (e) => this.handleTouchMove(e));
-        this.header.addEventListener('touchend', (e) => this.handleTouchEnd(e));
+        // Remove listeners using the same bound handlers
+        this.headerContainer.removeEventListener('touchstart', this.boundTouchHandlers.start);
+        this.headerContainer.removeEventListener('touchmove', this.boundTouchHandlers.move);
+        this.headerContainer.removeEventListener('touchend', this.boundTouchHandlers.end);
+        
+        // Reset handlers
+        this.boundTouchHandlers = {
+            start: null,
+            move: null,
+            end: null
+        };
     }
     
     handleTouchStart(e) {
         this.touchStart = e.touches[0].clientY;
         this.isDragging = true;
         this.startTime = Date.now();
-        this.modalContent.style.transition = 'none';
-        this.modal.style.transition = 'none';
+        
+        // Remove transition for direct manipulation
+        this.modalContainer.style.transition = 'none';
     }
     
     handleTouchMove(e) {
@@ -232,17 +309,13 @@ class Slideshow {
         // Only allow dragging down
         if (diff < 0) return;
         
-        // Add resistance to the drag
-        this.currentTranslate = diff * 0.5;
+        // Convert to percentage of viewport height
+        const percentage = (diff / window.innerHeight) * 100;
+        this.currentTranslate = percentage;
         
-        // Apply transform only to the content
-        this.modalContent.style.transform = `translateY(${this.currentTranslate}px)`;
+        // Use percentage-based transform
+        this.modalContainer.style.transform = `translateY(${percentage}%)`;
         
-        // Super aggressive fade - start fading immediately
-        const fadeProgress = Math.min(this.currentTranslate / (window.innerHeight * 0.3), 1);
-        this.modal.style.background = `rgba(0, 0, 0, ${0.95 * (1 - fadeProgress * 2)})`;
-        
-        // Prevent default scroll
         e.preventDefault();
     }
     
@@ -250,22 +323,17 @@ class Slideshow {
         if (!this.isDragging) return;
         
         this.isDragging = false;
-        this.modalContent.style.transition = 'transform 0.3s ease';
-        this.modal.style.transition = 'background 0.3s ease';
         
         // Calculate velocity
         const time = Date.now() - this.startTime;
         const velocity = this.currentTranslate / time;
         
-        // Dismiss if dragged far enough or flicked fast enough
-        if (this.currentTranslate > window.innerHeight * 0.3 || velocity > 0.5) {
-            this.modalContent.style.transform = `translateY(${window.innerHeight}px)`;
-            this.modal.style.background = 'rgba(0, 0, 0, 0)';
-            setTimeout(() => this.closeSlideshow(), 300);
+        if (this.currentTranslate > 30 || velocity > 0.5) {  // 30% threshold
+            // Close immediately, let CSS handle the animation
+            this.closeSlideshow();
         } else {
-            // Snap back
-            this.modalContent.style.transform = 'translateY(0)';
-            this.modal.style.background = 'rgba(0, 0, 0, 0.95)';
+            // Snap back: remove inline transform and let CSS take over
+            this.modalContainer.style.transform = '';
         }
         
         this.touchStart = null;
@@ -274,26 +342,6 @@ class Slideshow {
     
     isMobile() {
         return window.innerWidth <= 768;
-    }
-
-    lockScroll() {
-        // Store current scroll position
-        this.scrollPosition = window.pageYOffset;
-        // Add styles to body
-        document.body.style.overflow = 'hidden';
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${this.scrollPosition}px`;
-        document.body.style.width = '100%';
-    }
-
-    unlockScroll() {
-        // Remove styles from body
-        document.body.style.removeProperty('overflow');
-        document.body.style.removeProperty('position');
-        document.body.style.removeProperty('top');
-        document.body.style.removeProperty('width');
-        // Restore scroll position
-        window.scrollTo(0, this.scrollPosition);
     }
 }
 

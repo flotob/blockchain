@@ -19,6 +19,7 @@ node_modules
 .sass-cache/*
 _site
 _site/*
+import
 
 # Notion images
 /assets/images/notion/*

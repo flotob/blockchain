@@ -615,9 +615,7 @@ function initKeyboardNavigation() {
     });
 }
 
-// Initialize when DOM is ready, but don't override existing scroll handlers
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initNavigation);
-} else {
-    initNavigation();
-} 
+// Comment out initialization to test pure CSS behavior
+// document.addEventListener('DOMContentLoaded', initNavigation);
+
+// initNavigation(); 
