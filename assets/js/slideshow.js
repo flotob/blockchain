@@ -76,9 +76,11 @@ class Slideshow {
                     this.closeSlideshow();
                     break;
                 case 'ArrowLeft':
+                    e.preventDefault(); // Prevent browser scroll
                     this.previousSlide();
                     break;
                 case 'ArrowRight':
+                    e.preventDefault(); // Prevent browser scroll
                     this.nextSlide();
                     break;
             }
