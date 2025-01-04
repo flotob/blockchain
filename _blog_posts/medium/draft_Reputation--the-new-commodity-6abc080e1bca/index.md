@@ -1,0 +1,35 @@
+---
+title: Reputation: the new commodity
+date: 2025-01-02T23:00:00.000Z
+original_url: https://medium.com/p/6abc080e1bca
+is_draft: true
+hero_image: 
+---
+
+If you talk to anyone that is involved in the wider Bitcoin space you will soon discover that mostly every advanced service in a Crypto…
+
+* * *
+
+### Reputation: the new commodity
+
+  
+
+If you talk to anyone that is involved in the wider Bitcoin space you will soon discover that mostly every advanced service in a Crypto Economy hinges on one central requirement: user reputation.
+
+#### A quick history of reputation systems
+
+\[no idea\]
+
+#### Quantifying the Intangible
+
+\[whatever … said\]
+
+#### What is quantified is tradable
+
+#### Identity and Reputation: same same but different?
+
+\[yup\]
+
+[View original.](https://medium.com/p/6abc080e1bca)
+
+Exported from [Medium](https://medium.com) on January 3, 2025.

@@ -7,36 +7,67 @@ export class Logger {
     this.spinner = null;
   }
 
-  debug(...args) {
+  debug(message) {
     if (this.verbose) {
-      console.log(chalk.gray('[debug]'), ...args);
+      if (this.spinner) {
+        this.spinner.stop();
+      }
+      console.log(chalk.gray(`[debug] ${message}`));
+      if (this.spinner) {
+        this.spinner.start();
+      }
     }
   }
 
-  info(...args) {
-    console.log(chalk.blue('[info]'), ...args);
+  error(message, error) {
+    if (this.spinner) {
+      this.spinner.stop();
+    }
+    console.error(chalk.red(`[error] ${message}`));
+    if (error && this.verbose) {
+      console.error(chalk.red(error.stack || error));
+    }
+    if (this.spinner) {
+      this.spinner.start();
+    }
   }
 
-  warn(...args) {
-    console.log(chalk.yellow('[warn]'), ...args);
+  success(message) {
+    if (this.spinner) {
+      this.spinner.stop();
+    }
+    console.log(chalk.green(`✔ ${message}`));
+    if (this.spinner) {
+      this.spinner.start();
+    }
   }
 
-  error(...args) {
-    console.error(chalk.red('[error]'), ...args);
+  warn(message) {
+    if (this.spinner) {
+      this.spinner.stop();
+    }
+    console.warn(chalk.yellow(`⚠ ${message}`));
+    if (this.spinner) {
+      this.spinner.start();
+    }
   }
 
-  success(...args) {
-    console.log(chalk.green('✔'), ...args);
-  }
-
-  startSpinner(text) {
+  startSpinner(message) {
     if (this.spinner) {
       this.spinner.stop();
     }
     this.spinner = ora({
-      text,
-      color: 'blue'
+      text: message,
+      spinner: 'dots'
     }).start();
+  }
+
+  updateSpinner(message) {
+    if (this.spinner) {
+      this.spinner.text = message;
+    } else {
+      console.log(message);
+    }
   }
 
   stopSpinner() {

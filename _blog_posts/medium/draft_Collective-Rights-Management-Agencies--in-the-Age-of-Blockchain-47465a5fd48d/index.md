@@ -1,0 +1,28 @@
+---
+title: Collective Rights Management Agencies 
+in the
+Age of Blockchain
+date: 2025-01-02T23:00:00.000Z
+original_url: https://medium.com/p/47465a5fd48d
+is_draft: true
+hero_image: images/1*l742RPSPWPkg6kz_vxdSLQ.png
+---
+
+Centralize the rules Distribute their execution
+
+* * *
+
+## Collective Rights Management Agencies   
+in the  
+Age of Blockchain
+
+  
+
+!\[\](images/1\*l742RPSPWPkg6kz\_vxdSLQ.png)
+
+Centralize the rules  
+Distribute their execution
+
+[View original.](https://medium.com/p/47465a5fd48d)
+
+Exported from [Medium](https://medium.com) on January 3, 2025.
