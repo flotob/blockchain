@@ -69,6 +69,22 @@ export async function importMediumArticles() {
     await fs.mkdir(mediumPostsDir, { recursive: true });
     logger.debug(`Created directory: ${mediumPostsDir}`);
 
+    // Initialize YAML handler and structure
+    logger.debug('Initializing YAML handler...');
+    const yamlHandler = new YAMLHandler(process.cwd());
+    let blogPostsYaml;
+    try {
+      blogPostsYaml = await yamlHandler.readYAML('_data/blog_posts.yml');
+      logger.debug('Successfully read blog_posts.yml');
+    } catch (error) {
+      logger.error(`Error reading blog_posts.yml: ${error}`);
+      blogPostsYaml = {};
+    }
+
+    // Reset medium_archive section
+    blogPostsYaml.medium_archive = [];
+    logger.debug('Reset medium_archive section');
+
     // Process each post
     let totalProcessed = 0;
     let successCount = 0;
@@ -79,74 +95,61 @@ export async function importMediumArticles() {
     for (const post of htmlFiles) {
       totalProcessed++;
       const postName = path.basename(post);
+      logger.debug(`\n=== Processing post ${totalProcessed}/${htmlFiles.length}: ${postName} ===`);
       logger.startSpinner(`[${totalProcessed}/${htmlFiles.length}] Processing: ${postName}`);
       
       try {
-        // Read post HTML
-        logger.debug(`Reading HTML file: ${postName}`);
+        // Read and process HTML
+        logger.debug(`Reading HTML from: ${post}`);
         const html = await fs.readFile(post, 'utf8');
-        logger.debug(`Read ${html.length} characters from file`);
-        
         const $ = cheerio.load(html);
-        logger.debug('Loaded HTML with cheerio');
         
-        // Extract metadata with detailed logging
-        logger.debug('Extracting metadata...');
-        
-        // Get title from h1 or h3
+        // Extract metadata
         const title = $('h1.p-name').text() || $('h3.graf--title').text();
-        logger.debug(`Found title: ${title}`);
-        
-        // Get canonical URL from footer's canonical link
         const canonicalUrl = $('footer a.p-canonical').attr('href');
-        logger.debug(`Found canonical URL: ${canonicalUrl}`);
-        
-        // Determine if it's a draft
         const isDraft = path.basename(post).startsWith('draft_');
+        logger.debug(`Metadata extracted:
+          Title: ${title}
+          URL: ${canonicalUrl}
+          Is Draft: ${isDraft}
+        `);
         
-        // Get date from filename for published posts, use Satoshi date for drafts
+        // Get date
         let publishDate;
         if (isDraft) {
           publishDate = SATOSHI_DATE;
-          logger.debug('Draft post, using Satoshi date');
+          logger.debug('Using Satoshi date for draft');
         } else {
           try {
             const dateFromFilename = path.basename(post).split('_')[0];
             publishDate = new Date(dateFromFilename).toISOString();
             logger.debug(`Extracted date from filename: ${publishDate}`);
           } catch (error) {
-            logger.error(`Error parsing date from filename, using current date: ${error}`);
             publishDate = new Date().toISOString();
+            logger.debug(`Using current date due to error: ${error}`);
           }
         }
-        
-        const metadata = {
-          title,
-          date: publishDate,
-          original_url: canonicalUrl || '',
-          is_draft: isDraft,
-          article_id: path.basename(post, '.html')
-        };
-        logger.debug(`Extracted metadata: ${JSON.stringify(metadata, null, 2)}`);
 
-        // Create directory for post
-        const postDir = path.join(mediumPostsDir, metadata.article_id);
+        // Create post directory
+        const postDir = path.join(mediumPostsDir, path.basename(post, '.html'));
         await fs.mkdir(postDir, { recursive: true });
-        logger.debug(`Created directory for post: ${postDir}`);
+        logger.debug(`Created directory: ${postDir}`);
 
-        // Process content with timeout
+        // Process content and get results
         logger.debug('Processing content...');
-        logger.updateSpinner(`[${totalProcessed}/${htmlFiles.length}] Converting content: ${postName}`);
-        const { content, heroImage } = await processContentWithTimeout($, postDir);
-        logger.debug(`Processed content length: ${content.length} characters`);
-        logger.debug(`Hero image path: ${heroImage}`);
+        const { content, heroImage, excerpt } = await processContentWithTimeout($, postDir);
+        logger.debug(`Content processing results:
+          Hero Image: ${heroImage}
+          Excerpt length: ${excerpt?.length}
+          Content length: ${content?.length}
+        `);
 
-        // Create markdown file
+        // Write markdown file
         const markdown = `---
-title: ${metadata.title}
-date: ${metadata.date || new Date().toISOString()}
-original_url: ${metadata.original_url || ''}
-is_draft: ${metadata.is_draft}
+title: ${title}
+date: ${publishDate}
+original_url: ${canonicalUrl || ''}
+is_draft: ${isDraft}
 hero_image: ${heroImage}
 ---
 
@@ -154,158 +157,54 @@ ${content}`;
 
         const markdownPath = path.join(postDir, 'index.md');
         await fs.writeFile(markdownPath, markdown);
-        logger.debug(`Saved markdown file: ${markdownPath}`);
+        logger.debug(`Wrote markdown to: ${markdownPath}`);
+        
+        // Add to YAML directly using our processed results
+        const yamlEntry = {
+          title: title || 'Untitled',
+          url: canonicalUrl || '',
+          image: heroImage,
+          excerpt: excerpt,
+          publishedAt: publishDate,
+          isDraft: isDraft
+        };
+        logger.debug(`Adding YAML entry:
+${JSON.stringify(yamlEntry, null, 2)}`);
+        
+        blogPostsYaml.medium_archive.push(yamlEntry);
+
         successCount++;
         logger.success(`[${totalProcessed}/${htmlFiles.length}] Processed: ${postName}`);
       } catch (error) {
         logger.error(`Error processing post ${postName}: ${error}`);
         errorCount++;
-        logger.updateSpinner(`[${totalProcessed}/${htmlFiles.length}] Failed: ${postName}`);
         continue;
       }
     }
 
+    // Sort by date descending
+    logger.debug('\n=== Finalizing YAML ===');
+    blogPostsYaml.medium_archive.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+    logger.debug(`Sorted ${blogPostsYaml.medium_archive.length} entries`);
+
+    // Save YAML
+    logger.debug('Writing YAML file...');
+    await yamlHandler.writeYAML('_data/blog_posts.yml', blogPostsYaml);
+    logger.debug('YAML file written successfully');
+    
     logger.stopSpinner();
-    logger.success(`Import summary:
+    logger.success(`Import completed:
     Total files: ${htmlFiles.length}
     Successfully processed: ${successCount}
     Errors: ${errorCount}
     Skipped: ${skipCount}
     `);
 
-    // Update blog_posts.yml
-    logger.debug('Starting YAML update process...');
-    const yamlHandler = new YAMLHandler(process.cwd());
-    
-    // Read existing YAML with error handling
-    let blogPostsYaml;
-    try {
-      logger.debug('Reading existing blog_posts.yml...');
-      blogPostsYaml = await yamlHandler.readYAML('_data/blog_posts.yml');
-      logger.debug('Successfully read blog_posts.yml');
-    } catch (error) {
-      logger.error(`Error reading blog_posts.yml: ${error}`);
-      blogPostsYaml = {}; // Start with empty object if file doesn't exist
-    }
-
-    // Add medium_archive section if it doesn't exist
-    if (!blogPostsYaml.medium_archive) {
-      logger.debug('Creating medium_archive section');
-      blogPostsYaml.medium_archive = [];
-    } else {
-      logger.debug(`Found existing medium_archive with ${blogPostsYaml.medium_archive.length} entries`);
-      // Clear existing entries
-      blogPostsYaml.medium_archive = [];
-      logger.debug('Cleared existing medium_archive entries');
-    }
-
-    // Add imported posts
-    const importPattern = path.join(mediumPostsDir, '**/index.md');
-    logger.debug(`Looking for imported posts with pattern: ${importPattern}`);
-    const importedPosts = await globPromise(importPattern);
-    logger.debug(`Found ${importedPosts.length} imported posts to process`);
-
-    let yamlProcessedCount = 0;
-    let yamlErrorCount = 0;
-    for (const post of importedPosts) {
-      logger.debug(`Processing imported post ${yamlProcessedCount + 1}/${importedPosts.length}: ${post}`);
-      
-      try {
-        const content = await fs.readFile(post, 'utf8');
-        logger.debug(`Read ${content.length} characters from ${post}`);
-        
-        const parts = content.split('---').filter(Boolean);
-        if (parts.length < 2) {
-          logger.debug(`Skipping malformed post: ${post} (invalid front matter)`);
-          yamlErrorCount++;
-          continue;
-        }
-        
-        // Parse front matter
-        const frontMatter = parts[0].trim();
-        const metadata = frontMatter.split('\n')
-          .filter(line => line.trim().length > 0)
-          .reduce((acc, line) => {
-            const [key, ...valueParts] = line.split(':');
-            if (key && valueParts.length > 0) {
-              const value = valueParts.join(':').trim();
-              // Remove quotes if present
-              acc[key.trim()] = value.replace(/^["']|["']$/g, '');
-            }
-            return acc;
-          }, {});
-
-        logger.debug(`Parsed metadata: ${JSON.stringify(metadata, null, 2)}`);
-
-        // Generate excerpt from content
-        const contentText = parts[1] || '';
-        const firstParagraph = contentText
-          .split('\n')
-          .map(line => line.trim())
-          .find(line => line.length > 0 && !line.startsWith('#')) || '';
-        const excerpt = firstParagraph.length > 200 
-          ? firstParagraph.substring(0, 200) + '...'
-          : firstParagraph;
-
-        // Verify image exists before adding to YAML
-        let imagePath = '';
-        if (metadata.hero_image) {
-          const fullImagePath = path.join(process.cwd(), metadata.hero_image.replace(/^\//, ''));
-          try {
-            await fs.access(fullImagePath);
-            imagePath = metadata.hero_image;
-          } catch (error) {
-            logger.debug(`Hero image not found at ${fullImagePath}, skipping`);
-          }
-        }
-
-        // Add to blog_posts.yml
-        blogPostsYaml.medium_archive.push({
-          title: metadata.title || 'Untitled',
-          url: metadata.original_url || '',
-          image: imagePath,  // Only use path if file exists
-          excerpt: excerpt,
-          publishedAt: metadata.date,
-          isDraft: metadata.is_draft === 'true'
-        });
-        logger.debug(`Added post to blog_posts.yml: ${metadata.title}`);
-        yamlProcessedCount++;
-      } catch (error) {
-        logger.error(`Error processing post ${post}: ${error}`);
-        yamlErrorCount++;
-        continue;
-      }
-    }
-
-    logger.debug(`YAML processing summary:
-    Total files: ${importedPosts.length}
-    Successfully processed: ${yamlProcessedCount}
-    Errors: ${yamlErrorCount}
-    `);
-
-    // Sort by date descending
-    blogPostsYaml.medium_archive.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
-    logger.debug('Sorted medium_archive posts by date');
-
-    // Save blog_posts.yml
-    try {
-      logger.debug('Writing updated blog_posts.yml...');
-      await yamlHandler.writeYAML('_data/blog_posts.yml', blogPostsYaml);
-      logger.success('Updated blog_posts.yml');
-    } catch (error) {
-      logger.stopSpinner(); // Stop spinner before throwing
-      logger.error(`Error writing blog_posts.yml: ${error}`);
-      throw error;
-    }
-
-    logger.stopSpinner(); // Ensure spinner is stopped before finishing
-    logger.success('Medium import completed successfully');
-    process.exit(0); // Explicitly exit
-
+    process.exit(0);
   } catch (error) {
-    logger.stopSpinner(); // Stop spinner in case of error
+    logger.stopSpinner();
     logger.error(`Failed to import Medium articles: ${error}`);
-    process.exit(1); // Exit with error code
+    process.exit(1);
   }
 }
 
@@ -347,7 +246,8 @@ async function downloadImage(url, postDir) {
   }
 }
 
-async function processContent($, postDir) {
+// Export processContent for testing
+export async function processContent($, postDir) {
   logger.debug('Starting content processing...');
   
   // Extract article content
@@ -369,12 +269,28 @@ async function processContent($, postDir) {
   
   if (!article.length) {
     logger.error('No content element found at all');
-    return { content: 'No content found', heroImage: '' };
+    return { content: 'No content found', heroImage: '', excerpt: '' };
   }
   
   logger.debug('Found content element, proceeding with processing');
   
   try {
+    // Extract excerpt BEFORE any content modifications
+    logger.debug('Extracting excerpt from original content...');
+    // Find first real paragraph after introduction
+    const paragraphs = article.find('p.graf--p').filter((_, el) => {
+      const $el = $(el);
+      // Skip if inside blockquote or is subtitle
+      if ($el.closest('blockquote').length > 0) return false;
+      if ($el.text().startsWith('This article was funded')) return false;
+      return true;
+    });
+    const firstParagraph = paragraphs.first().text();
+    const excerpt = firstParagraph.length > 200 
+      ? firstParagraph.substring(0, 200) + '...'
+      : firstParagraph;
+    logger.debug(`Extracted excerpt: ${excerpt}`);
+
     // Remove unwanted elements
     logger.debug('Removing title...');
     article.find('h1').first().remove(); // Remove title
@@ -382,22 +298,40 @@ async function processContent($, postDir) {
     logger.debug('Processing figures and images...');
     const imagePromises = [];
     let heroImage = '';  // Track the first image we process
-    let foundFirstImage = false;  // Track if we've found the first image
     
+    // First look for featured image and download it
+    const featuredImg = article.find('img[data-is-featured="true"]');
+    if (featuredImg.length) {
+      const src = featuredImg.attr('src');
+      if (src) {
+        logger.debug(`Found featured image: ${src}`);
+        const urlParts = src.split('/');
+        const originalFilename = urlParts[urlParts.length - 1];
+        const postDirName = path.basename(postDir);
+        const filename = `${postDirName}-${originalFilename}`;
+        heroImage = `/assets/images/medium/${filename}`;
+        logger.debug(`Set hero image from featured image: ${heroImage}`);
+        
+        // Download featured image
+        const promise = downloadImage(src, postDir);
+        imagePromises.push(promise);
+      }
+    }
+    
+    // Process all figures and images
     article.find('figure').each((i, el) => {
       const img = $(el).find('img');
       const src = img.attr('src');
       if (src) {
         logger.debug(`Found image: ${src}`);
         
-        // Set hero image to first image found, regardless of download status
-        if (!foundFirstImage) {
-          foundFirstImage = true;
+        // If no hero image yet, use this one
+        if (!heroImage) {
           const urlParts = src.split('/');
           const originalFilename = urlParts[urlParts.length - 1];
           const postDirName = path.basename(postDir);
           const filename = `${postDirName}-${originalFilename}`;
-          heroImage = path.join('/assets/images/medium', filename);
+          heroImage = `/assets/images/medium/${filename}`;
           logger.debug(`Set hero image: ${heroImage}`);
         }
         
@@ -422,7 +356,7 @@ async function processContent($, postDir) {
     
     if (!htmlContent) {
       logger.error('No HTML content found');
-      return { content: 'No content found', heroImage: '' };
+      return { content: 'No content found', heroImage: '', excerpt };
     }
     
     // Convert to markdown with error handling
@@ -433,22 +367,24 @@ async function processContent($, postDir) {
       
       if (!markdown) {
         logger.error('Markdown conversion resulted in empty content');
-        return { content: 'Markdown conversion failed', heroImage: '' };
+        return { content: 'Markdown conversion failed', heroImage: '', excerpt };
       }
       
-      return { content: markdown, heroImage };
+      return { content: markdown, heroImage, excerpt };
     } catch (error) {
       logger.error(`Error converting to markdown: ${error}`);
       return { 
         content: `Error converting content: ${error.message}\n\nOriginal HTML:\n${htmlContent}`,
-        heroImage: ''
+        heroImage: '',
+        excerpt
       };
     }
   } catch (error) {
     logger.error(`Error in content processing: ${error}`);
     return { 
       content: `Error processing content: ${error.message}`,
-      heroImage: ''
+      heroImage: '',
+      excerpt: ''
     };
   }
 } 
