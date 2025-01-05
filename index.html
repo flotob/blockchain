@@ -440,27 +440,19 @@ title: Florian Glatz | Blockchain Lawyer
         });
     });
 
-    let scrollTimeout;
-    window.addEventListener('scroll', () => {
-        clearTimeout(scrollTimeout);
-        hideChrome();
+    // Simple chrome visibility for hero section
+    const updateChromeVisibility = () => {
+        const chromeElements = document.querySelectorAll('.chrome');
+        const isInHeroSection = window.scrollY < window.innerHeight;
         
-        scrollTimeout = setTimeout(() => {
-            const scrollPosition = window.scrollY;
-            const windowHeight = window.innerHeight;
-            
-            // Only show chrome if we're not at the top section
-            if (scrollPosition > windowHeight / 2) {
-                showChrome();
-            }
-            
-            // Let navigation.js handle button states
-        }, 150);
-    });
+        chromeElements.forEach(element => {
+            element.classList.toggle('visible', !isInHeroSection);
+        });
+    };
 
-    // Initial state
-    hideChrome();
-    // Let navigation.js handle initial button states
+    // Initial state and scroll listener
+    updateChromeVisibility();
+    window.addEventListener('scroll', updateChromeVisibility);
 
     const menuButton = document.getElementById('menuButton');
     const menuOverlay = document.querySelector('.menu-overlay');

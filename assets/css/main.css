@@ -482,13 +482,15 @@ html {
     background: var(--bg);
     border-color: var(--border);
     backdrop-filter: blur(8px);
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
     z-index: 100;
 }
 
-.chrome.visible {
-    opacity: 1;
+/* Only hide chrome when in hero section */
+.chrome:not(.visible) {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .header {

@@ -47,7 +47,7 @@
             </a>
         </h2>
         <div class="blog-grid">
-            {% assign sorted_network_posts = site.data.blog_posts.network_society_posts | sort: "publishedAt" | reverse
+            {% assign sorted_network_posts = site.data.blog_posts.network_society_posts | sort: "publishedAt"
             %}
             {% for post in sorted_network_posts %}
             <a href="{{ post.url }}" target="_blank" rel="noopener" class="blog-card">
