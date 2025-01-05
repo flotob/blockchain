@@ -237,6 +237,16 @@
     margin-bottom: 0.5em;
 }
 
+/* Images */
+.blog-modal .blog-text img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
 /* Mobile Styles - with increased specificity */
 @media (max-width: 767px) {
     /* Modal Container - Initial State */
@@ -327,6 +337,18 @@
 
     .blog-modal .modal-footer-container {
         display: none !important;
+    }
+
+    /* Ensure images don't overflow on mobile */
+    .blog-modal .blog-content {
+        padding: 1.5rem;
+    }
+    
+    .blog-modal .blog-text img {
+        margin: 1.5rem -1.5rem;
+        width: calc(100% + 3rem);
+        max-width: calc(100% + 3rem);
+        border-radius: 0;
     }
 }
 

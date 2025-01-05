@@ -11,6 +11,13 @@ class BlogModal extends Modal {
             typographer: true
         });
         
+        // Add target="_blank" to all links
+        this.md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+            tokens[idx].attrPush(['target', '_blank']);
+            tokens[idx].attrPush(['rel', 'noopener noreferrer']);
+            return self.renderToken(tokens, idx, options);
+        };
+        
         // State
         this.currentBlog = null;
         this.blogData = JSON.parse(document.getElementById('blog-data').textContent);
@@ -74,6 +81,12 @@ class BlogModal extends Modal {
         `;
         
         this.contentContainer.innerHTML = content;
+        
+        // Add target="_blank" to all links in the content
+        this.contentContainer.querySelectorAll('a').forEach(link => {
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+        });
     }
     
     updateFooter() {
