@@ -116,19 +116,27 @@
     overflow-x: hidden;
     overscroll-behavior: none;
     position: relative;
+    background-color: var(--paper-bg);
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-clip: border-box;
+    padding: 2rem;
+    box-shadow: 
+        inset 0 2px 4px -2px rgba(0, 0, 0, 0.1),
+        inset 0 -2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 .blog-modal .blog-content {
-    padding: 2rem 4rem;
-    background-color: var(--paper-bg);
-    min-height: 100%;
+    max-width: 65ch;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .blog-modal .blog-text {
-    max-width: 65ch;
-    margin: 0 auto;
-    font-size: 1.125rem;
-    line-height: 1.75;
+    font-size: 1rem;
+    line-height: 1.6;
     color: var(--text-primary);
 }
 
@@ -212,12 +220,12 @@
 .blog-modal .blog-text a {
     color: var(--primary);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid var(--primary);
     transition: border-color 0.2s ease;
 }
 
 .blog-modal .blog-text a:hover {
-    border-bottom-color: var(--primary);
+    border-bottom-color: transparent;
 }
 
 /* Lists */

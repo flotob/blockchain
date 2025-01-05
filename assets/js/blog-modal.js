@@ -72,10 +72,14 @@ class BlogModal extends Modal {
     }
     
     updateContent() {
+        // Split at first <hr /> and take the last part, or use full content if no separator
+        const parts = this.currentBlog.content.split('<hr />');
+        const mainContent = parts.length > 1 ? parts.slice(1).join('<hr />') : this.currentBlog.content;
+        
         const content = `
             <div class="blog-content">
                 <div class="blog-text">
-                    ${this.md.render(this.currentBlog.content)}
+                    ${this.md.render(mainContent)}
                 </div>
             </div>
         `;
