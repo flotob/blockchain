@@ -90,9 +90,9 @@ class Modal {
         // Close button
         this.closeButton.addEventListener('click', () => this.close());
         
-        // Close on background click (desktop only)
+        // Close on background click (all devices)
         this.modal.addEventListener('click', (e) => {
-            if (this.isDesktop && e.target === this.modal) {
+            if (e.target === this.modal) {
                 this.close();
             }
         });

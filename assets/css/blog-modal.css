@@ -129,8 +129,14 @@
 }
 
 .blog-modal .blog-content {
-    max-width: 65ch;
+    width: min(65ch, 100% - 3rem);
     margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Everything else just takes 100% of its parent */
+.blog-modal .blog-text,
+.blog-modal .blog-text > * {
     width: 100%;
 }
 
@@ -138,6 +144,16 @@
     font-size: 1rem;
     line-height: 1.6;
     color: var(--text-primary);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Specific handling for blockquotes */
+.blog-modal .blog-text blockquote {
+    margin: 1.5em auto;
+    padding: 0 1em;
+    border-left: 4px solid var(--border);
+    color: var(--text-secondary);
 }
 
 /* Headings */
@@ -222,6 +238,8 @@
     text-decoration: none;
     border-bottom: 1px solid var(--primary);
     transition: border-color 0.2s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .blog-modal .blog-text a:hover {
@@ -247,10 +265,10 @@
 
 /* Images */
 .blog-modal .blog-text img {
-    max-width: 100%;
+    margin: 1.5rem auto;
+    width: 100%;
     height: auto;
     display: block;
-    margin: 2rem auto;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
@@ -303,8 +321,6 @@
 
     /* Content */
     .blog-modal.active .blog-content {
-        padding: 1.5rem 1rem;
-        width: 100%;
         box-sizing: border-box;
     }
 
@@ -312,8 +328,6 @@
     .blog-modal.active .blog-text {
         font-size: 1rem;
         line-height: 1.7;
-        max-width: 85%;
-        margin: 0 auto;
         box-sizing: border-box;
     }
 
@@ -353,10 +367,10 @@
     }
     
     .blog-modal .blog-text img {
-        margin: 1.5rem -1.5rem;
-        width: calc(100% + 3rem);
-        max-width: calc(100% + 3rem);
-        border-radius: 0;
+        margin: 1.5rem 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0.5rem;
     }
 }
 
