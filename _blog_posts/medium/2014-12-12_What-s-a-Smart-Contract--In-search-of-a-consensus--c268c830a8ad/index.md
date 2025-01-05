@@ -90,7 +90,7 @@ From a legal standpoint, this presumption is wrong or at least not necessarily t
 
 It his however undeniable, that smart contracts have to be classified as **legally relevant behavior**. We live in a world that is governed by legal statutes that encompass all possible economic transactions (and more). Contract law is just one possible tool to organize economic transactions. A schematic view might look something like this:
 
-!\[\](/assets/images/medium/2014-12-12\_What-s-a-Smart-Contract--In-search-of-a-consensus--c268c830a8ad-1\*WWtCLYSV4T5ml\_L-gn-aIA.png)
+![](/assets/images/medium/2014-12-12_What-s-a-Smart-Contract--In-search-of-a-consensus--c268c830a8ad-1*WWtCLYSV4T5ml_L-gn-aIA.png)
 
 Let’s look at the intersection of contract law and smart contracts. Is it possible to find a generalization of the act of contracting that captures both systems? Following [Szabo](http://szabo.best.vwh.net/smart_contracts_2.html),
 
@@ -100,7 +100,7 @@ What Szabo tells us is that the abstract concept of a “contract” is a recogn
 
 I suggest the following generalized model of contracting:
 
-!\[\](/assets/images/medium/2014-12-12\_What-s-a-Smart-Contract--In-search-of-a-consensus--c268c830a8ad-1\*wdlFcTIAuYElZkRGupEb0g.png)
+![](/assets/images/medium/2014-12-12_What-s-a-Smart-Contract--In-search-of-a-consensus--c268c830a8ad-1*wdlFcTIAuYElZkRGupEb0g.png)
 
 Let’s see how this model holds up if we apply it to the concept of smart contracts and contracts in the legal sense.
 
@@ -120,7 +120,7 @@ Understood in such a general way, the question of “how” a contract is formal
 
 Since a single picture says more than a thousand words, look at this beautiful infographic I plagiarized from [Lawrence Lessig](http://www.lessig.org/about/) and slightly adapted for the purpose of this article.
 
-!\[\](/assets/images/medium/2014-12-12\_What-s-a-Smart-Contract--In-search-of-a-consensus--c268c830a8ad-1\*Qr6DFyNGAH0Cf3t-1PC8lg.png)
+![](/assets/images/medium/2014-12-12_What-s-a-Smart-Contract--In-search-of-a-consensus--c268c830a8ad-1*Qr6DFyNGAH0Cf3t-1PC8lg.png)
 
 In Lessig’s original version, there is a person at the center (actually it’s a dot representing a person), not a contract. What the great thinker tried to teach us mortals with his original graphic were the four fundamental _constraints_ operating on a person’s life. Those constraints are distinct in nature yet interwoven in complex ways.
 

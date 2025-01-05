@@ -285,13 +285,18 @@
 
     /* Content */
     .blog-modal.active .blog-content {
-        padding: 1.5rem 2rem;
+        padding: 1.5rem 1rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     /* Text Sizes */
     .blog-modal.active .blog-text {
         font-size: 1rem;
         line-height: 1.7;
+        max-width: 85%;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
 
     .blog-modal.active .blog-text h1 { font-size: 1.875rem; }

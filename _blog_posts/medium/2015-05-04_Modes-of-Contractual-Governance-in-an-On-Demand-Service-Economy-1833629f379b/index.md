@@ -11,7 +11,7 @@ What has been dubbed the ‘Uber-for-X’ approach in the startup world, and the
 
 * * *
 
-!\[\](/assets/images/medium/2015-05-04\_Modes-of-Contractual-Governance-in-an-On-Demand-Service-Economy-1833629f379b-1\*TW0XuppLblpprR\_C6Gc2zg.jpeg)
+![](/assets/images/medium/2015-05-04_Modes-of-Contractual-Governance-in-an-On-Demand-Service-Economy-1833629f379b-1*TW0XuppLblpprR_C6Gc2zg.jpeg)
 
 ### Modes of Contractual Governance in an On-Demand Service Economy
 

@@ -35,7 +35,9 @@ Looking at the history of funding mechanisms for builders using blockchain and c
 
 Decentralized Finance exists at the intersection of play and exchange. While the exchange part is fully automated and trustless, the play part is much more dynamic: it’s driven by communities, incentives, and conventions. It is where capital formation happens, and value is collectively created and distributed.
 
-!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*FmAR2IkDpT9aIHKLU9w7EA.png)
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*FmAR2IkDpT9aIHKLU9w7EA.png)
+
+The [Curve Wars](https://rekt.news/curve-wars/) are an interesting example of how play and exchange can come together.
 
 Today, more than ever, DeFi is innovating at a pace that is too fast for regulators to absorb and deal with constructively, particularly when it comes to the governance of DeFi protocols. Decentralized governance of protocols by pseudonymous or anonymous stakeholders is not the way regulators imagined how financial infrastructure should be governed \[[2](https://stanford-jblp.pubpub.org/pub/cex-regs-to-crypto-protocols/release/1)\].
 
@@ -43,7 +45,7 @@ Today, more than ever, DeFi is innovating at a pace that is too fast for regulat
 
 How are DeFi projects born? Typically, a set of founders build a team, raise venture capital, and start to build both code and a community. But how does a project go from that stage into a fully operational protocol, governed by a community of thousands of users and large capital reserves in a multisig?
 
-!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*qJ5ILT2Wqp4KIu0BXThDkA.png)
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*qJ5ILT2Wqp4KIu0BXThDkA.png)
 
 According to some, including well-known investment firm a16z, the answer is [progressive decentralization](https://a16z.com/2020/01/09/progressive-decentralization-crypto-product-management/). The priority goes:
 
@@ -64,7 +66,9 @@ The problems arise when code makes a phase transition from mere text into embodi
 
 ### Radical decentralization: Storytellers and Communities
 
-!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*KcMNf6jNhchANoc8vj5eag.jpeg)
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*KcMNf6jNhchANoc8vj5eag.jpeg)
+
+Nietzsche says _“Whoever reaches their ideal transcends it eo ipso”_. We’ll get to why this matters in the context of launching DeFi protocols in the Metaverse later on. For now, just look at that Mustache.
 
 Any solution that addresses the compliance challenges for builders should satisfy the following requirements:
 
@@ -86,7 +90,9 @@ This is where NFTs, the Metaverse and storytelling come into play. Storytelling 
 **Value Creation at different levels of the stack  
 **For crypto assets, value creation happens in different forms at different levels of the value stack. 
 
-!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*PPWFezQCChlZfhkcnlNv9w.jpeg)
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*PPWFezQCChlZfhkcnlNv9w.jpeg)
+
+The style of this image is heavily inspired by Ben Thompson’s [stratechery](http://stratechery.com/).
 
 Builders operate at [layer zero](https://forum.makerdao.com/u/layerzero), they write and design code and applications in raw files. Economically that value accrues as intellectual property rights on those raw bytes maintained through _git_ and its ilk.
 
@@ -118,7 +124,9 @@ Auctioning the tokenized IP of a fully functional DeFi protocol to its future co
 
 **Insight 3: NFTs are effectively equity in a future DAO, if the NFT buyers so desire. Or in other words: DAOSHARES**
 
-!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*H2pt7G9Nwfp-gIDco91h-Q.jpeg)
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*H2pt7G9Nwfp-gIDco91h-Q.jpeg)
+
+Say DAOSHARES three times in a row. Breathe. Again.
 
 The idea that NFTs can serve as standardized containers for transacting rights, and in particular IP rights, is [not particularly new](https://newretro.org/post/131481159882/decentralised-attribution-is-already-here-ish). From the day of the first non-fungible token spec, in form of the ERC721 standard on the Ethereum blockchain, various ideas of how to do that [were present](https://heckerhut.medium.com/a-blockchain-token-taxonomy-fadf5c56139a).
 
@@ -136,7 +144,9 @@ So how does it work in detail?
 
 The method we present and the Potion Unlock implementation we have built is split into two distinct phases, where in the first phase builders are handig over the project to their community and in phase two the community makes a choice on what they want to do with the project going forward, such as deploying a DAO or exploring totally different ways to exploit the IP.
 
-!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*95ydq1CJYteqhaorRp9pLg.png)
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*95ydq1CJYteqhaorRp9pLg.png)
+
+Note that “releasing IP into public domain” is not possible in many jurisdictions. In that case it means to license the IP in a copyleft fashion such that it acts as if it were in the public domain.
 
 Let us give you a sense of how Potion Unlock makes use of this method. A dedicated microsite allows users to purchase and interact with Potion NFTs. The process can be modelled as 4 distinct phases:
 
@@ -145,17 +155,29 @@ Let us give you a sense of how Potion Unlock makes use of this method. A dedicat
 3.  Resolution of negoations with collective on-chain secret reveal
 4.  Decryption of source code and execution of buyer’s decision
 
-!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*JwDv-Yxo7MtRbWCd7\_U8aA.png)!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*z0KVLUQWwwfTouCvPoNp9Q.png)
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*JwDv-Yxo7MtRbWCd7_U8aA.png)
 
-!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*EF1O\_8I-xxn0n7-b4o5z6Q.png)!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*o3peMzFU0qTg9\_1Hhmycag.png)
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*z0KVLUQWwwfTouCvPoNp9Q.png)
 
-!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*coVl\_gspQcOvI0Q2f3avew.png)!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*\_OV7fSZcdYf3wTyRoTzfrw.png)
+Potion NFTs public auction
+
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*EF1O_8I-xxn0n7-b4o5z6Q.png)
+
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*o3peMzFU0qTg9_1Hhmycag.png)
+
+revelation of secret
+
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*coVl_gspQcOvI0Q2f3avew.png)
+
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*_OV7fSZcdYf3wTyRoTzfrw.png)
+
+validation of secret and decryption of protocol source code
 
 ### Compliance — or why this is actually legal 🤯 
 
 The key compliance issues of the method we present can be captured in the following categories:
 
-!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*Vhpvs\_TeAKuY8fkKoqgK2w@2x.jpeg)
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*Vhpvs_TeAKuY8fkKoqgK2w@2x.jpeg)
 
 #### Why this is certifiably legal for builders
 
@@ -216,7 +238,9 @@ After the public auction of the protocol’s IP as NFTs, there is a heterogenous
 
 If out of this framework of incentives a DAO is born that ends up deploying and operating the DeFi protocol contained in the original IP acquired by NFT buyers, is that DAO by force liable under the same rules as traditional financial service providers? Or are there ways of governance and operation of the protocol by the DAO imaginable where we can truly speak of a decentralized service, operated by its users, as a public good and infrastructure, more than anything else?
 
-!\[\](/assets/images/medium/draft\_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1\*pPNDrS\_Pu6GM2fLB6nuycg.jpeg)
+![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*pPNDrS_Pu6GM2fLB6nuycg.jpeg)
+
+The Metaverse brings the power of Frida Kahlo to everyone.
 
 The more favorable interpretation for DAOs, i.e. that they assume a fundamentally new role outside of traditional regulation is being reasoned about and excellently argued for by Samantha Altschuler, Co-President of Harvard Law School Blockchain & FinTech Initiative in her recent article [“Should Centralized Exchange Regulations Apply to Cryptocurrency Protocols?”](https://stanford-jblp.pubpub.org/pub/cex-regs-to-crypto-protocols/release/1). 
 

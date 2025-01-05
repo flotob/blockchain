@@ -138,7 +138,7 @@ Before we talk about looks, let’s talk about functionality. In that respect, t
 2.  a set of tools empowering every citizen or interest group, including governments themselves, to monitor and formally propose a change in or addition to current policies pertaining to a particular territory or service
 3.  community-guided, public discourse and structured discussion venues for debating arguments and different perspectives among stakeholders around policy implementations, connected goals and underlying values as well as voting tools to gauge movements in opinion and consensus
 
-!\[\](/assets/images/medium/2021-02-03\_Can-the-Wikipedia-model-be-applied-to-Public-Policy-Making--ff4444a2ff60-1\*kVQ1n33xwujNNEo1Xy8hvQ.png)
+![](/assets/images/medium/2021-02-03_Can-the-Wikipedia-model-be-applied-to-Public-Policy-Making--ff4444a2ff60-1*kVQ1n33xwujNNEo1Xy8hvQ.png)
 
 _Poli.cy is a non-commercial, open source platform for drafting policy proposals, monitoring current and future policies, and expert debate on policies._
 

@@ -4,7 +4,7 @@ date: 2023-05-17T00:00:00.000Z
 medium_id: 50de94e8ee1e
 original_url: https://medium.com/@heckerhut/daos-are-dead-long-live-daos-50de94e8ee1e
 is_draft: false
-hero_image: /assets/images/medium/2023-05-17_DAOs-are-Dead--Long-live-DAOs--50de94e8ee1e-1*TxjhA7tCiBcD5Gan8TpD5A.png
+hero_image: /assets/images/medium/2023-05-17_DAOs-are-Dead--Long-live-DAOs--50de94e8ee1e-1*3IDcQk4Ide70iVm5i4VEvQ.png
 ---
 
 This article was funded by the CollectiveBrain community. Join the community to become a paid knowledge contributor or start out as an…
@@ -25,7 +25,9 @@ _“If it is correct — as I believe it is — that a fundamental eleme
 
 Decentralized Autonomous Organizations — or DAOs for short — have been a topic of discussion for decades. I first stumbled upon the idea ten years ago, when Daniel Larimer framed Bitcoin as a Decentralized Autonomous Corporation (DAC). \[2\] Shortly after, young Vitalik Buterin attempted to systematize different forms of organization, autonomy and agency, introducing the term DAO for the first time \[3\].
 
-!\[\](/assets/images/medium/2023-05-17\_DAOs-are-Dead--Long-live-DAOs--50de94e8ee1e-1\*3IDcQk4Ide70iVm5i4VEvQ.png)
+![](/assets/images/medium/2023-05-17_DAOs-are-Dead--Long-live-DAOs--50de94e8ee1e-1*3IDcQk4Ide70iVm5i4VEvQ.png)
+
+Source: [https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide)
 
 In 2016, a team of early Ethereum developers formed around Christoph Jentzsch, to put the idea of a deliberately designed DAO to the test and coining the infamous sentence “Code is Law”. While the experiment of “TheDAO” failed spectacularly due to an exploit in the code \[4\], the idea of DAOs had been spread around the world. \[5\]
 
@@ -55,13 +57,17 @@ Ignorant of this puristic view of DAOs, a lot of projects and communities starte
 
 Some people get really mad about this form of cultural appropriation. Here’s an example:
 
-!\[\](/assets/images/medium/2023-05-17\_DAOs-are-Dead--Long-live-DAOs--50de94e8ee1e-1\*3wMus12wRRS4F9VXJYlo2g.png)
+![](/assets/images/medium/2023-05-17_DAOs-are-Dead--Long-live-DAOs--50de94e8ee1e-1*3wMus12wRRS4F9VXJYlo2g.png)
+
+Source: [https://twitter.com/lex\_node/status/1642936303942615048?s=20](https://twitter.com/lex_node/status/1642936303942615048?s=20)
 
 Personally, I don’t see this form of appropriation of the term DAO as a problem. Sure, it does make some discussions more cumbersome because you never know what kind of DAO a person means when engaging in a debate. Do they mean the general, values-based form of a DAO, or do they mean an autonomous piece of software that depends on continuous governance as an input for its functioning?
 
 On the other hand, it’s cool that a broader cultural circle is absorbing the values and principles behind decentralized organizations. This is what mainstream adoption will look like. Watch this video of a bunch of e-sports commentators grappling with the phenomenon of NounsDAO.
 
-!\[\](/assets/images/medium/2023-05-17\_DAOs-are-Dead--Long-live-DAOs--50de94e8ee1e-1\*v4ypR63vQSLg6XOnEpPE8w.png)
+![](/assets/images/medium/2023-05-17_DAOs-are-Dead--Long-live-DAOs--50de94e8ee1e-1*v4ypR63vQSLg6XOnEpPE8w.png)
+
+Link to watch the video: [https://twitter.com/punk4156/status/1644662999234355200](https://twitter.com/punk4156/status/1644662999234355200)
 
 Which begs the question: is NounsDAO a DAO in the strict meaning of the term? In my assessment it’s not. Although NounsDAO is to my knowledge an unincorporated non-entity that purely operates on-chain, it doesn’t govern a separate technical artifact, it’s raison d’être, like an on-chain marketplace or stablecoin. It’s not a means to an end — unlike MakerDAO, Aave, Compound or Uniswap. Sure, there is a continuous auction of new Nouns NFTs being maintained as a technical artifact. But this is a purely self-referential piece of code. It has no extrinsic purpose, except to grow the treasury and membership base of the project.
 
@@ -91,7 +97,7 @@ This may not sound like a tectonic shift and in a sense it’s not. But the rami
 
 In summary we can say that DAOs exist on a spectrum. Of course, the transition between these can be fluid.
 
-!\[\](/assets/images/medium/2023-05-17\_DAOs-are-Dead--Long-live-DAOs--50de94e8ee1e-1\*TxjhA7tCiBcD5Gan8TpD5A.png)
+![](/assets/images/medium/2023-05-17_DAOs-are-Dead--Long-live-DAOs--50de94e8ee1e-1*TxjhA7tCiBcD5Gan8TpD5A.png)
 
 If you liked this article, [join CollectiveBrain for more good stuff](https://app.cg/community/G1YnQr6cz7).
 

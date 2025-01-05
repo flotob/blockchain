@@ -31,7 +31,9 @@ Through a sophisticated mix of proven web technologies\[2\], public-key cryptogr
 
 In effect, what we built at SatoshiPay, is a new type of web-based intermediary, which I’m calling **trustless intermediary.** The SatoshiPay service mediates contractual negotiations and performance between buyers and sellers of digital goods, without those parties having to trust the service with their money.\[3\]
 
-!\[\](/assets/images/medium/2016-02-01\_How-we-use-Smart-Contracts-at-SatoshiPay-to-change-the-Internet-s-economy-forever--Today--777988a868d-1\*38k0dOwQsQhT37-i-MkEVw.png)
+![](/assets/images/medium/2016-02-01_How-we-use-Smart-Contracts-at-SatoshiPay-to-change-the-Internet-s-economy-forever--Today--777988a868d-1*38k0dOwQsQhT37-i-MkEVw.png)
+
+To understand the lower half of the graphic, read [this](https://medium.com/@heckerhut/smart-contracts-platforms-and-intermediaries-c3d30f5182a6#.lhx3xzgsx).
 
 #### Bitcoin micro-payment channels as a scalable web service
 

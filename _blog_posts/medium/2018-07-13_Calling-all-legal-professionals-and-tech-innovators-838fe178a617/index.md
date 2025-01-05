@@ -23,7 +23,7 @@ On September 19th, the Swiss Legal Tech 2018 will be rounded off with a full-day
 
 [_Get your Ticket here for Conference and Hands-On Workshops, or apply for our free, all-inclusive Hackathon_](http://swisslegal.tech/2018).
 
-!\[\](/assets/images/medium/2018-07-13\_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1\*L5uGxgwHCvHcTN5MD-VbjA.png)
+![](/assets/images/medium/2018-07-13_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1*L5uGxgwHCvHcTN5MD-VbjA.png)
 
 [_Get your Ticket here for Conference and Hands-On Workshops, or apply for our free, all-inclusive Hackathon_](http://swisslegal.tech/2018).
 
@@ -31,13 +31,13 @@ On September 19th, the Swiss Legal Tech 2018 will be rounded off with a full-day
 
 By participating all three days, or at the conference or workshops alone: you will find like-minded peers eager to explore new ideas with you. At the hackathon and workshops, we will deal with challenging topics in the most reflective and creative ways. The hackathon is divided into the three building blocks: Idea Hacking, Prototype Hacking and Idea Competition. Our workshops are centered around hands-on practical understanding of emerging trends and technologies. And lastly, the conference unites all stakeholders to find a consensus on where the industry as a whole is headed and where new challenges and opportunities are awaiting us.
 
-!\[\](/assets/images/medium/2018-07-13\_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1\*nRKNRynO7ewIz8jJ8hf1nA.jpeg)
+![](/assets/images/medium/2018-07-13_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1*nRKNRynO7ewIz8jJ8hf1nA.jpeg)
 
 #### Day 1: Let’s REthink Law
 
 Collaboration and knowledge sharing are key when rethinking the status quo. On the first day of the hackathon, we bring together interdisciplinary teams of legal practitioners, software developers and digital innovators in order to build bridges between law, tech and business. It’s an international atmosphere with event participants from India, Africa, Australia, U.S.A., South America and most of Europe. All teams will be working with collective brainstorming, idea structuring and team building. The goal is to identify problems and search for solutions. We call it Idea Hacking — and we believe that it’s the recipe for creating innovative legal tech output.
 
-!\[\](/assets/images/medium/2018-07-13\_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1\*xOFFRqtDGTsPePoOQcmCIQ.jpeg)
+![](/assets/images/medium/2018-07-13_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1*xOFFRqtDGTsPePoOQcmCIQ.jpeg)
 
 [_Get your Ticket here for Conference and Hands-On Workshops, or apply for our free, all-inclusive Hackathon_](http://swisslegal.tech/2018).
 
@@ -49,7 +49,9 @@ In **separate workshops** that deal with the integration of legal tech into dail
 
 During the hackathon, the teams will be working on developing their ideas further into functioning prototypes. These prototypes could win your team some attractive prizes. At the Idea Competition, three winning ideas will be decided upon by an expert jury on the basis of their levels of creativity, practicality, social impact, etc.
 
-!\[\](/assets/images/medium/2018-07-13\_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1\*Mv4qNT0gFcO9JKsbG5-7HA.jpeg)!\[\](/assets/images/medium/2018-07-13\_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1\*3YpVttqVIzmo-Jo7Cz0mBw.jpeg)
+![](/assets/images/medium/2018-07-13_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1*Mv4qNT0gFcO9JKsbG5-7HA.jpeg)
+
+![](/assets/images/medium/2018-07-13_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1*3YpVttqVIzmo-Jo7Cz0mBw.jpeg)
 
 #### Day 3: Let’s come together
 
@@ -57,7 +59,9 @@ The subsequent conference presents renowned speakers who will provide their thou
 
 You can find more information about the hackathon, the workshops and the conference on [https://swisslegal.tech/2018/](https://swisslegal.tech/2018/).
 
-!\[\](/assets/images/medium/2018-07-13\_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1\*yCFDpH38Ju3odNgTFigbCw.jpeg)!\[\](/assets/images/medium/2018-07-13\_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1\*1Z5FpLjnDk6ajDs1f9WX\_g.jpeg)
+![](/assets/images/medium/2018-07-13_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1*yCFDpH38Ju3odNgTFigbCw.jpeg)
+
+![](/assets/images/medium/2018-07-13_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1*1Z5FpLjnDk6ajDs1f9WX_g.jpeg)
 
 #### How do I participate, you ask?
 

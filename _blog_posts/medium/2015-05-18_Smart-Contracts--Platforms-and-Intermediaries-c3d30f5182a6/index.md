@@ -11,7 +11,7 @@ Crypto Economics as a mixed human-machine system fueled by economic incentivisat
 
 * * *
 
-!\[\](/assets/images/medium/2015-05-18\_Smart-Contracts--Platforms-and-Intermediaries-c3d30f5182a6-1\*1ii5ybYk8nyVRXrdPOePeg.png)
+![](/assets/images/medium/2015-05-18_Smart-Contracts--Platforms-and-Intermediaries-c3d30f5182a6-1*1ii5ybYk8nyVRXrdPOePeg.png)
 
 ## Smart Contracts, Platforms  
 and Intermediaries
@@ -30,7 +30,9 @@ One of the more interesting insights produced by research in Bitcoin and the con
 
 Looking at current-day internet platforms through the [lens of contract](https://medium.com/@heckerhut/modes-of-contractual-governance-in-an-on-demand-service-economy-1833629f379b#44c6-5310e0f093b7), especially at platforms concerned with the trading of goods and services in horizontal networks of buyers and sellers, we can differentiate two phases of contracting between those economic actors: the pre and the post contractual phase.
 
-!\[\](/assets/images/medium/2015-05-18\_Smart-Contracts--Platforms-and-Intermediaries-c3d30f5182a6-1\*CRRgDz78LN-Otvy5rgGg-Q.png)
+![](/assets/images/medium/2015-05-18_Smart-Contracts--Platforms-and-Intermediaries-c3d30f5182a6-1*CRRgDz78LN-Otvy5rgGg-Q.png)
+
+[Nick Szabo](http://szabo.best.vwh.net/phases.html)’s temporal model of contracting, derived from standard economic models
 
 [Transaction cost economics](http://en.wikipedia.org/wiki/Transaction_cost) tells us, that each of those activities entails certain costs. The economic role of a platform is to reduce each of those expenses as far as possible. Today, platforms are based on a monolithic approach, that can be described as a **full integration**: in order to enjoy a platform’s network of users willing to engage in trade, one has to buy into the governance of both the pre and the post contractual phase on the platform’s terms. This gives the platform provider, _the_ _firm_, an arguably unproportional amount of influence over broad ranges of economic activities.
 
@@ -50,7 +52,9 @@ In the **Blockchain model**, the notion of mediation services in both the pre an
 
 The blockchain model accomplishes this functional reconstruction of existing techno-economic infrastructure with an impressive feat: it creates a sort of secondary economy around the provision of _computational resources_. That is, the technical peer-to-peer protocol that coordinates the construction of a _blockchain-type computer_ provides economic incentives for people to provide resources for said infrastructure. Those incentives are in turn disconnected from the semantic meaning of the data those resources are used to process (separation of concerns).
 
-!\[\](/assets/images/medium/2015-05-18\_Smart-Contracts--Platforms-and-Intermediaries-c3d30f5182a6-1\*wQsQY6IWfO-c5th7vBF-qg.png)
+![](/assets/images/medium/2015-05-18_Smart-Contracts--Platforms-and-Intermediaries-c3d30f5182a6-1*wQsQY6IWfO-c5th7vBF-qg.png)
+
+The Blockchain Model
 
 As shown in the picture, mediation services interact with the Settlement Layer, but they don’t “own it”, i.e. it is not integrated in their infrastructure and therefore accessible to everyone else. In effect, it creates an open environment for competition to blossom.
 

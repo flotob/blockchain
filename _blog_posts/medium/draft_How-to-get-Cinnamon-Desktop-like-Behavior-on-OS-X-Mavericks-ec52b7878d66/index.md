@@ -25,11 +25,16 @@ Long story short, here’s how you can replicate on OS X Mavericks what Cinnamon
 
 First, let’s fix spaces. All you need here is [**TotalSpaces**](http://totalspaces.binaryage.com/). The full version is currently at USD 18.00. It’s completely worth it.
 
-!\[\](/assets/images/medium/draft\_How-to-get-Cinnamon-Desktop-like-Behavior-on-OS-X-Mavericks-ec52b7878d66-1\*IEljsagdKVEr1DM\_IrUvrA.png)
+![](/assets/images/medium/draft_How-to-get-Cinnamon-Desktop-like-Behavior-on-OS-X-Mavericks-ec52b7878d66-1*IEljsagdKVEr1DM_IrUvrA.png)
+
+You get the same grid view as in Mint. However, new spaces cannot be created here, nor can they be removed.  
+That’s [Gonjasufi](http://www.youtube.com/watch?v=4nq4rLem8Xs) by the way.
 
 However, you cannot create new spaces in the grid view. Adding / removing spaces is done in the TotalSpaces app itself, which, truthfully, sucks and is solved much more intuitively in Cinnamon.
 
-!\[\](/assets/images/medium/draft\_How-to-get-Cinnamon-Desktop-like-Behavior-on-OS-X-Mavericks-ec52b7878d66-1\*CoBV0dUWKL37pOMj2z-3Rg.png)
+![](/assets/images/medium/draft_How-to-get-Cinnamon-Desktop-like-Behavior-on-OS-X-Mavericks-ec52b7878d66-1*CoBV0dUWKL37pOMj2z-3Rg.png)
+
+This is not a good solution.
 
 On the positive side, if you can get used to the Macbook’s touch pad, you can navigate through your spaces with ease, thanks you three-/four-finger gestures. It’s kind of a pain to set up, but it can all be done in the TotalSpaces App. Remember to deactivate the corresponding gestures in OS X’s System Settings.
 

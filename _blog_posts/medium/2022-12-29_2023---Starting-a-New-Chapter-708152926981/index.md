@@ -32,7 +32,9 @@ That’s why I’ve decided to build [Common Ground](https://commonground.cg/) -
 
 Behind Common Ground stands an incredible team of builders, investors and communities, that are united by a shared vision of a better internet.
 
-!\[\](/assets/images/medium/2022-12-29\_2023---Starting-a-New-Chapter-708152926981-1\*HRN5b8BAueclAtNwMdVLBQ.png)
+![](/assets/images/medium/2022-12-29_2023---Starting-a-New-Chapter-708152926981-1*HRN5b8BAueclAtNwMdVLBQ.png)
+
+Check out [https://commonground.cg/](https://commonground.cg/)
 
 Common Ground brings together essential features for communities, including chat, voice, blogging and much, much more. Hence, I’m moving my blog there. I’ve already published one significant post under my new moniker “ada” about what I call the “Builder-Operator-Separation”, explaining how builders in the web3 space can create extralegal spaces with radical decentralization.
 

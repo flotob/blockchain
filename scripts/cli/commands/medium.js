@@ -304,30 +304,6 @@ export async function processContent($, postDir) {
     logger.debug('Processing figures and images...');
     let heroImage = '';  // Track the first image we process
     
-    // First look for featured image and download it
-    const featuredImg = article.find('img[data-is-featured="true"]');
-    if (featuredImg.length) {
-      const src = featuredImg.attr('src');
-      if (src) {
-        logger.debug(`Found featured image: ${src}`);
-        const urlParts = src.split('/');
-        const originalFilename = urlParts[urlParts.length - 1];
-        const postDirName = path.basename(postDir);
-        const filename = `${postDirName}-${originalFilename}`;
-        const localPath = `/assets/images/medium/${filename}`;
-        logger.debug(`Attempting to download featured image to: ${localPath}`);
-        
-        // Download featured image and only set hero image if successful
-        const downloadedPath = await downloadImage(src, postDir);
-        if (downloadedPath) {
-          heroImage = downloadedPath;
-          logger.debug(`Set hero image from featured image: ${heroImage}`);
-        } else {
-          logger.debug('Failed to download featured image, will try next image');
-        }
-      }
-    }
-    
     // Process all figures and images
     const promises = [];
     article.find('figure').each((i, el) => {
@@ -336,30 +312,21 @@ export async function processContent($, postDir) {
       if (src) {
         logger.debug(`Found image: ${src}`);
         
-        // If no hero image yet, try to use this one
+        // Set hero image to first image found
         if (!heroImage) {
           const urlParts = src.split('/');
           const originalFilename = urlParts[urlParts.length - 1];
           const postDirName = path.basename(postDir);
           const filename = `${postDirName}-${originalFilename}`;
-          const localPath = `/assets/images/medium/${filename}`;
-          
-          // Download image and set hero image if successful
-          const promise = downloadImage(src, postDir).then(downloadedPath => {
-            if (downloadedPath && !heroImage) {
-              heroImage = downloadedPath;
-              logger.debug(`Set hero image: ${heroImage}`);
-            }
-            $(el).replaceWith(`![](${downloadedPath || src})`);
-          });
-          promises.push(promise);
-        } else {
-          // Just download and replace the image
-          const promise = downloadImage(src, postDir).then(downloadedPath => {
-            $(el).replaceWith(`![](${downloadedPath || src})`);
-          });
-          promises.push(promise);
+          heroImage = `/assets/images/medium/${filename}`;
+          logger.debug(`Set hero image: ${heroImage}`);
         }
+        
+        // Download and update the image src
+        const promise = downloadImage(src, postDir).then(downloadedPath => {
+          img.attr('src', downloadedPath || src);
+        });
+        promises.push(promise);
       } else {
         logger.debug('Found figure without image, removing');
         $(el).remove();
@@ -389,6 +356,11 @@ export async function processContent($, postDir) {
         logger.error('Markdown conversion resulted in empty content');
         return { content: 'Markdown conversion failed', heroImage: '', excerpt };
       }
+
+      // Fix escaped image paths after Turndown conversion
+      markdown = markdown.replace(/!\[\]\(([^)]+)\)/g, (match, path) => {
+        return `![](${path.replace(/\\/g, '')})`;
+      });
       
       return { content: markdown, heroImage, excerpt };
     } catch (error) {

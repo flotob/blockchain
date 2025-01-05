@@ -19,7 +19,9 @@ Age of Blockchain
 
   
 
-!\[\](/assets/images/medium/draft\_Collective-Rights-Management-Agencies--in-the-Age-of-Blockchain-47465a5fd48d-1\*l742RPSPWPkg6kz\_vxdSLQ.png)
+![](/assets/images/medium/draft_Collective-Rights-Management-Agencies--in-the-Age-of-Blockchain-47465a5fd48d-1*l742RPSPWPkg6kz_vxdSLQ.png)
+
+Metzger/Heinemann on the [NC-CC Licensing model](http://www.jipitec.eu/issues/jipitec-6-1-2015/4172/metzger.pdf) introduced by [Directive 2014/26/EU](http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32014L0026&from=EN)
 
 Centralize the rules  
 Distribute their execution

@@ -11,7 +11,7 @@ Why decentralized infrastructure has still a long way to go
 
 * * *
 
-!\[\](/assets/images/medium/2015-06-13\_The-Quiet-Death-of-Ripple-s-Codiu--Project-782c11a17c02-1\*jD9N\_laS4ciIMLEwlPhvDw.jpeg)
+![](/assets/images/medium/2015-06-13_The-Quiet-Death-of-Ripple-s-Codiu--Project-782c11a17c02-1*jD9N_laS4ciIMLEwlPhvDw.jpeg)
 
 ## The Quiet Death of Ripple’s Codiu§ Project
 
@@ -61,7 +61,9 @@ Since instances of the Codius execution environment are hosted on cheaply availa
 
 From a Platform vs. Services perspective, the relationship between Blockchains and Codius looks like this:
 
-!\[\](/assets/images/medium/2015-06-13\_The-Quiet-Death-of-Ripple-s-Codiu--Project-782c11a17c02-1\*k-u8b0QF3Ty2QmpkMwQdNw.png)
+![](/assets/images/medium/2015-06-13_The-Quiet-Death-of-Ripple-s-Codiu--Project-782c11a17c02-1*k-u8b0QF3Ty2QmpkMwQdNw.png)
+
+The Blockchain Platform Model as envisioned by Codius
 
 _If you want to better understand the lower half of the graphic, I advise you to_ [_read this_](https://medium.com/@heckerhut/smart-contracts-platforms-and-intermediaries-c3d30f5182a6)_. This post focuses on the upper half, i.e. the Codius service layer._
 
