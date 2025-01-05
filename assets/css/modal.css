@@ -134,4 +134,38 @@
     .modal-header-container:active {
         cursor: grabbing;
     }
+}
+
+/* Desktop Resize Handle */
+@media (min-width: 768px) {
+    .modal-container {
+        transition: transform 0.3s cubic-bezier(0.2, 0.0, 0.0, 1.0), width 0.1s ease-out;
+        position: relative;
+    }
+
+    /* Visual indicator and interaction area */
+    .modal-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;  /* Wider clickable area */
+        height: 100%;
+        opacity: 0;
+        background: var(--primary);
+        transition: opacity 0.2s ease;
+        z-index: 10;
+    }
+
+    .modal-container:hover::before {
+        opacity: 0.1;
+    }
+
+    .modal.resizing .modal-container::before {
+        opacity: 0.2;
+    }
+
+    .modal.resizing {
+        user-select: none;
+    }
 } 

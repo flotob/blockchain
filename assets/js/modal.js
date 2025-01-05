@@ -9,6 +9,13 @@ class Modal {
         
         // State
         this.isDesktop = window.matchMedia('(min-width: 768px)').matches;
+        this.isResizing = false;
+        this.initialX = 0;
+        this.initialWidth = 0;
+        
+        // Constants
+        this.MIN_WIDTH = 400;
+        this.MAX_WIDTH = window.innerWidth * 0.8;
         
         // Touch interaction state
         this.touchStart = null;
@@ -23,6 +30,60 @@ class Modal {
         window.addEventListener('resize', () => {
             this.isDesktop = window.matchMedia('(min-width: 768px)').matches;
         });
+        
+        // Initialize resize functionality for desktop
+        if (this.isDesktop) {
+            this.initResizeHandle();
+        }
+    }
+    
+    initResizeHandle() {
+        const resizeHandle = this.modalContainer;
+        
+        const startResize = (e) => {
+            // Only handle left edge resize
+            const handleWidth = 20;
+            if (e.clientX > resizeHandle.getBoundingClientRect().left + handleWidth) return;
+            
+            this.isResizing = true;
+            this.initialX = e.clientX;
+            this.initialWidth = resizeHandle.offsetWidth;
+            this.modal.classList.add('resizing');
+            
+            // Prevent text selection while resizing
+            document.body.style.userSelect = 'none';
+        };
+        
+        const doResize = (e) => {
+            if (!this.isResizing) return;
+            
+            const delta = this.initialX - e.clientX;
+            const newWidth = Math.min(Math.max(this.initialWidth + delta, this.MIN_WIDTH), this.MAX_WIDTH);
+            
+            resizeHandle.style.width = `${newWidth}px`;
+            
+            // Store the preferred width
+            localStorage.setItem('modalWidth', newWidth);
+        };
+        
+        const stopResize = () => {
+            if (!this.isResizing) return;
+            
+            this.isResizing = false;
+            this.modal.classList.remove('resizing');
+            document.body.style.userSelect = '';
+        };
+        
+        // Add event listeners
+        resizeHandle.addEventListener('mousedown', startResize);
+        document.addEventListener('mousemove', doResize);
+        document.addEventListener('mouseup', stopResize);
+        
+        // Restore preferred width if available
+        const preferredWidth = localStorage.getItem('modalWidth');
+        if (preferredWidth) {
+            resizeHandle.style.width = `${preferredWidth}px`;
+        }
     }
     
     bindEvents() {
