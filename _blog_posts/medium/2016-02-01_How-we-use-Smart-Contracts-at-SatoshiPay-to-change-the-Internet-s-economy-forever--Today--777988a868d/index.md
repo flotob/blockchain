@@ -1,6 +1,7 @@
 ---
 title: How we use Smart Contracts at SatoshiPay to change the Internet’s economy forever. Today!
 date: 2016-02-01T00:00:00.000Z
+medium_id: 777988a868d
 original_url: https://medium.com/@heckerhut/how-we-use-smart-contracts-at-satoshipay-to-change-the-internet-s-economy-forever-today-777988a868d
 is_draft: false
 hero_image: /assets/images/medium/2016-02-01_How-we-use-Smart-Contracts-at-SatoshiPay-to-change-the-Internet-s-economy-forever--Today--777988a868d-1*38k0dOwQsQhT37-i-MkEVw.png

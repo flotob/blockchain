@@ -108,10 +108,14 @@ export async function importMediumArticles() {
         const title = $('h1.p-name').text() || $('h3.graf--title').text();
         const canonicalUrl = $('footer a.p-canonical').attr('href');
         const isDraft = path.basename(post).startsWith('draft_');
+        
+        // Extract Medium ID from filename
+        const mediumId = path.basename(post, '.html').split('-').pop();
         logger.debug(`Metadata extracted:
           Title: ${title}
           URL: ${canonicalUrl}
           Is Draft: ${isDraft}
+          Medium ID: ${mediumId}
         `);
         
         // Get date
@@ -148,6 +152,7 @@ export async function importMediumArticles() {
         const markdown = `---
 title: ${title}
 date: ${publishDate}
+medium_id: ${mediumId}
 original_url: ${canonicalUrl || ''}
 is_draft: ${isDraft}
 hero_image: ${heroImage}
@@ -161,6 +166,7 @@ ${content}`;
         
         // Add to YAML directly using our processed results
         const yamlEntry = {
+          id: mediumId,
           title: title || 'Untitled',
           url: canonicalUrl || '',
           image: heroImage,
@@ -296,7 +302,6 @@ export async function processContent($, postDir) {
     article.find('h1').first().remove(); // Remove title
     
     logger.debug('Processing figures and images...');
-    const imagePromises = [];
     let heroImage = '';  // Track the first image we process
     
     // First look for featured image and download it
@@ -309,37 +314,52 @@ export async function processContent($, postDir) {
         const originalFilename = urlParts[urlParts.length - 1];
         const postDirName = path.basename(postDir);
         const filename = `${postDirName}-${originalFilename}`;
-        heroImage = `/assets/images/medium/${filename}`;
-        logger.debug(`Set hero image from featured image: ${heroImage}`);
+        const localPath = `/assets/images/medium/${filename}`;
+        logger.debug(`Attempting to download featured image to: ${localPath}`);
         
-        // Download featured image
-        const promise = downloadImage(src, postDir);
-        imagePromises.push(promise);
+        // Download featured image and only set hero image if successful
+        const downloadedPath = await downloadImage(src, postDir);
+        if (downloadedPath) {
+          heroImage = downloadedPath;
+          logger.debug(`Set hero image from featured image: ${heroImage}`);
+        } else {
+          logger.debug('Failed to download featured image, will try next image');
+        }
       }
     }
     
     // Process all figures and images
+    const promises = [];
     article.find('figure').each((i, el) => {
       const img = $(el).find('img');
       const src = img.attr('src');
       if (src) {
         logger.debug(`Found image: ${src}`);
         
-        // If no hero image yet, use this one
+        // If no hero image yet, try to use this one
         if (!heroImage) {
           const urlParts = src.split('/');
           const originalFilename = urlParts[urlParts.length - 1];
           const postDirName = path.basename(postDir);
           const filename = `${postDirName}-${originalFilename}`;
-          heroImage = `/assets/images/medium/${filename}`;
-          logger.debug(`Set hero image: ${heroImage}`);
+          const localPath = `/assets/images/medium/${filename}`;
+          
+          // Download image and set hero image if successful
+          const promise = downloadImage(src, postDir).then(downloadedPath => {
+            if (downloadedPath && !heroImage) {
+              heroImage = downloadedPath;
+              logger.debug(`Set hero image: ${heroImage}`);
+            }
+            $(el).replaceWith(`![](${downloadedPath || src})`);
+          });
+          promises.push(promise);
+        } else {
+          // Just download and replace the image
+          const promise = downloadImage(src, postDir).then(downloadedPath => {
+            $(el).replaceWith(`![](${downloadedPath || src})`);
+          });
+          promises.push(promise);
         }
-        
-        // Download image and replace with local path
-        const promise = downloadImage(src, postDir).then(localPath => {
-          $(el).replaceWith(`![](${localPath || src})`); // Use original URL in content if download failed
-        });
-        imagePromises.push(promise);
       } else {
         logger.debug('Found figure without image, removing');
         $(el).remove();
@@ -347,7 +367,7 @@ export async function processContent($, postDir) {
     });
 
     // Wait for all images to be downloaded
-    await Promise.all(imagePromises);
+    await Promise.all(promises);
 
     logger.debug('Converting to markdown...');
     // Get HTML content before conversion

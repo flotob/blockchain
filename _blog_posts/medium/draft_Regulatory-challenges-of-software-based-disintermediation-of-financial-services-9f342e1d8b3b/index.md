@@ -1,6 +1,7 @@
 ---
 title: Regulatory challenges of software-based disintermediation of financial services
 date: 2008-10-31T00:00:00.000Z
+medium_id: 9f342e1d8b3b
 original_url: 
 is_draft: true
 hero_image: 

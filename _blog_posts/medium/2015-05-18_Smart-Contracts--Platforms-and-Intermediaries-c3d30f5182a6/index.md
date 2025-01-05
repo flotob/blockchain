@@ -1,6 +1,7 @@
 ---
 title: Smart Contracts, Platforms and Intermediaries
 date: 2015-05-18T00:00:00.000Z
+medium_id: c3d30f5182a6
 original_url: https://medium.com/@heckerhut/smart-contracts-platforms-and-intermediaries-c3d30f5182a6
 is_draft: false
 hero_image: /assets/images/medium/2015-05-18_Smart-Contracts--Platforms-and-Intermediaries-c3d30f5182a6-1*1ii5ybYk8nyVRXrdPOePeg.png

@@ -1,6 +1,7 @@
 ---
 title: What’s a Smart Contract? In search of a consensus.
 date: 2014-12-12T00:00:00.000Z
+medium_id: c268c830a8ad
 original_url: https://medium.com/@heckerhut/whats-a-smart-contract-in-search-of-a-consensus-c268c830a8ad
 is_draft: false
 hero_image: /assets/images/medium/2014-12-12_What-s-a-Smart-Contract--In-search-of-a-consensus--c268c830a8ad-1*WWtCLYSV4T5ml_L-gn-aIA.png

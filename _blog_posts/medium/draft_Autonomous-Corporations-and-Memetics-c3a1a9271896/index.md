@@ -1,6 +1,7 @@
 ---
 title: Autonomous Corporations and Memetics
 date: 2008-10-31T00:00:00.000Z
+medium_id: c3a1a9271896
 original_url: 
 is_draft: true
 hero_image: 

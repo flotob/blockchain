@@ -2,6 +2,7 @@
 title: The Political Economy
 of Computing
 date: 2015-05-13T00:00:00.000Z
+medium_id: 7fffc75423a2
 original_url: https://medium.com/@heckerhut/the-political-economy-of-computing-7fffc75423a2
 is_draft: false
 hero_image: /assets/images/medium/2015-05-13_The-Political-Economy-of-Computing-7fffc75423a2-1*RVB-TczCbA-CGSV6ApgIgQ.jpeg

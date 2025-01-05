@@ -1,6 +1,7 @@
 ---
 title: Smart contracts and the two phases of contracting
 date: 2008-10-31T00:00:00.000Z
+medium_id: 10adae93d5e3
 original_url: 
 is_draft: true
 hero_image: 

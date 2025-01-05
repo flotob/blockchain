@@ -1,6 +1,7 @@
 ---
 title: The Berlin Legal Tech 2017 Hackathon: Retrospective and Future Roadmaps
 date: 2017-02-12T00:00:00.000Z
+medium_id: 88f50d45aac8
 original_url: https://medium.com/@heckerhut/the-berlin-legal-tech-2017-hackathon-retrospective-and-future-roadmaps-88f50d45aac8
 is_draft: false
 hero_image: /assets/images/medium/2017-02-12_The-Berlin-Legal-Tech-2017-Hackathon--Retrospective-and-Future-Roadmaps-88f50d45aac8-1*taXey05Vh_3e1Hn1-Xf3TA.png

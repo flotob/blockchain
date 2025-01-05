@@ -1,6 +1,7 @@
 ---
 title: Modes of Contractual Governance in an On-Demand Service Economy
 date: 2015-05-04T00:00:00.000Z
+medium_id: 1833629f379b
 original_url: https://medium.com/@heckerhut/modes-of-contractual-governance-in-an-on-demand-service-economy-1833629f379b
 is_draft: false
 hero_image: /assets/images/medium/2015-05-04_Modes-of-Contractual-Governance-in-an-On-Demand-Service-Economy-1833629f379b-1*TW0XuppLblpprR_C6Gc2zg.jpeg

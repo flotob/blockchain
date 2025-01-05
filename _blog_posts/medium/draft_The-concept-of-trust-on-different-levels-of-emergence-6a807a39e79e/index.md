@@ -1,6 +1,7 @@
 ---
 title: The concept of trust on different levels of emergence
 date: 2008-10-31T00:00:00.000Z
+medium_id: 6a807a39e79e
 original_url: 
 is_draft: true
 hero_image: 

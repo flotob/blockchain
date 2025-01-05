@@ -1,6 +1,7 @@
 ---
 title: Trust in socio-technological systems
 date: 2008-10-31T00:00:00.000Z
+medium_id: 74bfb3c52f6
 original_url: 
 is_draft: true
 hero_image: 

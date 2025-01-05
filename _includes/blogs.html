@@ -14,7 +14,7 @@
         <div class="blog-grid">
             {% assign sorted_medium_posts = site.data.blog_posts.medium_archive | where_exp:"post", "post.isDraft == false" | sort: "publishedAt" | reverse %}
             {% for post in sorted_medium_posts %}
-            <a href="{{ post.url }}" target="_blank" rel="noopener" class="blog-card">
+            <a href="#" class="blog-card blog-trigger" data-medium-id="{{ post.id }}">
                 <div class="blog-image-container">
                     {% if post.image != '' %}
                     <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image">
@@ -70,3 +70,20 @@
         </div>
     </div>
 </div>
+
+<!-- Store blog data for modal -->
+<script type="application/json" id="blog-data">
+    [
+        {% for post in site.blog_posts %}
+        {
+            "id": {{ post.medium_id | jsonify }},
+            "title": {{ post.title | jsonify }},
+            "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+            "original_url": {{ post.original_url | jsonify }},
+            "is_draft": {{ post.is_draft | jsonify }},
+            "hero_image": {{ post.hero_image | jsonify }},
+            "content": {{ post.content | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ]
+</script>

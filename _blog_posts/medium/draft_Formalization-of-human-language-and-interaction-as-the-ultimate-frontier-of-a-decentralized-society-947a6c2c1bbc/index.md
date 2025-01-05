@@ -1,6 +1,7 @@
 ---
 title: Formalization of human language and interaction as the ultimate frontier of a decentralized society
 date: 2008-10-31T00:00:00.000Z
+medium_id: 947a6c2c1bbc
 original_url: 
 is_draft: true
 hero_image: 

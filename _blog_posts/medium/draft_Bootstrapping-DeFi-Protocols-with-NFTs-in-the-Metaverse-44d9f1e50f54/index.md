@@ -1,6 +1,7 @@
 ---
 title: Bootstrapping DeFi Protocols with NFTs in the Metaverse
 date: 2008-10-31T00:00:00.000Z
+medium_id: 44d9f1e50f54
 original_url: 
 is_draft: true
 hero_image: /assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*FmAR2IkDpT9aIHKLU9w7EA.png

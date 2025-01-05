@@ -2,6 +2,7 @@
 title: Glimpses into the future
 or why we do what we do
 date: 2008-10-31T00:00:00.000Z
+medium_id: 8e3a56d14368
 original_url: 
 is_draft: true
 hero_image: 

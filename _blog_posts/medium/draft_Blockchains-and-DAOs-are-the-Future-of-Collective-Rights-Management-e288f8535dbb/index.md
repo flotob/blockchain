@@ -1,6 +1,7 @@
 ---
 title: Blockchains and DAOs are the Future of Collective Rights Management
 date: 2008-10-31T00:00:00.000Z
+medium_id: e288f8535dbb
 original_url: 
 is_draft: true
 hero_image: 

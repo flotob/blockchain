@@ -1,6 +1,7 @@
 ---
 title: How to get Cinnamon Desktop-like Behavior on OS X Mavericks
 date: 2008-10-31T00:00:00.000Z
+medium_id: ec52b7878d66
 original_url: 
 is_draft: true
 hero_image: /assets/images/medium/draft_How-to-get-Cinnamon-Desktop-like-Behavior-on-OS-X-Mavericks-ec52b7878d66-1*IEljsagdKVEr1DM_IrUvrA.png

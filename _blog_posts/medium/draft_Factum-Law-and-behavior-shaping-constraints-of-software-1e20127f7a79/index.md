@@ -1,6 +1,7 @@
 ---
 title: Factum Law and behavior-shaping constraints of software
 date: 2008-10-31T00:00:00.000Z
+medium_id: 1e20127f7a79
 original_url: 
 is_draft: true
 hero_image: 

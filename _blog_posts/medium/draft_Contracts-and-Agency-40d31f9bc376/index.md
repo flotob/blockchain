@@ -1,6 +1,7 @@
 ---
 title: Contracts and Agency
 date: 2008-10-31T00:00:00.000Z
+medium_id: 40d31f9bc376
 original_url: 
 is_draft: true
 hero_image: 

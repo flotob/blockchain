@@ -3,6 +3,7 @@ title: Collective Rights Management Agencies
 in the
 Age of Blockchain
 date: 2008-10-31T00:00:00.000Z
+medium_id: 47465a5fd48d
 original_url: 
 is_draft: true
 hero_image: /assets/images/medium/draft_Collective-Rights-Management-Agencies--in-the-Age-of-Blockchain-47465a5fd48d-1*l742RPSPWPkg6kz_vxdSLQ.png

@@ -1,6 +1,7 @@
 ---
 title: Are text-based real-time applications the new Store Front in E-Commerce?
 date: 2008-10-31T00:00:00.000Z
+medium_id: ec01fc9ada1b
 original_url: 
 is_draft: true
 hero_image: 

@@ -1,6 +1,7 @@
 ---
 title: Can the Wikipedia-model be applied to Public Policy-Making?
 date: 2021-02-03T00:00:00.000Z
+medium_id: ff4444a2ff60
 original_url: https://medium.com/@heckerhut/can-the-wikipedia-model-be-applied-to-public-policy-making-ff4444a2ff60
 is_draft: false
 hero_image: /assets/images/medium/2021-02-03_Can-the-Wikipedia-model-be-applied-to-Public-Policy-Making--ff4444a2ff60-1*kVQ1n33xwujNNEo1Xy8hvQ.png

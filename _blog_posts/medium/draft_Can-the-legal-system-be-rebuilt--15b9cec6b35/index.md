@@ -1,6 +1,7 @@
 ---
 title: Can the legal system be rebuilt?
 date: 2008-10-31T00:00:00.000Z
+medium_id: 15b9cec6b35
 original_url: 
 is_draft: true
 hero_image: 

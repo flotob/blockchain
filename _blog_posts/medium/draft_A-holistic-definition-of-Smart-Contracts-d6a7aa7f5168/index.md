@@ -1,6 +1,7 @@
 ---
 title: A holistic definition of Smart Contracts
 date: 2008-10-31T00:00:00.000Z
+medium_id: d6a7aa7f5168
 original_url: 
 is_draft: true
 hero_image: 

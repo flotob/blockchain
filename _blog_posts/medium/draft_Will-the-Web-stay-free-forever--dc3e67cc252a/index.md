@@ -1,6 +1,7 @@
 ---
 title: Will the Web stay free forever?
 date: 2008-10-31T00:00:00.000Z
+medium_id: dc3e67cc252a
 original_url: 
 is_draft: true
 hero_image: 

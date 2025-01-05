@@ -1,6 +1,7 @@
 ---
 title: User Experience and Law
 date: 2008-10-31T00:00:00.000Z
+medium_id: a5469037eea6
 original_url: 
 is_draft: true
 hero_image: 

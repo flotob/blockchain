@@ -1,6 +1,7 @@
 ---
 title: The legality of Apomediation
 date: 2008-10-31T00:00:00.000Z
+medium_id: 4d0d1638847d
 original_url: 
 is_draft: true
 hero_image: 

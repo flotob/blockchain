@@ -1,6 +1,7 @@
 ---
 title: Freedom from Contract
 date: 2008-10-31T00:00:00.000Z
+medium_id: f0fb63e1f557
 original_url: 
 is_draft: true
 hero_image: 

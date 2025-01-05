@@ -1,6 +1,7 @@
 ---
 title: Bitcoin: Finance meets rich data
 date: 2008-10-31T00:00:00.000Z
+medium_id: 32ada67d089f
 original_url: 
 is_draft: true
 hero_image: 

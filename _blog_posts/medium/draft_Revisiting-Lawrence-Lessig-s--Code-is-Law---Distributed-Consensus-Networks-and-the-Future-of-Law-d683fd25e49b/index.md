@@ -1,6 +1,7 @@
 ---
 title: Revisiting Lawrence Lessig’s “Code is Law”: Distributed Consensus Networks and the Future of Law
 date: 2008-10-31T00:00:00.000Z
+medium_id: d683fd25e49b
 original_url: 
 is_draft: true
 hero_image: 

@@ -1,6 +1,7 @@
 ---
 title: DAOs are Dead! Long live DAOs!
 date: 2023-05-17T00:00:00.000Z
+medium_id: 50de94e8ee1e
 original_url: https://medium.com/@heckerhut/daos-are-dead-long-live-daos-50de94e8ee1e
 is_draft: false
 hero_image: /assets/images/medium/2023-05-17_DAOs-are-Dead--Long-live-DAOs--50de94e8ee1e-1*TxjhA7tCiBcD5Gan8TpD5A.png

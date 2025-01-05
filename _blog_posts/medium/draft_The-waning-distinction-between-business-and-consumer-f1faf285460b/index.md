@@ -1,6 +1,7 @@
 ---
 title: The waning distinction between business and consumer
 date: 2008-10-31T00:00:00.000Z
+medium_id: f1faf285460b
 original_url: 
 is_draft: true
 hero_image: 

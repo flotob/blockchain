@@ -1,6 +1,7 @@
 ---
 title: Smart Contracts: Is the code you execute to do legally relevant real-world transactions (contracts)…
 date: 2008-10-31T00:00:00.000Z
+medium_id: 90072d6baaf9
 original_url: 
 is_draft: true
 hero_image: 

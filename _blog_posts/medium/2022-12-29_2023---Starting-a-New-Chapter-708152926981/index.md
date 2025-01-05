@@ -1,6 +1,7 @@
 ---
 title: 2023 — Starting a New Chapter
 date: 2022-12-29T00:00:00.000Z
+medium_id: 708152926981
 original_url: https://medium.com/@heckerhut/2023-starting-a-new-chapter-708152926981
 is_draft: false
 hero_image: /assets/images/medium/2022-12-29_2023---Starting-a-New-Chapter-708152926981-1*HRN5b8BAueclAtNwMdVLBQ.png

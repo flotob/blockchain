@@ -1,11 +1,8 @@
-class Slideshow {
+import Modal from './modal.js';
+
+class Slideshow extends Modal {
     constructor() {
-        // DOM Elements
-        this.modal = document.querySelector('.slideshow-modal');
-        this.modalContainer = this.modal.querySelector('.modal-container');
-        this.modalContent = this.modal.querySelector('.modal-content');
-        this.closeButton = this.modal.querySelector('.modal-close');
-        this.headerContainer = this.modalContainer.querySelector('.modal-header-container');
+        super('.slideshow-modal');
         
         // Initialize markdown-it
         this.md = window.markdownit({
@@ -17,33 +14,13 @@ class Slideshow {
         // State
         this.currentProject = null;
         this.currentSlideIndex = 0;
-        this.scrollPosition = 0;
-        this.isDesktop = window.matchMedia('(min-width: 768px)').matches;
-        
-        // Touch interaction state
-        this.touchStart = null;
-        this.currentTranslate = 0;
-        this.isDragging = false;
-        this.startTime = 0;
-        this.boundTouchHandlers = {
-            start: null,
-            move: null,
-            end: null
-        };
-        
-        // Load project data
         this.projectData = JSON.parse(document.getElementById('project-data').textContent);
         
-        // Bind event listeners
-        this.bindEvents();
-        
-        // Listen for resize events to update isDesktop
-        window.addEventListener('resize', () => {
-            this.isDesktop = window.matchMedia('(min-width: 768px)').matches;
-        });
+        // Bind slideshow-specific events
+        this.bindSlideshowEvents();
     }
     
-    bindEvents() {
+    bindSlideshowEvents() {
         // Trigger buttons
         document.querySelectorAll('.slideshow-trigger').forEach(trigger => {
             trigger.addEventListener('click', (e) => {
@@ -52,35 +29,17 @@ class Slideshow {
             });
         });
         
-        // Modal controls
-        this.closeButton.addEventListener('click', () => this.closeSlideshow());
-        
-        // Close on background click (desktop only)
-        this.modal.addEventListener('click', (e) => {
-            if (this.isDesktop && e.target === this.modal) {
-                this.closeSlideshow();
-            }
-        });
-        
-        // Prevent click propagation from modal content
-        this.modalContainer.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-        
-        // Keyboard navigation
+        // Keyboard navigation for slides
         document.addEventListener('keydown', (e) => {
             if (!this.modal.classList.contains('active')) return;
             
             switch(e.key) {
-                case 'Escape':
-                    this.closeSlideshow();
-                    break;
                 case 'ArrowLeft':
-                    e.preventDefault(); // Prevent browser scroll
+                    e.preventDefault();
                     this.previousSlide();
                     break;
                 case 'ArrowRight':
-                    e.preventDefault(); // Prevent browser scroll
+                    e.preventDefault();
                     this.nextSlide();
                     break;
             }
@@ -92,20 +51,11 @@ class Slideshow {
         if (!this.currentProject || !this.currentProject.slides || this.currentProject.slides.length === 0) return;
         
         this.currentSlideIndex = 0;
-        
-        // Let CSS handle the transform animation
-        this.modal.classList.add('active');
-        
-        // Update header
         this.updateHeader();
-        
-        // Only bind touch events on mobile
-        if (!this.isDesktop) {
-            this.bindTouchEvents();
-        }
-        
         this.updateSlide();
         this.updateNavigation();
+        
+        super.open();
     }
     
     updateHeader() {
@@ -123,33 +73,6 @@ class Slideshow {
         `;
         
         this.headerContainer.innerHTML = header;
-    }
-    
-    closeSlideshow() {
-        // Reset touch state
-        this.isDragging = false;
-        this.touchStart = null;
-        this.currentTranslate = 0;
-        
-        // Cleanup touch events
-        this.unbindTouchEvents();
-        
-        // First, trigger the slide-out animation and backdrop fade
-        this.modalContainer.style.transform = this.isDesktop ? 'translateX(100%)' : 'translateY(100%)';
-        this.modal.style.background = 'rgba(0, 0, 0, 0)';
-        
-        // Wait for the animation to complete before removing active class
-        setTimeout(() => {
-            this.modal.classList.remove('active');
-            // Clean up transform and background related styles
-            this.modalContainer.style.removeProperty('transform');
-            this.modalContainer.style.removeProperty('transition');
-            this.modal.style.removeProperty('background');
-            
-            // Reset state
-            this.currentProject = null;
-            this.currentSlideIndex = 0;
-        }, 300); // Match the transition duration from CSS
     }
     
     updateSlide() {
@@ -261,89 +184,6 @@ class Slideshow {
             this.updateSlide();
             this.updateNavigation();
         }
-    }
-    
-    bindTouchEvents() {
-        // Create bound handlers that we can later remove
-        this.boundTouchHandlers = {
-            start: (e) => this.handleTouchStart(e),
-            move: (e) => this.handleTouchMove(e),
-            end: (e) => this.handleTouchEnd(e)
-        };
-        
-        // Add new listeners to the header container
-        this.headerContainer.addEventListener('touchstart', this.boundTouchHandlers.start);
-        this.headerContainer.addEventListener('touchmove', this.boundTouchHandlers.move);
-        this.headerContainer.addEventListener('touchend', this.boundTouchHandlers.end);
-    }
-    
-    unbindTouchEvents() {
-        if (!this.headerContainer || !this.boundTouchHandlers) return;
-        
-        // Remove listeners using the same bound handlers
-        this.headerContainer.removeEventListener('touchstart', this.boundTouchHandlers.start);
-        this.headerContainer.removeEventListener('touchmove', this.boundTouchHandlers.move);
-        this.headerContainer.removeEventListener('touchend', this.boundTouchHandlers.end);
-        
-        // Reset handlers
-        this.boundTouchHandlers = {
-            start: null,
-            move: null,
-            end: null
-        };
-    }
-    
-    handleTouchStart(e) {
-        this.touchStart = e.touches[0].clientY;
-        this.isDragging = true;
-        this.startTime = Date.now();
-        
-        // Remove transition for direct manipulation
-        this.modalContainer.style.transition = 'none';
-    }
-    
-    handleTouchMove(e) {
-        if (!this.isDragging) return;
-        
-        const currentY = e.touches[0].clientY;
-        const diff = currentY - this.touchStart;
-        
-        // Only allow dragging down
-        if (diff < 0) return;
-        
-        // Convert to percentage of viewport height
-        const percentage = (diff / window.innerHeight) * 100;
-        this.currentTranslate = percentage;
-        
-        // Use percentage-based transform
-        this.modalContainer.style.transform = `translateY(${percentage}%)`;
-        
-        e.preventDefault();
-    }
-    
-    handleTouchEnd(e) {
-        if (!this.isDragging) return;
-        
-        this.isDragging = false;
-        
-        // Calculate velocity
-        const time = Date.now() - this.startTime;
-        const velocity = this.currentTranslate / time;
-        
-        if (this.currentTranslate > 30 || velocity > 0.5) {  // 30% threshold
-            // Close immediately, let CSS handle the animation
-            this.closeSlideshow();
-        } else {
-            // Snap back: remove inline transform and let CSS take over
-            this.modalContainer.style.transform = '';
-        }
-        
-        this.touchStart = null;
-        this.currentTranslate = 0;
-    }
-    
-    isMobile() {
-        return window.innerWidth <= 768;
     }
 }
 

@@ -1,6 +1,7 @@
 ---
 title: Conversational Bots & Chat and their potential to change legal practice
 date: 2008-10-31T00:00:00.000Z
+medium_id: a909586f6150
 original_url: 
 is_draft: true
 hero_image: 

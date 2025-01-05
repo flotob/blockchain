@@ -1,6 +1,7 @@
 ---
 title: Fundamental problems in redesigning human-centric systems with technology
 date: 2008-10-31T00:00:00.000Z
+medium_id: 39205cbfd968
 original_url: 
 is_draft: true
 hero_image: 

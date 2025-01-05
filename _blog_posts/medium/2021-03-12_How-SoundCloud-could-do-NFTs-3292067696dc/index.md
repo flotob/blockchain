@@ -1,6 +1,7 @@
 ---
 title: How SoundCloud could do NFTs
 date: 2021-03-12T00:00:00.000Z
+medium_id: 3292067696dc
 original_url: https://medium.com/@heckerhut/how-soundcloud-could-do-nfts-3292067696dc
 is_draft: false
 hero_image: /assets/images/medium/2021-03-12_How-SoundCloud-could-do-NFTs-3292067696dc-1*fjcIMsiLr_y9c8rnIAqhhw.png

@@ -1,6 +1,7 @@
 ---
 title: Finite State Machine
 date: 2008-10-31T00:00:00.000Z
+medium_id: 3b62768b5b23
 original_url: 
 is_draft: true
 hero_image: 

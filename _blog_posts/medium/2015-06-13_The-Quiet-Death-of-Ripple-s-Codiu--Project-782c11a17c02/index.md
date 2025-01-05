@@ -1,6 +1,7 @@
 ---
 title: The Quiet Death of Ripple’s Codiu§ Project
 date: 2015-06-13T00:00:00.000Z
+medium_id: 782c11a17c02
 original_url: https://medium.com/@heckerhut/the-quiet-death-of-ripple-s-codiu-project-782c11a17c02
 is_draft: false
 hero_image: /assets/images/medium/2015-06-13_The-Quiet-Death-of-Ripple-s-Codiu--Project-782c11a17c02-1*jD9N_laS4ciIMLEwlPhvDw.jpeg

@@ -1,6 +1,7 @@
 ---
 title: Calling all legal professionals and tech innovators
 date: 2018-07-13T00:00:00.000Z
+medium_id: 838fe178a617
 original_url: https://medium.com/@heckerhut/calling-all-legal-professionals-and-tech-innovators-838fe178a617
 is_draft: false
 hero_image: /assets/images/medium/2018-07-13_Calling-all-legal-professionals-and-tech-innovators-838fe178a617-1*L5uGxgwHCvHcTN5MD-VbjA.png
