@@ -134,7 +134,7 @@ export async function importMediumArticles() {
           }
         }
 
-        // Create post directory
+        // Create post directory for images
         const postDir = path.join(mediumPostsDir, path.basename(post, '.html'));
         await fs.mkdir(postDir, { recursive: true });
         logger.debug(`Created directory: ${postDir}`);
@@ -148,10 +148,18 @@ export async function importMediumArticles() {
           Content length: ${content?.length}
         `);
 
-        // Write markdown file
+        // Create slugified filename from title
+        const slug = title.toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/(^-|-$)/g, '');
+
+        // Write markdown file directly in medium directory
         const markdown = `---
 title: ${title}
+layout: post
 date: ${publishDate}
+categories:
+  - medium
 medium_id: ${mediumId}
 original_url: ${canonicalUrl || ''}
 is_draft: ${isDraft}
@@ -160,7 +168,7 @@ hero_image: ${heroImage}
 
 ${content}`;
 
-        const markdownPath = path.join(postDir, 'index.md');
+        const markdownPath = path.join(mediumPostsDir, `${slug}.md`);
         await fs.writeFile(markdownPath, markdown);
         logger.debug(`Wrote markdown to: ${markdownPath}`);
         
