@@ -15,6 +15,11 @@ class BlogModal extends Modal {
         this.currentBlog = null;
         this.blogData = JSON.parse(document.getElementById('blog-data').textContent);
         
+        // Get DOM references
+        this.headerContainer = this.modal.querySelector('.modal-header-container');
+        this.contentContainer = this.modal.querySelector('.modal-content');
+        this.footerContainer = this.modal.querySelector('.modal-footer-container');
+        
         // Bind blog-specific events
         this.bindBlogEvents();
     }
@@ -36,6 +41,7 @@ class BlogModal extends Modal {
         
         this.updateHeader();
         this.updateContent();
+        this.updateFooter();
         
         super.open();
     }
@@ -43,9 +49,13 @@ class BlogModal extends Modal {
     updateHeader() {
         const header = `
             <div class="blog-header">
-                <h2>${this.currentBlog.title}</h2>
-                <div class="blog-meta">
-                    <span class="blog-date">${this.currentBlog.date}</span>
+                <div class="blog-header-content">
+                    <div class="medium-logo">
+                        <svg width="24" height="24" viewBox="0 0 1043.63 592.71" fill="currentColor">
+                            <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94"></path>
+                        </svg>
+                    </div>
+                    <h2>${this.currentBlog.title}</h2>
                 </div>
             </div>
         `;
@@ -59,23 +69,25 @@ class BlogModal extends Modal {
                 <div class="blog-text">
                     ${this.md.render(this.currentBlog.content)}
                 </div>
-                ${this.renderFooter()}
             </div>
         `;
         
-        this.modalContent.innerHTML = content;
+        this.contentContainer.innerHTML = content;
     }
     
-    renderFooter() {
-        return `
+    updateFooter() {
+        const footer = `
             <div class="blog-footer">
-                <div class="blog-actions">
+                <div class="blog-footer-content">
+                    <time class="blog-date">${this.currentBlog.date}</time>
                     <a href="${this.currentBlog.original_url}" target="_blank" class="blog-action">
-                        🔗 Read on Medium
+                        Read on Medium
                     </a>
                 </div>
             </div>
         `;
+        
+        this.footerContainer.innerHTML = footer;
     }
 }
 
