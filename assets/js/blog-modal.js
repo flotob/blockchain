@@ -36,7 +36,8 @@ class BlogModal extends Modal {
     }
     
     openBlog(mediumId) {
-        this.currentBlog = this.blogData.find(b => b.id === mediumId);
+        // Convert both IDs to strings for comparison
+        this.currentBlog = this.blogData.find(b => String(b.id) === String(mediumId));
         if (!this.currentBlog) return;
         
         this.updateHeader();
