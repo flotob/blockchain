@@ -6,7 +6,7 @@ projects:
     image: https://framerusercontent.com/images/hYVNYcaQlCxkrdC7IfgIhm8ri0.png
     url: https://commonground.cg
     image_type: default
-    # notion_source: 16ff33c1f6c0803092bbcd4da6ed51f7
+    notion_source: 16ff33c1f6c0803092bbcd4da6ed51f7
 
   - title: European Crypto Initiative
     role: Co-Founder & Board Member
@@ -15,7 +15,7 @@ projects:
     image: images/euci2.png
     url: https://eu.ci
     image_type: default
-    # notion_source: 170f33c1f6c080399d02df5e9b7d572c
+    notion_source: 170f33c1f6c080399d02df5e9b7d572c
 
   - title: Consulting
     role: Law & Code

@@ -310,6 +310,39 @@ export class NotionAPI {
     }
   }
 
+  // Transform URLs for embed compatibility
+  _transformEmbedUrl(url) {
+    try {
+      const urlObj = new URL(url);
+      
+      // Loom
+      if (urlObj.hostname === 'www.loom.com' || urlObj.hostname === 'loom.com') {
+        const videoId = urlObj.pathname.split('/').pop();
+        return `https://www.loom.com/embed/${videoId}`;
+      }
+      
+      // YouTube
+      if (urlObj.hostname === 'www.youtube.com' || urlObj.hostname === 'youtube.com') {
+        const videoId = urlObj.searchParams.get('v');
+        if (videoId) {
+          return `https://www.youtube.com/embed/${videoId}`;
+        }
+      }
+      
+      // Vimeo
+      if (urlObj.hostname === 'vimeo.com') {
+        const videoId = urlObj.pathname.split('/').pop();
+        return `https://player.vimeo.com/video/${videoId}`;
+      }
+      
+      // If no transformation needed or unknown platform, return original URL
+      return url;
+    } catch (error) {
+      console.warn(chalk.yellow(`Failed to transform URL ${url}: ${error.message}`));
+      return url;
+    }
+  }
+
   // Convert Notion blocks to markdown
   _blockToMarkdown(block) {
     // If it's an array, process each block
@@ -360,6 +393,34 @@ export class NotionAPI {
         
         // For now, use direct URL - we'll update this in processSlideContent
         markdown += `![${caption}](${block.image.file?.url || block.image.external?.url})\n\n`;
+        break;
+
+      case 'video':
+        const videoUrl = this._transformEmbedUrl(block.video.external?.url || block.video.file?.url);
+        const videoCaption = block.video.caption?.length > 0 
+          ? this._richTextToMarkdown(block.video.caption) 
+          : '';
+        
+        markdown += `<div class="embed-container">\n`;
+        markdown += `<iframe src="${videoUrl}" frameborder="0" allowfullscreen></iframe>\n`;
+        if (videoCaption) {
+          markdown += `<figcaption>${videoCaption}</figcaption>\n`;
+        }
+        markdown += `</div>\n\n`;
+        break;
+
+      case 'embed':
+        const embedUrl = this._transformEmbedUrl(block.embed.url);
+        const embedCaption = block.embed.caption?.length > 0 
+          ? this._richTextToMarkdown(block.embed.caption) 
+          : '';
+        
+        markdown += `<div class="embed-container">\n`;
+        markdown += `<iframe src="${embedUrl}" frameborder="0" allowfullscreen></iframe>\n`;
+        if (embedCaption) {
+          markdown += `<figcaption>${embedCaption}</figcaption>\n`;
+        }
+        markdown += `</div>\n\n`;
         break;
 
       default:

@@ -1,11 +1,11 @@
 ---
 project: 16ff33c1f6c0803092bbcd4da6ed51f7
 order: 3
-title: product
+title: Product
 ---
-# Product Showcase: User Dashboard
+Try it yourself: [https://app.cg/](https://app.cg/)
 
-
-
-A glimpse into our intuitive user interface designed for seamless navigation.
+<div class="embed-container">
+<iframe src="https://www.loom.com/embed/926878e8ff8448f9aad9df78f5aa2a5d" frameborder="0" allowfullscreen></iframe>
+</div>
 
