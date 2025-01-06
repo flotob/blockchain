@@ -14,7 +14,7 @@
         <div class="blog-grid">
             {% assign sorted_medium_posts = site.data.blog_posts.medium_archive | where_exp:"post", "post.isDraft == false" | sort: "publishedAt" | reverse %}
             {% for post in sorted_medium_posts %}
-            <a href="#" class="blog-card blog-trigger" data-medium-id="{{ post.id }}">
+            <a href="/blog/medium/{{ post.title | slugify }}/" class="blog-card blog-trigger" data-medium-id="{{ post.id }}">
                 <div class="blog-image-container">
                     {% if post.image != '' %}
                     <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image">
