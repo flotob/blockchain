@@ -259,9 +259,9 @@ medium_archive:
     title: Bootstrapping DeFi Protocols with NFTs in the Metaverse
     url: ''
     image: /assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*FmAR2IkDpT9aIHKLU9w7EA.png
-    excerpt: by Florian Glatz with Raul Calvo
-    publishedAt: '2008-10-31T00:00:00.000Z'
-    isDraft: true
+    excerpt: 'Tl;dr: We present a new method to launch DeFi protocols that increases compliance of builders and gives operators of the protocol a fighting chance to legally exit the realm of TradFi regulation. The ...'
+    publishedAt: '2021-12-12T00:00:00.000Z'
+    isDraft: false
   - id: 182eb3725852
     title: Building Common Ground
     url: ''

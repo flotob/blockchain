@@ -1,22 +1,20 @@
 ---
 title: Bootstrapping DeFi Protocols with NFTs in the Metaverse
 layout: post
-date: 2008-10-31T00:00:00.000Z
+date: 2021-12-12T00:00:00.000Z
 categories:
   - medium
 medium_id: 44d9f1e50f54
-original_url: 
+original_url: https://medium.com/@heckerhut/
 is_draft: true
 hero_image: /assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*FmAR2IkDpT9aIHKLU9w7EA.png
 ---
 
-by Florian Glatz with Raul Calvo
+by Florian Glatz
 
 * * *
 
 ### Bootstrapping DeFi Protocols with NFTs in the Metaverse
-
-_by_ [_Florian Glatz_](http://twitter.com/heckerhut) _with Raul Calvo_
 
 Tl;dr: We present a new method to launch DeFi protocols that increases compliance of builders and gives operators of the protocol a fighting chance to legally exit the realm of TradFi regulation. The method allows developers of DeFi protocols to monetize their work, empower their community and stay fully compliant in the process. The method we present can be framed as “radical decentralization”, continuing — yet fundamentally changing — the previous approach popularized as “progressive decentralization” \[[1](https://a16z.com/2020/01/09/progressive-decentralization-crypto-product-management/)\].
 
@@ -139,63 +137,29 @@ Currently the focus of the wider community seems to rest on defining contractual
 
 **Insight 4: Containerizing IP with NFTs can be done in various ways. We came up with a novel method that leans heavily on _technological_ as opposed to _contractual_ arrangements, while addressing all potential legal matters with a maximally permissive open source license for all IP being thusly transacted.**
 
-We implemented the idea in form of _Potion Unlock_ in the wider context of the [Potion Protocol launch](https://www.potion.auction/) by selling the IP ownership in the protocol in a public auction to a community of users passionate about [on-chain risk management](http://kelly.finance/).
-
 So how does it work in detail?
 
 ### Tokenizing IP with NFTs, encryption and incentives
 
-The method we present and the Potion Unlock implementation we have built is split into two distinct phases, where in the first phase builders are handig over the project to their community and in phase two the community makes a choice on what they want to do with the project going forward, such as deploying a DAO or exploring totally different ways to exploit the IP.
+The method we present is split into two distinct phases, where in the first phase builders are handig over the project to their community and in phase two the community makes a choice on what they want to do with the project going forward, such as deploying a DAO or exploring totally different ways to exploit the IP.
 
 ![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*95ydq1CJYteqhaorRp9pLg.png)
 
 Note that “releasing IP into public domain” is not possible in many jurisdictions. In that case it means to license the IP in a copyleft fashion such that it acts as if it were in the public domain.
 
-Let us give you a sense of how Potion Unlock makes use of this method. A dedicated microsite allows users to purchase and interact with Potion NFTs. The process can be modelled as 4 distinct phases:
-
-1.  Purchase + minting of NFTs
-2.  Negotations between buyers what to do with IP
-3.  Resolution of negoations with collective on-chain secret reveal
-4.  Decryption of source code and execution of buyer’s decision
-
-![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*JwDv-Yxo7MtRbWCd7_U8aA.png)
-
-![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*z0KVLUQWwwfTouCvPoNp9Q.png)
-
-Potion NFTs public auction
-
-![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*EF1O_8I-xxn0n7-b4o5z6Q.png)
-
-![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*o3peMzFU0qTg9_1Hhmycag.png)
-
-revelation of secret
-
-![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*coVl_gspQcOvI0Q2f3avew.png)
-
-![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*_OV7fSZcdYf3wTyRoTzfrw.png)
-
-validation of secret and decryption of protocol source code
-
-### Compliance — or why this is actually legal 🤯 
+### Compliance Considerations
 
 The key compliance issues of the method we present can be captured in the following categories:
 
 ![](/assets/images/medium/draft_Bootstrapping-DeFi-Protocols-with-NFTs-in-the-Metaverse-44d9f1e50f54-1*Vhpvs_TeAKuY8fkKoqgK2w@2x.jpeg)
 
-#### Why this is certifiably legal for builders
+#### Protected Speech
 
-The method we present has been ratified by not one but two European national financial market authorities, both acting under the MiFID II and related regimes of securities and capital market rules that govern the license requirements around selling tokens to the public, running exchange venues and brokering derivatives.
-
-In terms of AML, with Potion we received the first public confirmation of a particular — maybe even any — European national AML authority (Spain), that selling NFTs does not require the seller to conduct an AML check with buyers, with no threshold amounts. This is noteworthy for two reasons:
-
-*   It confirms what FATF already said in its updated, yet non-binding guidelines, i.e. that non-fungible tokens don’t fall into the set of virtual currency schemes they intend to regulate with AML laws
-*   The digital art aspect of NFTs does not classify NFTs as art from an AML perspective, such that the requirement for art dealers to KYC buyers of art pieces is not applicable, at least in Spain but most likely anywhere in Europe (since the definition of art is derived from the VAT directive which focuses on physical art)
-
-From a tax perspective, the sale of NFTs is subject to VAT in the EU and understood to consist in the rendering of electronic services. This is hardly avoidable and needs to be dealt with appropriately by projects intending to make use of this method.
+The method we present complies with what FATF already said in its updated, yet non-binding guidelines, i.e. that non-fungible tokens don’t fall into the set of virtual currency schemes they intend to regulate with AML laws. The digital art aspect of NFTs does not classify NFTs as art from an AML perspective, such that the requirement for art dealers to KYC buyers of art pieces is not applicable, at least in Spain but most likely anywhere in Europe (since the definition of art is derived from the VAT directive which focuses on physical art)
 
 #### Why this could even be legal for DAO members
 
-Continuing the compliance evaluation, we eventually have to confront two important questions, which we also tried to get as much clarity on as possible from regulators themselves:
+Continuing the compliance evaluation, we eventually have to confront two important questions:
 
 1.  Are builders liable for what happens with “their” IP after the NFTs are sold and the code has been released as open source to the public at large?
 2.  Is the answer to question (1) affected by the particular outcome of the negotiations of NFT buyers with regards to how they plan to exploit the IP they acquired, in particular if that decision leads to the creation of a DAO and the deployment and maintence of an unregulated DeFi protocol offering services comparable to traditional, regulated financial services?
