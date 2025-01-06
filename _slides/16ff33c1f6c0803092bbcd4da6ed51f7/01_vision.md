@@ -16,6 +16,8 @@ Common Ground is a community-owned and governed social app that seamlessly integ
 -  What if every human could cast a vote each day on something that’s important to their local or wider community, or delegate their vote to a trusted friend or community leader?
 - What if the positive impact of community work were measurable and thus, fundable?
 - What if communities could build in public while filtering signal from noise effortlessly?
+
+
 We started with a real-time web3 communications app, to serve as the integration layer on which emerging onchain primitives like smart wallets, community tokens, onchain treasuries, governance and more are woven into a coherent, impactful interaction surface.
 
 ### Communication is the atomic unit of coordination
