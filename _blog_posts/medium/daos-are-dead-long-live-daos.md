@@ -16,7 +16,7 @@ This article was funded by the CollectiveBrain community. Join the community to 
 
 ### DAOs are Dead! Long live DAOs!
 
-> This article was funded by the [CollectiveBrain community](https://app.cg/c/G1YnQr6cz7/). Join the community to become a paid knowledge contributor or start out as an apprentice to get access to exclusive knowledge shared by experts.
+> This article was funded by the [CollectiveBrain community](https://app.cg/c/CollectiveBrain/). Join the community to become a paid knowledge contributor or start out as an apprentice to get access to exclusive knowledge shared by experts.
 
 ### Introduction
 
