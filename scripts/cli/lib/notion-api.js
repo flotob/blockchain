@@ -296,7 +296,7 @@ export class NotionAPI {
           if (block.type === 'image') {
             markdown += await this.processNotionImage(block, projectId);
           } else {
-            markdown += this._blockToMarkdown(block);
+            markdown += await this._blockToMarkdown(block);
           }
         }
 
@@ -344,10 +344,14 @@ export class NotionAPI {
   }
 
   // Convert Notion blocks to markdown
-  _blockToMarkdown(block) {
+  async _blockToMarkdown(block, level = 0) {
     // If it's an array, process each block
     if (Array.isArray(block)) {
-      return block.map(b => this._blockToMarkdown(b)).join('');
+      let markdown = '';
+      for (const b of block) {
+        markdown += await this._blockToMarkdown(b, level);
+      }
+      return markdown;
     }
 
     let markdown = '';
@@ -369,11 +373,33 @@ export class NotionAPI {
         break;
 
       case 'bulleted_list_item':
-        markdown += '- ' + this._richTextToMarkdown(block.bulleted_list_item.rich_text) + '\n';
+        const indent = '  '.repeat(level);
+        markdown += indent + '- ' + this._richTextToMarkdown(block.bulleted_list_item.rich_text) + '\n';
+        if (block.has_children) {
+          try {
+            const children = await this.notion.blocks.children.list({ block_id: block.id });
+            for (const child of children.results) {
+              markdown += await this._blockToMarkdown(child, level + 1);
+            }
+          } catch (error) {
+            console.warn(chalk.yellow(`Failed to fetch children of bullet point: ${error.message}`));
+          }
+        }
         break;
 
       case 'numbered_list_item':
-        markdown += '1. ' + this._richTextToMarkdown(block.numbered_list_item.rich_text) + '\n';
+        const numIndent = '  '.repeat(level);
+        markdown += numIndent + '1. ' + this._richTextToMarkdown(block.numbered_list_item.rich_text) + '\n';
+        if (block.has_children) {
+          try {
+            const children = await this.notion.blocks.children.list({ block_id: block.id });
+            for (const child of children.results) {
+              markdown += await this._blockToMarkdown(child, level + 1);
+            }
+          } catch (error) {
+            console.warn(chalk.yellow(`Failed to fetch children of numbered list: ${error.message}`));
+          }
+        }
         break;
 
       case 'code':

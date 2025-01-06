@@ -1,6 +1,6 @@
 ---
 project: 16ff33c1f6c0803092bbcd4da6ed51f7
-order: 2
+order: 3
 title: Capabilities
 ---
 ![](/assets/images/notion/16ff33c1f6c0803092bbcd4da6ed51f7/172f33c1-f6c0-80ab-82ad-f4801a8fa6db.png)

@@ -3,16 +3,13 @@ project: 170f33c1f6c080399d02df5e9b7d572c
 order: 1
 title: introduction
 ---
-# The European Crypto Initiative (EUCI)
+# The European Crypto Initiative
 
-The **European Crypto Initiative (EUCI)** is a non-profit advocacy group dedicated to shaping the future of decentralized and blockchain technologies in Europe. We work closely with policymakers, industry leaders, and the general public to foster an environment that embraces innovation while preserving essential democratic values.
+EUCI is an advocacy organisation based in Brussels, Belgium, that aims to shape EU regulation in favor of open, permissionless, decentralised applications leveraging blockchain technology while advocating for an innovative EU environment, supporting technological development for SMEs and innovative crypto-assets service providers (CASPs).
 
-## Who We Are
+# Crypto’s Voice in Europe
 
-- **An independent voice** for the European crypto community
-- **A network of industry experts** collaborating on policy, education, and regulatory guidance
-- **Committed to transparency** and open dialogue on emerging digital technologies
-## Why EUCI?
+EUCI has adeptly positioned itself as this indispensable intermediary through a multifaceted approach. By focusing on education, crafting well-researched position papers, conducting thorough research and analysis, and engaging in real-life dialogues, the EUCI has proven itself to be a reliable, resourceful, and trustworthy participant in conversations with EU regulators. This comprehensive strategy ensures that the voice of the Web3 community is not only heard but is also influential in shaping the regulatory landscape. Through its efforts, the EUCI facilitates a constructive and informed dialogue between the burgeoning digital sector and regulatory bodies, ensuring that regulations reflect the nuanced realities of these advanced technologies while protecting the ecosystem’s integrity and fostering innovation.
 
-We believe that Europe should be at the forefront of responsible innovation, setting global standards in crypto and blockchain while ensuring privacy, security, and inclusivity for all.
+
 
