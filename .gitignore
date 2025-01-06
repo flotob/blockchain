@@ -20,7 +20,3 @@ node_modules
 _site
 _site/*
 import
-
-# Notion images
-/assets/images/notion/*
-!/assets/images/notion/.gitkeep
