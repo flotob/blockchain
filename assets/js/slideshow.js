@@ -11,6 +11,13 @@ class Slideshow extends Modal {
             typographer: true
         });
         
+        // Add target="_blank" to all links
+        this.md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+            tokens[idx].attrPush(['target', '_blank']);
+            tokens[idx].attrPush(['rel', 'noopener noreferrer']);
+            return self.renderToken(tokens, idx, options);
+        };
+        
         // State
         this.currentProject = null;
         this.currentSlideIndex = 0;
@@ -80,6 +87,12 @@ class Slideshow extends Modal {
         
         const slide = this.currentProject.slides[this.currentSlideIndex];
         this.modalContent.innerHTML = this.renderSlide(slide);
+        
+        // Add target="_blank" to all links in the content
+        this.modalContent.querySelectorAll('a').forEach(link => {
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+        });
         
         // Update element references after rendering
         this.prevButton = this.modalContent.querySelector('.nav-button.prev');
