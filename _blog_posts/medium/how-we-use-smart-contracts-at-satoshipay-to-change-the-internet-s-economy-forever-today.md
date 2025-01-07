@@ -47,14 +47,14 @@ The sophisticated mix of proven web infrastructure, cryptography and the Bitcoin
 
 Combining those features enables us to act as a trustless intermediary between buyers and sellers of digital goods. More specifically, we employ three distinct transaction types to offer our service in a trustless manner:
 
-**Commitment Transaction  
-**The commitment transaction specifies the maximum amount of bitcoins a buyer is going to spend in a single “session” (also called a “channel”). The commitment transaction sends the specified amount from the buyer’s wallet to a 2-out-of-2 multi-signature address, based on the buyer’s and seller’s public key. The effect of which is, that only together buyer and seller can move any of the committed funds (in the world of legacy banking, this is called a joint account with the option ‘both or all to sign’). The maximum duration of a session is specified by the nLockTime property attached to the refund transaction (see below).
+**Commitment Transaction**
+The commitment transaction specifies the maximum amount of bitcoins a buyer is going to spend in a single “session” (also called a “channel”). The commitment transaction sends the specified amount from the buyer’s wallet to a 2-out-of-2 multi-signature address, based on the buyer’s and seller’s public key. The effect of which is, that only together buyer and seller can move any of the committed funds (in the world of legacy banking, this is called a joint account with the option ‘both or all to sign’). The maximum duration of a session is specified by the nLockTime property attached to the refund transaction (see below).
 
-**Payment Transaction  
-**The payment transaction is constantly re-negotiated between the parties, thereby incrementally transferring some of the committed bitcoins from the multi-signature address to the seller. Over the course of a session, the amount transferred from buyer to seller can increase in arbitrarily small steps, thereby enabling what we call **nano-payments** of as little as 1 satoshi (~0.000004 USD at the time of writing). Since only the very last payment transaction of a complete payment session is ever published to the Bitcoin blockchain, our service is detached from Bitcoin’s current scalability problems to a major extent.
+**Payment Transaction**
+The payment transaction is constantly re-negotiated between the parties, thereby incrementally transferring some of the committed bitcoins from the multi-signature address to the seller. Over the course of a session, the amount transferred from buyer to seller can increase in arbitrarily small steps, thereby enabling what we call **nano-payments** of as little as 1 satoshi (~0.000004 USD at the time of writing). Since only the very last payment transaction of a complete payment session is ever published to the Bitcoin blockchain, our service is detached from Bitcoin’s current scalability problems to a major extent.
 
-**Refund Transaction  
-**The refund transaction is the buyer’s insurance policy: before the buyer actually commits any funds to the multi-signature address, the seller signs a transactions that transfers all of the yet-to-be-committed funds back to the buyer. Should the seller disappear after commitment, the buyer can get his money back, provided that the refund transaction’s lock-time has expired.
+**Refund Transaction**
+The refund transaction is the buyer’s insurance policy: before the buyer actually commits any funds to the multi-signature address, the seller signs a transactions that transfers all of the yet-to-be-committed funds back to the buyer. Should the seller disappear after commitment, the buyer can get his money back, provided that the refund transaction’s lock-time has expired.
 
 #### Machine-to-Machine Payments
 
