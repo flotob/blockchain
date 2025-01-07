@@ -3,7 +3,7 @@ projects:
     role: Co-Founder & Board Member
     description: Co-Founder and board member of the Common Ground Association, developing a user-owned social network using web3 primitives
     description_mobile: Building a user-owned social network with web3 technology
-    image: https://framerusercontent.com/images/hYVNYcaQlCxkrdC7IfgIhm8ri0.png
+    image: images/common-ground.png
     url: https://commonground.cg
     image_type: default
     notion_source: 16ff33c1f6c0803092bbcd4da6ed51f7
@@ -21,7 +21,7 @@ projects:
     role: Law & Code
     description: Helping projects and founders succeed in the web3 space with my decade of knowledge and experience in this unique industry
     description_mobile: Helping projects and founders succeed in the web3 space
-    image: images/common-ground.jpg
+    image: images/consulting.jpg
     url: mailto:fg@blockchain.lawyer
     image_type: default 
 
