@@ -16,8 +16,7 @@ Taking technological change seriously in the social sciences.
 
 ![](/assets/images/medium/2015-05-13_The-Political-Economy-of-Computing-7fffc75423a2-1*RVB-TczCbA-CGSV6ApgIgQ.jpeg)
 
-## The Political Economy  
-of Computing
+## The Political Economy of Computing
 
 ### Taking technological change seriously in the social sciences.
 
