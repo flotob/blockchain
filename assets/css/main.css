@@ -735,6 +735,10 @@ html {
     background: var(--bg-alt);
 }
 
+#events.blog-section {
+    background: var(--bg);
+}
+
 .blog-container {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
@@ -1718,16 +1722,16 @@ html {
 
 .other-events-grid .blog-category {
     margin-bottom: 0;
-    background: var(--bg);
-    border-radius: 16px;
     padding: 1.5rem;
+    /*background: var(--bg);
+    border-radius: 16px;
     box-shadow: 0 4px 20px -8px var(--shadow), 0 2px 4px -1px var(--shadow-light);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;*/
 }
 
 .other-events-grid .blog-category:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.15);
+    /*transform: translateY(-4px);
+    box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.15);*/
 }
 
 .other-events-grid .blog-category-title {
@@ -1999,8 +2003,7 @@ body {
 .content-wrapper,
 .work-card,
 .blog-card,
-.publication-card,
-.other-events-grid .blog-category {
+.publication-card {
     background: var(--bg);
     box-shadow: 0 4px 6px -1px var(--shadow-light), 0 2px 4px -1px var(--shadow-light);
 }
