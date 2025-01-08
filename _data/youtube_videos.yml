@@ -620,10 +620,10 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '2714'
-        likeCount: '46'
+        viewCount: '2717'
+        likeCount: '47'
         favoriteCount: '0'
-        commentCount: '0'
+        commentCount: '1'
       duration: PT1H8M55S
       url: https://www.youtube.com/watch?v=q5V01d3sp80
     - title: A Programming Language For Lawyers - Episode 2
@@ -1087,7 +1087,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '901'
+        viewCount: '902'
         likeCount: '129'
         favoriteCount: '0'
         commentCount: '0'
@@ -1123,15 +1123,15 @@ media_appearances:
         url: https://www.youtube.com/channel/UCY3xr3np532v1AkXpjSudog
         thumbnail:
           default:
-            url: https://yt3.ggpht.com/h_Cqcg3Bvgwlx68SfIhWNBiSKZ0X7RgZw5zHemXI7sBHePIVrol9ngIf4z9eU1IXatYvhGlvqUY=s88-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/L-hAHShLPww6RNlbsYYwzRi59B9Git9iofcmLc-ZkArQ6Retvo24wuFEkZx9Iplm_Z7bulzjP7k=s88-c-k-c0x00ffffff-no-rj
             width: 88
             height: 88
           medium:
-            url: https://yt3.ggpht.com/h_Cqcg3Bvgwlx68SfIhWNBiSKZ0X7RgZw5zHemXI7sBHePIVrol9ngIf4z9eU1IXatYvhGlvqUY=s240-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/L-hAHShLPww6RNlbsYYwzRi59B9Git9iofcmLc-ZkArQ6Retvo24wuFEkZx9Iplm_Z7bulzjP7k=s240-c-k-c0x00ffffff-no-rj
             width: 240
             height: 240
           high:
-            url: https://yt3.ggpht.com/h_Cqcg3Bvgwlx68SfIhWNBiSKZ0X7RgZw5zHemXI7sBHePIVrol9ngIf4z9eU1IXatYvhGlvqUY=s800-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/L-hAHShLPww6RNlbsYYwzRi59B9Git9iofcmLc-ZkArQ6Retvo24wuFEkZx9Iplm_Z7bulzjP7k=s800-c-k-c0x00ffffff-no-rj
             width: 800
             height: 800
       statistics:
@@ -1141,628 +1141,390 @@ media_appearances:
         commentCount: '0'
       duration: PT1H9M35S
       url: https://www.youtube.com/watch?v=e1vG0-YHPLo
-    - title: The future of blockchain and cryptocurrency - Interview with Franzesco Renzi, Superfluid
-      description: |-
-        In this podcast episode, the host Florian Glatz interviews Francesco Renzi, the co-founder of Superfluid. Superfluid is a protocol for building decentralized applications that allows for continuous, real-time flows of cryptocurrency.
-
-        Francesco discusses how Superfluid is different from other DeFi protocols and how it can be used to create new kinds of decentralized applications. He explains how Superfluid's streaming technology can be used for things like revenue sharing and real-time payments.
-
-        The conversation then turns to the topic of security in the crypto space. Francesco discusses the challenges of securing decentralized systems and the importance of a holistic approach to security. He also talks about the limitations of traditional security practices and how they may not work in the context of decentralized systems.
-
-        In this conversation, they also discuss the challenges of creating legal frameworks for decentralized systems, particularly when it comes to resolving disputes between parties. Francesco emphasizes the need for better solutions to these problems and the importance of avoiding the adoption of traditional finance solutions that may not work in the context of decentralized systems.
-
-        Overall, the podcast provides a fascinating glimpse into the world of decentralized finance and the challenges and opportunities that come with building new kinds of financial systems.
-
-
-         ▬▬▬▬▬▬ Timestamps:  ▬▬▬▬▬▬▬▬▬▬▬▬▬
-
-        00:00:00 - Let’s find Common Ground
-        00:00:34 - Introduction Francesco
-        00:01:54 - What is Superfluid?
-        00:03:25 - How does Superfluid work?
-        00:07:44 - Use cases for Superfluid
-        00:09:37 - Comparison of Superfluid with other payment systems
-        00:12:29 - Liquidity in the Superfluid system
-        00:14:41 - Risks with Superfluid
-        00:20:02 - Differences between Superfluid and traditional financial systems
-        00:23:48 - How Superfluid interacts with decentralized financial systems
-        00:29:18 - Challenges with security in decentralized financial systems
-        00:38:23 - Regulatory issues in decentralized financial systems.
-        00:42:18 - Conclusion
-
-
-        #crypto #cryptocurrency #blockchain
-      publishedAt: '2023-05-13T09:37:20Z'
+    - title: The future of blockchain and cryptocurrency - Interview with Francesco Renzi, Superfluid
+      description: Learn more on https://commonground.cg
+      publishedAt: '2022-01-08T10:27:00Z'
       thumbnails:
         default:
-          url: https://i.ytimg.com/vi/zSRT5P15xPQ/default.jpg
+          url: https://i.ytimg.com/vi/W6pWhDBrhxY/default.jpg
           width: 120
           height: 90
         medium:
-          url: https://i.ytimg.com/vi/zSRT5P15xPQ/mqdefault.jpg
+          url: https://i.ytimg.com/vi/W6pWhDBrhxY/mqdefault.jpg
           width: 320
           height: 180
         high:
-          url: https://i.ytimg.com/vi/zSRT5P15xPQ/hqdefault.jpg
+          url: https://i.ytimg.com/vi/W6pWhDBrhxY/hqdefault.jpg
           width: 480
           height: 360
         standard:
-          url: https://i.ytimg.com/vi/zSRT5P15xPQ/sddefault.jpg
+          url: https://i.ytimg.com/vi/W6pWhDBrhxY/sddefault.jpg
           width: 640
           height: 480
         maxres:
-          url: https://i.ytimg.com/vi/zSRT5P15xPQ/maxresdefault.jpg
+          url: https://i.ytimg.com/vi/W6pWhDBrhxY/maxresdefault.jpg
           width: 1280
           height: 720
       channel:
         name: Common Ground
-        id: UC1jydw5LShbEAfyqWxTRSiA
-        url: https://www.youtube.com/channel/UC1jydw5LShbEAfyqWxTRSiA
+        id: UCcXJkkuFW8DloPo-VVyT2sA
+        url: https://www.youtube.com/channel/UCcXJkkuFW8DloPo-VVyT2sA
         thumbnail:
           default:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s88-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s88-c-k-c0x00ffffff-no-rj
             width: 88
             height: 88
           medium:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s240-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s240-c-k-c0x00ffffff-no-rj
             width: 240
             height: 240
           high:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s800-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s800-c-k-c0x00ffffff-no-rj
             width: 800
             height: 800
       statistics:
-        viewCount: '55'
+        viewCount: '1000'
         likeCount: '0'
         favoriteCount: '0'
         commentCount: '0'
       duration: PT42M35S
-      url: https://www.youtube.com/watch?v=zSRT5P15xPQ
-    - title: Proving you’re human in a world of AI - with Clément Lesaege, Kleros
-      description: |-
-        In this captivating episode, join Florian Glatz, the visionary founder of Common Ground, as he engages in a fascinating conversation with Clément Lesaege, the brilliant mind behind Kleros. Prepare to dive deep into the world of startups and decentralized dispute resolution.
-        Florian and Clément share their remarkable journeys as entrepreneurs, shedding light on the challenges and triumphs they've encountered while building their groundbreaking companies. Get inspired as they reveal invaluable insights and strategies for overcoming obstacles in the startup landscape.
-        Discover the essence of Common Ground and Kleros as Florian and Clément discuss their respective projects. Common Ground seeks to bridge the gap between traditional institutions and blockchain technology, fostering trust and collaboration. On the other hand, Kleros revolutionizes dispute resolution by leveraging blockchain and crowdsourcing to ensure fairness and transparency.
-        Explore the importance of decentralization, transparency, and community involvement in Florian and Clément's ventures. Gain a deeper understanding of the potential impact of blockchain technology on various industries and its role in shaping a more inclusive and just society.
-        Whether you're an aspiring entrepreneur, a blockchain enthusiast, or simply curious about the future of startups and decentralized systems, this engaging conversation offers a wealth of knowledge and inspiration. Tune in to our YouTube channel and embark on an insightful journey with Florian Glatz and Clément Lesaege.
-        Don't miss out on more captivating interviews with industry leaders on our YouTube channel! Subscribe now and stay tuned for inspiring content.
-
-
-        00:00:00 Introduction of Clément Lesaege and Kleros
-        00:02:05 Where is Web3 at the moment?
-        00:10:40 Web3-applications
-        00:12:57 Born in a classical banking system
-        00:19:59 Getting Cryptos in the wallet
-        00:22:48 Definition of the Kleros protocol
-        00:25:17 Usage and adoption of Kleros
-        00:29:20 The Kleros token
-        00:34:42 Proof of Humanity
-        00:42:17 Use Cases for Proof of Humanity
-        00:46:34 The soul bond token concept
-        00:50:34 Outro
-
-        #Podcast #Blockchain #decentralization
-      publishedAt: '2023-05-13T09:31:37Z'
+      url: https://www.youtube.com/watch?v=W6pWhDBrhxY
+    - title: Proving you're human in a world of AI - with Clément Lesaege, Kleros
+      description: Learn more on https://commonground.cg
+      publishedAt: '2022-01-08T10:24:42Z'
       thumbnails:
         default:
-          url: https://i.ytimg.com/vi/XnIZFOlgOss/default.jpg
+          url: https://i.ytimg.com/vi/34Fo1-8y18U/default.jpg
           width: 120
           height: 90
         medium:
-          url: https://i.ytimg.com/vi/XnIZFOlgOss/mqdefault.jpg
+          url: https://i.ytimg.com/vi/34Fo1-8y18U/mqdefault.jpg
           width: 320
           height: 180
         high:
-          url: https://i.ytimg.com/vi/XnIZFOlgOss/hqdefault.jpg
+          url: https://i.ytimg.com/vi/34Fo1-8y18U/hqdefault.jpg
           width: 480
           height: 360
         standard:
-          url: https://i.ytimg.com/vi/XnIZFOlgOss/sddefault.jpg
+          url: https://i.ytimg.com/vi/34Fo1-8y18U/sddefault.jpg
           width: 640
           height: 480
         maxres:
-          url: https://i.ytimg.com/vi/XnIZFOlgOss/maxresdefault.jpg
+          url: https://i.ytimg.com/vi/34Fo1-8y18U/maxresdefault.jpg
           width: 1280
           height: 720
       channel:
         name: Common Ground
-        id: UC1jydw5LShbEAfyqWxTRSiA
-        url: https://www.youtube.com/channel/UC1jydw5LShbEAfyqWxTRSiA
+        id: UCcXJkkuFW8DloPo-VVyT2sA
+        url: https://www.youtube.com/channel/UCcXJkkuFW8DloPo-VVyT2sA
         thumbnail:
           default:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s88-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s88-c-k-c0x00ffffff-no-rj
             width: 88
             height: 88
           medium:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s240-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s240-c-k-c0x00ffffff-no-rj
             width: 240
             height: 240
           high:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s800-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s800-c-k-c0x00ffffff-no-rj
             width: 800
             height: 800
       statistics:
-        viewCount: '118'
-        likeCount: '5'
+        viewCount: '1000'
+        likeCount: '0'
         favoriteCount: '0'
         commentCount: '0'
       duration: PT50M55S
-      url: https://www.youtube.com/watch?v=XnIZFOlgOss
-    - title: Helping artists make a living from NFTs - Web3 unleashed - with Darri Ulfsson, Darkblock
-      description: |-
-        In this enlightening episode of "Finding Common Ground," host Florian Glatz welcomes Darri Ulfsson, the innovative founder of Darkblock, to a riveting discussion on the potential of Web3 content infrastructure. Discover how Darkblock is revolutionizing the NFT landscape by allowing multiple pieces of content to be linked to a single NFT, creating a richer digital ownership experience.
-
-        From his roots as a photographer to becoming a self-taught blockchain and crypto enthusiast, Darri shares his journey towards building a solution that supports artists in a world increasingly moving towards digital art. Watch as Florian and Darri discuss the transformative power of Web3, its current shortcomings, and what it would take to make it a mainstream phenomenon.
-
-        Listen to Florian's insightful anecdotes from his own experience incorporating Web3 elements into Common Ground, the social network he founded. They take a nostalgic trip back to the early days of the internet, speculate on the future potentials of Web4, and critique the current social media landscape with its issues of data privacy.
-
-        As the discussion shifts towards NFTs, Darri brings to light his fascination with tokenization and its applications beyond just JPEGs. Learn about a compelling real estate use case that highlights the power of NFTs and take a peek into the future of NFTs and the role Darkblock is playing in it.
-
-        The conversation takes a deep dive into how artists can add value to their NFTs, from using drops as royalties to tokenizing ebooks, and explores the delicate balance artists need to strike between accessibility of their art and earning a living.
-
-        Wrapping up, they address the pressing topics of censorship, responsibility in the Web3 world, and how DAOs could potentially change the game of ownership, even extending to fan-owned football clubs.
-
-        Don't miss this episode that presents a deep understanding of the rapidly evolving Web3 landscape from the experts who are shaping its future. Hit subscribe and stay tuned for more insightful episodes!
-
-
-
-         
-        00:00:00 How Darri came into Web3
-        00:05:23 What’s interesting about Web3?
-        00:08:59 What is missing in Web3?
-        00:14:56 Become Web2.5 to 
-        00:18:31 Evolving from Web2 to Web3
-        00:25:34 What could Web4 be like?
-        00:26:41 Pro’s and Con’s of Social Media
-        00:28:30 What is a NFT and what is fascinating about them?
-        00:35:58 Royalty-discussion about NFTs
-        00:40:33 What does Darkblock do?
-        00:46:16 Adding utility to the NFTs
-        00:54:15 Exciting usecases of royalties of NFTs
-        00:58:19 The business model of artists and creators
-        01:03:06 Censorship of Web3
-      publishedAt: '2023-05-19T05:00:30Z'
+      url: https://www.youtube.com/watch?v=34Fo1-8y18U
+    - title: Helping artists make a living from NFTs - Web3 unleashed - with Darri Ulfsson
+      description: Learn more on https://commonground.cg
+      publishedAt: '2022-01-08T10:28:16Z'
       thumbnails:
         default:
-          url: https://i.ytimg.com/vi/kyfyWdN2mEc/default.jpg
+          url: https://i.ytimg.com/vi/1u-Ngmix-r8/default.jpg
           width: 120
           height: 90
         medium:
-          url: https://i.ytimg.com/vi/kyfyWdN2mEc/mqdefault.jpg
+          url: https://i.ytimg.com/vi/1u-Ngmix-r8/mqdefault.jpg
           width: 320
           height: 180
         high:
-          url: https://i.ytimg.com/vi/kyfyWdN2mEc/hqdefault.jpg
+          url: https://i.ytimg.com/vi/1u-Ngmix-r8/hqdefault.jpg
           width: 480
           height: 360
         standard:
-          url: https://i.ytimg.com/vi/kyfyWdN2mEc/sddefault.jpg
+          url: https://i.ytimg.com/vi/1u-Ngmix-r8/sddefault.jpg
           width: 640
           height: 480
         maxres:
-          url: https://i.ytimg.com/vi/kyfyWdN2mEc/maxresdefault.jpg
+          url: https://i.ytimg.com/vi/1u-Ngmix-r8/maxresdefault.jpg
           width: 1280
           height: 720
       channel:
         name: Common Ground
-        id: UC1jydw5LShbEAfyqWxTRSiA
-        url: https://www.youtube.com/channel/UC1jydw5LShbEAfyqWxTRSiA
+        id: UCcXJkkuFW8DloPo-VVyT2sA
+        url: https://www.youtube.com/channel/UCcXJkkuFW8DloPo-VVyT2sA
         thumbnail:
           default:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s88-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s88-c-k-c0x00ffffff-no-rj
             width: 88
             height: 88
           medium:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s240-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s240-c-k-c0x00ffffff-no-rj
             width: 240
             height: 240
           high:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s800-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s800-c-k-c0x00ffffff-no-rj
             width: 800
             height: 800
       statistics:
-        viewCount: '69'
-        likeCount: '5'
+        viewCount: '1000'
+        likeCount: '0'
         favoriteCount: '0'
         commentCount: '0'
       duration: PT1H14M32S
-      url: https://www.youtube.com/watch?v=kyfyWdN2mEc
+      url: https://www.youtube.com/watch?v=1u-Ngmix-r8
     - title: 'Revolutionizing Work Dynamics: Web3 Insights with Andreas Fauler, Rocketstar Foundation'
-      description: |-
-        In this episode, Florian Glatz and Andreas Fauler delve into the similarities between Web1 and Web3, focusing on key aspects such as decentralization and open source. They explore the rising prominence of DAOs (decentralized autonomous organizations) and how these platforms are revolutionizing coordination and decision-making. Discover how you can create a DAO on the blockchain in just 20 minutes and coordinate with others around a shared purpose, regardless of knowing them personally.
-         
-        Andreas emphasizes the strengths of DAOs, particularly their ability to facilitate creative hierarchy and decentralized decision-making. Drawing from his experience in enterprises, he highlights the importance of incorporating project management practices into DAOs. Andreas expresses his concerns about the existing gap between DAOs and traditional organizations, urging for increased collaboration between the two.
-         
-        Learn about Rocketstar Foundation, an innovative initiative founded by Andreas and seven others, dedicated to bridging the gap between Web3 and enterprises through collaborative protocols. As an European co-operative, they are pioneering new ways of work, where members determine their level of contribution to the DAO.
-         
-        Andreas provides insights into the exciting projects that Rocketstar Foundation is actively involved in, showcasing their impact at the forefront of Web3 technologies. Florian also shares his own experiences with cooperatives, discussing his platform Common Ground's journey towards establishing a European cooperative.
-         
-        Discover the superpower of Web3 DAOs and governance as Florian and Andreas explore the advantages of this transformative combination. Andreas reveals his seven data segments, each holding unique value for different types of organizations, further exemplifying the potential of Web3 technologies.
-         
-        Finally, Florian and Andreas delve into their predictions for 2023, discussing the significant trends and future directions within the Web3 landscape. Gain valuable insights into the possibilities that lie ahead in this engaging conversation.
-         
-        Join Florian Glatz on "Finding Common Ground" as he uncovers the potential and impact of Web3 technologies, connecting with visionary guests like Andreas Fauler to explore the collaborative future that awaits us. Subscribe now and be part of the Web3 revolution!
-
-        00:00 Introduction of Andreas and Florian
-        00:55 How Andreas got into Web3
-        03:12 Are Web1 and Web3 rooted in the same idea?
-        06:09 Platforms are changing
-        09:34 What DAOs can learn from the enterprise world
-        12:19 The creation of Rocketstar Foundation
-        17:42 These projects Rocketstar Foundation is working with
-        21:06 What kind of cooperative to choose?
-        26:06 The vision of Rocketstar Foundation regarding cooperatives
-        28:37 The marriage of Web3 DAOS and governance
-        31:50 The first movers
-        36:11 Definition of people Data
-        38:57 Web3 regulation
-        42:01 Predictions to 2023
-        47:48 Crypto culture
-      publishedAt: '2023-05-26T04:00:21Z'
+      description: Learn more on https://commonground.cg
+      publishedAt: '2022-01-08T10:30:05Z'
       thumbnails:
         default:
-          url: https://i.ytimg.com/vi/TZJTknJ7W0M/default.jpg
+          url: https://i.ytimg.com/vi/_IMNS-_H7mo/default.jpg
           width: 120
           height: 90
         medium:
-          url: https://i.ytimg.com/vi/TZJTknJ7W0M/mqdefault.jpg
+          url: https://i.ytimg.com/vi/_IMNS-_H7mo/mqdefault.jpg
           width: 320
           height: 180
         high:
-          url: https://i.ytimg.com/vi/TZJTknJ7W0M/hqdefault.jpg
+          url: https://i.ytimg.com/vi/_IMNS-_H7mo/hqdefault.jpg
           width: 480
           height: 360
         standard:
-          url: https://i.ytimg.com/vi/TZJTknJ7W0M/sddefault.jpg
+          url: https://i.ytimg.com/vi/_IMNS-_H7mo/sddefault.jpg
           width: 640
           height: 480
         maxres:
-          url: https://i.ytimg.com/vi/TZJTknJ7W0M/maxresdefault.jpg
+          url: https://i.ytimg.com/vi/_IMNS-_H7mo/maxresdefault.jpg
           width: 1280
           height: 720
       channel:
         name: Common Ground
-        id: UC1jydw5LShbEAfyqWxTRSiA
-        url: https://www.youtube.com/channel/UC1jydw5LShbEAfyqWxTRSiA
+        id: UCcXJkkuFW8DloPo-VVyT2sA
+        url: https://www.youtube.com/channel/UCcXJkkuFW8DloPo-VVyT2sA
         thumbnail:
           default:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s88-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s88-c-k-c0x00ffffff-no-rj
             width: 88
             height: 88
           medium:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s240-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s240-c-k-c0x00ffffff-no-rj
             width: 240
             height: 240
           high:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s800-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s800-c-k-c0x00ffffff-no-rj
             width: 800
             height: 800
       statistics:
-        viewCount: '17'
-        likeCount: '1'
+        viewCount: '1000'
+        likeCount: '0'
         favoriteCount: '0'
         commentCount: '0'
       duration: PT49M32S
-      url: https://www.youtube.com/watch?v=TZJTknJ7W0M
-    - title: Bitcoin's Journey to Mainstream Adoption - with Katharina Klimkeit
-      description: |-
-        In this engaging episode, host Florian Glatz is joined by entrepreneur Katharina Klimkeit. Known for co-founding the fact-checking platform Facts for Friends, Katharina is also paving the way in the blockchain industry with her latest venture, Orange Society.
-
-        They initiate the discussion by delving into the realm of Web3, assessing its potential impact and challenges. Katharina, sharing her expertise in the crypto world, dispels common misconceptions surrounding Bitcoin, clarifying its position relative to other cryptocurrencies.
-
-        The conversation then turns to consider Bitcoin's potential as the new world reserve currency and the crucial role of centralized governance in Decentralized Autonomous Organizations (DAOs).
-
-        Shifting gears, Katharina narrates her journey with Facts for Friends, highlighting how it tackles the ever-increasing problem of misinformation in our digital age, exacerbated by AI and deep fake technologies.
-
-        The discussion gets more introspective as they tackle the concept of censorship, the prospect of a universal biometric identity, and the balance of freedom and responsibility in leading an autonomous life.
-
-        Towards the end, they discuss their visions for a future that is both non-censored and decentralized. Katharina also shares insights into her latest initiative, Orange Society, aimed at mainstreaming Bitcoin and making it more attractive for mass adoption.
-
-        They conclude the episode with an honest examination of Bitcoin's image problem and discuss what it needs for easier adoption. Florian closes the conversation by asking Katharina for her best advice for aspiring founders, particularly women.
-
-        Don't forget to subscribe to our channel to stay updated with our future episodes and join the conversation by sharing your thoughts in the comments section.
-
-        #Blockchain #Bitcoin #web3 
-
-
-        00:00 Intro
-        00:18 Introduction of Katharina Klimkeit
-        01:39 Is Web3 the right path to take?
-        04:32 Where is the breakthrough for Web3?
-        09:24 The difference between Bitcoin and Crypto
-        13:02 Better governance system of Bitcoin?
-        18:19 Bitcoin as the new world reserve currency
-        22:50 Fact checking of information
-        26:57 Attention span-problem
-        27:44 How Facts for Friends works
-        32:20 Trustworthiness of AI
-        38:47 Censorship vs. Disinformation
-        43:57 Autonomy and courage
-        48:34 Can all people become autonomous?
-        52:44 A privileged position to be autonomous
-        57:41 Orange society
-        01:04:11 Branding or technology for Bitcoin
-        01:09:38 Top Tips for founders
-        01:13:26 Outro
-      publishedAt: '2023-06-02T04:00:21Z'
+      url: https://www.youtube.com/watch?v=_IMNS-_H7mo
+    - title: Bitcoin's Journey to Mainstream Adoption - with Katharina Klimkeit, Orange Society
+      description: Learn more on https://commonground.cg
+      publishedAt: '2022-01-08T10:30:54Z'
       thumbnails:
         default:
-          url: https://i.ytimg.com/vi/bOslQjYq6hU/default.jpg
+          url: https://i.ytimg.com/vi/1zNkBwdyFNE/default.jpg
           width: 120
           height: 90
         medium:
-          url: https://i.ytimg.com/vi/bOslQjYq6hU/mqdefault.jpg
+          url: https://i.ytimg.com/vi/1zNkBwdyFNE/mqdefault.jpg
           width: 320
           height: 180
         high:
-          url: https://i.ytimg.com/vi/bOslQjYq6hU/hqdefault.jpg
+          url: https://i.ytimg.com/vi/1zNkBwdyFNE/hqdefault.jpg
           width: 480
           height: 360
         standard:
-          url: https://i.ytimg.com/vi/bOslQjYq6hU/sddefault.jpg
+          url: https://i.ytimg.com/vi/1zNkBwdyFNE/sddefault.jpg
           width: 640
           height: 480
         maxres:
-          url: https://i.ytimg.com/vi/bOslQjYq6hU/maxresdefault.jpg
+          url: https://i.ytimg.com/vi/1zNkBwdyFNE/maxresdefault.jpg
           width: 1280
           height: 720
       channel:
         name: Common Ground
-        id: UC1jydw5LShbEAfyqWxTRSiA
-        url: https://www.youtube.com/channel/UC1jydw5LShbEAfyqWxTRSiA
+        id: UCcXJkkuFW8DloPo-VVyT2sA
+        url: https://www.youtube.com/channel/UCcXJkkuFW8DloPo-VVyT2sA
         thumbnail:
           default:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s88-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s88-c-k-c0x00ffffff-no-rj
             width: 88
             height: 88
           medium:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s240-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s240-c-k-c0x00ffffff-no-rj
             width: 240
             height: 240
           high:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s800-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s800-c-k-c0x00ffffff-no-rj
             width: 800
             height: 800
       statistics:
-        viewCount: '130'
-        likeCount: '2'
+        viewCount: '1000'
+        likeCount: '0'
         favoriteCount: '0'
         commentCount: '0'
       duration: PT1H15M23S
-      url: https://www.youtube.com/watch?v=bOslQjYq6hU
-    - title: Cryptocurrency, Proof of Humanity and Biometrics - Tiago Sada, Worldcoin
-      description: |-
-        Welcome back to another episode of "Finding Common Ground," where we delve into conversations exploring the nexus of technology, society, and the future. In this episode, our host Florian Glatz, the founder of Common Ground, invites Tiago Sada, the lead of product engineering and design at Tools for Humanity and a significant contributor to the innovative project, Worldcoin.
-
-        Tiago, with his background in computer science and robotics, shares his journey into the vibrant realm of Web3 and offers insightful predictions on the impending cryptocurrency boom.
-
-        The conversation shifts gears to unpack the concept of Worldcoin, a project co-founded by Sam Altman, well-known for his role at OpenAI. Worldcoin aims to democratize access to AI systems and devise more reliable methods of online identity authentication. Tiago sheds light on the complexities of building Worldcoin, addressing the ethical and technological challenges associated with developing an effective biometric identification system.
-
-        Watch as we delve deeper into the heart of Worldcoin's biometric technology, discussing the 'Orb' device, the World ID protocol, and its application. Florian and Tiago explore the project's controversial aspects, particularly the use of biometrics, and the inherent issues associated with validating human identities in the digital world.
-
-        In this candid discussion, Tiago elucidates on Worldcoin's fundraising efforts, its vision of being a public good, and how data is managed securely within the system. We close with an intriguing look at Worldcoin's 'white hat' program and the steps they're taking to ensure the security of their revolutionary technology.
-
-        Don't forget to subscribe for more thought-provoking discussions on the future of technology and society. Hit the bell icon to stay notified about our latest releases. Let's find common ground together.
-
-        #FindingCommonGround #Cryptocurrency #Worldcoin #Biometrics #Web3
-
-
-        00:00 Introduction
-        00:43 Introduction of Tiago Sada
-        02:10 Tiago’s journey into Web3
-        05:06 The breakthrough of Crypto
-        07:47 Stablecoins
-        09:54 The vision of Common Ground
-        11:28 The use case of Crypto
-        12:52 Worldcoin 
-        21:24 Use cases of Worldcoin
-        23:13 Proof of humanity
-        27:18 The protocol of Worldcoin
-        28:42 Protocol governance
-        31:35 Mistakes and controversy
-        34:19 Verification opportunities
-        36:25 Public good
-        37:49 Fundraising 
-        41:31 Data collected
-        45:33 Credentials
-        49:44 Good heart’s law
-        52:29 Hacking an orb?!
-        53:06 Bootstrapping the network
-        59:25 White hat program
-        01:00:11 Goodbye
-      publishedAt: '2023-06-09T04:00:26Z'
+      url: https://www.youtube.com/watch?v=1zNkBwdyFNE
+    - title: Cryptocurrency, Proof of Personhood and Biometrics - with Tiago Sada, Worldcoin / Tools for Humanity
+      description: Learn more on https://commonground.cg
+      publishedAt: '2022-01-08T10:31:50Z'
       thumbnails:
         default:
-          url: https://i.ytimg.com/vi/X0WvzDkysG4/default.jpg
+          url: https://i.ytimg.com/vi/8Cg2VIy0Xhg/default.jpg
           width: 120
           height: 90
         medium:
-          url: https://i.ytimg.com/vi/X0WvzDkysG4/mqdefault.jpg
+          url: https://i.ytimg.com/vi/8Cg2VIy0Xhg/mqdefault.jpg
           width: 320
           height: 180
         high:
-          url: https://i.ytimg.com/vi/X0WvzDkysG4/hqdefault.jpg
+          url: https://i.ytimg.com/vi/8Cg2VIy0Xhg/hqdefault.jpg
           width: 480
           height: 360
         standard:
-          url: https://i.ytimg.com/vi/X0WvzDkysG4/sddefault.jpg
+          url: https://i.ytimg.com/vi/8Cg2VIy0Xhg/sddefault.jpg
           width: 640
           height: 480
         maxres:
-          url: https://i.ytimg.com/vi/X0WvzDkysG4/maxresdefault.jpg
+          url: https://i.ytimg.com/vi/8Cg2VIy0Xhg/maxresdefault.jpg
           width: 1280
           height: 720
       channel:
         name: Common Ground
-        id: UC1jydw5LShbEAfyqWxTRSiA
-        url: https://www.youtube.com/channel/UC1jydw5LShbEAfyqWxTRSiA
+        id: UCcXJkkuFW8DloPo-VVyT2sA
+        url: https://www.youtube.com/channel/UCcXJkkuFW8DloPo-VVyT2sA
         thumbnail:
           default:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s88-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s88-c-k-c0x00ffffff-no-rj
             width: 88
             height: 88
           medium:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s240-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s240-c-k-c0x00ffffff-no-rj
             width: 240
             height: 240
           high:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s800-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s800-c-k-c0x00ffffff-no-rj
             width: 800
             height: 800
       statistics:
-        viewCount: '311'
-        likeCount: '12'
+        viewCount: '1000'
+        likeCount: '0'
         favoriteCount: '0'
-        commentCount: '1'
+        commentCount: '0'
       duration: PT1H1M16S
-      url: https://www.youtube.com/watch?v=X0WvzDkysG4
+      url: https://www.youtube.com/watch?v=8Cg2VIy0Xhg
     - title: 'Inside the Mind of a Crypto Visionary: A Deep Dive - with Antonius Gress, Blockbrain'
-      description: |-
-        In this insightful episode of Finding Common Ground, your host Florian Glatz sits down with the “Master of Data,” Antonius Gress, Co-founder of Blockbrain. Watch as Antonius unpacks his journey from co-founding a social platform in 2014 to his present-day focus on blockchain technology.
-
-        Dive headfirst into the Web3 revolution as we discuss its current state and the roadmap to mass adoption. Explore the many layers of integrating blockchain into big corporations, the challenges faced, and the reasons why some promising projects haven't seen the light of day.
-
-        Delve into the constructive dialogue between industry leaders, start-ups, politicians, and regulators in the crypto sphere, all working towards creating a harmonious Web3 world. Learn about Blockbrain, an innovative platform designed to protect investors and their portfolios. Understand how traditional financial KPIs are being adapted and applied in the cryptocurrency realm.
-
-        Join the discussion on custodial versus self-custodial wallets as Antonius shares his unique perspective. Discover the exciting intersection of AI and crypto. From leveraging natural language processing to identify potentially harmful smart contracts to being alert about AI-driven fraud, the conversation covers it all.
-
-        Hear about Blockbrain's collaboration with academic institutions and the complexities they face while building and preparing data sets for research. Gain insights into how you can bring value to this process.
-
-        Finally, we round off the episode by looking into the crystal ball of crypto, speculating on the potential for a new bull market.
-
-        Whether you're a tech enthusiast, an investor, or someone curious about the future of finance, this episode is sure to provide a wealth of insights. Hit that subscribe button, like the video if you enjoyed the content, and don't forget to ring the bell icon to stay updated with the latest discussions on the show. Welcome to the crypto revolution.
-
-
-        00:00 Introduction
-        01:04 Introduction of Antonius Gress
-        04:18 Antonius’ ideas about Web3
-        07:32 Building a social network
-        10:31 Blockchain use cases in big companies
-        22:27 What is Blockbrain about?
-        34:01 Custodial vs. self-custodial wallets
-        37:21 The future of AI and crypto
-        49:55 Working with university and researchers
-        54:02 Coming up bull market?!
-        59:44 Goodybe
-      publishedAt: '2023-06-23T04:00:12Z'
+      description: Learn more on https://commonground.cg
+      publishedAt: '2022-01-08T10:33:25Z'
       thumbnails:
         default:
-          url: https://i.ytimg.com/vi/VSenn0D-B4Y/default.jpg
+          url: https://i.ytimg.com/vi/XMxlU3qKwZY/default.jpg
           width: 120
           height: 90
         medium:
-          url: https://i.ytimg.com/vi/VSenn0D-B4Y/mqdefault.jpg
+          url: https://i.ytimg.com/vi/XMxlU3qKwZY/mqdefault.jpg
           width: 320
           height: 180
         high:
-          url: https://i.ytimg.com/vi/VSenn0D-B4Y/hqdefault.jpg
+          url: https://i.ytimg.com/vi/XMxlU3qKwZY/hqdefault.jpg
           width: 480
           height: 360
         standard:
-          url: https://i.ytimg.com/vi/VSenn0D-B4Y/sddefault.jpg
+          url: https://i.ytimg.com/vi/XMxlU3qKwZY/sddefault.jpg
           width: 640
           height: 480
         maxres:
-          url: https://i.ytimg.com/vi/VSenn0D-B4Y/maxresdefault.jpg
+          url: https://i.ytimg.com/vi/XMxlU3qKwZY/maxresdefault.jpg
           width: 1280
           height: 720
       channel:
         name: Common Ground
-        id: UC1jydw5LShbEAfyqWxTRSiA
-        url: https://www.youtube.com/channel/UC1jydw5LShbEAfyqWxTRSiA
+        id: UCcXJkkuFW8DloPo-VVyT2sA
+        url: https://www.youtube.com/channel/UCcXJkkuFW8DloPo-VVyT2sA
         thumbnail:
           default:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s88-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s88-c-k-c0x00ffffff-no-rj
             width: 88
             height: 88
           medium:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s240-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s240-c-k-c0x00ffffff-no-rj
             width: 240
             height: 240
           high:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s800-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s800-c-k-c0x00ffffff-no-rj
             width: 800
             height: 800
       statistics:
-        viewCount: '46'
-        likeCount: '1'
+        viewCount: '1000'
+        likeCount: '0'
         favoriteCount: '0'
         commentCount: '0'
       duration: PT1H46S
-      url: https://www.youtube.com/watch?v=VSenn0D-B4Y
-    - title: Web3, Wealth, and the Future of Africa - with Andy Tudhope
-      description: |-
-        Join Florian Glatz as he engages in a riveting conversation with Africa-based Web3 pioneer, Andy Tudhope. In this video, we dive into Andy's fascinating journey from an aspiring teacher to a key player in the world of Web3, a journey ignited by a single Bitcoin from his father in 2011.
-         
-        The discussion centers on the evolution of Web3, contrasting Andy's early expectations with the current state of affairs. We navigate the labyrinth of regulations, placing a special emphasis on Ethereum and the U.S. Securities and Exchange Commission's role in the crypto ecosystem.
-         
-        Andy, with his African roots, holds an optimistic vision for Africa's potential in shaping the future of crypto. He speaks of a future where solutions are built on Web3 by Africans for Africans, a prospect that carries immense promise.
-         
-        We explore abstract concepts of public goods and beauty, unveiling how they intertwine with Andy's work. The conversation then turns to Andy's personal literary creation, "The Blue Book", a testament to his love for this new digital frontier.
-         
-        Our deep dive extends to the Kernel community, Andy's creation designed to nurture interest and skills in Web3. We also delve into the inception of Florian's Common Ground-project, born out of a hopeful mission by 'The Fellowship' to deliver a gift to the world.
-         
-        Wrapping up, Andy shares practical advice for those new to the Web3 world, offering insightful tips on how to explore this burgeoning scene. This video is a must-watch for anyone keen on understanding the intersection of idealistic philosophies, technology, and beauty in a digital age. Don't forget to like, comment, and subscribe for more insightful conversations!
-
-        #web3 #blockchain #cryptocurrency 
-
-
-        00:00 Introduction to the podcast
-        01:00 What is Web3 for Andy?
-        07:29 Expectation vs. Reality
-        19:52 Web3 in Africa
-        24:25 Public goods
-        33:42 The concept of beauty
-        42:41 The Blue Book
-        51:11 Kernel community
-        01:00:29 Stigmas
-        01:06:08 Tips to discover the Web3-Worlds
-      publishedAt: '2023-06-30T04:00:12Z'
+      url: https://www.youtube.com/watch?v=XMxlU3qKwZY
+    - title: Web3, Wealth and the Future of Africa - with Andy Tudhope, Kernel Community
+      description: Learn more on https://commonground.cg
+      publishedAt: '2022-01-08T10:34:54Z'
       thumbnails:
         default:
-          url: https://i.ytimg.com/vi/OjuL-2ljiDE/default.jpg
+          url: https://i.ytimg.com/vi/AuG5yaaBJiA/default.jpg
           width: 120
           height: 90
         medium:
-          url: https://i.ytimg.com/vi/OjuL-2ljiDE/mqdefault.jpg
+          url: https://i.ytimg.com/vi/AuG5yaaBJiA/mqdefault.jpg
           width: 320
           height: 180
         high:
-          url: https://i.ytimg.com/vi/OjuL-2ljiDE/hqdefault.jpg
+          url: https://i.ytimg.com/vi/AuG5yaaBJiA/hqdefault.jpg
           width: 480
           height: 360
         standard:
-          url: https://i.ytimg.com/vi/OjuL-2ljiDE/sddefault.jpg
+          url: https://i.ytimg.com/vi/AuG5yaaBJiA/sddefault.jpg
           width: 640
           height: 480
         maxres:
-          url: https://i.ytimg.com/vi/OjuL-2ljiDE/maxresdefault.jpg
+          url: https://i.ytimg.com/vi/AuG5yaaBJiA/maxresdefault.jpg
           width: 1280
           height: 720
       channel:
         name: Common Ground
-        id: UC1jydw5LShbEAfyqWxTRSiA
-        url: https://www.youtube.com/channel/UC1jydw5LShbEAfyqWxTRSiA
+        id: UCcXJkkuFW8DloPo-VVyT2sA
+        url: https://www.youtube.com/channel/UCcXJkkuFW8DloPo-VVyT2sA
         thumbnail:
           default:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s88-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s88-c-k-c0x00ffffff-no-rj
             width: 88
             height: 88
           medium:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s240-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s240-c-k-c0x00ffffff-no-rj
             width: 240
             height: 240
           high:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s800-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s800-c-k-c0x00ffffff-no-rj
             width: 800
             height: 800
       statistics:
-        viewCount: '69'
-        likeCount: '1'
+        viewCount: '1000'
+        likeCount: '0'
         favoriteCount: '0'
         commentCount: '0'
       duration: PT1H9M33S
-      url: https://www.youtube.com/watch?v=OjuL-2ljiDE
+      url: https://www.youtube.com/watch?v=AuG5yaaBJiA
     - title: 'Blockchain-Brillanz: Florians Perspektiven zu #web3  , #nfts  und der Common Ground-Zukunft🎙️🚀🌐'
       description: |-
         🎙️ Tauche mit uns in die faszinierende Welt von Blockchain, Web3 und NFTs ein! In unserem aktuellen Podcast-Interview sprechen wir mit dem Experten Florian über die Evolution der Blockchain-Technologie, die aufregenden Entwicklungen in Web3 und die wegweisende Common Ground App für den Austausch im Web3 Raum.
@@ -1974,69 +1736,6 @@ media_appearances:
         commentCount: '5'
       duration: PT34M48S
       url: https://www.youtube.com/watch?v=BinI5onWTcM
-    - title: The future of DAOs and the Importance of Governance - Interview with Sebastian Bürgel, HOPR
-      description: |-
-        In this episode of the Finding Common Ground Podcast, Florian Glatz, a lawyer specializing in blockchain technology, interviews Sebastian Bürgel, the CEO and co-founder of HOPR, a privacy-focused blockchain project. Sebastian talks about his journey into the blockchain space, his motivation for starting HOPR, and how the project is developing innovative solutions for privacy and data protection in a decentralized world. 
-
-        The conversation also delves into topics such as decentralized autonomous organizations (DAOs), the need for constitutions in the context of DAOs, and the challenges faced by the blockchain industry as it seeks to establish itself as a viable alternative to traditional centralized systems. 
-
-        Sebastian offers his insights on the opportunities and limitations of blockchain technology, and how it can be used to create a fairer and more transparent world. He also shares his thoughts on the regulatory landscape surrounding blockchain, and how jurisdictions such as Switzerland can provide a supportive environment for blockchain projects to thrive.
-
-        Overall, this conversation offers a fascinating glimpse into the world of blockchain technology and its potential to reshape the way we think about privacy, data protection, and governance. It is a must-watch for anyone interested in the future of decentralized systems and their impact on society.
-
-        Who is Sebastian, what is HOPR:
-
-        Sebastian Bürgel is a blockchain entrepreneur and co-founder of HOPR, a privacy-focused blockchain project based in Switzerland. He has a background in mathematics and has been working in the blockchain space since 2014. 
-
-        HOPR is a decentralized messaging protocol that aims to provide secure communication and data transfer while preserving user privacy. It utilizes a mixnet architecture, similar to the one used by Tor, to ensure that messages are routed through multiple nodes before reaching their destination. This helps to prevent network eavesdropping and ensures that messages remain private and secure.
-
-        Sebastian and his team at HOPR are working to build a more private and secure internet for users. They believe that everyone has the right to online privacy, and that the current centralized model of the internet puts user data at risk. HOPR aims to address this by building a decentralized messaging protocol that users can trust.
-      publishedAt: '2023-05-03T16:00:32Z'
-      thumbnails:
-        default:
-          url: https://i.ytimg.com/vi/XVKqpKfIXc0/default.jpg
-          width: 120
-          height: 90
-        medium:
-          url: https://i.ytimg.com/vi/XVKqpKfIXc0/mqdefault.jpg
-          width: 320
-          height: 180
-        high:
-          url: https://i.ytimg.com/vi/XVKqpKfIXc0/hqdefault.jpg
-          width: 480
-          height: 360
-        standard:
-          url: https://i.ytimg.com/vi/XVKqpKfIXc0/sddefault.jpg
-          width: 640
-          height: 480
-        maxres:
-          url: https://i.ytimg.com/vi/XVKqpKfIXc0/maxresdefault.jpg
-          width: 1280
-          height: 720
-      channel:
-        name: Common Ground
-        id: UC1jydw5LShbEAfyqWxTRSiA
-        url: https://www.youtube.com/channel/UC1jydw5LShbEAfyqWxTRSiA
-        thumbnail:
-          default:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s88-c-k-c0x00ffffff-no-rj
-            width: 88
-            height: 88
-          medium:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s240-c-k-c0x00ffffff-no-rj
-            width: 240
-            height: 240
-          high:
-            url: https://yt3.ggpht.com/ZEqYannEl-HZTR569ERuNANVS94g3r49PlbAIuThw74kjgN0ESYkVQwYJZqiQShUooEOlcDR0Q=s800-c-k-c0x00ffffff-no-rj
-            width: 800
-            height: 800
-      statistics:
-        viewCount: '139'
-        likeCount: '6'
-        favoriteCount: '0'
-        commentCount: '2'
-      duration: PT1H23M42S
-      url: https://www.youtube.com/watch?v=XVKqpKfIXc0
     - title: 'yWeb3: Navigating Frontier Tech | Snoop Dogg | SilkRoad | Coinbase'
       description: |-
         In this episode, Jay Steinback, CEO & Founder of yWhales, Abe Micael, yWhales Head of Ecosystem, Jeffery Ugbah, Director at Galaxy, and Florian Glatz, Co-Founder of Common Ground discuss the latest in the world of emerging tech and Web3. From hot topics like Elon Musk’s X.ai launch, to Snoop Dogg’s participation in the raise of a Web3 music platform, the team covers deFi, regulation, crypto, gaming, and blockchain news. Listen in for expert insights from the top builders in emerging tech today!
@@ -2130,12 +1829,60 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '4185'
+        viewCount: '4186'
         likeCount: '76'
         favoriteCount: '0'
         commentCount: '1'
       duration: PT1H9M12S
       url: https://www.youtube.com/watch?v=lwFLMY0D5zc
+    - title: DAOs as new Organizational Structures and how to be a valuable contributor - with Juan from MakerDAO
+      description: Learn more on https://commonground.cg
+      publishedAt: '2022-01-08T10:38:25Z'
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/DBGPrswfpmo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/DBGPrswfpmo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/DBGPrswfpmo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/DBGPrswfpmo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/DBGPrswfpmo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channel:
+        name: Common Ground
+        id: UCcXJkkuFW8DloPo-VVyT2sA
+        url: https://www.youtube.com/channel/UCcXJkkuFW8DloPo-VVyT2sA
+        thumbnail:
+          default:
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s88-c-k-c0x00ffffff-no-rj
+            width: 88
+            height: 88
+          medium:
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s240-c-k-c0x00ffffff-no-rj
+            width: 240
+            height: 240
+          high:
+            url: https://yt3.ggpht.com/VldevawMUwxxEC_hpgaIHx8U0CZ7-kDgvUJ9kJBXrj0cHeIxIk-UsqWsI7wNZwM9gfDPc_HeuA=s800-c-k-c0x00ffffff-no-rj
+            width: 800
+            height: 800
+      statistics:
+        viewCount: '1000'
+        likeCount: '0'
+        favoriteCount: '0'
+        commentCount: '0'
+      duration: PT1H2M58S
+      url: https://www.youtube.com/watch?v=DBGPrswfpmo
   lectures:
     - title: Blockchain for Dummys - Was verbirgt sich hinter der Technologie? | Legal Transformation Days 2017
       description: |-
@@ -2183,7 +1930,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '422'
+        viewCount: '423'
         likeCount: '5'
         favoriteCount: '0'
       duration: PT2M8S
@@ -3149,15 +2896,15 @@ media_appearances:
         url: https://www.youtube.com/channel/UCFy8ZqduE0lWRkvAUreMmlw
         thumbnail:
           default:
-            url: https://yt3.ggpht.com/E_FGYEp0UdmrvfQVnzxETubGncj44prYRi8WToLca31yEZ-7lxEsW9Wyzvs7QbOeVbdHxDVQ=s88-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/w5BrjvSMcCtK28ISCt9I5627o5Yg47Xb9io7bmyOBpZax44s-yLxWnOEqYY-dkviYx65lAMRCZw=s88-c-k-c0x00ffffff-no-rj
             width: 88
             height: 88
           medium:
-            url: https://yt3.ggpht.com/E_FGYEp0UdmrvfQVnzxETubGncj44prYRi8WToLca31yEZ-7lxEsW9Wyzvs7QbOeVbdHxDVQ=s240-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/w5BrjvSMcCtK28ISCt9I5627o5Yg47Xb9io7bmyOBpZax44s-yLxWnOEqYY-dkviYx65lAMRCZw=s240-c-k-c0x00ffffff-no-rj
             width: 240
             height: 240
           high:
-            url: https://yt3.ggpht.com/E_FGYEp0UdmrvfQVnzxETubGncj44prYRi8WToLca31yEZ-7lxEsW9Wyzvs7QbOeVbdHxDVQ=s800-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/w5BrjvSMcCtK28ISCt9I5627o5Yg47Xb9io7bmyOBpZax44s-yLxWnOEqYY-dkviYx65lAMRCZw=s800-c-k-c0x00ffffff-no-rj
             width: 800
             height: 800
       statistics:
@@ -3318,7 +3065,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '40'
+        viewCount: '41'
         likeCount: '2'
         favoriteCount: '0'
         commentCount: '0'
@@ -3374,7 +3121,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '14'
+        viewCount: '15'
         likeCount: '2'
         favoriteCount: '0'
         commentCount: '0'
@@ -3651,7 +3398,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '82'
+        viewCount: '83'
         likeCount: '3'
         favoriteCount: '0'
         commentCount: '1'
@@ -3799,19 +3546,19 @@ media_appearances:
         url: https://www.youtube.com/channel/UCjxkd3ik9DFb7DTV5MMRygQ
         thumbnail:
           default:
-            url: https://yt3.ggpht.com/MBJigiE-AAvbUP9CpEUaC6HdB0qJiK0XV8dY6vwtk9ESsd7VEtHOEBR1ncCvJCpX9sBZ_lzP=s88-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/PRoRjpu_m3VR8fR0TF_wGzrQKX-xc5xqnsgp5mq_RnR46xeNdxPJhf7VMaCjbBHS9nud1V2gniw=s88-c-k-c0x00ffffff-no-rj
             width: 88
             height: 88
           medium:
-            url: https://yt3.ggpht.com/MBJigiE-AAvbUP9CpEUaC6HdB0qJiK0XV8dY6vwtk9ESsd7VEtHOEBR1ncCvJCpX9sBZ_lzP=s240-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/PRoRjpu_m3VR8fR0TF_wGzrQKX-xc5xqnsgp5mq_RnR46xeNdxPJhf7VMaCjbBHS9nud1V2gniw=s240-c-k-c0x00ffffff-no-rj
             width: 240
             height: 240
           high:
-            url: https://yt3.ggpht.com/MBJigiE-AAvbUP9CpEUaC6HdB0qJiK0XV8dY6vwtk9ESsd7VEtHOEBR1ncCvJCpX9sBZ_lzP=s800-c-k-c0x00ffffff-no-rj
+            url: https://yt3.ggpht.com/PRoRjpu_m3VR8fR0TF_wGzrQKX-xc5xqnsgp5mq_RnR46xeNdxPJhf7VMaCjbBHS9nud1V2gniw=s800-c-k-c0x00ffffff-no-rj
             width: 800
             height: 800
       statistics:
-        viewCount: '16'
+        viewCount: '19'
         likeCount: '1'
         favoriteCount: '0'
         commentCount: '0'
@@ -3867,7 +3614,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '25'
+        viewCount: '26'
         likeCount: '2'
         favoriteCount: '0'
         commentCount: '0'
@@ -3996,7 +3743,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '40'
+        viewCount: '42'
         likeCount: '1'
         favoriteCount: '0'
         commentCount: '0'
@@ -4108,7 +3855,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '1431'
+        viewCount: '1432'
         likeCount: '0'
         favoriteCount: '0'
         commentCount: '0'
@@ -4181,7 +3928,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '6'
+        viewCount: '7'
         likeCount: '0'
         favoriteCount: '0'
         commentCount: '0'
@@ -4268,7 +4015,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '608'
+        viewCount: '610'
         likeCount: '16'
         favoriteCount: '0'
         commentCount: '1'
@@ -4340,7 +4087,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '61'
+        viewCount: '62'
         likeCount: '1'
         favoriteCount: '0'
         commentCount: '0'
@@ -4440,7 +4187,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '1291'
+        viewCount: '1293'
         likeCount: '16'
         favoriteCount: '0'
       duration: PT1H34M7S
@@ -4487,7 +4234,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '653'
+        viewCount: '654'
         favoriteCount: '0'
       duration: PT2H2M56S
       url: https://www.youtube.com/watch?v=8-WWGP6XKc8
@@ -4564,7 +4311,7 @@ media_appearances:
             width: 800
             height: 800
       statistics:
-        viewCount: '1073'
+        viewCount: '1075'
         likeCount: '42'
         favoriteCount: '0'
         commentCount: '0'
