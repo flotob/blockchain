@@ -31,4 +31,5 @@ projects:
     description_mobile: Using my superpowers to help projects that I believe contribute to a better world
     image: images/probono.png
     url: mailto:fg@blockchain.lawyer
-    image_type: default         
+    image_type: default
+    notion_source: 175f33c1f6c08073b522f8001a4ee165
