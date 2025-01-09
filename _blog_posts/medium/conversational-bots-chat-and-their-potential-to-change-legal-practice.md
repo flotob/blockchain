@@ -1,5 +1,5 @@
 ---
-title: Conversational Bots & Chat and their potential to change legal practice
+title: "Conversational Bots & Chat and their potential to change legal practice"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

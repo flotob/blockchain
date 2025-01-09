@@ -1,5 +1,5 @@
 ---
-title: The Meme of Bitcoin
+title: "The Meme of Bitcoin"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

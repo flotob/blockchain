@@ -1,5 +1,5 @@
 ---
-title: A Blockchain Token Taxonomy
+title: "A Blockchain Token Taxonomy"
 layout: post
 date: 2016-09-10T00:00:00.000Z
 categories:

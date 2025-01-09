@@ -1,5 +1,5 @@
 ---
-title: Can the Wikipedia-model be applied to Public Policy-Making?
+title: "Can the Wikipedia-model be applied to Public Policy-Making?"
 layout: post
 date: 2021-02-03T00:00:00.000Z
 categories:

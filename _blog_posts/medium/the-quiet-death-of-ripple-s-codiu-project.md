@@ -1,5 +1,5 @@
 ---
-title: The Quiet Death of Ripple’s Codiu§ Project
+title: "The Quiet Death of Ripple’s Codiu§ Project"
 layout: post
 date: 2015-06-13T00:00:00.000Z
 categories:

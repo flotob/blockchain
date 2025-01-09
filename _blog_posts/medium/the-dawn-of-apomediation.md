@@ -1,5 +1,5 @@
 ---
-title: The Dawn of Apomediation
+title: "The Dawn of Apomediation"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

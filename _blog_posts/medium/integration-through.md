@@ -1,5 +1,5 @@
 ---
-title: Integration through
+title: "Integration through"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

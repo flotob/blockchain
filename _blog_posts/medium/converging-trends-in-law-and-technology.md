@@ -1,5 +1,5 @@
 ---
-title: Converging trends in law and technology
+title: "Converging trends in law and technology"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

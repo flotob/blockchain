@@ -1,5 +1,5 @@
 ---
-title: Regulatory challenges of software-based disintermediation of financial services
+title: "Regulatory challenges of software-based disintermediation of financial services"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

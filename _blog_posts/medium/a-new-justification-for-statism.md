@@ -1,5 +1,5 @@
 ---
-title: A new justification for statism
+title: "A new justification for statism"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

@@ -1,5 +1,5 @@
 ---
-title: How we use Smart Contracts at SatoshiPay to change the Internet’s economy forever. Today!
+title: "How we use Smart Contracts at SatoshiPay to change the Internet’s economy forever. Today!"
 layout: post
 date: 2016-02-01T00:00:00.000Z
 categories:

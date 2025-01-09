@@ -1,5 +1,5 @@
 ---
-title: Bitcoin: Finance meets rich data
+title: "Bitcoin: Finance meets rich data"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

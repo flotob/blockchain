@@ -1,5 +1,5 @@
 ---
-title: A holistic definition of Smart Contracts
+title: "A holistic definition of Smart Contracts"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

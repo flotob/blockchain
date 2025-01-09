@@ -1,5 +1,5 @@
 ---
-title: If there is a web there is a spider
+title: "If there is a web there is a spider"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

@@ -26,6 +26,9 @@ collections:
     permalink: /research/:title/
   slides:
     output: false
+  advocacy:
+    output: true
+    permalink: /advocacy/:title/
 
 # Plugins
 plugins:
@@ -94,6 +97,14 @@ defaults:
       sitemap:
         priority: 0.9
         changefreq: "yearly"
+  - scope:
+      path: ""
+      type: "advocacy"
+    values:
+      layout: "advocacy"
+      sitemap:
+        priority: 0.9
+        changefreq: "monthly"
   - scope:
       path: "404.html"
     values:

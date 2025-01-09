@@ -1,5 +1,5 @@
 ---
-title: How SoundCloud could do NFTs
+title: "How SoundCloud could do NFTs"
 layout: post
 date: 2021-03-12T00:00:00.000Z
 categories:

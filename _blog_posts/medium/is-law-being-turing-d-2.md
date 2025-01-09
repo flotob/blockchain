@@ -1,5 +1,5 @@
 ---
-title: Is law being Turing’d? #2
+title: "Is law being Turing’d? #2"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

@@ -1,5 +1,5 @@
 ---
-title: 'The Political Economy of Computing'
+title: "'The Political Economy of Computing'"
 layout: post
 date: 2015-05-13T00:00:00.000Z
 categories:

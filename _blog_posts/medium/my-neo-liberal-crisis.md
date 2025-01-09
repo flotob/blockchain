@@ -1,5 +1,5 @@
 ---
-title: My neo-liberal crisis
+title: "My neo-liberal crisis"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

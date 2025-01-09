@@ -1,5 +1,5 @@
 ---
-title: Where humans meet machines
+title: "Where humans meet machines"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

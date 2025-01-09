@@ -1,5 +1,5 @@
 ---
-title: Rule Engines and Crypto Assets
+title: "Rule Engines and Crypto Assets"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

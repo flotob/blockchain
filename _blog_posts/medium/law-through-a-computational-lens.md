@@ -1,5 +1,5 @@
 ---
-title: Law through a computational lens
+title: "Law through a computational lens"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

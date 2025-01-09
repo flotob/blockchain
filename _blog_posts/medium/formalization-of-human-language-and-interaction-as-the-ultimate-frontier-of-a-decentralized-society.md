@@ -1,5 +1,5 @@
 ---
-title: Formalization of human language and interaction as the ultimate frontier of a decentralized society
+title: "Formalization of human language and interaction as the ultimate frontier of a decentralized society"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

@@ -1,5 +1,5 @@
 ---
-title: Smart Contracts: Is the code you execute to do legally relevant real-world transactions (contracts)…
+title: "Smart Contracts: Is the code you execute to do legally relevant real-world transactions (contracts)…"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

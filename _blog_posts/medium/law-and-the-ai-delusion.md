@@ -1,5 +1,5 @@
 ---
-title: Law and the AI Delusion
+title: "Law and the AI Delusion"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

@@ -1,5 +1,5 @@
 ---
-title: An ethical argument for public blockchains
+title: "An ethical argument for public blockchains"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

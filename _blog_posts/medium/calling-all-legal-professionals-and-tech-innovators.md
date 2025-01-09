@@ -1,5 +1,5 @@
 ---
-title: Calling all legal professionals and tech innovators
+title: "Calling all legal professionals and tech innovators"
 layout: post
 date: 2018-07-13T00:00:00.000Z
 categories:

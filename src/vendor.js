@@ -1,4 +1,9 @@
 import MarkdownIt from 'markdown-it';
+import * as pdfjsLib from 'pdfjs-dist';
 
-// Just export markdown-it directly
-export default MarkdownIt; 
+// Export MarkdownIt to window object
+window.markdownit = MarkdownIt;
+
+export { MarkdownIt };
+
+export { pdfjsLib }; 

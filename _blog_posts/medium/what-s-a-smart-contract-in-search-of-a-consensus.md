@@ -1,5 +1,5 @@
 ---
-title: What’s a Smart Contract? In search of a consensus.
+title: "What’s a Smart Contract? In search of a consensus."
 layout: post
 date: 2014-12-12T00:00:00.000Z
 categories:

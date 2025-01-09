@@ -1,5 +1,5 @@
 ---
-title: Defining the extra-legal space of operational compliance under which decentralized applications…
+title: "Defining the extra-legal space of operational compliance under which decentralized applications…"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

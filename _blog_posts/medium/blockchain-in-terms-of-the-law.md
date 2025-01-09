@@ -1,5 +1,5 @@
 ---
-title: Blockchain in Terms of the Law
+title: "Blockchain in Terms of the Law"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

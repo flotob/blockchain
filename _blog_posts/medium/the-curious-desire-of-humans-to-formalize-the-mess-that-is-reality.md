@@ -1,6 +1,6 @@
 ---
-title: The curious desire of humans 
-to formalize the mess that is reality
+title: "The curious desire of humans 
+to formalize the mess that is reality"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

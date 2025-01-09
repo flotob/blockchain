@@ -1,5 +1,5 @@
 // List of section IDs in order
-const SECTION_IDS = ['hero', 'work', 'blogs', 'publications', 'interviews', 'events'];
+const SECTION_IDS = ['hero', 'work', 'blogs', 'publications', 'advocacy', 'interviews', 'events'];
 
 // Initialize navigation
 function initNavigation() {

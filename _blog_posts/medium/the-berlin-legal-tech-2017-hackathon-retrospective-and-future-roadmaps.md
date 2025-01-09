@@ -1,5 +1,5 @@
 ---
-title: 'The Berlin Legal Tech 2017 Hackathon: Retrospective and Future Roadmaps'
+title: "'The Berlin Legal Tech 2017 Hackathon: Retrospective and Future Roadmaps'"
 layout: post
 date: 2017-02-12T00:00:00.000Z
 categories:

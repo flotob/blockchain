@@ -1,5 +1,5 @@
 ---
-title: DAOs are Dead! Long live DAOs!
+title: "DAOs are Dead! Long live DAOs!"
 layout: post
 date: 2023-05-17T00:00:00.000Z
 categories:

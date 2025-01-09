@@ -1,5 +1,5 @@
 ---
-title: The waning distinction between business and consumer
+title: "The waning distinction between business and consumer"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

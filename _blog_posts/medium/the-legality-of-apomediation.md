@@ -1,5 +1,5 @@
 ---
-title: The legality of Apomediation
+title: "The legality of Apomediation"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

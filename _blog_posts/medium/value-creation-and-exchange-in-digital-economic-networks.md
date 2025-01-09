@@ -1,5 +1,5 @@
 ---
-title: Value Creation and Exchange in Digital Economic Networks
+title: "Value Creation and Exchange in Digital Economic Networks"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

@@ -1,0 +1,44 @@
+<div class="blog-container">
+    {% for org in site.data.advocacy %}
+    {% assign org_name = org[0] %}
+    {% assign org_data = org[1] %}
+    
+    {% if org_data.documents.size > 0 %}
+    <div class="blog-category">
+        <h2 class="blog-category-title">
+            {{ org_name | capitalize }}
+        </h2>
+        <div class="blog-grid">
+            {% assign docs_with_dates = org_data.documents | where_exp: "doc", "doc.date != null" %}
+            {% assign sorted_docs = docs_with_dates | sort: "date" %}
+            {% for doc in sorted_docs %}
+            <a href="{{ doc.pdf_url }}" class="blog-card advocacy-trigger" data-pdf-url="{{ doc.pdf_url }}">
+                <div class="blog-image-container">
+                    {% if doc.preview_image %}
+                    <img src="{{ doc.preview_image }}" alt="{{ doc.title }}" class="blog-image">
+                    {% endif %}
+                </div>
+                <div class="blog-content">
+                    <div class="doc-meta">
+                        {% if doc.type %}
+                        <span class="doc-type">{{ doc.type | replace: '_', ' ' | capitalize }}</span>
+                        {% endif %}
+                        <span class="doc-language">{{ doc.language | upcase }}</span>
+                    </div>
+                    <h3 class="blog-title">{{ doc.title }}</h3>
+                    <div class="advocacy-meta">
+                        {% if doc.organization %}
+                        <span class="organization">{{ doc.organization }}</span>
+                        {% endif %}
+                        {% if doc.date %}
+                        <span class="year">{{ doc.date | date: "%Y" }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div> 

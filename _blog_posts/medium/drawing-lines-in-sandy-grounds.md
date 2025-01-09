@@ -1,5 +1,5 @@
 ---
-title: Drawing Lines in Sandy Grounds
+title: "Drawing Lines in Sandy Grounds"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

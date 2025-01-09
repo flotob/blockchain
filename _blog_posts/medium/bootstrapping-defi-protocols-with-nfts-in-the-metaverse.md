@@ -1,5 +1,5 @@
 ---
-title: Bootstrapping DeFi Protocols with NFTs in the Metaverse
+title: "Bootstrapping DeFi Protocols with NFTs in the Metaverse"
 layout: post
 date: 2021-12-12T00:00:00.000Z
 categories:

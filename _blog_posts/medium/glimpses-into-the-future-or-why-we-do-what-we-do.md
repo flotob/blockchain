@@ -1,6 +1,6 @@
 ---
-title: Glimpses into the future
-or why we do what we do
+title: "Glimpses into the future
+or why we do what we do"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

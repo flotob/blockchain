@@ -12,6 +12,9 @@ import { browseNotion } from './commands/notion.js';
 import { updateWorkSlides } from './commands/work.js';
 import convertBlogPosts from './commands/convert-blog-posts.js';
 import { importMediumArticles } from './commands/medium.js';
+import { importAdvocacyDocuments } from './commands/advocacy.js';
+import path from 'path';
+import fs from 'fs/promises';
 
 console.log('Imports completed');
 
@@ -38,6 +41,7 @@ async function interactive() {
         { name: 'Browse Notion Pages', value: 'browse-notion' },
         { name: 'Update Work Slides', value: 'update-work' },
         { name: 'Import Medium Archive', value: 'import-medium' },
+        { name: 'Import Advocacy Documents', value: 'import-advocacy' },
         { name: 'Validate Content', value: 'validate' },
         { name: 'Exit', value: 'exit' }
       ]
@@ -107,6 +111,11 @@ async function interactive() {
 
   if (action === 'import-medium') {
     await importMediumArticles({ verbose: program.opts().verbose });
+    return;
+  }
+
+  if (action === 'import-advocacy') {
+    await importAdvocacyDocuments({ verbose: program.opts().verbose });
     return;
   }
 
@@ -195,6 +204,24 @@ program
       console.error(chalk.red('Error:'), error);
       process.exit(1);
     }
+  });
+
+program
+  .command('import-advocacy')
+  .description('Import advocacy documents')
+  .option('-v, --verbose', 'Enable verbose logging')
+  .option('--clear-cache', 'Clear vision analysis cache before importing')
+  .action(async (options) => {
+    if (options.clearCache) {
+      const cacheDir = path.join(process.cwd(), '.cache', 'vision');
+      try {
+        await fs.rm(cacheDir, { recursive: true, force: true });
+        console.log('Vision analysis cache cleared');
+      } catch (error) {
+        console.warn('Failed to clear cache:', error);
+      }
+    }
+    await importAdvocacyDocuments(options);
   });
 
 // Error handling

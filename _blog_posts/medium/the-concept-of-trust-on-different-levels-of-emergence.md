@@ -1,5 +1,5 @@
 ---
-title: The concept of trust on different levels of emergence
+title: "The concept of trust on different levels of emergence"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

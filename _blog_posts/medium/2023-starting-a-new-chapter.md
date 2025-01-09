@@ -1,5 +1,5 @@
 ---
-title: 2023 — Starting a New Chapter
+title: "2023 — Starting a New Chapter"
 layout: post
 date: 2022-12-29T00:00:00.000Z
 categories:

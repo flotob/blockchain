@@ -1,5 +1,5 @@
 ---
-title: Fundamental problems in redesigning human-centric systems with technology
+title: "Fundamental problems in redesigning human-centric systems with technology"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

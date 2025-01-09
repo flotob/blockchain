@@ -1,7 +1,5 @@
 ---
-title: Collective Rights Management Agencies 
-in the
-Age of Blockchain
+title: "Collective Rights Management Agencies in the Age of Blockchain"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

@@ -8,8 +8,14 @@ export default {
   output: {
     file: 'assets/js/vendor.js',
     format: 'iife',
-    name: 'markdownit',
-    sourcemap: true
+    name: 'vendor',
+    sourcemap: true,
+    globals: {
+      'fs': 'null',
+      'path': 'null',
+      'url': 'null',
+      'worker_threads': 'null'
+    }
   },
   plugins: [
     nodePolyfills(),
@@ -17,7 +23,10 @@ export default {
       browser: true,
       preferBuiltins: false
     }),
-    commonjs(),
+    commonjs({
+      // PDF.js has some conditional requires that we need to handle
+      ignore: ['canvas', 'worker_threads']
+    }),
     json()
   ]
 }; 

@@ -1,5 +1,5 @@
 ---
-title: Modes of Contractual Governance in an On-Demand Service Economy
+title: "Modes of Contractual Governance in an On-Demand Service Economy"
 layout: post
 date: 2015-05-04T00:00:00.000Z
 categories:

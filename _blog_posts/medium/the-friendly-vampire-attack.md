@@ -1,5 +1,5 @@
 ---
-title: The friendly vampire attack
+title: "The friendly vampire attack"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

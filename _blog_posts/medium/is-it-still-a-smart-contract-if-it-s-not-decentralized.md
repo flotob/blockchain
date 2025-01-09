@@ -1,5 +1,5 @@
 ---
-title: Is it still a smart contract if it’s not decentralized?
+title: "Is it still a smart contract if it’s not decentralized?"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

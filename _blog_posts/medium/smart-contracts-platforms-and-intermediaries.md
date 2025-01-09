@@ -1,5 +1,5 @@
 ---
-title: Smart Contracts, Platforms and Intermediaries
+title: "Smart Contracts, Platforms and Intermediaries"
 layout: post
 date: 2015-05-18T00:00:00.000Z
 categories:

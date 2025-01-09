@@ -1,5 +1,5 @@
 ---
-title: The picture you show: that’s not a whale. It’s a whale shark. Which is a fish.
+title: "The picture you show: that’s not a whale. It’s a whale shark. Which is a fish."
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

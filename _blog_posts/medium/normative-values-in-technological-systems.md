@@ -1,5 +1,5 @@
 ---
-title: Normative values in technological systems
+title: "Normative values in technological systems"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

@@ -1,5 +1,5 @@
 ---
-title: Smart contracts and the two phases of contracting
+title: "Smart contracts and the two phases of contracting"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

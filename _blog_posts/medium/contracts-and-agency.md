@@ -1,5 +1,5 @@
 ---
-title: Contracts and Agency
+title: "Contracts and Agency"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:

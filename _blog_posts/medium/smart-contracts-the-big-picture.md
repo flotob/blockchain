@@ -1,5 +1,5 @@
 ---
-title: Smart Contracts: The Big Picture
+title: "Smart Contracts: The Big Picture"
 layout: post
 date: 2008-10-31T00:00:00.000Z
 categories:
