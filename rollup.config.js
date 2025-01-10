@@ -2,6 +2,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import nodePolyfills from 'rollup-plugin-node-polyfills';
+import copy from 'rollup-plugin-copy';
 
 export default {
   input: 'src/vendor.js',
@@ -18,6 +19,14 @@ export default {
     }
   },
   plugins: [
+    copy({
+      targets: [
+        { 
+          src: 'node_modules/swiper/swiper-bundle.css',
+          dest: 'assets/css' 
+        }
+      ]
+    }),
     nodePolyfills(),
     resolve({
       browser: true,
