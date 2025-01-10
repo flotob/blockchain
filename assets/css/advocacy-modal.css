@@ -94,27 +94,29 @@
 .advocacy-modal .modal-footer-container {
     flex: 0 0 auto;
     background: var(--background-secondary);
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border-top: 1px solid var(--border);
     display: flex;
     justify-content: flex-end;
+    font-size: 0.875rem;
 }
 
 .advocacy-modal .modal-footer-container .button {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background: var(--primary);
-    color: white;
+    gap: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    color: var(--text-secondary);
     text-decoration: none;
-    border-radius: 0.5rem;
-    font-weight: 500;
+    border-radius: 0.25rem;
+    font-weight: normal;
     transition: all 0.2s;
+    background: transparent;
 }
 
 .advocacy-modal .modal-footer-container .button:hover {
-    background: var(--primary-dark);
+    background: var(--border);
+    color: var(--text-primary);
 }
 
 /* Mobile Adjustments */

@@ -5,9 +5,8 @@
     
     {% if org_data.documents.size > 0 %}
     <div class="blog-category">
-        <h2 class="blog-category-title">
-            {{ org_name | capitalize }}
-        </h2>
+        <h2 class="blog-category-title">{{ org_data.title }}</h2>
+        <div class="event-description" style="margin: -0.75rem 0 1.5rem 2rem; font-size: 1.1rem;">{{ org_data.position }}</div>
         <div class="blog-grid">
             {%- assign docs_with_dates = org_data.documents | where_exp: "doc", "doc.date != null" -%}
             {%- assign sorted_docs = docs_with_dates | sort: "date" -%}

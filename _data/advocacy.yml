@@ -1,4 +1,6 @@
 bundesblock:
+  title: Blockchain Bundesverband
+  position: Co-Founder & Chairman (2017-2022)
   documents:
     - title: Aktionspapier des Blockchain Bundesverband e.V.
       date: '2019-09-18'
@@ -121,6 +123,8 @@ bundesblock:
       preview_image: /assets/images/advocacy/bundesblock-2017_kernforderungen.pdf.1.jpg
       file_size: 51
 euci:
+  title: European Crypto Initiative
+  position: Co-Founder & Vice President (ongoing)
   documents:
     - title: Official Journal of the European Union L 150
       date: '2023-06-09'
