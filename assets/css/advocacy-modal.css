@@ -230,16 +230,35 @@
         justify-content: center;
         background: var(--background);
         transition: opacity 0.3s ease;
+        padding: 1rem; /* Add padding to prevent images from touching edges */
     }
 
     .pdf-viewer .swiper-slide img {
         max-width: 100%;
         max-height: 100%;
+        width: auto !important; /* Prevent width stretching */
+        height: auto !important; /* Prevent height stretching */
         object-fit: contain;
         user-select: none;
         -webkit-user-select: none;
         opacity: 0;
         transition: opacity 0.3s ease;
+        /* Subtle shadow for better visibility on white backgrounds */
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    /* Landscape optimization */
+    .pdf-viewer .swiper-slide.landscape {
+        padding: 2rem; /* More padding for landscape images */
+    }
+
+    .pdf-viewer .swiper-slide.landscape img {
+        max-height: 85%; /* Slightly reduce max height for better fit */
+    }
+
+    /* Portrait optimization */
+    .pdf-viewer .swiper-slide.portrait img {
+        max-width: 85%; /* Slightly reduce max width for better fit */
     }
 
     .pdf-viewer .swiper-slide-active img {

@@ -34,6 +34,32 @@ async function imageExists(url) {
     }
 }
 
+// Create slide HTML with orientation detection
+function createSlideHTML(imageUrl, pageNum, isFirst = false) {
+    return `
+        <div class="swiper-slide">
+            <img 
+                src="${imageUrl}" 
+                alt="Page ${pageNum}" 
+                loading="${isFirst ? 'eager' : 'lazy'}"
+                onload="(function(img) {
+                    // Add orientation class based on image dimensions
+                    const slide = img.parentElement;
+                    if (img.naturalWidth > img.naturalHeight) {
+                        slide.classList.add('landscape');
+                    } else {
+                        slide.classList.add('portrait');
+                    }
+                    // Force Swiper update after image loads
+                    if (typeof window.updateSwiper === 'function') {
+                        window.updateSwiper();
+                    }
+                })(this)"
+            >
+        </div>
+    `;
+}
+
 // Initialize Swiper for mobile PDF viewing
 async function initMobileViewer(pdfContainer, pdfUrl) {
     if (!isMobile()) {
@@ -62,9 +88,7 @@ async function initMobileViewer(pdfContainer, pdfUrl) {
     pdfContainer.innerHTML = `
         <div class="swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="${firstPageUrl}" alt="Page 1" loading="eager">
-                </div>
+                ${createSlideHTML(firstPageUrl, 1, true)}
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -106,18 +130,19 @@ async function initMobileViewer(pdfContainer, pdfUrl) {
             },
             on: {
                 slideChange: function() {
-                    // Update progress bar
                     const progress = (this.activeIndex) / (this.slides.length - 1);
                     progressBar.style.width = `${progress * 100}%`;
                 },
                 touchStart: function() {
-                    // Show UI elements on touch
                     swiperEl.querySelector('.swiper-pagination').style.opacity = '1';
                     swiperEl.querySelector('.swiper-button-next').style.opacity = '1';
                     swiperEl.querySelector('.swiper-button-prev').style.opacity = '1';
                 }
             }
         });
+
+        // Add global update function for image onload
+        window.updateSwiper = () => swiper.update();
 
         // Load remaining pages in the background
         let pageNum = 2;
@@ -129,11 +154,7 @@ async function initMobileViewer(pdfContainer, pdfUrl) {
             const exists = await imageExists(nextPageUrl);
             if (!exists) break;
 
-            wrapper.insertAdjacentHTML('beforeend', `
-                <div class="swiper-slide">
-                    <img src="${nextPageUrl}" alt="Page ${pageNum}" loading="lazy">
-                </div>
-            `);
+            wrapper.insertAdjacentHTML('beforeend', createSlideHTML(nextPageUrl, pageNum));
             
             console.log(`[PDF Viewer] Added page ${pageNum}`);
             pageNum++;
