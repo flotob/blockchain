@@ -125,16 +125,50 @@
 @media (max-width: 767px) {
     .advocacy-modal .modal-container {
         width: 100%;
-        height: 100%;
+        height: 85vh; /* Reduced height to show background */
+        max-height: 85vh;
         position: fixed;
-        top: 0;
+        top: auto; /* Reset top position */
+        bottom: 0;
         left: 0;
         right: 0;
-        bottom: 0;
+        transform: translateY(100%); /* Start from below */
+        border-radius: 16px 16px 0 0; /* Rounded top corners */
+        transition: transform 0.3s cubic-bezier(0.2, 0.0, 0.0, 1.0);
+    }
+
+    .advocacy-modal.active .modal-container {
+        transform: translateY(0);
+    }
+
+    .advocacy-modal .modal-header-container {
+        padding: 1rem;
+        position: relative;
+        /* Add visual handle for drawer */
+        &:before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 36px;
+            height: 4px;
+            background: var(--border);
+            border-radius: 2px;
+        }
+    }
+
+    .advocacy-modal .doc-title {
+        font-size: 1.125rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-top: 0.75rem; /* Space for handle */
+        margin: 0;
     }
 
     .advocacy-modal .modal-content {
-        position: fixed;
+        position: absolute;
         top: 64px; /* Height of header */
         left: 0;
         right: 0;
@@ -142,6 +176,7 @@
         overflow: hidden;
     }
 
+    /* Adjust PDF viewer container */
     .advocacy-modal .pdf-viewer {
         position: absolute;
         top: 0;
@@ -153,31 +188,17 @@
         background: var(--background);
     }
 
-    /* Swiper specific styles */
-    .advocacy-modal .pdf-viewer .swiper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+    /* Swiper pagination adjustments for shorter container */
+    .pdf-viewer .swiper-pagination {
+        bottom: 16px;
     }
 
-    .advocacy-modal .pdf-viewer .swiper-wrapper {
-        height: 100%;
+    .pdf-viewer .swiper-button-next {
+        right: 8px;
     }
 
-    .advocacy-modal .pdf-viewer .swiper-slide {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--background);
-    }
-
-    .advocacy-modal .pdf-viewer .swiper-slide img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
+    .pdf-viewer .swiper-button-prev {
+        left: 8px;
     }
 } 
 
