@@ -1,5 +1,5 @@
 <div class="blog-container">
-    {% for org in site.data.advocacy %}
+    {% for org in site.data.advocacy reversed %}
     {% assign org_name = org[0] %}
     {% assign org_data = org[1] %}
     
@@ -9,34 +9,40 @@
             {{ org_name | capitalize }}
         </h2>
         <div class="blog-grid">
-            {% assign docs_with_dates = org_data.documents | where_exp: "doc", "doc.date != null" %}
-            {% assign sorted_docs = docs_with_dates | sort: "date" %}
-            {% for doc in sorted_docs %}
-            <a href="{{ doc.pdf_url }}" class="blog-card advocacy-trigger" data-pdf-url="{{ doc.pdf_url }}">
+            {%- assign docs_with_dates = org_data.documents | where_exp: "doc", "doc.date != null" -%}
+            {%- assign sorted_docs = docs_with_dates | sort: "date" -%}
+            {%- for doc in sorted_docs reversed -%}
+            <a href="#" class="blog-card advocacy-trigger" 
+               data-title="{{ doc.title }}"
+               data-type="{{ doc.type | replace: '_', ' ' | capitalize }}"
+               data-language="{{ doc.language | upcase }}"
+               data-organization="{{ doc.organization }}"
+               data-year="{{ doc.date | date: '%Y' }}"
+               data-pdf-url="{{ doc.pdf_url }}">
                 <div class="blog-image-container">
-                    {% if doc.preview_image %}
+                    {%- if doc.preview_image -%}
                     <img src="{{ doc.preview_image }}" alt="{{ doc.title }}" class="blog-image">
-                    {% endif %}
+                    {%- endif -%}
                 </div>
                 <div class="blog-content">
                     <div class="doc-meta">
-                        {% if doc.type %}
+                        {%- if doc.type -%}
                         <span class="doc-type">{{ doc.type | replace: '_', ' ' | capitalize }}</span>
-                        {% endif %}
+                        {%- endif -%}
                         <span class="doc-language">{{ doc.language | upcase }}</span>
                     </div>
                     <h3 class="blog-title">{{ doc.title }}</h3>
                     <div class="advocacy-meta">
-                        {% if doc.organization %}
+                        {%- if doc.organization -%}
                         <span class="organization">{{ doc.organization }}</span>
-                        {% endif %}
-                        {% if doc.date %}
+                        {%- endif -%}
+                        {%- if doc.date -%}
                         <span class="year">{{ doc.date | date: "%Y" }}</span>
-                        {% endif %}
+                        {%- endif -%}
                     </div>
                 </div>
             </a>
-            {% endfor %}
+            {%- endfor -%}
         </div>
     </div>
     {% endif %}

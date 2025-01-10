@@ -181,7 +181,7 @@ euci:
       date: '2021-02-25'
       type: null
       language: en
-      organization: EU Crypto Initiative
+      organization: European Crypto Initiative
       tags:
         - blockchain
         - stablecoins
@@ -194,7 +194,7 @@ euci:
       date: '2021-02-25'
       type: position paper
       language: en
-      organization: EU Crypto Initiative
+      organization: European Crypto Initiative
       tags:
         - MiCA
         - DeFi
@@ -220,7 +220,7 @@ euci:
       date: '2020-12-18'
       type: draft
       language: en
-      organization: EU Crypto Initiative
+      organization: European Crypto Initiative
       tags:
         - MiCA
         - crypto
@@ -246,7 +246,7 @@ euci:
       date: '2020-10-28'
       type: overview
       language: en
-      organization: null
+      organization: European Crypto Initiative
       tags:
         - digital finance
         - cryptoassets
@@ -256,10 +256,10 @@ euci:
       preview_image: /assets/images/advocacy/euci-2020-10-28 - Crypto-assets - EU training.pdf.1.jpg
       file_size: 0
     - title: On scope regarding decentralized use cases
-      date: '2024-06-25'
+      date: '2022-06-25'
       type: amendment
       language: en
-      organization: European Commission
+      organization: European Crypto Initiative
       tags:
         - decentralized
         - crypto-assets
