@@ -5,6 +5,7 @@ import { YAMLHandler } from '../lib/yaml.js';
 import { Logger } from '../lib/logger.js';
 import { fromPath } from 'pdf2pic';
 import { analyzeDocument } from '../lib/vision-analyzer.js';
+import { generatePdfPages } from './generate-pdf-pages.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -49,7 +50,7 @@ async function generatePreview(pdfPath, outputName) {
 
 async function createCollectionFile(org, document) {
   // Ensure document has all required fields
-  const requiredFields = ['title', 'date', 'type', 'language', 'pdf_url', 'tags'];
+  const requiredFields = ['title', 'date', 'type', 'language', 'pdf_url', 'tags', 'total_pages'];
   const missingFields = requiredFields.filter(field => !(field in document));
   
   if (!document || missingFields.length > 0) {
@@ -70,6 +71,7 @@ async function createCollectionFile(org, document) {
     `pdf_url: "${document.pdf_url}"`,
     `preview_image: "${document.preview_image}"`,
     `file_size: ${document.file_size}`,
+    `total_pages: ${document.total_pages}`,
     `tags: [${document.tags.map(t => `"${t}"`).join(', ')}]`,
     '---',
     '',
@@ -83,6 +85,7 @@ async function createCollectionFile(org, document) {
     `## Document Details`,
     '',
     `- File Size: ${document.file_size}KB`,
+    `- Pages: ${document.total_pages}`,
     '',
     `## Download`,
     '',
@@ -114,14 +117,20 @@ async function processDocument(filePath, org) {
     // Copy PDF to assets directory
     const assetsPath = path.join(REPO_ROOT, ASSETS_DIR, org);
     await fs.mkdir(assetsPath, { recursive: true });
-    await fs.copyFile(filePath, path.join(assetsPath, path.basename(filePath)));
+    const targetPath = path.join(assetsPath, path.basename(filePath));
+    await fs.copyFile(filePath, targetPath);
+
+    // Generate page images
+    const pageFiles = await generatePdfPages(targetPath);
+    const totalPages = pageFiles.length;
 
     // Create document object
     const document = {
       ...metadata,
       pdf_url: path.join('/', ASSETS_DIR, org, path.basename(filePath)),
       preview_image: previewPath,
-      file_size: fileSize
+      file_size: fileSize,
+      total_pages: totalPages
     };
 
     // Create collection file
@@ -180,32 +189,8 @@ export async function importAdvocacyDocuments(options = { verbose: false }) {
         const sourcePath = path.join(orgPath, file);
         
         try {
-          // Generate preview image
-          logger.debug(`Generating preview image for ${file}`);
-          const previewPath = await generatePreview(sourcePath, `${org}-${file}`);
-          if (!previewPath) {
-            logger.warn(`Failed to generate preview for ${file}`);
-            continue;
-          }
-
-          // Get metadata from OpenAI vision analysis
-          logger.debug(`Analyzing document with OpenAI Vision: ${file}`);
-          const metadata = await analyzeDocument(path.join(REPO_ROOT, previewPath));
-          
-          // Copy PDF to assets directory
-          logger.debug(`Copying PDF to assets directory: ${file}`);
-          const targetDir = path.join(REPO_ROOT, ASSETS_DIR, org);
-          await fs.mkdir(targetDir, { recursive: true });
-          const targetPath = path.join(ASSETS_DIR, org, file);
-          await fs.copyFile(sourcePath, path.join(REPO_ROOT, targetPath));
-          
-          // Create document entry
-          const document = {
-            ...metadata,
-            pdf_url: `/${targetPath}`,
-            preview_image: previewPath,
-            file_size: Math.round((await fs.stat(sourcePath)).size / 1024) // Size in KB
-          };
+          const document = await processDocument(sourcePath, org);
+          if (!document) continue;
           
           // Check if document already exists (by pdf_url)
           const existingIndex = advocacyData[org].documents.findIndex(
@@ -219,12 +204,6 @@ export async function importAdvocacyDocuments(options = { verbose: false }) {
             advocacyData[org].documents.push(document);
             logger.debug(`Added new document: ${file}`);
           }
-          
-          // Create collection file
-          logger.debug(`Creating collection file for ${file}`);
-          await createCollectionFile(org, document);
-          
-          logger.debug(`Successfully processed ${file}`);
         } catch (error) {
           logger.error(`Failed to process ${file}:`, error);
           console.error('Detailed error:', error);
@@ -248,8 +227,7 @@ export async function importAdvocacyDocuments(options = { verbose: false }) {
     return true;
   } catch (error) {
     logger.stopSpinner();
-    logger.error('Failed to import advocacy documents', error);
-    console.error('Detailed error:', error);
+    logger.error('Failed to import advocacy documents:', error);
     throw error;
   }
 } 

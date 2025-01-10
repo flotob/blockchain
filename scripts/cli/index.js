@@ -13,6 +13,7 @@ import { updateWorkSlides } from './commands/work.js';
 import convertBlogPosts from './commands/convert-blog-posts.js';
 import { importMediumArticles } from './commands/medium.js';
 import { importAdvocacyDocuments } from './commands/advocacy.js';
+import { generatePdfPages, processAllPdfs } from './commands/generate-pdf-pages.js';
 import path from 'path';
 import fs from 'fs/promises';
 
@@ -42,6 +43,7 @@ async function interactive() {
         { name: 'Update Work Slides', value: 'update-work' },
         { name: 'Import Medium Archive', value: 'import-medium' },
         { name: 'Import Advocacy Documents', value: 'import-advocacy' },
+        { name: 'Generate PDF Page Images', value: 'generate-pdf-pages' },
         { name: 'Validate Content', value: 'validate' },
         { name: 'Exit', value: 'exit' }
       ]
@@ -77,6 +79,62 @@ async function interactive() {
       } else if (section === 'events') {
         await updateEventData({ verbose: program.opts().verbose });
       }
+    } catch (error) {
+      console.error(chalk.red('Error:'), error);
+      console.error(chalk.red('Stack trace:'), error.stack);
+      process.exit(1);
+    }
+    return;
+  }
+
+  if (action === 'generate-pdf-pages') {
+    const { scope, overwriteImages } = await inquirer.prompt([
+      {
+        type: 'list',
+        name: 'scope',
+        message: 'Generate pages for:',
+        choices: [
+          { name: 'All PDFs', value: 'all' },
+          { name: 'Specific PDF', value: 'specific' },
+          { name: 'Back', value: 'back' }
+        ]
+      },
+      {
+        type: 'confirm',
+        name: 'overwriteImages',
+        message: 'Overwrite existing images?',
+        default: false
+      }
+    ]);
+
+    if (scope === 'back') {
+      return interactive();
+    }
+
+    try {
+      if (scope === 'all') {
+        await processAllPdfs({ verbose: program.opts().verbose, overwriteImages });
+      } else if (scope === 'specific') {
+        const { pdfPath } = await inquirer.prompt([
+          {
+            type: 'input',
+            name: 'pdfPath',
+            message: 'Enter the path to the PDF (relative to assets/pdf/):',
+            validate: async (input) => {
+              const fullPath = path.join(process.cwd(), 'assets/pdf', input);
+              try {
+                const stat = await fs.stat(fullPath);
+                return stat.isFile() && input.toLowerCase().endsWith('.pdf');
+              } catch (e) {
+                return 'Please enter a valid PDF file path';
+              }
+            }
+          }
+        ]);
+        const fullPath = path.join(process.cwd(), 'assets/pdf', pdfPath);
+        await generatePdfPages(fullPath, { verbose: program.opts().verbose, overwriteImages });
+      }
+      console.log(chalk.green('PDF page generation completed successfully!'));
     } catch (error) {
       console.error(chalk.red('Error:'), error);
       console.error(chalk.red('Stack trace:'), error.stack);
@@ -222,6 +280,38 @@ program
       }
     }
     await importAdvocacyDocuments(options);
+  });
+
+// Add PDF pages generation command
+program
+  .command('generate-pdf-pages')
+  .description('Generate page images from PDFs')
+  .option('--all', 'Process all PDFs')
+  .option('--overwrite-images', 'Overwrite existing images')
+  .argument('[pdf-path]', 'Path to specific PDF (relative to assets/pdf/)')
+  .action(async (pdfPath, options) => {
+    try {
+      if (options.all) {
+        await processAllPdfs({ 
+          verbose: program.opts().verbose, 
+          overwriteImages: options.overwriteImages 
+        });
+      } else if (pdfPath) {
+        const fullPath = path.join(process.cwd(), 'assets/pdf', pdfPath);
+        await generatePdfPages(fullPath, { 
+          verbose: program.opts().verbose,
+          overwriteImages: options.overwriteImages 
+        });
+      } else {
+        console.error(chalk.red('Error: Please specify either --all or provide a PDF path'));
+        process.exit(1);
+      }
+      console.log(chalk.green('PDF page generation completed successfully!'));
+    } catch (error) {
+      console.error(chalk.red('Error:'), error);
+      console.error(chalk.red('Stack trace:'), error.stack);
+      process.exit(1);
+    }
   });
 
 // Error handling
