@@ -1,12 +1,6 @@
 // Device detection
 const isMobile = () => {
-    const isMobileDevice = window.innerWidth <= 768 || 'ontouchstart' in window;
-    console.log('[PDF Viewer] Device detection:', {
-        width: window.innerWidth,
-        hasTouch: 'ontouchstart' in window,
-        isMobile: isMobileDevice
-    });
-    return isMobileDevice;
+    return window.innerWidth <= 768 || 'ontouchstart' in window;
 };
 
 // Generate page image URL
@@ -28,8 +22,7 @@ async function imageExists(url) {
     try {
         const response = await fetch(url, { method: 'HEAD' });
         return response.ok;
-    } catch (error) {
-        console.error(`[PDF Viewer] Error checking image existence:`, error);
+    } catch {
         return false;
     }
 }
@@ -43,14 +36,12 @@ function createSlideHTML(imageUrl, pageNum, isFirst = false) {
                 alt="Page ${pageNum}" 
                 loading="${isFirst ? 'eager' : 'lazy'}"
                 onload="(function(img) {
-                    // Add orientation class based on image dimensions
                     const slide = img.parentElement;
                     if (img.naturalWidth > img.naturalHeight) {
                         slide.classList.add('landscape');
                     } else {
                         slide.classList.add('portrait');
                     }
-                    // Force Swiper update after image loads
                     if (typeof window.updateSwiper === 'function') {
                         window.updateSwiper();
                     }
@@ -62,18 +53,13 @@ function createSlideHTML(imageUrl, pageNum, isFirst = false) {
 
 // Initialize Swiper for mobile PDF viewing
 async function initMobileViewer(pdfContainer, pdfUrl) {
-    if (!isMobile()) {
-        console.log('[PDF Viewer] Not mobile, skipping mobile viewer');
-        return null;
-    }
+    if (!isMobile()) return null;
 
     // First check if the first page exists
     const firstPageUrl = getPageImageUrl(pdfUrl, 1);
-    console.log('[PDF Viewer] Checking first page:', firstPageUrl);
     const imageAvailable = await imageExists(firstPageUrl);
 
     if (!imageAvailable) {
-        console.error('[PDF Viewer] No image version available, falling back to iframe');
         const iframe = document.createElement('iframe');
         iframe.src = pdfUrl;
         iframe.title = 'PDF Document';
@@ -103,8 +89,6 @@ async function initMobileViewer(pdfContainer, pdfUrl) {
     const progressBar = swiperEl.querySelector('.swiper-progress-bar');
 
     try {
-        console.log('[PDF Viewer] Initializing Swiper instance');
-        
         const swiper = new window.Swiper(swiperEl, {
             direction: 'horizontal',
             slidesPerView: 1,
@@ -150,13 +134,10 @@ async function initMobileViewer(pdfContainer, pdfUrl) {
         
         while (true) {
             const nextPageUrl = getPageImageUrl(pdfUrl, pageNum);
-            console.log(`[PDF Viewer] Checking page ${pageNum}:`, nextPageUrl);
             const exists = await imageExists(nextPageUrl);
             if (!exists) break;
 
             wrapper.insertAdjacentHTML('beforeend', createSlideHTML(nextPageUrl, pageNum));
-            
-            console.log(`[PDF Viewer] Added page ${pageNum}`);
             pageNum++;
             swiper.update();
             
@@ -166,30 +147,19 @@ async function initMobileViewer(pdfContainer, pdfUrl) {
         }
 
         return swiper;
-    } catch (error) {
-        console.error('[PDF Viewer] Failed to initialize Swiper:', error);
+    } catch {
         return null;
     }
 }
 
 // Main initialization function
 export function initPdfViewer(containerId, pdfUrl, totalPages) {
-    console.log('[PDF Viewer] Initializing viewer:', {
-        containerId,
-        pdfUrl,
-        totalPages
-    });
-
     const container = document.getElementById(containerId);
-    if (!container) {
-        console.error('[PDF Viewer] Container not found:', containerId);
-        return;
-    }
+    if (!container) return;
 
     if (isMobile()) {
         initMobileViewer(container, pdfUrl);
     } else {
-        console.log('[PDF Viewer] Using desktop iframe viewer');
         const iframe = document.createElement('iframe');
         iframe.src = pdfUrl;
         iframe.title = 'PDF Document';
