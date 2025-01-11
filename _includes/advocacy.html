@@ -11,7 +11,7 @@
             {%- assign docs_with_dates = org_data.documents | where_exp: "doc", "doc.date != null" -%}
             {%- assign sorted_docs = docs_with_dates | sort: "date" -%}
             {%- for doc in sorted_docs reversed -%}
-            <a href="#" class="blog-card advocacy-trigger" 
+            <a href="/advocacy/{{ org_name | slugify }}-{{ doc.title | slugify }}/" class="blog-card advocacy-trigger" 
                data-title="{{ doc.title }}"
                data-type="{{ doc.type | replace: '_', ' ' | capitalize }}"
                data-language="{{ doc.language | upcase }}"
