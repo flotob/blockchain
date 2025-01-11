@@ -35,7 +35,7 @@ bundesblock:
       date: '2020-01-01'
       type: position paper
       language: de
-      organization: Blockchain Bundesverband e.V.
+      organization: Blockchain Bundesverband
       tags:
         - blockchain
         - strategy
@@ -116,7 +116,7 @@ bundesblock:
       date: '2017-01-01'
       type: position paper
       language: de
-      organization: Blockchain Bundesverband e.V.
+      organization: Blockchain Bundesverband
       tags:
         - blockchain
         - digital infrastructure
@@ -129,7 +129,7 @@ bundesblock:
       date: '2017-01-01'
       type: position paper
       language: de
-      organization: Blockchain Bundesverband e.V.
+      organization: Blockchain Bundesverband
       tags:
         - blockchain
         - regulation
@@ -203,7 +203,7 @@ euci:
       date: '2021-05-04'
       type: regulation
       language: en
-      organization: European Union
+      organization: European Crypto Initiative
       tags:
         - crypto-assets
         - decentralization
@@ -216,7 +216,7 @@ euci:
       date: '2021-04-29'
       type: comments
       language: en
-      organization: European Union
+      organization: European Crypto Initiative
       tags:
         - MiCA
         - blockchain
@@ -231,7 +231,7 @@ euci:
       date: '2021-02-25'
       type: position paper
       language: en
-      organization: EU Crypto Initiative
+      organization: European Crypto Initiative
       tags:
         - blockchain
         - crypto
@@ -246,7 +246,7 @@ euci:
       date: '2021-02-25'
       type: position paper
       language: en
-      organization: EU Crypto Initiative
+      organization: European Crypto Initiative
       tags:
         - MiCA
         - DeFi
@@ -261,7 +261,7 @@ euci:
       date: '2021-02-03'
       type: executive summary
       language: en
-      organization: European financial organization
+      organization: European Crypto Initiative
       tags:
         - crypto assets
         - financial inclusion
@@ -275,7 +275,7 @@ euci:
       date: '2020-12-18'
       type: draft
       language: en
-      organization: EU Crypto Initiative
+      organization: European Crypto Initiative
       tags:
         - MiCA
         - cryptocurrency
@@ -289,7 +289,7 @@ euci:
       date: '2020-10-28'
       type: overview
       language: en
-      organization: European Union
+      organization: European Crypto Initiative
       tags:
         - cryptoassets
         - digital finance
