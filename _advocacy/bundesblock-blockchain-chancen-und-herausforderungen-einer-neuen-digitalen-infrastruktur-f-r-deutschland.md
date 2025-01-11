@@ -1,13 +1,15 @@
 ---
+layout: pdf
 title: "Blockchain: Chancen und Herausforderungen einer neuen digitalen Infrastruktur für Deutschland"
 date: 2017-10-16
 organization: bundesblock
 type: position paper
 language: de
 pdf_url: "/assets/pdf/bundesblock/2017_bundesblock_positionspapier_v1.1.pdf"
-preview_image: "/assets/images/advocacy/bundesblock-2017_bundesblock_positionspapier_v1.1.pdf.1.jpg"
+preview_image: "/assets/images/advocacy/bundesblock-2017_bundesblock_positionspapier_v1.1.1.jpg"
 file_size: 1279
-tags: ["blockchain", "digital infrastructure", "Germany"]
+total_pages: 0
+tags: ["blockchain", "digital infrastructure", "technology", "Germany"]
 ---
 
 # Blockchain: Chancen und Herausforderungen einer neuen digitalen Infrastruktur für Deutschland
@@ -20,6 +22,7 @@ tags: ["blockchain", "digital infrastructure", "Germany"]
 ## Document Details
 
 - File Size: 1279KB
+- Pages: 0
 
 ## Download
 
@@ -29,4 +32,5 @@ tags: ["blockchain", "digital infrastructure", "Germany"]
 
 - blockchain
 - digital infrastructure
+- technology
 - Germany

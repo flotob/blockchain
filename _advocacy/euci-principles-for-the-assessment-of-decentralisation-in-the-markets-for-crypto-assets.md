@@ -1,25 +1,28 @@
 ---
+layout: pdf
 title: "Principles for the assessment of decentralisation in the markets for crypto-assets"
-date: 2024-06-25
+date: 2023-01-01
 organization: euci
-type: null
+type: guideline
 language: en
 pdf_url: "/assets/pdf/euci/PrinciplesCryptoAssetsPDF_250624 (3).pdf"
-preview_image: "/assets/images/advocacy/euci-PrinciplesCryptoAssetsPDF_250624 (3).pdf.1.jpg"
+preview_image: "/assets/images/advocacy/euci-PrinciplesCryptoAssetsPDF_250624 (3).1.jpg"
 file_size: 1603
-tags: ["crypto-assets", "decentralisation", "finance"]
+total_pages: 0
+tags: ["decentralisation", "crypto-assets", "market regulation"]
 ---
 
 # Principles for the assessment of decentralisation in the markets for crypto-assets
 
 **Organization:** euci
-**Type:** null
+**Type:** guideline
 **Language:** en
-**Date:** Not specified
+**Date:** 2023-01-01
 
 ## Document Details
 
 - File Size: 1603KB
+- Pages: 0
 
 ## Download
 
@@ -27,6 +30,6 @@ tags: ["crypto-assets", "decentralisation", "finance"]
 
 ## Tags
 
-- crypto-assets
 - decentralisation
-- finance
+- crypto-assets
+- market regulation

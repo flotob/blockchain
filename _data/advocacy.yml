@@ -2,6 +2,62 @@ bundesblock:
   title: Blockchain Bundesverband
   position: Co-Founder & Chairman (2017-2022)
   documents:
+    - title: Kette ins Kanzleramt
+      date: '2024-02-20'
+      type: article
+      language: de
+      organization: Süddeutsche Zeitung
+      tags:
+        - blockchain
+        - politics
+        - technology
+      pdf_url: /assets/pdf/bundesblock/2018_kanzleramt.pdf
+      preview_image: /assets/images/advocacy/bundesblock-2018_kanzleramt.1.jpg
+      file_size: 7026
+      total_pages: 0
+    - title: A Brief History of Us
+      date: '2023-01-01'
+      type: overview
+      language: en
+      organization: Blockchain Bundesverband
+      tags:
+        - blockchain
+        - history
+        - organization
+      pdf_url: /assets/pdf/bundesblock/2022_handover.pdf
+      preview_image: /assets/images/advocacy/bundesblock-2022_handover.1.jpg
+      file_size: 598
+      total_pages: 0
+    - title: 'Mehr Fortschritt Wagen: Bündnis für Freiheit, Gerechtigkeit und Nachhaltigkeit'
+      date: '2021-01-01'
+      type: coalition agreement
+      language: de
+      organization: Sozialdemokratische Partei Deutschlands (SPD), Bündnis 90/Die Grünen, Freie Demokratische Partei (FDP)
+      tags:
+        - politics
+        - coalition
+        - Germany
+        - sustainability
+        - freedom
+        - justice
+      pdf_url: /assets/pdf/bundesblock/2021_koalitionsvertrag.pdf
+      preview_image: /assets/images/advocacy/bundesblock-2021_koalitionsvertrag.1.jpg
+      file_size: 2156
+      total_pages: 0
+    - title: Kernforderungen Blockchain Bundesverband e.V. (i.Gr.)
+      date: '2020-01-01'
+      type: position paper
+      language: de
+      organization: Blockchain Bundesverband
+      tags:
+        - blockchain
+        - technology
+        - regulation
+        - innovation
+      pdf_url: /assets/pdf/bundesblock/2017_kernforderungen.pdf
+      preview_image: /assets/images/advocacy/bundesblock-2017_kernforderungen.1.jpg
+      file_size: 51
+      total_pages: 0
     - title: Aktionspapier des Blockchain Bundesverband e.V.
       date: '2019-09-18'
       type: position paper
@@ -10,13 +66,14 @@ bundesblock:
       tags:
         - blockchain
         - strategy
+        - government
       pdf_url: /assets/pdf/bundesblock/2020_aktionspapier.pdf
-      preview_image: /assets/images/advocacy/bundesblock-2020_aktionspapier.pdf.1.jpg
+      preview_image: /assets/images/advocacy/bundesblock-2020_aktionspapier.1.jpg
       file_size: 773
-      total_pages: 20
+      total_pages: 0
     - title: Zukunftstechnologie Blockchain - Chancen für Deutschland nutzen
       date: '2019-06-25'
-      type: eckpunktepapier
+      type: position paper
       language: de
       organization: CDU/CSU-Fraktion im Deutschen Bundestag
       tags:
@@ -24,36 +81,40 @@ bundesblock:
         - technology
         - Germany
       pdf_url: /assets/pdf/bundesblock/2019_blockchain-cdu.pdf
-      preview_image: /assets/images/advocacy/bundesblock-2019_blockchain-cdu.pdf.1.jpg
+      preview_image: /assets/images/advocacy/bundesblock-2019_blockchain-cdu.1.jpg
       file_size: 315
-      total_pages: 12
+      total_pages: 0
+    - title: Blockchain-Strategie der Bundesregierung
+      date: '2019-01-01'
+      type: strategy document
+      language: de
+      organization: Bundesministerium für Wirtschaft und Energie, Bundesministerium der Finanzen
+      tags:
+        - blockchain
+        - strategy
+        - government
+        - economy
+      pdf_url: /assets/pdf/bundesblock/2019_blockchain-strategie.pdf
+      preview_image: /assets/images/advocacy/bundesblock-2019_blockchain-strategie.1.jpg
+      file_size: 394
+      total_pages: 0
     - title: Stellungnahme des Blockchain Bundesverband
       date: '2018-11-28'
-      type: Stellungnahme
+      type: position paper
       language: de
       organization: Blockchain Bundesverband
       tags:
         - blockchain
-        - digitale Agenda
-        - Deutscher Bundestag
+        - digital agenda
+        - German parliament
       pdf_url: /assets/pdf/bundesblock/2018_bundestag-stellungnahme.pdf
-      preview_image: /assets/images/advocacy/bundesblock-2018_bundestag-stellungnahme.pdf.1.jpg
+      preview_image: /assets/images/advocacy/bundesblock-2018_bundestag-stellungnahme.1.jpg
       file_size: 645
-      total_pages: 35
-    - title: Kette ins Kanzleramt
-      date: '2018-02-20'
-      type: column
-      language: de
-      organization: Süddeutsche Zeitung
-      tags:
-        - blockchain
-        - politics
-        - technology
-      pdf_url: /assets/pdf/bundesblock/2018_kanzleramt.pdf
-      preview_image: /assets/images/advocacy/bundesblock-2018_kanzleramt.pdf.1.jpg
-      file_size: 7026
-      total_pages: 3
-    - title: Ein neuer Aufbruch für Europa Eine neue Dynamik für Deutschland Ein neuer Zusammenhalt für unser Land
+      total_pages: 0
+    - title: |-
+        Ein neuer Aufbruch für Europa
+        Eine neue Dynamik für Deutschland
+        Ein neuer Zusammenhalt für unser Land
       date: '2018-02-07'
       type: Koalitionsvertrag
       language: de
@@ -63,9 +124,9 @@ bundesblock:
         - coalition agreement
         - Germany
       pdf_url: /assets/pdf/bundesblock/2018_koalitionsvertrag.pdf
-      preview_image: /assets/images/advocacy/bundesblock-2018_koalitionsvertrag.pdf.1.jpg
+      preview_image: /assets/images/advocacy/bundesblock-2018_koalitionsvertrag.1.jpg
       file_size: 2852
-      total_pages: 179
+      total_pages: 0
     - title: 'Blockchain: Chancen und Herausforderungen einer neuen digitalen Infrastruktur für Deutschland'
       date: '2017-10-16'
       type: position paper
@@ -74,97 +135,85 @@ bundesblock:
       tags:
         - blockchain
         - digital infrastructure
+        - technology
         - Germany
       pdf_url: /assets/pdf/bundesblock/2017_bundesblock_positionspapier_v1.1.pdf
-      preview_image: /assets/images/advocacy/bundesblock-2017_bundesblock_positionspapier_v1.1.pdf.1.jpg
+      preview_image: /assets/images/advocacy/bundesblock-2017_bundesblock_positionspapier_v1.1.1.jpg
       file_size: 1279
-      total_pages: 44
-    - title: A Brief History of Us
-      date: '2022-01-01'
-      type: null
-      language: en
-      organization: Blockchain Bundesverband
-      tags:
-        - blockchain
-        - history
-      pdf_url: /assets/pdf/bundesblock/2022_handover.pdf
-      preview_image: /assets/images/advocacy/bundesblock-2022_handover.pdf.1.jpg
-      file_size: 598
-      total_pages: 9
-    - title: Mehr Fortschritt wagen - Bündnis für Freiheit, Gerechtigkeit und Nachhaltigkeit
-      date: '2021-12-07'
-      type: Koalitionsvertrag
-      language: de
-      organization: Sozialdemokratische Partei Deutschlands (SPD), Bündnis 90/Die Grünen, Freie Demokraten (FDP)
-      tags:
-        - coalition
-        - freedom
-        - justice
-        - sustainability
-      pdf_url: /assets/pdf/bundesblock/2021_koalitionsvertrag.pdf
-      preview_image: /assets/images/advocacy/bundesblock-2021_koalitionsvertrag.pdf.1.jpg
-      file_size: 2156
-      total_pages: 144
-    - title: Blockchain-Strategie der Bundesregierung
-      date: '2019-09-18'
-      type: strategy document
-      language: de
-      organization: Bundesministerium für Wirtschaft und Energie, Bundesministerium der Finanzen
-      tags:
-        - blockchain
-        - economy
-        - strategy
-      pdf_url: /assets/pdf/bundesblock/2019_blockchain-strategie.pdf
-      preview_image: /assets/images/advocacy/bundesblock-2019_blockchain-strategie.pdf.1.jpg
-      file_size: 394
-      total_pages: 24
-    - title: Kernforderungen Blockchain Bundesverband e.V. (i.Gr.)
-      date: '2017-06-01'
-      type: position paper
-      language: de
-      organization: Blockchain Bundesverband e.V.
-      tags:
-        - blockchain
-        - regulation
-        - innovation
-        - technology
-      pdf_url: /assets/pdf/bundesblock/2017_kernforderungen.pdf
-      preview_image: /assets/images/advocacy/bundesblock-2017_kernforderungen.pdf.1.jpg
-      file_size: 51
-      total_pages: 2
+      total_pages: 0
 euci:
   title: European Crypto Initiative
   position: Co-Founder & Vice President (ongoing)
   documents:
     - title: Official Journal of the European Union L 150
       date: '2023-06-09'
-      type: legislation
+      type: regulation
       language: en
       organization: European Union
       tags:
         - regulation
-        - finance
         - crypto-assets
+        - finance
         - deforestation
         - legislation
       pdf_url: /assets/pdf/euci/OJ_L_2023_150_FULL_EN_TXT.pdf
-      preview_image: /assets/images/advocacy/euci-OJ_L_2023_150_FULL_EN_TXT.pdf.1.jpg
+      preview_image: /assets/images/advocacy/euci-OJ_L_2023_150_FULL_EN_TXT.1.jpg
       file_size: 2292
-      total_pages: 252
-    - title: Proposal for a Regulation of the European Parliament and of the Council on Markets in Crypto-assets, and amending Directive (EU) 2019/1937 (MiCA)
+      total_pages: 0
+    - title: 'EU Digital Finance Package: Cryptoassets & Markets: an Overview'
+      date: '2023-01-01'
+      type: overview report
+      language: en
+      organization: European Union
+      tags:
+        - blockchain
+        - cryptoassets
+        - finance
+        - markets
+      pdf_url: /assets/pdf/euci/2020-10-28 - Crypto-assets - EU training.pdf
+      preview_image: /assets/images/advocacy/euci-2020-10-28 - Crypto-assets - EU training.1.jpg
+      file_size: 6569
+      total_pages: 0
+    - title: Principles for the assessment of decentralisation in the markets for crypto-assets
+      date: '2023-01-01'
+      type: guideline
+      language: en
+      organization: Finanstilsynet
+      tags:
+        - decentralisation
+        - crypto-assets
+        - market regulation
+      pdf_url: /assets/pdf/euci/PrinciplesCryptoAssetsPDF_250624 (3).pdf
+      preview_image: /assets/images/advocacy/euci-PrinciplesCryptoAssetsPDF_250624 (3).1.jpg
+      file_size: 1603
+      total_pages: 0
+    - title: On scope regarding decentralized use cases
+      date: '2023-01-01'
+      type: regulation
+      language: en
+      organization: European Union
+      tags:
+        - decentralized
+        - crypto-assets
+        - regulation
+      pdf_url: /assets/pdf/euci/EUCI Proposals MiCA vFinal (3).pdf
+      preview_image: /assets/images/advocacy/euci-EUCI Proposals MiCA vFinal (3).1.jpg
+      file_size: 149
+      total_pages: 0
+    - title: Proposal for a Regulation of the European Parliament and of the Council on Markets in Crypto-assets, and amending Directive (EU) 2019/1937 (MiCA) - Letter to the Chair of the European Parliament Committee on Economic and Monetary Affairs
       date: '2022-10-05'
-      type: proposal
+      type: information note
       language: en
       organization: Council of the European Union
       tags:
         - crypto-assets
         - regulation
         - finance
-        - European Union
+        - EU legislation
       pdf_url: /assets/pdf/euci/provisional agreement (ST-13198-2022-INIT_en).pdf
-      preview_image: /assets/images/advocacy/euci-provisional agreement (ST-13198-2022-INIT_en).pdf.1.jpg
+      preview_image: /assets/images/advocacy/euci-provisional agreement (ST-13198-2022-INIT_en).1.jpg
       file_size: 1626
-      total_pages: 380
+      total_pages: 0
     - title: Technical position on MiCA - Trilogues
       date: '2022-05-13'
       type: position paper
@@ -172,14 +221,14 @@ euci:
       organization: European Crypto Initiative
       tags:
         - MiCA
-        - cryptocurrency
-        - regulation
+        - crypto regulation
         - DeFi
         - NFTs
+        - EU legislation
       pdf_url: /assets/pdf/euci/2022-05-13 - EUCI - Technical position on MiCA - Trilogues.pdf
-      preview_image: /assets/images/advocacy/euci-2022-05-13 - EUCI - Technical position on MiCA - Trilogues.pdf.1.jpg
+      preview_image: /assets/images/advocacy/euci-2022-05-13 - EUCI - Technical position on MiCA - Trilogues.1.jpg
       file_size: 126
-      total_pages: 5
+      total_pages: 0
     - title: MiCA - Comments on ongoing Council discussions
       date: '2021-04-29'
       type: comments
@@ -195,113 +244,88 @@ euci:
       preview_image: /assets/images/advocacy/euci-Council EUCI - MiCA notes on ongoing discussions_ (1).pdf.1.jpg
       file_size: 185
       total_pages: 3
-    - title: 'Money on blockchain: promoting Europe''s competitiveness through the development of a euro-stablecoins market'
-      date: '2021-02-25'
-      type: null
+    - title: MiCA - Comments on ongoing Council discussions
+      date: '2021-04-29'
+      type: position paper
       language: en
-      organization: European Crypto Initiative
+      organization: European Union
       tags:
+        - MiCA
         - blockchain
-        - stablecoins
-        - Europe
-        - competitiveness
-      pdf_url: /assets/pdf/euci/7860 EUCI - Stablecoin Paper.pdf
-      preview_image: /assets/images/advocacy/euci-7860 EUCI - Stablecoin Paper.pdf.1.jpg
-      file_size: 356
-      total_pages: 8
-    - title: 'MiCA & DeFi: Why Europe needs to get on the front foot on financial innovation'
+        - NFTs
+        - regulation
+      pdf_url: /assets/pdf/euci/EUCI-MiCA-notes-on-ongoing-discussions.pdf
+      preview_image: /assets/images/advocacy/euci-EUCI-MiCA-notes-on-ongoing-discussions.1.jpg
+      file_size: 73
+      total_pages: 0
+    - title: 'Money on blockchain: promoting Europe’s competitiveness through the development of a euro-stablecoins market'
       date: '2021-02-25'
       type: position paper
       language: en
-      organization: European Crypto Initiative
+      organization: EU Crypto Initiative
+      tags:
+        - blockchain
+        - stablecoins
+        - finance
+        - Europe
+        - competitiveness
+      pdf_url: /assets/pdf/euci/7860 EUCI - Stablecoin Paper.pdf
+      preview_image: /assets/images/advocacy/euci-7860 EUCI - Stablecoin Paper.1.jpg
+      file_size: 356
+      total_pages: 0
+    - title: Why Europe needs to get on the front foot on financial innovation
+      date: '2021-02-25'
+      type: position paper
+      language: en
+      organization: EU Crypto Initiative
       tags:
         - MiCA
         - DeFi
         - financial innovation
         - Europe
+        - regulation
       pdf_url: /assets/pdf/euci/7860 EUCI_Decentralized Finance.pdf
-      preview_image: /assets/images/advocacy/euci-7860 EUCI_Decentralized Finance.pdf.1.jpg
+      preview_image: /assets/images/advocacy/euci-7860 EUCI_Decentralized Finance.1.jpg
       file_size: 1059
-      total_pages: 16
+      total_pages: 0
     - title: Ensuring market integrity while promoting crypto asset innovations and financial inclusion in Europe
       date: '2021-02-03'
-      type: Executive Summary
+      type: executive summary
       language: en
-      organization: null
+      organization: European Union
       tags:
-        - crypto assets
+        - crypto asset
         - market integrity
         - financial inclusion
         - Europe
       pdf_url: /assets/pdf/euci/2021-02-03 - EUCI - Exec Summary.pdf
-      preview_image: /assets/images/advocacy/euci-2021-02-03 - EUCI - Exec Summary.pdf.1.jpg
+      preview_image: /assets/images/advocacy/euci-2021-02-03 - EUCI - Exec Summary.1.jpg
       file_size: 64
-      total_pages: 4
-    - title: MiCA Summary of Shortcomings & Improvement Proposals
+      total_pages: 0
+    - title: Summary of Shortcomings & Improvement Proposals
       date: '2020-12-18'
       type: draft
       language: en
-      organization: European Crypto Initiative
+      organization: EU Crypto Initiative
       tags:
         - MiCA
-        - crypto
-        - improvement
-        - proposal
+        - cryptocurrency
+        - regulation
       pdf_url: /assets/pdf/euci/2020-12-18 - EUCI - MiCA Regulation - Shortcomings & Proposals.pdf
-      preview_image: /assets/images/advocacy/euci-2020-12-18 - EUCI - MiCA Regulation - Shortcomings & Proposals.pdf.1.jpg
+      preview_image: /assets/images/advocacy/euci-2020-12-18 - EUCI - MiCA Regulation - Shortcomings & Proposals.1.jpg
       file_size: 449
-      total_pages: 18
+      total_pages: 0
     - title: Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on Markets in Crypto-assets, and amending Directive (EU) 2019/1937
       date: '2020-09-24'
       type: proposal
       language: en
       organization: European Commission
       tags:
-        - crypto-assets
         - regulation
+        - crypto-assets
         - finance
         - European Union
       pdf_url: /assets/pdf/euci/COM(2020) 593 final.pdf
-      preview_image: /assets/images/advocacy/euci-COM(2020) 593 final.pdf.1.jpg
+      preview_image: /assets/images/advocacy/euci-COM(2020) 593 final.1.jpg
       file_size: 2775
-      total_pages: 109
-    - title: 'EU Digital Finance Package: Cryptoassets & Markets: an Overview'
-      date: '2020-10-28'
-      type: overview
-      language: en
-      organization: European Crypto Initiative
-      tags:
-        - digital finance
-        - cryptoassets
-        - markets
-        - overview
-      pdf_url: /assets/pdf/euci/2020-10-28 - Crypto-assets - EU training.pdf
-      preview_image: /assets/images/advocacy/euci-2020-10-28 - Crypto-assets - EU training.pdf.1.jpg
-      file_size: 0
-      total_pages: 28
-    - title: On scope regarding decentralized use cases
-      date: '2022-06-25'
-      type: amendment
-      language: en
-      organization: European Crypto Initiative
-      tags:
-        - decentralized
-        - crypto-assets
-        - regulation
-      pdf_url: /assets/pdf/euci/EUCI Proposals MiCA vFinal (3).pdf
-      preview_image: /assets/images/advocacy/euci-EUCI Proposals MiCA vFinal (3).pdf.1.jpg
-      file_size: 0
-      total_pages: 23
-    - title: Principles for the assessment of decentralisation in the markets for crypto-assets
-      date: '2024-06-25'
-      type: null
-      language: en
-      organization: Finanstilsynet
-      tags:
-        - crypto-assets
-        - decentralisation
-        - finance
-      pdf_url: /assets/pdf/euci/PrinciplesCryptoAssetsPDF_250624 (3).pdf
-      preview_image: /assets/images/advocacy/euci-PrinciplesCryptoAssetsPDF_250624 (3).pdf.1.jpg
-      file_size: 0
-      total_pages: 27
+      total_pages: 0

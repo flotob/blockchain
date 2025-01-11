@@ -6,6 +6,7 @@ import { Logger } from '../lib/logger.js';
 import { fromPath } from 'pdf2pic';
 import { analyzeDocument } from '../lib/vision-analyzer.js';
 import { generatePdfPages } from './generate-pdf-pages.js';
+import { PDFDocument } from 'pdf-lib';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,6 +19,14 @@ const PREVIEW_DIR = 'assets/images/advocacy';
 const DATA_FILE = '_data/advocacy.yml';
 const COLLECTION_DIR = '_advocacy';
 
+async function getPdfDimensions(pdfPath) {
+  const pdfBytes = await fs.readFile(pdfPath);
+  const pdfDoc = await PDFDocument.load(pdfBytes);
+  const page = pdfDoc.getPage(0);
+  const { width, height } = page.getSize();
+  return { width, height };
+}
+
 async function generatePreview(pdfPath, outputName) {
   try {
     // Ensure preview directory exists
@@ -26,15 +35,26 @@ async function generatePreview(pdfPath, outputName) {
 
     console.log(`Generating preview for ${pdfPath}`);
 
-    // Convert first page to JPG using pdf2pic
+    // Get PDF dimensions first
+    const { width, height } = await getPdfDimensions(pdfPath);
+    const isPortrait = height > width;
+
+    // Base options
     const options = {
       density: 150,
       saveFilename: outputName,
       savePath: previewDir,
       format: "jpg",
-      width: 800,
-      height: 1067 // Maintains roughly A4 proportions
     };
+
+    // Set dimensions based on orientation
+    // For portrait: height = 1067, width will scale proportionally
+    // For landscape: width = 800, height will scale proportionally
+    if (isPortrait) {
+      options.height = 1067; // Standard A4 height at this scale
+    } else {
+      options.width = 800; // Standard A4 width at this scale
+    }
     
     const convert = fromPath(pdfPath, options);
     await convert(1); // Convert first page only
@@ -63,6 +83,7 @@ async function createCollectionFile(org, document) {
   
   const frontMatter = [
     '---',
+    'layout: pdf',
     `title: "${document.title}"`,
     `date: ${document.date || 'null'}`,
     `organization: ${org}`,

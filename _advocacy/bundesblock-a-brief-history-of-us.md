@@ -1,25 +1,28 @@
 ---
+layout: pdf
 title: "A Brief History of Us"
-date: 2022-01-01
+date: 2023-01-01
 organization: bundesblock
-type: null
+type: overview
 language: en
 pdf_url: "/assets/pdf/bundesblock/2022_handover.pdf"
-preview_image: "/assets/images/advocacy/bundesblock-2022_handover.pdf.1.jpg"
+preview_image: "/assets/images/advocacy/bundesblock-2022_handover.1.jpg"
 file_size: 598
-tags: ["blockchain", "history"]
+total_pages: 0
+tags: ["blockchain", "history", "organization"]
 ---
 
 # A Brief History of Us
 
 **Organization:** bundesblock
-**Type:** null
+**Type:** overview
 **Language:** en
-**Date:** Not specified
+**Date:** 2023-01-01
 
 ## Document Details
 
 - File Size: 598KB
+- Pages: 0
 
 ## Download
 
@@ -29,3 +32,4 @@ tags: ["blockchain", "history"]
 
 - blockchain
 - history
+- organization

@@ -1,25 +1,28 @@
 ---
+layout: pdf
 title: "Kette ins Kanzleramt"
-date: 2018-02-20
+date: 2024-02-20
 organization: bundesblock
-type: column
+type: article
 language: de
 pdf_url: "/assets/pdf/bundesblock/2018_kanzleramt.pdf"
-preview_image: "/assets/images/advocacy/bundesblock-2018_kanzleramt.pdf.1.jpg"
+preview_image: "/assets/images/advocacy/bundesblock-2018_kanzleramt.1.jpg"
 file_size: 7026
+total_pages: 0
 tags: ["blockchain", "politics", "technology"]
 ---
 
 # Kette ins Kanzleramt
 
 **Organization:** bundesblock
-**Type:** column
+**Type:** article
 **Language:** de
-**Date:** 2018-02-20
+**Date:** 2024-02-20
 
 ## Document Details
 
 - File Size: 7026KB
+- Pages: 0
 
 ## Download
 

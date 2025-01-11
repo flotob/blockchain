@@ -10,6 +10,27 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
+function formatDate(dateStr) {
+    // If it's already in YYYY-MM-DD format, return as is
+    if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+        return dateStr;
+    }
+    
+    // If it's just a year, append -01-01
+    if (/^\d{4}$/.test(dateStr)) {
+        return `${dateStr}-01-01`;
+    }
+    
+    // Try to extract year from string
+    const yearMatch = dateStr.match(/\d{4}/);
+    if (yearMatch) {
+        return `${yearMatch[0]}-01-01`;
+    }
+    
+    // Fallback to current year
+    return `${new Date().getFullYear()}-01-01`;
+}
+
 async function getCacheKey(imagePath) {
   const buffer = await fs.readFile(imagePath);
   return crypto.createHash('md5').update(buffer).digest('hex');
@@ -39,189 +60,166 @@ async function saveToCache(cacheKey, result) {
   );
 }
 
+function generateFallbackMetadata(imagePath, filename) {
+    // Extract year from filename if it matches a pattern like YYYY or 20XX
+    const yearMatch = filename.match(/20\d{2}/);
+    const currentYear = new Date().getFullYear();
+    const year = yearMatch ? yearMatch[0] : currentYear.toString();
+    
+    // Guess organization from path
+    const pathParts = imagePath.split('/');
+    const orgIndex = pathParts.indexOf('advocacy') + 1;
+    const org = orgIndex < pathParts.length ? pathParts[orgIndex] : 'Unknown Organization';
+    
+    // Clean up filename to create title
+    const title = filename
+        .replace(/\.pdf$/, '')
+        .replace(/[-_]/g, ' ')
+        .replace(/([A-Z])/g, ' $1')
+        .replace(/\d{4}/g, '') // Remove year numbers
+        .replace(/\s+/g, ' ')
+        .trim();
+    
+    // Guess document type from filename/title
+    let type = 'document';
+    if (title.toLowerCase().includes('proposal')) type = 'proposal';
+    else if (title.toLowerCase().includes('paper')) type = 'position paper';
+    else if (title.toLowerCase().includes('regulation')) type = 'regulation';
+    
+    // Guess language
+    const language = filename.toLowerCase().includes('de') ? 'de' : 'en';
+    
+    // Generate basic tags from title
+    const tags = title.toLowerCase()
+        .split(' ')
+        .filter(word => word.length > 3)
+        .filter(word => !['the', 'and', 'for', 'with'].includes(word));
+    
+    return {
+        title,
+        date: formatDate(year),
+        type,
+        language,
+        organization: org,
+        tags: tags.slice(0, 5) // Limit to 5 most relevant words as tags
+    };
+}
+
 export async function analyzeDocument(imagePath) {
-  try {
-    const filename = path.basename(imagePath);
-    console.log(`Processing ${filename}...`);
+    try {
+        const filename = path.basename(imagePath);
+        console.log(`Processing ${filename}...`);
 
-    // Check cache first
-    const cacheKey = await getCacheKey(imagePath);
-    const cached = await getFromCache(cacheKey);
-    if (cached) {
-      console.log(`[cache] Using cached result for ${filename}`);
-      return cached;
-    }
+        // Check cache first
+        const cacheKey = `${path.basename(imagePath)}-gpt-4o`;
+        const cached = await getFromCache(cacheKey);
+        if (cached) {
+            console.log(`[cache] Using cached result for ${filename}`);
+            return cached;
+        }
 
-    // Read image as base64
-    const imageBuffer = await fs.readFile(imagePath);
-    const base64Image = imageBuffer.toString('base64');
+        // Read image as base64
+        const imageBuffer = await fs.readFile(imagePath);
+        const base64Image = imageBuffer.toString('base64');
 
-    const systemPrompt = `You are a document metadata extractor. Please analyze the document cover page and return a JSON response with the following fields:
+        const systemPrompt = `You are a document metadata extractor. Analyze the document cover page and return a JSON response with the following fields:
     - title: The full title of the document
-    - date: The publication date in YYYY format, or null if not found
-    - type: The document type (e.g. "position paper", "regulation", "proposal", etc.)
+    - date: The publication date in YYYY-MM-DD format if an exact date is visible. If only a year is visible or can be confidently inferred, return just the year (YYYY). You must at minimum return a year - never return null.
+    - type: The document type (e.g. "position paper", "regulation", "proposal", etc.). If unclear, infer from content and style. Never return null.
     - language: The primary language of the document ("en" or "de")
-    - organization: The publishing organization
+    - organization: The publishing organization. If not explicitly shown, infer from document style, content, or context. Never return null.
     - tags: Array of relevant topic tags (e.g. ["blockchain", "regulation", "finance"])
+
+    IMPORTANT:
+    - For dates: Return full YYYY-MM-DD if visible on document, otherwise return YYYY if you can determine/estimate the year
+    - NEVER return null values
+    - Make educated guesses based on available information
+    - If exact date unknown, estimate year from content/context
+    - If type unclear, infer from document style/format
+    - If organization not shown, deduce from letterhead/style/content
+    - Better to make an educated guess than return null
 
     Return ONLY the JSON object, no other text.`;
 
-    const requestPayload = {
-      model: "gpt-4o",
-      messages: [
-        { 
-          role: "system", 
-          content: systemPrompt 
-        },
-        {
-          role: "user",
-          content: [
-            {
-              type: "text",
-              text: "Please analyze this document cover page and extract metadata as json. Return the response as a json object with the specified fields."
-            },
-            {
-              type: "image_url",
-              image_url: {
-                url: `data:image/jpeg;base64,${base64Image}`
-              }
-            }
-          ]
-        }
-      ],
-      max_tokens: 1000,
-      response_format: { type: "json_object" }
-    };
-
-    console.log(`[api] Sending request to OpenAI for ${filename}`);
-    const response = await openai.chat.completions.create(requestPayload);
-    
-    const result = response.choices[0].message.content;
-    console.log(`[api] Received response for ${filename}`);
-    
-    // Parse and validate the response
-    let metadata;
-    try {
-      metadata = JSON.parse(result);
-      console.log(`[debug] Initial metadata for ${filename}:`, JSON.stringify(metadata, null, 2));
-    } catch (error) {
-      throw new Error(`Failed to parse OpenAI response as JSON: ${result}`);
-    }
-    
-    // Check for null fields and retry with full PDF if needed
-    const nullFields = Object.entries(metadata)
-      .filter(([key, value]) => value === null)
-      .map(([key]) => key);
-      
-    if (nullFields.length > 0) {
-      console.log(`[retry] Found null fields in ${filename}: ${nullFields.join(', ')}`);
-      
-      // Get the original PDF path
-      const pdfPath = imagePath.replace('.1.jpg', '');
-      if (await fs.access(pdfPath).then(() => true).catch(() => false)) {
-        const pdfBuffer = await fs.readFile(pdfPath);
-        const base64Pdf = pdfBuffer.toString('base64');
-        
-        // Add debug logging
-        console.log(`[debug] Attempting retry with full PDF for ${filename}`);
-        
-        const retryPayload = {
-          ...requestPayload,
-          messages: [
-            { 
-              role: "system", 
-              content: `You are a document metadata extractor. You have access to the full PDF document. Please analyze it thoroughly and return a JSON response with the following fields:
-    - title: The full title of the document
-    - date: The publication date in YYYY format. If not found in the document:
-        1. Look for contextual clues (references to events, regulations, or other dated documents)
-        2. Check if the document discusses specific events or regulations that can help date it
-        3. Make an educated guess based on the document's content and context
-        4. If you make a guess, use the first day of the estimated month (e.g., "2021-01-01" for "early 2021")
-    - type: The document type (e.g. "position paper", "regulation", "proposal", etc.)
-    - language: The primary language of the document ("en" or "de")
-    - organization: The publishing organization
-    - tags: Array of relevant topic tags (e.g. ["blockchain", "regulation", "finance"])
-
-Look through the entire document to find this information, especially dates and document types which may be mentioned in headers, footers, or metadata sections.
-
-For dates specifically:
-- Check document properties and metadata
-- Look for date patterns in headers, footers, and version numbers
-- Consider references to specific events or regulations that can help date the document
-- Use contextual clues to make an educated guess if no explicit date is found
-
-Return ONLY the JSON object, no other text.` 
-            },
-            {
-              role: "user",
-              content: [
-                {
-                  type: "text",
-                  text: "Please analyze this full document and extract metadata as json. Pay special attention to any null fields from the previous analysis, particularly the date field."
+        const requestPayload = {
+            model: "gpt-4o",
+            messages: [
+                { 
+                    role: "system", 
+                    content: systemPrompt 
                 },
                 {
-                  type: "file_url",
-                  file_url: {
-                    url: `data:application/pdf;base64,${base64Pdf}`
-                  }
+                    role: "user",
+                    content: [
+                        {
+                            type: "text",
+                            text: "Please analyze this document cover page and extract metadata as json. Make educated guesses for any unclear fields - never return null values."
+                        },
+                        {
+                            type: "image_url",
+                            image_url: {
+                                url: `data:image/jpeg;base64,${base64Image}`
+                            }
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            max_tokens: 1000,
+            response_format: { type: "json_object" }
         };
 
-        console.log(`[api] Sending retry request to OpenAI for ${filename}`);
-        const retryResponse = await openai.chat.completions.create(retryPayload);
-        const retryResult = retryResponse.choices[0].message.content;
-        console.log(`[debug] Retry response received for ${filename}`);
+        console.log(`[api] Sending request to OpenAI for ${filename}`);
+        const response = await openai.chat.completions.create(requestPayload);
         
+        const result = response.choices[0].message.content;
+        console.log(`[api] Received response for ${filename}`);
+        
+        // Parse and validate the response
+        let metadata;
         try {
-          const retryMetadata = JSON.parse(retryResult);
-          console.log(`[debug] Original metadata: ${JSON.stringify(metadata)}`);
-          console.log(`[debug] Retry metadata: ${JSON.stringify(retryMetadata)}`);
-          
-          // Merge the retry results, keeping non-null values from either response
-          metadata = {
-            ...metadata,
-            ...Object.fromEntries(
-              Object.entries(retryMetadata)
-                .filter(([key, value]) => value !== null || metadata[key] === null)
-            )
-          };
-          
-          console.log(`[debug] Merged metadata: ${JSON.stringify(metadata)}`);
+            metadata = JSON.parse(result);
+            console.log(`[debug] Initial metadata for ${filename}:`, JSON.stringify(metadata, null, 2));
         } catch (error) {
-          console.log(`[warn] Failed to parse retry response: ${error.message}`);
+            console.log(`[warn] Failed to parse OpenAI response, using fallback: ${error.message}`);
+            metadata = generateFallbackMetadata(imagePath, filename);
         }
-      }
-    }
-    
-    // Validate required fields - only check for existence, not null values
-    const requiredFields = ['title', 'date', 'type', 'language', 'organization', 'tags'];
-    const missingFields = requiredFields.filter(field => !(field in metadata));
-    
-    if (missingFields.length > 0) {
-      const error = new Error(`Invalid response: missing fields ${missingFields.join(', ')}`);
-      // Cache the error to avoid re-processing
-      await saveToCache(cacheKey, { error: error.message });
-      throw error;
-    }
+        
+        // If metadata is null or undefined, use fallback
+        if (!metadata) {
+            console.log(`[warn] Received null metadata, using fallback`);
+            metadata = generateFallbackMetadata(imagePath, filename);
+        }
 
-    // Ensure tags is an array
-    if (!Array.isArray(metadata.tags)) {
-      metadata.tags = [metadata.tags].filter(Boolean);
+        // Ensure all required fields have values
+        const fallback = generateFallbackMetadata(imagePath, filename);
+        Object.entries(fallback).forEach(([key, value]) => {
+            if (!metadata[key] || metadata[key] === null) {
+                console.log(`[warn] Using fallback for ${key}`);
+                metadata[key] = value;
+            }
+        });
+
+        // Ensure tags is an array
+        if (!Array.isArray(metadata.tags)) {
+            metadata.tags = metadata.tags ? [metadata.tags] : fallback.tags;
+        }
+
+        // Update the metadata processing to format dates
+        // After the metadata validation and before caching
+        if (metadata.date) {
+            metadata.date = formatDate(metadata.date);
+        }
+
+        // Cache successful result
+        await saveToCache(cacheKey, metadata);
+        console.log(`[success] Processed ${filename}`);
+        return metadata;
+
+    } catch (error) {
+        console.error(`[error] Failed to process ${path.basename(imagePath)}: ${error.message}`);
+        // Even on error, return fallback metadata instead of throwing
+        const fallback = generateFallbackMetadata(imagePath, path.basename(imagePath));
+        await saveToCache(cacheKey, fallback);
+        return fallback;
     }
-
-    // Cache successful result
-    await saveToCache(cacheKey, metadata);
-    console.log(`[success] Processed ${filename}`);
-    return metadata;
-
-  } catch (error) {
-    // Cache errors to avoid re-processing problematic files
-    const cacheKey = await getCacheKey(imagePath);
-    await saveToCache(cacheKey, { error: error.message });
-    console.error(`[error] Failed to process ${path.basename(imagePath)}: ${error.message}`);
-    throw error;
-  }
 } 

@@ -1,13 +1,15 @@
 ---
+layout: pdf
 title: "Summary of Shortcomings & Improvement Proposals"
 date: 2020-12-18
 organization: euci
 type: draft
 language: en
 pdf_url: "/assets/pdf/euci/2020-12-18 - EUCI - MiCA Regulation - Shortcomings & Proposals.pdf"
-preview_image: "/assets/images/advocacy/euci-2020-12-18 - EUCI - MiCA Regulation - Shortcomings & Proposals.pdf.1.jpg"
+preview_image: "/assets/images/advocacy/euci-2020-12-18 - EUCI - MiCA Regulation - Shortcomings & Proposals.1.jpg"
 file_size: 449
-tags: ["MiCA", "crypto", "regulation"]
+total_pages: 0
+tags: ["MiCA", "cryptocurrency", "regulation"]
 ---
 
 # Summary of Shortcomings & Improvement Proposals
@@ -20,6 +22,7 @@ tags: ["MiCA", "crypto", "regulation"]
 ## Document Details
 
 - File Size: 449KB
+- Pages: 0
 
 ## Download
 
@@ -28,5 +31,5 @@ tags: ["MiCA", "crypto", "regulation"]
 ## Tags
 
 - MiCA
-- crypto
+- cryptocurrency
 - regulation

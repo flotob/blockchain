@@ -1,25 +1,28 @@
 ---
+layout: pdf
 title: "Money on blockchain: promoting Europe’s competitiveness through the development of a euro-stablecoins market"
 date: 2021-02-25
 organization: euci
-type: null
+type: position paper
 language: en
 pdf_url: "/assets/pdf/euci/7860 EUCI - Stablecoin Paper.pdf"
-preview_image: "/assets/images/advocacy/euci-7860 EUCI - Stablecoin Paper.pdf.1.jpg"
+preview_image: "/assets/images/advocacy/euci-7860 EUCI - Stablecoin Paper.1.jpg"
 file_size: 356
-tags: ["blockchain", "stablecoins", "Europe", "competitiveness"]
+total_pages: 0
+tags: ["blockchain", "stablecoins", "finance", "Europe", "competitiveness"]
 ---
 
 # Money on blockchain: promoting Europe’s competitiveness through the development of a euro-stablecoins market
 
 **Organization:** euci
-**Type:** null
+**Type:** position paper
 **Language:** en
 **Date:** 2021-02-25
 
 ## Document Details
 
 - File Size: 356KB
+- Pages: 0
 
 ## Download
 
@@ -29,5 +32,6 @@ tags: ["blockchain", "stablecoins", "Europe", "competitiveness"]
 
 - blockchain
 - stablecoins
+- finance
 - Europe
 - competitiveness

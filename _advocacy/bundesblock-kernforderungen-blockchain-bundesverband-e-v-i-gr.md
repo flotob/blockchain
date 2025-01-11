@@ -1,13 +1,15 @@
 ---
+layout: pdf
 title: "Kernforderungen Blockchain Bundesverband e.V. (i.Gr.)"
-date: 2017-09-18
+date: 2020-01-01
 organization: bundesblock
 type: position paper
 language: de
 pdf_url: "/assets/pdf/bundesblock/2017_kernforderungen.pdf"
-preview_image: "/assets/images/advocacy/bundesblock-2017_kernforderungen.pdf.1.jpg"
+preview_image: "/assets/images/advocacy/bundesblock-2017_kernforderungen.1.jpg"
 file_size: 51
-tags: ["blockchain", "regulation", "innovation", "technology"]
+total_pages: 0
+tags: ["blockchain", "technology", "regulation", "innovation"]
 ---
 
 # Kernforderungen Blockchain Bundesverband e.V. (i.Gr.)
@@ -15,11 +17,12 @@ tags: ["blockchain", "regulation", "innovation", "technology"]
 **Organization:** bundesblock
 **Type:** position paper
 **Language:** de
-**Date:** Not specified
+**Date:** 2020-01-01
 
 ## Document Details
 
 - File Size: 51KB
+- Pages: 0
 
 ## Download
 
@@ -28,6 +31,6 @@ tags: ["blockchain", "regulation", "innovation", "technology"]
 ## Tags
 
 - blockchain
+- technology
 - regulation
 - innovation
-- technology

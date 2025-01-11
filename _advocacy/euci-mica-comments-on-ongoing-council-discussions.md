@@ -1,34 +1,36 @@
 ---
+layout: pdf
 title: "MiCA - Comments on ongoing Council discussions"
 date: 2021-04-29
 organization: euci
-type: comments
+type: position paper
 language: en
-pdf_url: "/assets/pdf/euci/Council EUCI - MiCA notes on ongoing discussions_ (1).pdf"
-preview_image: "/assets/images/advocacy/euci-Council EUCI - MiCA notes on ongoing discussions_ (1).pdf.1.jpg"
-file_size: 185
-tags: ["MiCA", "NFTs", "blockchain", "regulation", "crypto assets"]
+pdf_url: "/assets/pdf/euci/EUCI-MiCA-notes-on-ongoing-discussions.pdf"
+preview_image: "/assets/images/advocacy/euci-EUCI-MiCA-notes-on-ongoing-discussions.1.jpg"
+file_size: 73
+total_pages: 0
+tags: ["MiCA", "blockchain", "NFTs", "regulation"]
 ---
 
 # MiCA - Comments on ongoing Council discussions
 
 **Organization:** euci
-**Type:** comments
+**Type:** position paper
 **Language:** en
 **Date:** 2021-04-29
 
 ## Document Details
 
-- File Size: 185KB
+- File Size: 73KB
+- Pages: 0
 
 ## Download
 
-[Download PDF](/assets/pdf/euci/Council EUCI - MiCA notes on ongoing discussions_ (1).pdf)
+[Download PDF](/assets/pdf/euci/EUCI-MiCA-notes-on-ongoing-discussions.pdf)
 
 ## Tags
 
 - MiCA
-- NFTs
 - blockchain
+- NFTs
 - regulation
-- crypto assets
