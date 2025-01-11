@@ -5,11 +5,11 @@ date: 2021-02-03
 organization: euci
 type: executive summary
 language: en
-pdf_url: "/assets/pdf/euci/2021-02-03 - EUCI - Exec Summary.pdf"
-preview_image: "/assets/images/advocacy/euci-2021-02-03 - EUCI - Exec Summary.1.jpg"
+pdf_url: "/assets/pdf/euci/2021-02-03_market_integrity.pdf"
+preview_image: "/assets/images/advocacy/euci-2021-02-03_market_integrity.1.jpg"
 file_size: 64
-total_pages: 0
-tags: ["crypto asset", "market integrity", "financial inclusion", "Europe"]
+total_pages: 4
+tags: ["crypto assets", "financial inclusion", "Europe", "market integrity"]
 ---
 
 # Ensuring market integrity while promoting crypto asset innovations and financial inclusion in Europe
@@ -22,15 +22,15 @@ tags: ["crypto asset", "market integrity", "financial inclusion", "Europe"]
 ## Document Details
 
 - File Size: 64KB
-- Pages: 0
+- Pages: 4
 
 ## Download
 
-[Download PDF](/assets/pdf/euci/2021-02-03 - EUCI - Exec Summary.pdf)
+[Download PDF](/assets/pdf/euci/2021-02-03_market_integrity.pdf)
 
 ## Tags
 
-- crypto asset
-- market integrity
+- crypto assets
 - financial inclusion
 - Europe
+- market integrity

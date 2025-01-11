@@ -1,7 +1,7 @@
 ---
 layout: pdf
 title: "Kette ins Kanzleramt"
-date: 2024-02-20
+date: 2018-01-01
 organization: bundesblock
 type: article
 language: de
@@ -17,7 +17,7 @@ tags: ["blockchain", "politics", "technology"]
 **Organization:** bundesblock
 **Type:** article
 **Language:** de
-**Date:** 2024-02-20
+**Date:** 2018-01-01
 
 ## Document Details
 

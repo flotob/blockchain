@@ -1,27 +1,23 @@
 ---
 layout: pdf
-title: "Ein neuer Aufbruch für Europa
-Eine neue Dynamik für Deutschland
-Ein neuer Zusammenhalt für unser Land"
-date: 2018-02-07
+title: "Ein neuer Aufbruch für Europa Eine neue Dynamik für Deutschland Ein neuer Zusammenhalt für unser Land"
+date: 2018-01-01
 organization: bundesblock
-type: Koalitionsvertrag
+type: coalition agreement
 language: de
 pdf_url: "/assets/pdf/bundesblock/2018_koalitionsvertrag.pdf"
 preview_image: "/assets/images/advocacy/bundesblock-2018_koalitionsvertrag.1.jpg"
 file_size: 2852
 total_pages: 0
-tags: ["politics", "coalition agreement", "Germany"]
+tags: ["politics", "Germany", "coalition", "agreement"]
 ---
 
-# Ein neuer Aufbruch für Europa
-Eine neue Dynamik für Deutschland
-Ein neuer Zusammenhalt für unser Land
+# Ein neuer Aufbruch für Europa Eine neue Dynamik für Deutschland Ein neuer Zusammenhalt für unser Land
 
 **Organization:** bundesblock
-**Type:** Koalitionsvertrag
+**Type:** coalition agreement
 **Language:** de
-**Date:** 2018-02-07
+**Date:** 2018-01-01
 
 ## Document Details
 
@@ -35,5 +31,6 @@ Ein neuer Zusammenhalt für unser Land
 ## Tags
 
 - politics
-- coalition agreement
 - Germany
+- coalition
+- agreement

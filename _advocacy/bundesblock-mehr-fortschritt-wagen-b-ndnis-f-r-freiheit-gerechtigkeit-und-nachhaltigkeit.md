@@ -1,6 +1,6 @@
 ---
 layout: pdf
-title: "Mehr Fortschritt Wagen: Bündnis für Freiheit, Gerechtigkeit und Nachhaltigkeit"
+title: "MEHR FORTSCHRITT WAGEN: BÜNDNIS FÜR FREIHEIT, GERECHTIGKEIT UND NACHHALTIGKEIT"
 date: 2021-01-01
 organization: bundesblock
 type: coalition agreement
@@ -8,11 +8,11 @@ language: de
 pdf_url: "/assets/pdf/bundesblock/2021_koalitionsvertrag.pdf"
 preview_image: "/assets/images/advocacy/bundesblock-2021_koalitionsvertrag.1.jpg"
 file_size: 2156
-total_pages: 0
-tags: ["politics", "coalition", "Germany", "sustainability", "freedom", "justice"]
+total_pages: 144
+tags: ["politics", "coalition", "Germany", "social issues", "sustainability", "freedom"]
 ---
 
-# Mehr Fortschritt Wagen: Bündnis für Freiheit, Gerechtigkeit und Nachhaltigkeit
+# MEHR FORTSCHRITT WAGEN: BÜNDNIS FÜR FREIHEIT, GERECHTIGKEIT UND NACHHALTIGKEIT
 
 **Organization:** bundesblock
 **Type:** coalition agreement
@@ -22,7 +22,7 @@ tags: ["politics", "coalition", "Germany", "sustainability", "freedom", "justice
 ## Document Details
 
 - File Size: 2156KB
-- Pages: 0
+- Pages: 144
 
 ## Download
 
@@ -33,6 +33,6 @@ tags: ["politics", "coalition", "Germany", "sustainability", "freedom", "justice
 - politics
 - coalition
 - Germany
+- social issues
 - sustainability
 - freedom
-- justice

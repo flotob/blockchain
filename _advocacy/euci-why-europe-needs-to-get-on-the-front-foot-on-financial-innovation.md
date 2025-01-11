@@ -5,11 +5,11 @@ date: 2021-02-25
 organization: euci
 type: position paper
 language: en
-pdf_url: "/assets/pdf/euci/7860 EUCI_Decentralized Finance.pdf"
-preview_image: "/assets/images/advocacy/euci-7860 EUCI_Decentralized Finance.1.jpg"
+pdf_url: "/assets/pdf/euci/2021-02-25_financial_innovation.pdf"
+preview_image: "/assets/images/advocacy/euci-2021-02-25_financial_innovation.1.jpg"
 file_size: 1059
-total_pages: 0
-tags: ["MiCA", "DeFi", "financial innovation", "Europe", "regulation"]
+total_pages: 16
+tags: ["MiCA", "DeFi", "finance", "innovation", "Europe"]
 ---
 
 # Why Europe needs to get on the front foot on financial innovation
@@ -22,16 +22,16 @@ tags: ["MiCA", "DeFi", "financial innovation", "Europe", "regulation"]
 ## Document Details
 
 - File Size: 1059KB
-- Pages: 0
+- Pages: 16
 
 ## Download
 
-[Download PDF](/assets/pdf/euci/7860 EUCI_Decentralized Finance.pdf)
+[Download PDF](/assets/pdf/euci/2021-02-25_financial_innovation.pdf)
 
 ## Tags
 
 - MiCA
 - DeFi
-- financial innovation
+- finance
+- innovation
 - Europe
-- regulation

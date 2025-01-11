@@ -8,8 +8,8 @@ language: de
 pdf_url: "/assets/pdf/bundesblock/2019_blockchain-strategie.pdf"
 preview_image: "/assets/images/advocacy/bundesblock-2019_blockchain-strategie.1.jpg"
 file_size: 394
-total_pages: 0
-tags: ["blockchain", "strategy", "government", "economy"]
+total_pages: 24
+tags: ["blockchain", "strategy", "economy", "government"]
 ---
 
 # Blockchain-Strategie der Bundesregierung
@@ -22,7 +22,7 @@ tags: ["blockchain", "strategy", "government", "economy"]
 ## Document Details
 
 - File Size: 394KB
-- Pages: 0
+- Pages: 24
 
 ## Download
 
@@ -32,5 +32,5 @@ tags: ["blockchain", "strategy", "government", "economy"]
 
 - blockchain
 - strategy
-- government
 - economy
+- government

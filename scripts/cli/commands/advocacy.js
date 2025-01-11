@@ -19,6 +19,23 @@ const PREVIEW_DIR = 'assets/images/advocacy';
 const DATA_FILE = '_data/advocacy.yml';
 const COLLECTION_DIR = '_advocacy';
 
+function extractDateFromFilename(filename) {
+  // Try to match YYYY-MM-DD pattern first
+  const fullDateMatch = filename.match(/^(\d{4}-\d{2}-\d{2})/);
+  if (fullDateMatch) {
+    return fullDateMatch[1];
+  }
+
+  // Try to match YYYY pattern
+  const yearMatch = filename.match(/^(\d{4})/);
+  if (yearMatch) {
+    return `${yearMatch[1]}-01-01`;
+  }
+
+  // Return null if no date pattern found
+  return null;
+}
+
 async function getPdfDimensions(pdfPath) {
   const pdfBytes = await fs.readFile(pdfPath);
   const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -126,6 +143,12 @@ async function processDocument(filePath, org) {
     const fileSize = Math.round(stats.size / 1024); // Convert to KB
     const filename = path.basename(filePath, '.pdf');
 
+    // Extract date from filename
+    const date = extractDateFromFilename(filename);
+    if (!date) {
+      console.warn(`Warning: Could not extract date from filename: ${filename}`);
+    }
+
     // Generate preview image
     const previewPath = await generatePreview(filePath, `${org}-${filename}`);
     if (!previewPath) {
@@ -145,9 +168,10 @@ async function processDocument(filePath, org) {
     const pageFiles = await generatePdfPages(targetPath);
     const totalPages = pageFiles.length;
 
-    // Create document object
+    // Create document object, overriding the date from OpenAI with our filename date
     const document = {
       ...metadata,
+      date: date || metadata.date, // Fallback to OpenAI date if filename date not found
       pdf_url: path.join('/', ASSETS_DIR, org, path.basename(filePath)),
       preview_image: previewPath,
       file_size: fileSize,

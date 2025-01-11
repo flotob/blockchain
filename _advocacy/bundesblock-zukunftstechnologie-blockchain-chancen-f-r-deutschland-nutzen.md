@@ -1,7 +1,7 @@
 ---
 layout: pdf
 title: "Zukunftstechnologie Blockchain - Chancen für Deutschland nutzen"
-date: 2019-06-25
+date: 2019-01-01
 organization: bundesblock
 type: position paper
 language: de
@@ -9,7 +9,7 @@ pdf_url: "/assets/pdf/bundesblock/2019_blockchain-cdu.pdf"
 preview_image: "/assets/images/advocacy/bundesblock-2019_blockchain-cdu.1.jpg"
 file_size: 315
 total_pages: 0
-tags: ["blockchain", "technology", "Germany"]
+tags: ["blockchain", "technology", "innovation", "Germany"]
 ---
 
 # Zukunftstechnologie Blockchain - Chancen für Deutschland nutzen
@@ -17,7 +17,7 @@ tags: ["blockchain", "technology", "Germany"]
 **Organization:** bundesblock
 **Type:** position paper
 **Language:** de
-**Date:** 2019-06-25
+**Date:** 2019-01-01
 
 ## Document Details
 
@@ -32,4 +32,5 @@ tags: ["blockchain", "technology", "Germany"]
 
 - blockchain
 - technology
+- innovation
 - Germany

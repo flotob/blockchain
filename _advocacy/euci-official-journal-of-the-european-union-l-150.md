@@ -5,11 +5,11 @@ date: 2023-06-09
 organization: euci
 type: regulation
 language: en
-pdf_url: "/assets/pdf/euci/OJ_L_2023_150_FULL_EN_TXT.pdf"
-preview_image: "/assets/images/advocacy/euci-OJ_L_2023_150_FULL_EN_TXT.1.jpg"
+pdf_url: "/assets/pdf/euci/2023-06-09_eu_journal.pdf"
+preview_image: "/assets/images/advocacy/euci-2023-06-09_eu_journal.1.jpg"
 file_size: 2292
-total_pages: 0
-tags: ["regulation", "crypto-assets", "finance", "deforestation", "legislation"]
+total_pages: 252
+tags: ["legislation", "crypto-assets", "regulations", "deforestation"]
 ---
 
 # Official Journal of the European Union L 150
@@ -22,16 +22,15 @@ tags: ["regulation", "crypto-assets", "finance", "deforestation", "legislation"]
 ## Document Details
 
 - File Size: 2292KB
-- Pages: 0
+- Pages: 252
 
 ## Download
 
-[Download PDF](/assets/pdf/euci/OJ_L_2023_150_FULL_EN_TXT.pdf)
+[Download PDF](/assets/pdf/euci/2023-06-09_eu_journal.pdf)
 
 ## Tags
 
-- regulation
-- crypto-assets
-- finance
-- deforestation
 - legislation
+- crypto-assets
+- regulations
+- deforestation

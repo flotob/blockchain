@@ -1,15 +1,15 @@
 ---
 layout: pdf
 title: "On scope regarding decentralized use cases"
-date: 2023-01-01
+date: 2021-05-04
 organization: euci
 type: regulation
 language: en
-pdf_url: "/assets/pdf/euci/EUCI Proposals MiCA vFinal (3).pdf"
-preview_image: "/assets/images/advocacy/euci-EUCI Proposals MiCA vFinal (3).1.jpg"
+pdf_url: "/assets/pdf/euci/2021-05-04_mica_proposals.pdf"
+preview_image: "/assets/images/advocacy/euci-2021-05-04_mica_proposals.1.jpg"
 file_size: 149
-total_pages: 0
-tags: ["decentralized", "crypto-assets", "regulation"]
+total_pages: 23
+tags: ["crypto-assets", "decentralization", "regulation"]
 ---
 
 # On scope regarding decentralized use cases
@@ -17,19 +17,19 @@ tags: ["decentralized", "crypto-assets", "regulation"]
 **Organization:** euci
 **Type:** regulation
 **Language:** en
-**Date:** 2023-01-01
+**Date:** 2021-05-04
 
 ## Document Details
 
 - File Size: 149KB
-- Pages: 0
+- Pages: 23
 
 ## Download
 
-[Download PDF](/assets/pdf/euci/EUCI Proposals MiCA vFinal (3).pdf)
+[Download PDF](/assets/pdf/euci/2021-05-04_mica_proposals.pdf)
 
 ## Tags
 
-- decentralized
 - crypto-assets
+- decentralization
 - regulation

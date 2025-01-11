@@ -5,11 +5,11 @@ date: 2022-05-13
 organization: euci
 type: position paper
 language: en
-pdf_url: "/assets/pdf/euci/2022-05-13 - EUCI - Technical position on MiCA - Trilogues.pdf"
-preview_image: "/assets/images/advocacy/euci-2022-05-13 - EUCI - Technical position on MiCA - Trilogues.1.jpg"
+pdf_url: "/assets/pdf/euci/2022-05-13_trilogues_technical.pdf"
+preview_image: "/assets/images/advocacy/euci-2022-05-13_trilogues_technical.1.jpg"
 file_size: 126
-total_pages: 0
-tags: ["MiCA", "crypto regulation", "DeFi", "NFTs", "EU legislation"]
+total_pages: 5
+tags: ["MiCA", "cryptocurrency", "regulation", "EU"]
 ---
 
 # Technical position on MiCA - Trilogues
@@ -22,16 +22,15 @@ tags: ["MiCA", "crypto regulation", "DeFi", "NFTs", "EU legislation"]
 ## Document Details
 
 - File Size: 126KB
-- Pages: 0
+- Pages: 5
 
 ## Download
 
-[Download PDF](/assets/pdf/euci/2022-05-13 - EUCI - Technical position on MiCA - Trilogues.pdf)
+[Download PDF](/assets/pdf/euci/2022-05-13_trilogues_technical.pdf)
 
 ## Tags
 
 - MiCA
-- crypto regulation
-- DeFi
-- NFTs
-- EU legislation
+- cryptocurrency
+- regulation
+- EU

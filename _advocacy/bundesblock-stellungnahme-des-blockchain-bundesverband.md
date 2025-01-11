@@ -1,7 +1,7 @@
 ---
 layout: pdf
 title: "Stellungnahme des Blockchain Bundesverband"
-date: 2018-11-28
+date: 2018-01-01
 organization: bundesblock
 type: position paper
 language: de
@@ -9,7 +9,7 @@ pdf_url: "/assets/pdf/bundesblock/2018_bundestag-stellungnahme.pdf"
 preview_image: "/assets/images/advocacy/bundesblock-2018_bundestag-stellungnahme.1.jpg"
 file_size: 645
 total_pages: 0
-tags: ["blockchain", "digital agenda", "German parliament"]
+tags: ["blockchain", "digitale agenda", "regulation"]
 ---
 
 # Stellungnahme des Blockchain Bundesverband
@@ -17,7 +17,7 @@ tags: ["blockchain", "digital agenda", "German parliament"]
 **Organization:** bundesblock
 **Type:** position paper
 **Language:** de
-**Date:** 2018-11-28
+**Date:** 2018-01-01
 
 ## Document Details
 
@@ -31,5 +31,5 @@ tags: ["blockchain", "digital agenda", "German parliament"]
 ## Tags
 
 - blockchain
-- digital agenda
-- German parliament
+- digitale agenda
+- regulation
