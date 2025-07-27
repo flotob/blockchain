@@ -79,6 +79,10 @@ title: Florian Glatz | Blockchain Lawyer
     {%- include events.html -%}
 </section>
 
+<section id="forum" class="blog-section section">
+    {%- include forum.html -%}
+</section>
+
 <footer class="chrome footer">
     <div class="legal-links">
         <a href="#" id="imprintLink">Imprint</a>
@@ -107,6 +111,7 @@ title: Florian Glatz | Blockchain Lawyer
         <a href="#advocacy" class="menu-item">Public Policy</a>
         <a href="#interviews" class="menu-item">Podcasts</a>
         <a href="#events" class="menu-item">Events</a>
+        <a href="#forum" class="menu-item">Forum</a>
     </nav>
 </div>
 
@@ -162,7 +167,7 @@ title: Florian Glatz | Blockchain Lawyer
     }
 
     // Scroll Navigation Variables
-    const sections = ['hero', 'work', 'blogs', 'publications', 'interviews', 'events'];
+    const sections = ['hero', 'work', 'blogs', 'publications', 'advocacy', 'interviews', 'events', 'forum'];
     let currentSection = 0;
     let isScrolling = false;
 
@@ -199,7 +204,7 @@ title: Florian Glatz | Blockchain Lawyer
     }
 
     function scrollToSection(index) {
-        const sections = ['hero', 'work', 'blogs', 'publications', 'interviews', 'events'];
+        const sections = ['hero', 'work', 'blogs', 'publications', 'advocacy', 'interviews', 'events', 'forum'];
         if (index < 0 || index >= sections.length) return;
         
         const targetSection = document.querySelector(sections[index] === 'hero' ? '.hero' : '#' + sections[index]);

@@ -15,7 +15,7 @@ books:
       - "Legal Services"
       - "Digital Transformation"
     url: "https://www.beck-shop.de/breidenbach-glatz-rechtshandbuch-legal-tech/product/27489151"
-    image: "https://imageservice.azureedge.net/api/getimage?productId=27489151&width=270&format=webp"
+    image: "/assets/images/publications/book1.webp"
     description: "The definitive handbook on Legal Tech, exploring the digitalization of legal services and its impact on legal professions, businesses, and consumers. Published by C.H.BECK, this comprehensive guide provides practical examples and analyzes trends for the next 10-15 years."
 
   - type: "Book"
@@ -33,7 +33,7 @@ books:
       - "Digital Finance"
       - "Banking Law"
     url: "https://www.beck-shop.de/moeslein-omlor-fintech-handbuch/product/35466459"
-    image: "https://imageservice.azureedge.net/api/getimage?productId=35466459&width=270&format=webp"
+    image: "/assets/images/publications/book2.webp"
     description: "A comprehensive guide to the FinTech industry, covering payments, crowdfunding, lending, securities, robo-advisory, InsureTech, and digital currencies. Published by C.H.BECK as part of their Banking Law series."
 
 periodicals:
