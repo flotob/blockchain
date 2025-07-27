@@ -2284,21 +2284,31 @@ body,
 
 /* Forum Section Styles */
 #forum {
-    height: 100vh !important;
-    min-height: 100vh !important;
     width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
     display: flex !important;
     flex-direction: column !important;
+    min-height: 100vh !important;
+}
+
+.forum-wrapper {
+    width: 100%;
+    /* Desktop: Calculate space between chrome */
+    height: calc(100vh - 4rem - 65px);
+    display: flex;
+    flex-direction: column;
 }
 
 #curia-forum {
-    width: 100% !important;
-    height: 100% !important;
-    flex: 1 !important;
-    border: none !important;
-    border-radius: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+/* Mobile: Use proven modal pattern */
+@media (max-width: 768px) {
+    .forum-wrapper {
+        height: 85vh; /* Same as modals */
+    }
 }
