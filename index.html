@@ -514,6 +514,48 @@ title: Florian Glatz | Blockchain Lawyer
         }
     });
 
+    // Forum Lazy Loading
+    function loadForumEmbed() {
+        if (window.curiaLoaded) return;
+        
+        window.curiaLoaded = true;
+        
+        // Create and configure the script
+        const script = document.createElement('script');
+        script.src = 'https://curia.network/embed.js';
+        script.setAttribute('data-width', '100%');
+        script.setAttribute('data-height', '100%');
+        script.setAttribute('data-theme', 'light');
+        script.setAttribute('data-border-radius', '8px');
+        script.setAttribute('data-background-color', '#ffffff');
+        script.setAttribute('data-container', 'curia-forum');
+        script.setAttribute('data-community', '200607bb-ee18-4c2f-82a4-82e1938339bb');
+        
+        // Show the forum container and hide loading
+        script.onload = () => {
+            document.getElementById('forum-loading').style.display = 'none';
+            document.getElementById('curia-forum').style.display = 'block';
+        };
+        
+        document.head.appendChild(script);
+    }
+
+    // Intersection Observer for forum section
+    const forumObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadForumEmbed();
+                forumObserver.unobserve(entry.target); // Only load once
+            }
+        });
+    }, { threshold: 0.1 }); // Trigger when 10% visible
+
+    // Start observing the forum section
+    const forumSection = document.getElementById('forum');
+    if (forumSection) {
+        forumObserver.observe(forumSection);
+    }
+
     // Navigation handled by navigation.js
 </script> 
 
