@@ -663,6 +663,7 @@ html {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    padding: 4rem 2rem; /* Account for chrome space */
 }
 
 .menu-overlay.visible {
@@ -675,6 +676,10 @@ html {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+    max-height: calc(100vh - 8rem); /* Available height minus chrome */
+    overflow-y: auto; /* Scroll if needed */
+    width: 100%;
+    justify-content: center;
 }
 
 .menu-item {
@@ -714,6 +719,14 @@ html {
     transition-delay: 0.3s;
 }
 
+.menu-overlay.visible .menu-item:nth-child(6) {
+    transition-delay: 0.35s;
+}
+
+.menu-overlay.visible .menu-item:nth-child(7) {
+    transition-delay: 0.4s;
+}
+
 .menu-item:hover {
     color: var(--primary);
     transform: translateX(10px);
@@ -723,9 +736,40 @@ html {
     color: var(--primary);
 }
 
+/* Responsive menu sizing */
+@media (max-height: 900px) {
+    .menu-item {
+        font-size: 3rem;
+    }
+    .menu-items {
+        gap: 0.75rem;
+    }
+}
+
+@media (max-height: 700px) {
+    .menu-item {
+        font-size: 2.5rem;
+    }
+    .menu-items {
+        gap: 0.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .menu-item {
         font-size: 2.5rem;
+    }
+    .menu-items {
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item {
+        font-size: 2rem;
+    }
+    .menu-items {
+        gap: 0.5rem;
     }
 }
 
