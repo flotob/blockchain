@@ -1,25 +1,33 @@
 projects:
+  - title: Freedom Browser
+    role: Contributor & Co-Initiator
+    description: Freedom is a new browser built specifically for the decentralized web. There are no centralized gateways involved in content delivery.
+    description_mobile: Building a user-owned social network with web3 technology
+    image: images/freedom.png
+    url: https://freedombrowser.eth.limo/
+    image_type: default
+
   - title: Common Ground
-    role: Co-Founder & Board Member
-    description: Co-Founder and board member of the Common Ground Association, developing a user-owned social network using web3 primitives
+    role: Co-Founder & DAO Member
+    description: Common Ground is an open source (AGPL), user-governed alternative to Discord using web3 primitives.
     description_mobile: Building a user-owned social network with web3 technology
     image: images/common-ground.png
-    url: https://commonground.cg
+    url: https://commonground.box
     image_type: default
-    notion_source: 16ff33c1f6c0803092bbcd4da6ed51f7
+    #notion_source: 16ff33c1f6c0803092bbcd4da6ed51f7
 
   - title: European Crypto Initiative
     role: Co-Founder & Board Member
-    description: Co-Founder and board member of the European Crypto Initiative, a Brussels-based non-profit advocating for better crypto regulation in Europe
+    description: The European Crypto Initiative is a Brussels-based non-profit advocating for better crypto regulation in Europe.
     description_mobile: Advocating for better crypto regulation in Europe
     image: images/euci2.png
     url: https://eu.ci
     image_type: default
-    notion_source: 170f33c1f6c080399d02df5e9b7d572c
+    #notion_source: 170f33c1f6c080399d02df5e9b7d572c
 
   - title: Consulting
     role: Law & Code
-    description: Helping projects and founders succeed in the web3 space with my decade of knowledge and experience in this unique industry
+    description: Helping projects and founders succeed in the web3 space with my decade of knowledge and experience in this unique industry.
     description_mobile: Helping projects and founders succeed in the web3 space
     image: images/consulting.jpg
     url: mailto:fg@blockchain.lawyer
@@ -27,7 +35,7 @@ projects:
 
   - title: Pro Bono Work
     role: Everything, everywhere all at once
-    description: Using my superpowers to help projects that I believe contribute to a better world
+    description: Using my superpowers to help projects that I believe contribute to a better world.
     description_mobile: Using my superpowers to help projects that I believe contribute to a better world
     image: images/probono.png
     url: mailto:fg@blockchain.lawyer

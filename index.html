@@ -79,9 +79,9 @@ title: Florian Glatz | Blockchain Lawyer
     {%- include events.html -%}
 </section>
 
-<section id="forum" class="blog-section section">
+<!--<section id="forum" class="blog-section section">
     {%- include forum.html -%}
-</section>
+</section>-->
 
 <footer class="chrome footer">
     <div class="legal-links">
@@ -111,7 +111,7 @@ title: Florian Glatz | Blockchain Lawyer
         <a href="#advocacy" class="menu-item">Public Policy</a>
         <a href="#interviews" class="menu-item">Podcasts</a>
         <a href="#events" class="menu-item">Events</a>
-        <a href="#forum" class="menu-item">Forum</a>
+        <!--<a href="#forum" class="menu-item">Forum</a>-->
     </nav>
 </div>
 
@@ -167,7 +167,7 @@ title: Florian Glatz | Blockchain Lawyer
     }
 
     // Scroll Navigation Variables
-    const sections = ['hero', 'work', 'blogs', 'publications', 'advocacy', 'interviews', 'events', 'forum'];
+    const sections = ['hero', 'work', 'blogs', 'publications', 'advocacy', 'interviews', 'events'];
     let currentSection = 0;
     let isScrolling = false;
 
@@ -514,6 +514,7 @@ title: Florian Glatz | Blockchain Lawyer
         }
     });
 
+    /*
     // Forum Lazy Loading
     function loadForumEmbed() {
         if (window.curiaLoaded) return;
@@ -554,7 +555,7 @@ title: Florian Glatz | Blockchain Lawyer
     const forumSection = document.getElementById('forum');
     if (forumSection) {
         forumObserver.observe(forumSection);
-    }
+    }*/
 
     // Navigation handled by navigation.js
 </script> 
