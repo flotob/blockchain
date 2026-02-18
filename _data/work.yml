@@ -2,7 +2,7 @@ projects:
   - title: Freedom Browser
     role: Contributor & Co-Initiator
     description: Freedom is a new browser built specifically for the decentralized web. There are no centralized gateways involved in content delivery.
-    description_mobile: Building a user-owned social network with web3 technology
+    description_mobile: A Browser for the Decentralized Web
     image: images/freedom.png
     url: https://freedombrowser.eth.limo/
     image_type: default
